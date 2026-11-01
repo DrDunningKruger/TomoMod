@@ -801,9 +801,11 @@ focus_tree = {
 		id = CAN_commit_to_the_war
 		icon = GFX_CAN_commit
 		prerequisite = { focus = CAN_canadian_infantry_corps }
-		x = -2
-		y = 2
-		relative_position_id = CAN_canadian_infantry_corps
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; CAN_canadian_infantry_corps is defined later,
+		# so the position is converted to absolute (was x = -2 y = 2 relative to CAN_canadian_infantry_corps). Same on-screen position.
+		x = 14
+		y = 3
+		#relative_position_id = CAN_canadian_infantry_corps
 
 		cost = 5
 
@@ -1123,9 +1125,11 @@ focus_tree = {
 		id = CAN_uranium_mining
 		icon = GFX_GEN_nuke
 		prerequisite = { focus = CAN_the_sabre_project }
-		x = 0
-		y = 1
-		relative_position_id = CAN_the_sabre_project
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; CAN_the_sabre_project is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to CAN_the_sabre_project). Same on-screen position.
+		x = 28
+		y = 5
+		#relative_position_id = CAN_the_sabre_project
 
 		cost = 10
 
@@ -1779,7 +1783,7 @@ focus_tree = {
 	
 	focus = {
 		id = CAN_RCAC
-		icon = CAN_RCAC
+		icon = GFX_CAN_RCAC # TomoIHE port: icon name was missing the GFX_ prefix
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = 0
 		y = 2

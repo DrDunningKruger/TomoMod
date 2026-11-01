@@ -3168,9 +3168,8 @@ focus_tree = {
 		id = GER_wartime_economic_reorganisation
 		icon = GFX_focus_GER_prussian_legacy
 		prerequisite = { focus = GER_apointalbertspeer }
-		x = 0
-		y = 1
-		relative_position_id = GER_apointalbertspeer
+		x = 14
+		y = 10
 		cost = 5
 		ai_will_do = {
 			factor = 50
@@ -3570,9 +3569,8 @@ focus_tree = {
 		icon = GFX_GER_halftrack
 
 		prerequisite = { focus = GER_temp_focus_2 }
-		x = -2
-		y = 1
-		relative_position_id = GER_temp_focus_2
+		x = 10
+		y = 12
 		cost = 3
 
 		available_if_capitulated = yes
@@ -3624,9 +3622,8 @@ focus_tree = {
 		id = GER_stg44
 		icon = GFX_GER_STG
 		prerequisite = { focus = GER_temp_focus_3 }
-		x = 0
-		y = 1
-		relative_position_id = GER_temp_focus_3
+		x = 14
+		y = 12
 		cost = 5
 
 		available_if_capitulated = yes
@@ -4631,119 +4628,73 @@ focus_tree = {
 			set_province_name = { id = 678 name = "Mulhausen" }
 			hidden_effect = {
 			29 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			785 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			18 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			28 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			17 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			27 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			16 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			15 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			24 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			30 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			14 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}
 			23 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			19 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			806 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			33 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}
 			26 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			25 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}
 			31 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			22 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}
 			20 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			21 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			32 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}	
 			1 = {
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}			
 			
 			
@@ -8367,9 +8318,7 @@ focus_tree = {
 				limit = {
 					is_core_of = YUG
 				}
-				remove_dynamic_modifier = {
-					modifier = benelux_modifier
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = benelux_modifier } } remove_dynamic_modifier = { modifier = benelux_modifier } }
 			}
 			add_timed_idea = { idea = GER_southern_blitzkrieg days = 120 }
 			

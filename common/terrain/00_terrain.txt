@@ -10,6 +10,8 @@ categories =  {
 	}
 
 	ocean = {
+		naval_terrain = yes # TomoIHE port: 1.19 key (missing terrain naval keys crashed the game on fleet movement)
+		minimum_seazone_dominance = 250 # TomoIHE port: 1.19 naval dominance key (vanilla value)
 		color = { 40 83 176 }
 		movement_cost = 1.0
 		is_water = yes
@@ -201,6 +203,7 @@ categories =  {
 	
 	water_fjords = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 100 # TomoIHE port: 1.19 naval dominance key (vanilla value)
 		color = { 75 162 198 }
 		movement_cost = 1.0
 		is_water = yes
@@ -244,6 +247,7 @@ categories =  {
 	
 	water_shallow_sea = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 100 # TomoIHE port: 1.19 naval dominance key (vanilla value)
 		color = { 56 118 217 } 
 		movement_cost = 1.0
 		is_water = yes
@@ -257,6 +261,7 @@ categories =  {
 	
 	water_deep_ocean = {
 		naval_terrain = yes
+		minimum_seazone_dominance = 250 # TomoIHE port: 1.19 naval dominance key (vanilla value)
 		color = { 2 38 150 }
 		movement_cost = 1.0
 		is_water = yes

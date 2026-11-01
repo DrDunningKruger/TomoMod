@@ -7,6 +7,7 @@ set_stability = 0.62
 set_war_support = 0.45
 set_fuel_ratio = 1.0
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -37,8 +38,6 @@ set_technology = {
     new_tank_guns = 1
 	radio_tech_1 = 1
 	tank_improved_guns = 1	
-	mobile_warfare = 1	
-	base_strike = 1	
 }
 
 if = {

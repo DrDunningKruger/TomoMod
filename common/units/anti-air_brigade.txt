@@ -20,6 +20,7 @@ sub_units = {
 		group = infantry
 		
 		categories = {
+			category_anti_air
 			category_army
 			category_line_artillery
 		}		
@@ -80,6 +81,8 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_anti_air
+			category_mobile_and_mobile_combat_sup
 			category_army
 			category_line_artillery
 		}		

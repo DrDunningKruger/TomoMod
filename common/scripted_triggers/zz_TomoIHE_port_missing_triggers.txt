@@ -1,0 +1,77 @@
+# TomoIHE port (1.16.9 -> 1.19.3): vanilla scripted definitions referenced by the mod's Soviet (NSB) content
+# but missing because descriptor.mod uses replace_path on this folder. Copied verbatim from vanilla 1.19.3.
+# NOTE: some of these reference content not (yet) in the mod: events NSB_soviet_paranoia_system_events.19/.29,
+# characters SOV_genrikh_yagoda / SOV_nikolay_yezhov, focuses SOV_the_left_opposition / SOV_the_right_opposition /
+# SOV_beaten_but_not_defeated.
+
+
+
+
+
+# TomoIHE port: copied from vanilla 1.19.3 common/scripted_triggers/SOV_scripted_triggers.txt (lines 240-253)
+SOV_is_valid_academy_of_sciences_target = {
+	OR = {
+		AND = {
+			SOV_is_soviet_republic_tag_strict = yes
+			has_government = communism
+			is_in_faction_with = ROOT
+		}
+		AND = {
+			SOV_is_soviet_republic_tag_lax = yes
+			has_government = communism
+			is_subject_of = ROOT
+		}
+	}
+}
+
+# TomoIHE port: copied from vanilla 1.19.3 common/scripted_triggers/SOV_scripted_triggers.txt (lines 842-852)
+SOV_is_industrial_relocation_destiny_state = {
+	OR = {
+		state = 573 #Zlatoust
+		state = 653 #Sverdlovsk
+		state = 651 #Ufa
+		state = 572 #Chelyabinsk
+		state = 582 #Magnitogorsk
+		state = 398 #Perm
+		state = 652 #Orenburg
+	}
+}
+
+# TomoIHE port: copied from vanilla 1.19.3 common/scripted_triggers/SOV_scripted_triggers.txt (lines 51-55)
+SOV_character_can_be_purged = {
+	NOT = { has_character_flag = SOV_safe_from_purge_flag }
+	NOT = { has_character_flag = SOV_exiled_flag }
+	NOT = { has_character_flag = SOV_character_purged_flag }
+}
+
+# TomoIHE port: copied from vanilla 1.19.3 common/scripted_triggers/SOV_scripted_triggers.txt (lines 139-184)
+SOV_is_soviet_republic_tag_strict = {
+	# TomoIHE port: vanilla lists BLR, UKR, KAZ, GEO, ... (Soviet republic/releasable tags). None of them exist in
+	# this mod (common/country_tags only defines 36 tags), so the trigger can never be true; avoid unknown-tag errors.
+	always = no
+}
+
+# TomoIHE port: copied from vanilla 1.19.3 common/scripted_triggers/SOV_scripted_triggers.txt (lines 186-238)
+SOV_is_soviet_republic_tag_lax = {
+	# TomoIHE port: vanilla also lists the Soviet republic tags (BLR, UKR, ... MEL, EST, LAT, LIT) which do not
+	# exist in this mod; only the tags that exist in common/country_tags are kept.
+	OR = {
+		tag = POL
+		tag = FIN
+		tag = MON
+	}
+}
+
+
+is_vichy_france = {
+	has_country_flag = vichy_france
+}
+
+FRA_is_indochina_state = {
+	OR = {
+		state = 286
+		state = 670
+		state = 671
+		state = 741
+	}
+}

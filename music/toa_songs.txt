@@ -1,0 +1,153 @@
+# TomoIHE 1.19 port: partially neutralized - scripted trigger should_play_south_american_music was removed by
+# TomoIHE's replace_path on common/scripted_triggers; its vanilla body (capital on South America) is inlined below.
+music_station = "base_music"
+
+
+# argentina
+music = {
+	song = "argentina_civilian"
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 1.25
+			tag = ARG
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+	}
+}
+
+music = {
+	song = "argentina_militaristic"
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 1.25
+			tag = ARG
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+	}
+}
+
+
+# Brazil
+music = {
+	song = "brazil_civilian"
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 1.25
+			tag = BRA
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			tag = POR
+		}
+	}
+}
+
+music = {
+	song = "brazil_militaristic"
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 1.25
+			tag = BRA
+		}
+		modifier = {
+			factor = 1.5
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+	}
+}
+
+
+# Chile
+music = {
+	song = "chile_civilian"
+	chance = { 
+		factor = 1
+		modifier = {
+			factor = 1.25
+			tag = CHL
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+	}
+}
+
+music = {
+	song = "chile_militaristic"
+	chance = { 
+		factor = 1 
+		modifier = {
+			factor = 1.25
+			tag = CHL
+		}
+		modifier = {
+			factor = 1.5
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.05
+			NOT = { capital_scope = { is_on_continent = south_america } }
+		}
+		modifier = {
+			factor = 3
+			NOT = { capital_scope = { is_on_continent = south_america } }
+			any_enemy_country = {
+				capital_scope = { is_on_continent = south_america }
+			}
+		}
+	}
+}

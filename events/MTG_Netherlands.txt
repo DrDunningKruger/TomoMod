@@ -425,9 +425,9 @@ country_event = {
 		army_experience = -5
 		effect_tooltip = {
 			FROM = {
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 					name = HOL_secret_staff_talks
-					bonus = 1.0
+					cost_reduction = 0.5
 					uses = 1
 					category = land_doctrine
 				}
@@ -458,9 +458,9 @@ country_event = {
 		effect_tooltip = {
 			FROM = { army_experience = -5 }
 		}
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = HOL_secret_staff_talks
-			bonus = 1.0
+			cost_reduction = 0.5
 			uses = 1
 			category = land_doctrine
 		}

@@ -17,6 +17,7 @@ sub_units = {
 		group = support
 		
 		categories = {
+			category_support_artillery
 			category_support_battalions
 			category_army
 			category_artillery
@@ -64,6 +65,7 @@ sub_units = {
 		group = support
 
 		categories = {
+			category_support_artillery
 			category_support_battalions
 			category_army
 			category_artillery

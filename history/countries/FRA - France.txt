@@ -14,6 +14,7 @@ set_stability = 0.5
 set_war_support = 0.15
 set_fuel_ratio = 1.0
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -28,8 +29,6 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	interwar_antitank = 1
-	mobile_warfare = 1
-	fleet_in_being = 1
 	fuel_silos = 1
 	sonar = 1	
 	fuel_refining = 1

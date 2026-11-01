@@ -132,7 +132,7 @@ equipments = {
 
 		manpower = 4000
 
-		naval_supremacy_factor = 2.6
+		naval_dominance_factor = 300
 	}
 	###Special snowflake hull
 
@@ -194,6 +194,7 @@ equipments = {
 		}
 
 		manpower = 3200
+		naval_dominance_factor = 240
 	}
 	ship_hull_heavy_1 = {
 		abbreviation = "hcc"
@@ -286,6 +287,7 @@ equipments = {
 		fuel_consumption = 67
 		
 		build_cost_ic = 2800
+		naval_dominance_factor = 325
 	}
 
 	ship_hull_heavy_2 = {
@@ -352,6 +354,7 @@ equipments = {
 		}
 
 		manpower = 5200
+		naval_dominance_factor = 350
 	}
 
 	ship_hull_heavy_3 = {
@@ -418,6 +421,7 @@ equipments = {
 		}
 
 		manpower = 6000
+		naval_dominance_factor = 375
 	}
 
 	ship_hull_heavy_4 = {
@@ -485,6 +489,7 @@ equipments = {
 		}
 
 		manpower = 6000
+		naval_dominance_factor = 400
 	}
 
 	ship_hull_super_heavy_1 = {
@@ -588,6 +593,7 @@ equipments = {
 			chromium = 1
 		}
 		manpower = 9000
+		naval_dominance_factor = 400
 	}
 
 	battleship_1 = { 

@@ -113,9 +113,11 @@ focus_tree = {
 		id = ENG_tank_focus_2
 		prerequisite = { focus = ENG_nuffield_tank_development }
 		icon = GFX_ENG_cromwell
-		x = 0
-		y = 1
-		relative_position_id = ENG_nuffield_tank_development
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ENG_nuffield_tank_development is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to ENG_nuffield_tank_development). Same on-screen position.
+		x = 2
+		y = 3
+		#relative_position_id = ENG_nuffield_tank_development
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -262,9 +264,11 @@ focus_tree = {
 		id = ENG_integrated_support
 		prerequisite = { focus = uk_guns_focus }
 		icon = GFX_focus_CHL_ibanezs_coup
-		x = 0
-		y = 1
-		relative_position_id = uk_guns_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; uk_guns_focus is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to uk_guns_focus). Same on-screen position.
+		x = 8
+		y = 4
+		#relative_position_id = uk_guns_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -481,9 +485,11 @@ focus_tree = {
 		id = ENG_promote_general_initiative
 		prerequisite = { focus = uk_guns_focus }
 		icon = GFX_goal_generic_army_doctrines
-		x = -2
-		y = 1
-		relative_position_id = uk_guns_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; uk_guns_focus is defined later,
+		# so the position is converted to absolute (was x = -2 y = 1 relative to uk_guns_focus). Same on-screen position.
+		x = 6
+		y = 4
+		#relative_position_id = uk_guns_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -740,9 +746,11 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_balance_the_civilian_and_military_economies }
 		prerequisite = { focus = ENG_research_advancements }
 		icon = GFX_focus_SWE_italian_destroyers
-		x = -2
-		y = 1
-		relative_position_id = ENG_research_advancements
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ENG_research_advancements is defined later,
+		# so the position is converted to absolute (was x = -2 y = 1 relative to ENG_research_advancements). Same on-screen position.
+		x = 19
+		y = 3
+		#relative_position_id = ENG_research_advancements
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -847,9 +855,11 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_prioritise_early_military_growth }
 		prerequisite = { focus = ENG_research_advancements }
 		icon = GFX_focus_SWE_defense_act
-		x = 2
-		y = 1
-		relative_position_id = ENG_research_advancements
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ENG_research_advancements is defined later,
+		# so the position is converted to absolute (was x = 2 y = 1 relative to ENG_research_advancements). Same on-screen position.
+		x = 23
+		y = 3
+		#relative_position_id = ENG_research_advancements
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -927,9 +937,11 @@ focus_tree = {
 		id = ENG_research_advancements
 		prerequisite = { focus = shadow_scheme_focus }
 		icon = GFX_focus_research
-		x = 0
-		y = 1
-		relative_position_id = shadow_scheme_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; shadow_scheme_focus is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to shadow_scheme_focus). Same on-screen position.
+		x = 21
+		y = 2
+		#relative_position_id = shadow_scheme_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1001,9 +1013,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		icon = GFX_airdefense
-		x = 0
-		y = 1
-		relative_position_id = royal_ordinance_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; royal_ordinance_focus is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to royal_ordinance_focus). Same on-screen position.
+		x = 21
+		y = 7
+		#relative_position_id = royal_ordinance_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -1236,9 +1250,11 @@ focus_tree = {
 		id = radar_focus
 		prerequisite = { focus = coastal_command_focus }
 		icon = GFX_ENG_radar
-		x = 1
-		y = 1
-		relative_position_id = coastal_command_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; coastal_command_focus is defined later,
+		# so the position is converted to absolute (was x = 1 y = 1 relative to coastal_command_focus). Same on-screen position.
+		x = 30
+		y = 5
+		#relative_position_id = coastal_command_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3662,9 +3678,11 @@ focus_tree = {
 		id = uk_compass
 		prerequisite = { focus = uk_commonwealth_focus }
 		icon = GFX_ENG_cairo
-		x = -1
-		y = 1
-		relative_position_id = uk_commonwealth_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; uk_commonwealth_focus is defined later,
+		# so the position is converted to absolute (was x = -1 y = 1 relative to uk_commonwealth_focus). Same on-screen position.
+		x = 44
+		y = 6
+		#relative_position_id = uk_commonwealth_focus
 		mutually_exclusive = { focus = uk_digin }
 		cost = 1
         available = {
@@ -3731,9 +3749,11 @@ focus_tree = {
 		id = uk_digin
 		prerequisite = { focus = uk_commonwealth_focus }
 		icon = GFX_ENG_desert
-		x = 1
-		y = 1
-		relative_position_id = uk_commonwealth_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; uk_commonwealth_focus is defined later,
+		# so the position is converted to absolute (was x = 1 y = 1 relative to uk_commonwealth_focus). Same on-screen position.
+		x = 46
+		y = 6
+		#relative_position_id = uk_commonwealth_focus
 		cost = 1
 
 		available_if_capitulated = yes

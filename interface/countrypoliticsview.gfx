@@ -1,3 +1,4 @@
+# TomoIHE 1.19 port: rebased on vanilla 1.19.3 (adds 1.19 autonomy icons, GFX_idea_entry_bg_4, GFX_pol_view_bg_no_dlc); re-added mod-only GFX_idea_slot_*_manufacturers sprites.
 spriteTypes = {
 	
 	#Government in Exile
@@ -178,6 +179,36 @@ spriteTypes = {
 		name = "GFX_autonomy_aat_defense_council_member_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_colony_icon.dds"
 	}
+
+	spriteType = {
+		name = "GFX_autonomy_austro_hungarian_subject_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_austro_hungarian_vassal_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_volkskommissariat_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_volkskommissariat_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_eu_member_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_eu_member_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_sea_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_warlord_subject_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_sea_integrated_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_integrated_warlord_subject_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_associated_dominion_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_associated_dominion_icon.dds"
+	}
 	
 	#-------------
 
@@ -284,19 +315,9 @@ spriteTypes = {
 		name = "GFX_idea_slot_materiel_manufacturer"
 		textureFile = "gfx/interface/idea_slot_materiel_manufacturer.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_idea_slot_materiel_manufacturers"
-		textureFile = "gfx/interface/idea_slot_materiel_manufacturer.dds"
-	}
 
 	spriteType = {
 		name = "GFX_idea_slot_naval_manufacturer"
-		textureFile = "gfx/interface/idea_slot_naval_manufacturer.dds"
-	}	
-
-    spriteType = {
-		name = "GFX_idea_slot_naval_manufacturers"
 		textureFile = "gfx/interface/idea_slot_naval_manufacturer.dds"
 	}
 
@@ -304,17 +325,28 @@ spriteTypes = {
 		name = "GFX_idea_slot_aircraft_manufacturer"
 		textureFile = "gfx/interface/idea_slot_aircraft_manufacturer.dds"
 	}
-	
+
+	spriteType = {
+		name = "GFX_idea_slot_tank_manufacturer"
+		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
+	}
+
+	# TomoIHE: sprites for the mod's plural idea slots (common/idea_tags/00_idea.txt: *_manufacturers)
+	spriteType = {
+		name = "GFX_idea_slot_materiel_manufacturers"
+		textureFile = "gfx/interface/idea_slot_materiel_manufacturer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_naval_manufacturers"
+		textureFile = "gfx/interface/idea_slot_naval_manufacturer.dds"
+	}
+
 	spriteType = {
 		name = "GFX_idea_slot_aircraft_manufacturers"
 		textureFile = "gfx/interface/idea_slot_aircraft_manufacturer.dds"
 	}
 
-	spriteType = {
-		name = "GFX_idea_slot_tank_manufacturer"
-		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
-	}	
-	
 	spriteType = {
 		name = "GFX_idea_slot_tank_manufacturers"
 		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
@@ -447,6 +479,11 @@ spriteTypes = {
 		name = "GFX_idea_entry_bg_3"
 		texturefile = "gfx/interface/idea_entry_bg_3.dds"
 		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_idea_entry_bg_4"
+		texturefile = "gfx/interface/idea_entry_bg_4.dds"
 	}
 
 	spriteType = {
@@ -588,6 +625,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pol_view_bg"
 		textureFile = "gfx//interface//pol_view_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_view_bg_no_dlc"
+		textureFile = "gfx//interface//pol_view_bg_no_dlc.dds"
 	}
 
 	spriteType = {

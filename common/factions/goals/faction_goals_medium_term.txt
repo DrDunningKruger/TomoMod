@@ -1,0 +1,45 @@
+#category = short_term medium_term or long_term
+# ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
+
+faction_goal_unlock_research2 = {
+	name = faction_goal_unlock_research_name2
+	description = faction_goal_unlock_research_desc2
+	category = medium_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {	
+		always = no
+	}
+	visible = {
+		FROM = { has_faction_research_unlocked = no }
+	}
+
+	completed = {
+        date > 1945.1.1
+	}
+	complete_effect = {
+		set_faction_research_unlocked = yes
+		add_faction_initiative = 1
+	}
+
+}
+
+faction_goal_unlock_military2 = {
+	name = faction_goal_unlock_military_name2
+	description = faction_goal_unlock_military_desc2
+	category = medium_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {	
+		always = no
+	}
+	visible = {
+		FROM = { has_faction_military_unlocked = no }
+	}
+
+	completed = {
+        date > 1945.1.1
+	}
+	complete_effect = {
+		set_faction_military_unlocked = yes
+		add_faction_initiative = 1
+	}
+}

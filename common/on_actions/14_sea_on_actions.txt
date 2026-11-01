@@ -1,0 +1,49 @@
+# TomoIHE 1.19 port: partially disabled - the vanilla file references vanilla content removed by TomoIHE's replace_path
+# (SEA/PHI/JAP/CHI/PRC focuses, events, scripted effects and tags). Only the parts that are generic or valid for
+# TomoIHE are kept:
+#  - guardians_of_peace_been_at_war_flag / peace_winner_flag: read by vanilla faction goals (common/factions/goals)
+#  - RAJ_UK cosmetic tag cleanup after a peace conference (TomoIHE uses RAJ_UK)
+on_actions = {
+
+	on_war = {
+		effect = {
+			set_country_flag = guardians_of_peace_been_at_war_flag
+		}
+	}
+
+	# ROOT is winner, FROM is loser (called for all winners against all losers)
+	on_before_peace_conference_start = {
+		effect = {
+			IF = {
+				limit = {
+					ROOT = { NOT = { has_country_flag = peace_winner_flag } }
+				}
+				set_country_flag = peace_winner_flag
+			}
+		}
+	}
+
+	# ROOT is the winner, FROM is the loser
+	on_peaceconference_ended = {
+		effect = {
+			FROM = {
+				IF = {
+					limit = {
+						original_tag = RAJ
+						has_cosmetic_tag = RAJ_UK
+						OR = {
+							is_subject = no
+							any_country = {
+								has_subject = PREV
+								NOT = {
+									original_tag = ENG
+								}
+							}
+						}
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+		}
+	}
+}

@@ -32,6 +32,7 @@ if = {
 	}
 }
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -77,7 +78,6 @@ set_technology = {
     easy_maintenance = 1
 	tank_improved_guns = 1	
 	radio_tech_1 = 1
-    superior_firepower = 1	
 }
 if = {
 	limit = {
@@ -226,7 +226,6 @@ recruit_character = JAP_genki_abe
 recruit_character = JAP_gotaro_ogawa
 recruit_character = JAP_harukichi_shimoi
 recruit_character = JAP_heisuke_yanagawa
-recruit_character = JAP_hisaichi_terauchi
 recruit_character = JAP_hitoshi_yamakawa
 recruit_character = JAP_ichiro_hatoyama
 recruit_character = JAP_jinzaburo_masaki
@@ -258,7 +257,6 @@ recruit_character = JAP_senjuro_hayashi
 recruit_character = JAP_shigenori_togo
 recruit_character = JAP_shinji_sogo
 recruit_character = JAP_shumei_okawa
-recruit_character = JAP_shunroku_hata
 recruit_character = JAP_tadaichi_wakamatsu
 recruit_character = JAP_takahashi_korekiyo
 recruit_character = JAP_tokugawa_iesato

@@ -195,6 +195,7 @@ sub_units = {
 		group = infantry
 		
 		categories = {
+			category_mountaineers
 			category_front_line
 			category_light_infantry
 			category_all_infantry
@@ -250,6 +251,7 @@ sub_units = {
 		group = infantry
 		
 		categories = {
+			category_paratroopers
 			category_front_line
 			category_light_infantry
 			category_all_infantry
@@ -300,6 +302,8 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_mobile_and_mobile_combat_sup
+			category_vehicle_infantry
 			category_front_line
 			category_all_infantry
 			category_army
@@ -374,6 +378,8 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_mobile_and_mobile_combat_sup
+			category_vehicle_infantry
 			category_front_line
 			category_all_infantry
 			category_army

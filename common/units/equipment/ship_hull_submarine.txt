@@ -67,7 +67,6 @@ equipments = {
 		sub_visibility = 20
 		naval_speed = 14
 		reliability = 0.60
-		naval_supremacy_factor = 0.0
 		naval_range = 1500
 		
 		max_strength = 100
@@ -83,6 +82,7 @@ equipments = {
 		
 		manpower = 200
 		
+		naval_dominance_factor = 1
 	}
 
 	ship_hull_submarine_1 = {
@@ -92,6 +92,7 @@ equipments = {
 		priority = 2500
 		
 		module_slots = inherit
+		naval_dominance_factor = 1
 	}
 
 	ship_hull_submarine_2 = {
@@ -163,6 +164,7 @@ equipments = {
 		type = { 
 			submarine
 		}
+		naval_dominance_factor = 1
 	}
 
 	ship_hull_submarine_3 = {
@@ -250,6 +252,7 @@ equipments = {
 		type = { 
 			submarine
 		}	
+		naval_dominance_factor = 1
 	}
 	ship_hull_submarine_4 = {
 		year = 1944
@@ -332,6 +335,7 @@ equipments = {
 		type = { 
 			submarine
 		}	
+		naval_dominance_factor = 1
 	}
 
 	ship_hull_cruiser_submarine = {
@@ -431,6 +435,7 @@ equipments = {
 		type = { 
 			submarine
 		}	
+		naval_dominance_factor = 1
 	}
 	
 	ship_hull_midget_submarine = {
@@ -471,6 +476,7 @@ equipments = {
 		resources = {
 			steel = 1
 		}
+		naval_dominance_factor = 1
 	}	
 	
 #	submarine_1 = {

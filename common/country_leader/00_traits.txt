@@ -3884,6 +3884,9 @@ leader_traits = {
 	###
 
 	council_of_theorists = {
+		custom_modifier_tooltip = theorist_mastery_tt
+		custom_modifier_tooltip = air_theorist_mastery_tt
+		custom_modifier_tooltip = navy_theorist_mastery_tt
 		sprite = 14
 		experience_gain_army = 0.03
 		experience_gain_air = 0.03
@@ -3898,6 +3901,7 @@ leader_traits = {
 	}
 	
 	military_theorist = {
+		custom_modifier_tooltip = theorist_mastery_tt
 		sprite = 14	
 		land_doctrine_cost_factor = -0.1
         experience_gain_army = 0.1
@@ -3908,6 +3912,7 @@ leader_traits = {
 	}
 	
 	mobile_warfare_expert = { 
+		custom_modifier_tooltip = theorist_mastery_tt
 		sprite = 14
 		cat_mobile_warfare_cost_factor = -0.15
         experience_gain_army= 0.1	
@@ -3918,6 +3923,7 @@ leader_traits = {
 	}
 	
 	superior_firepower_expert = {
+		custom_modifier_tooltip = theorist_mastery_tt
 		sprite = 14
 		cat_superior_firepower_cost_factor = -0.15
         experience_gain_army = 0.1		
@@ -3928,6 +3934,7 @@ leader_traits = {
 	}
 	
 	grand_battle_plan_expert = {
+		custom_modifier_tooltip = theorist_mastery_tt
 		sprite = 14
 		cat_grand_battle_plan_cost_factor = -0.15
         experience_gain_army = 0.1	
@@ -3948,6 +3955,7 @@ leader_traits = {
 	}
 	
 	air_warfare_theorist = {
+		custom_modifier_tooltip = air_theorist_mastery_tt
 		sprite = 14
 		air_doctrine_cost_factor = -0.1
         experience_gain_air = 0.15
@@ -3958,6 +3966,7 @@ leader_traits = {
 	}
 	
 	dive_bomber = {
+		custom_modifier_tooltip = air_theorist_mastery_tt
 		sprite = 14
 		equipment_bonus = {
 			small_plane_cas_airframe = {
@@ -3974,6 +3983,7 @@ leader_traits = {
 	}
 	
 	victory_through_airpower = {
+		custom_modifier_tooltip = air_theorist_mastery_tt
 		sprite = 14
 		cat_strategic_destruction_cost_factor = -0.15
         experience_gain_air = 0.2		
@@ -3994,6 +4004,7 @@ leader_traits = {
 	}
 	
 	assault_avaition = {
+		custom_modifier_tooltip = air_theorist_mastery_tt
 		sprite = 14
 		cat_operational_integrity_cost_factor = -0.15
         experience_gain_air = 0.2		
@@ -4004,6 +4015,7 @@ leader_traits = {
 	}
 	
 	naval_theorist = {
+		custom_modifier_tooltip = navy_theorist_mastery_tt
 		sprite = 14
 		naval_doctrine_cost_factor = -0.1
         experience_gain_navy = 0.1		
@@ -4014,6 +4026,7 @@ leader_traits = {
 	}
 	
 	naval_aviation_pioneer = {
+		custom_modifier_tooltip = navy_theorist_mastery_tt
 		sprite = 14
 		cat_base_strike_cost_factor = -0.15
         experience_gain_navy = 0.05
@@ -4025,6 +4038,7 @@ leader_traits = {
 	}
 	
 	grand_fleet_proponent = {
+		custom_modifier_tooltip = navy_theorist_mastery_tt
 		sprite = 14
 		cat_fleet_in_being_cost_factor = -0.15
 		experience_gain_navy = 0.12
@@ -4035,6 +4049,7 @@ leader_traits = {
 	}
 	
 	submarine_specialist = {
+		custom_modifier_tooltip = navy_theorist_mastery_tt
 		sprite = 14
 		cat_trade_interdiction_cost_factor = -0.15
 		experience_gain_navy = 0.1		
@@ -4045,6 +4060,7 @@ leader_traits = {
 	}
 	
 	blitzkrieg_theorist = {
+		custom_modifier_tooltip = theorist_mastery_tt
 		sprite = 14
 		
 		equipment_bonus = {
@@ -5255,6 +5271,7 @@ leader_traits = {
 	# 1 is worst, 3 is best 
 	
 	army_chief_defensive_1 = { # DEFENSIVE CHIEF
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 9
 		army_defence_factor = 0.05
         max_dig_in = 0.5		
@@ -5268,6 +5285,7 @@ leader_traits = {
 	}
 	
 	army_chief_defensive_2 = { # DEFENSIVE CHIEF
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 9
 		army_defence_factor = 0.1	
 		max_dig_in = 1.0		
@@ -5281,6 +5299,7 @@ leader_traits = {
 	}
 	
 	army_chief_defensive_3 = { # DEFENSIVE CHIEF
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 9
 		army_defence_factor = 0.15	
 		max_dig_in = 1.5		
@@ -5295,6 +5314,7 @@ leader_traits = {
 	
 	
 	army_chief_offensive_1 = { # +5 Offensive efficiency
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 7
 		army_attack_factor = 0.05		
 		experience_gain_army = 0.06
@@ -5307,6 +5327,7 @@ leader_traits = {
 	}
 	
 	SPR_franco_army_chief_offensive = { # Franco: +10% attack, +0.10 army xp
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 7
 		army_attack_factor = 0.1
 		experience_gain_army = 0.1
@@ -5317,6 +5338,7 @@ leader_traits = {
 	}
 	
 	army_chief_offensive_2 = { # +10 Offensive efficiency
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 7
 		army_attack_factor = 0.1		
 		experience_gain_army = 0.09
@@ -5329,6 +5351,7 @@ leader_traits = {
 	}
 	
 	army_chief_offensive_3 = { # +15 Offensive efficiency
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 7
 		army_attack_factor = 0.15		
 		experience_gain_army = 0.12
@@ -5341,6 +5364,7 @@ leader_traits = {
 	}
 	
 	army_chief_old_guard = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5 # Should not need sprite, should mostly be secondary
 		experience_gain_army_factor = -0.1			
 		
@@ -5350,6 +5374,7 @@ leader_traits = {
 	}
 	
 	army_chief_drill_1 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 			
 		experience_gain_army = 0.06
@@ -5362,6 +5387,7 @@ leader_traits = {
 	}
 	
 	army_chief_drill_2 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.09
@@ -5374,6 +5400,7 @@ leader_traits = {
 	}
 	
 	army_chief_drill_3 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 			
 		experience_gain_army = 0.12
@@ -5387,6 +5414,7 @@ leader_traits = {
 	
 	
 	army_chief_reform_1 = {
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5	
 		training_time_army_factor = -0.05
 		army_org_factor = 0.01
@@ -5400,6 +5428,7 @@ leader_traits = {
 	}
 	
 	army_chief_reform_2 = {
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5		
 		training_time_army_factor = -0.1
 		army_org_factor = 0.03
@@ -5413,6 +5442,7 @@ leader_traits = {
 	}
 	
 	army_chief_reform_3 = { 
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5	
 		training_time_army_factor = -0.15
 		army_org_factor = 0.5
@@ -5427,6 +5457,7 @@ leader_traits = {
 	
 	
 	army_chief_organizational_1 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 			
 		experience_gain_army = 0.06
@@ -5439,6 +5470,7 @@ leader_traits = {
 	}
 	
 	army_chief_organizational_2 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 				
 		experience_gain_army = 0.09
@@ -5451,6 +5483,7 @@ leader_traits = {
 	}
 	
 	army_chief_organizational_3 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 			
 		experience_gain_army = 0.12
@@ -5463,6 +5496,7 @@ leader_traits = {
 	}
 	
 	army_chief_planning_1 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 	
 		experience_gain_army = 0.06
@@ -5475,6 +5509,7 @@ leader_traits = {
 	}
 	
 	army_chief_planning_2 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.09
@@ -5487,6 +5522,7 @@ leader_traits = {
 	}
 	
 	army_chief_planning_3 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.12
@@ -5499,6 +5535,7 @@ leader_traits = {
 	}
 	
 	army_chief_morale_1 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.06
@@ -5511,6 +5548,7 @@ leader_traits = {
 	}
 	
 	army_chief_morale_2 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 	
 		experience_gain_army = 0.09
@@ -5523,6 +5561,7 @@ leader_traits = {
 	}
 	
 	army_chief_morale_3 = { # Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 	
 		experience_gain_army = 0.12
@@ -5536,6 +5575,7 @@ leader_traits = {
 	
 	
 	army_chief_maneuver_1 = { # Ground units move 5% faster
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		army_speed_factor = 0.05	
         planning_speed = 0.05
@@ -5550,6 +5590,7 @@ leader_traits = {
 	}
 	
 	army_chief_maneuver_2 = { # Ground units move 10% faster
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		army_speed_factor = 0.1	
         planning_speed = 0.1	
@@ -5564,6 +5605,7 @@ leader_traits = {
 	}
 	
 	army_chief_maneuver_3 = { # Ground units move 15% faster
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		army_speed_factor = 0.15
         planning_speed = 0.15	
@@ -5578,6 +5620,7 @@ leader_traits = {
 	}
 
 	army_chief_entrenchment_1 = {#Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.06
@@ -5590,6 +5633,7 @@ leader_traits = {
 	}
 
 	army_chief_entrenchment_2 = {#Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 	
 		experience_gain_army = 0.09
@@ -5602,6 +5646,7 @@ leader_traits = {
 	}
 
 	army_chief_entrenchment_3 = { #Do not use
+		custom_modifier_tooltip = army_chief_mastery_tt
 		sprite = 5
 		
 		experience_gain_army = 0.12
@@ -6014,6 +6059,7 @@ leader_traits = {
 	###
 	
 	air_chief_reform = {  # Rate at which air experience is gained increases by 10%
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1
 		experience_gain_air = 0.4
 		
@@ -6025,6 +6071,7 @@ leader_traits = {
 	}
 	
 	air_chief_rely_on_others = {
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1
 		experience_gain_air_factor = -0.5
 		political_power_factor = 0.03
@@ -6039,6 +6086,7 @@ leader_traits = {
 	###
 
 	air_chief_paratrooper = { # Paratrooper drop efficiency increased by 12%
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1
 		paradrop_organization_factor = 0.05		
 		
@@ -6048,6 +6096,7 @@ leader_traits = {
 	}
 
 	air_chief_pilot_ace_trainer = {
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1
         #air_ace_generation_chance_factor = 0.10	
         air_mission_xp_gain_factor = 0.50	
@@ -6063,6 +6112,7 @@ leader_traits = {
 	}	
 	
 	air_chief_air_logistics = {
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1	
 
         air_weather_penalty = -0.2			
@@ -6088,6 +6138,7 @@ leader_traits = {
 	}	
 	
 	air_chief_fighter_bomber = { # 
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 1
 		
 		air_superiority_efficiency = 0.03	
@@ -6114,6 +6165,7 @@ leader_traits = {
 	}
 
 	air_chief_close_coordination = {  # Air superiority impact on land units improved by 10%
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 2
 		
 		army_bonus_air_superiority_factor = 0.1
@@ -6127,6 +6179,7 @@ leader_traits = {
 	}
 	
 	air_chief_naval_strike = { # Naval Strike mission efficiency increased by 12%
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 2
 		
 		naval_strike_attack_factor = 0.05
@@ -6141,6 +6194,7 @@ leader_traits = {
 	}	
 	
 	air_chief_night_bomber = { 
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 2
 		
 		air_night_penalty = -0.2	
@@ -6153,6 +6207,7 @@ leader_traits = {
 	}	
 	
 	air_chief_precision_bomber = { 
+		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 2	
 		
         air_ace_generation_chance_factor = 0.05	
@@ -6167,6 +6222,7 @@ leader_traits = {
 	######
 	
 	navy_chief_naval_aviation_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 1
 		navy_carrier_air_attack_factor = 0.03
 		navy_carrier_air_targetting_factor = 0.03
@@ -6181,6 +6237,7 @@ leader_traits = {
 	}
 	
 	navy_chief_naval_aviation_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 1
 		navy_carrier_air_attack_factor = 0.06
 		navy_carrier_air_targetting_factor = 0.07
@@ -6195,6 +6252,7 @@ leader_traits = {
 	}
 	
 	navy_chief_naval_aviation_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 1
 		navy_carrier_air_attack_factor = 0.1
 		navy_carrier_air_targetting_factor = 0.12
@@ -6210,6 +6268,7 @@ leader_traits = {
 	
 	
 	navy_chief_decisive_battle_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		navy_capital_ship_attack_factor = 0.05
 		navy_capital_ship_defence_factor = 0.05
@@ -6225,6 +6284,7 @@ leader_traits = {
 	}
 	
 	navy_chief_decisive_battle_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		navy_capital_ship_attack_factor = 0.1
 		navy_capital_ship_defence_factor = 0.1
@@ -6240,6 +6300,7 @@ leader_traits = {
 	}
 	
 	navy_chief_decisive_battle_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		navy_capital_ship_attack_factor = 0.15
 		navy_capital_ship_defence_factor = 0.15
@@ -6256,6 +6317,7 @@ leader_traits = {
 	
 	
 	navy_chief_commerce_raiding_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.1
 		experience_gain_navy = 0.06
@@ -6268,6 +6330,7 @@ leader_traits = {
 	}
 	
 	navy_chief_commerce_raiding_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.15
 		experience_gain_navy = 0.09
@@ -6280,6 +6343,7 @@ leader_traits = {
 	}
 	
 	navy_chief_commerce_raiding_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.2
 		experience_gain_navy = 0.12
@@ -6292,6 +6356,7 @@ leader_traits = {
 	}
 	
 	navy_chief_old_guard = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		experience_gain_navy_factor = -0.1
 		
@@ -6301,6 +6366,7 @@ leader_traits = {
 	}
 	
 	navy_chief_reform_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		experience_gain_navy = 0.12
 		
@@ -6312,6 +6378,7 @@ leader_traits = {
 	}
 	
 	navy_chief_reform_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		experience_gain_navy = 0.16
 		
@@ -6323,6 +6390,7 @@ leader_traits = {
 	}
 	
 	navy_chief_reform_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		experience_gain_navy = 0.2
 		
@@ -6334,6 +6402,7 @@ leader_traits = {
 	}
 	
 	navy_chief_maneuver_1 = { # Do not use
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		naval_speed_factor = 0.05
 		experience_gain_navy = 0.06
@@ -6346,6 +6415,7 @@ leader_traits = {
 	}
 	
 	navy_chief_maneuver_2 = { # Do not use
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		naval_speed_factor = 0.1
 		experience_gain_navy = 0.09
@@ -6358,6 +6428,7 @@ leader_traits = {
 	}
 	
 	navy_chief_maneuver_3 = { # Do not use
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 3
 		naval_speed_factor = 0.15
 		experience_gain_navy = 0.12
@@ -6371,6 +6442,7 @@ leader_traits = {
 	
 	
 	navy_anti_submarine_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 4
 		navy_submarine_detection_factor = 0.1
 		naval_speed_factor = 0.05
@@ -6384,6 +6456,7 @@ leader_traits = {
 	}
 	
 	navy_anti_submarine_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 4
 		navy_submarine_detection_factor = 0.15
 		naval_speed_factor = 0.1
@@ -6397,6 +6470,7 @@ leader_traits = {
 	}
 	
 	navy_anti_submarine_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 4
 		navy_submarine_detection_factor = 0.2
 		naval_speed_factor = 0.15
@@ -6448,6 +6522,7 @@ leader_traits = {
 	
 	
 	navy_fleet_logistics_1 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 6
 		navy_max_range_factor = 0.05
 		experience_gain_navy = 0.06
@@ -6460,6 +6535,7 @@ leader_traits = {
 	}
 	
 	navy_fleet_logistics_2 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 6
 		navy_max_range_factor = 0.10
 		experience_gain_navy = 0.09
@@ -6472,6 +6548,7 @@ leader_traits = {
 	}
 	
 	navy_fleet_logistics_3 = {
+		custom_modifier_tooltip = navy_chief_mastery_tt
 		sprite = 6
 		navy_max_range_factor = 0.15
 		experience_gain_navy = 0.12

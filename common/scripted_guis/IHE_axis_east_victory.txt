@@ -4,6 +4,7 @@ scripted_gui = {
 		window_name = "IHE_axis_east_victory_window"
 
 		visible = {
+			date > 1941.5.1
 			NOT = { has_global_flag = allies_east_victory }
 			NOT = { has_global_flag = victory_in_europe }
 		}

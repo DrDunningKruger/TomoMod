@@ -825,18 +825,22 @@ foreign_politics = {
 		complete_effect = {
 			if = {
 				limit = { tag = GER }
-				air_experience = 300
-				army_experience = 500
+				air_experience = 100
+				army_experience = 100
 			}
 			if = {
 				limit = { tag = SOV }
-				air_experience = 300
-				army_experience = 500
+				air_experience = 100
+				army_experience = 100
 			}
 			if = {
 				limit = { tag = ITA }
-				air_experience = 200
-				army_experience = 250
+				air_experience = 100
+				army_experience = 50
+			}
+			if = {
+				limit = { tag = ENG }
+				air_experience = 100
 			}
 			add_timed_idea  = {
 				idea = spain_attache

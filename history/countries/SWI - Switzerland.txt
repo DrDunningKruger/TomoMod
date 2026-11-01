@@ -4,6 +4,7 @@ oob = "SWI_1936"
 
 set_research_slots = 1
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1

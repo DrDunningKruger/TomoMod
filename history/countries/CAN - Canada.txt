@@ -16,6 +16,7 @@ set_stability = 0.8
 set_war_support = 0.2
 
 # Starting tech
+
 set_technology = {
     cap_everyone = 1
 	electronic_mechanical_engineering = 1
@@ -26,8 +27,6 @@ set_technology = {
 	tech_engineers = 1
 	tech_recon = 1
 	gw_artillery = 1
-	mobile_warfare = 1
-	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	basic_train = 1		

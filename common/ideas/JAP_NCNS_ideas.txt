@@ -1966,7 +1966,6 @@ ideas = {
 			
 			modifier = {
 				nuclear_production_factor = 0.15
-				specialization_nuclear_speed_factor = 0.3
 				army_artillery_attack_factor = 0.1
 			}
 		}

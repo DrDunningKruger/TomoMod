@@ -234,7 +234,7 @@ BEL_research_infantry_weapons = { # namestiti da posle inf 2 researchuje defanzi
 		factor = 100
 	}	
 }
-BEL_research_infantry_weapons = {
+BEL_research_infantry_weapons_late = {
 
 	allowed = {
 		original_tag = BEL

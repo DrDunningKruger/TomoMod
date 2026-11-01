@@ -202,6 +202,7 @@ if = { #DLC
 	}
 }
 
+
 set_technology = { #VANILLA & DLC
     cap_everyone = 1
 	infantry_weapons = 1
@@ -223,7 +224,6 @@ set_technology = { #VANILLA & DLC
 	iw_large_airframe = 1
 	early_bombs = 1
 	aa_lmg = 1	
-	mobile_warfare = 1	
 	armor_tech_1 = 1	
 	basic_medium_tank_chassis = 1
 	basic_heavy_tank_chassis = 1	

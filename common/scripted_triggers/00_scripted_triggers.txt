@@ -246,43 +246,6 @@ is_controlled_by_ROOT_or_ally = {
 	}
 }
 
-ai_air_doctrine_tier_1_trigger = {
-	OR = {
-		has_tech = home_defence
-		has_tech = dive_bombing
-		has_tech = flying_fortress
-	}
-}
-
-ai_air_doctrine_tier_2_trigger = {
-	OR = {
-		has_tech = day_bombing
-		has_tech = night_bombing
-		has_tech = direct_ground_support
-		has_tech = fighter_veteran_initiative
-	}
-}
-ai_air_doctrine_tier_3_trigger = {
-	OR = {
-		has_tech = high_level_bombing
-		has_tech = combat_unit_destruction
-		has_tech = multialtitude_flying
-	}
-}
-
-ai_land_doctrine_tier_1_trigger = {
-	OR = {
-		has_tech = elastic_defence
-		has_tech = mobile_defence
-	}
-}
-
-ai_land_doctrine_tier_2_trigger = {
-	OR = {
-		has_tech = kampfgruppe
-		has_tech = mechanised_offensive
-	}
-}
 SOV_save_pp_for_manpower_trouble = {
 	has_manpower < 1000000
 	has_political_power < 200

@@ -37,9 +37,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				experience_gain_army = 0.1
+				experience_gain_army = 0.2
 				war_support_factor = 0.1
-				experience_gain_air = 0.4
+				experience_gain_air = 0.2
 			}
 		}
 	

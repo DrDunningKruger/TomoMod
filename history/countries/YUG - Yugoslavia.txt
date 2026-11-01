@@ -28,6 +28,7 @@ add_ideas = {
 	extra_trade_minor
 }
 
+
 set_technology = {
     cap_everyone = 1
 	armored_car1 = 1
@@ -39,7 +40,6 @@ set_technology = {
 	interwar_antitank = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	superior_firepower = 1
 	fuel_silos = 1
 	basic_train = 1
     new_tank_guns = 1

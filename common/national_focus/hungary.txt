@@ -279,9 +279,11 @@ focus_tree = {
           has_full_control_of_state = 76
 		  has_full_control_of_state = 73
 		}
-		x = 0
-		y = 1
-		relative_position_id = HUN_elite_cavalry_division
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; HUN_elite_cavalry_division is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to HUN_elite_cavalry_division). Same on-screen position.
+		x = 19
+		y = 4
+		#relative_position_id = HUN_elite_cavalry_division
 		cost = 5
 		ai_will_do = {
 			factor = 10

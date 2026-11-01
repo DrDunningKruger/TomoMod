@@ -711,139 +711,8 @@ characters = {
 
 	}
 
-	JAP_tomoyuki_yamashita = {
-		name = JAP_tomoyuki_yamashita
 
-		portraits = {
-			army = {
-				small = GFX_idea_tomoyuki_yamashita
-				large = GFX_portrait_JAP_tomoyuki_yamashita
-			}
-		}
 
-		advisor = {
-			cost = 150
-			slot = theorist
-			idea_token = tomoyuki_yamashita
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			ai_will_do = {
-				base = 2.5
-			}
-			traits = {
-				grand_battle_plan_expert
-			}
-			on_add = {
-				JAP_small_army_faction_gain = yes
-			}
-			on_remove = {
-				JAP_small_army_faction_loss = yes
-			}
-		}
-
-		corps_commander = {
-			traits = { brilliant_strategist politically_connected trickster trait_engineer }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 5
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id = 0
-		}
-
-	}
-
-	JAP_hisaichi_terauchi = {
-		name = JAP_hisaichi_terauchi
-
-		portraits = {
-			army = {
-				small = GFX_idea_hisaichi_terauchi
-				large = GFX_portrait_JAP_hisaichi_terauchi
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = hisaichi_terauchi
-			ledger = army
-			allowed = {
-				OR = {
-					original_tag = JAP
-					original_tag = MAN
-				}
-			}
-			ai_will_do = {
-				base = 1
-			}
-			traits = {
-				mobile_warfare_expert	# was military_theorist
-			}
-			on_add = {
-				JAP_small_army_faction_gain = yes
-			}
-			on_remove = {
-				JAP_small_army_faction_loss = yes
-			}
-		}
-		
-		# Will be promoted to Field Marshal (Gensui) through focus
-		corps_commander = {
-			traits = { politically_connected JAP_samurai_lineage armor_officer } # offensive_doctrine
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = 0
-		}
-
-	}
-
-	JAP_shunroku_hata = {
-		name = JAP_shunroku_hata
-
-		portraits = {
-			army = {
-				small = GFX_idea_shunroku_hata
-				large = GFX_portrait_JAP_shunroku_hata
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = shunroku_hata
-			ledger = army
-			allowed = {
-				OR = {
-					original_tag = JAP
-					original_tag = MAN
-				}
-			}
-			traits = {
-				army_concealment_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1
-			}
-		}
-		
-		# Will be promoted to Field Marshal (Gensui) through focus
-		corps_commander = {
-			traits = { JAP_samurai_lineage brilliant_strategist } # offensive_doctrine
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 4
-			legacy_id = 0
-		}
-
-	}
 
 
 	JAP_kanji_ishiwara = {
@@ -869,51 +738,6 @@ characters = {
 	}
 
 
-	JAP_yasuji_okamura = {
-		name = JAP_yasuji_okamura
-
-		portraits = {
-			army = {
-				small = GFX_idea_yasuji_okamura
-				large = GFX_portrait_JAP_yasuji_okamura
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = yasuji_okamura
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 5
-				modifier = {
-					factor = 1.500
-					NOT = {
-						JAP = {
-							has_war_with = USA
-						}
-					}
-				}
-			}
-		}
-		
-		corps_commander = {
-			traits = { trait_reckless }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
-
-	}
 
 	JAP_toshizo_nishio = {
 		name = JAP_toshizo_nishio
@@ -1595,12 +1419,6 @@ characters = {
 			legacy_id = -1
 		}
 
-		scientist = {
-			traits = { scientist_trait_bright }
-			skills = {
-				specialization_naval = 2
-			}
-		}
 
 	}
 
@@ -1709,12 +1527,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-			traits = { scientist_trait_armored_specialist } 
-			skills = {
-				specialization_land = 1
-			}
-		}
 
 		corps_commander = {
 			traits = { trait_engineer armor_officer }
@@ -2311,12 +2123,6 @@ characters = {
 			traits = {
 				JAP_minister_of_finance
 			}
-			on_add = {
-				set_country_flag = JAP_okinori_kaya_hired
-			}
-			on_remove = {
-				clr_country_flag = JAP_okinori_kaya_hired
-			}
 			ai_will_do = {
 				base = 1.5
 			}
@@ -2878,12 +2684,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-			traits = { scientist_trait_artillery_specialist } # Iwakuro is the scientist_trait_armored_specialist guy
-			skills = {
-				specialization_land = 2
-			}
-		}
 
 	}
 
@@ -2896,12 +2696,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-			traits = { scientist_trait_surface_ship_specialist }
-			skills = {
-				specialization_naval = 2
-			}
-		}
 
 	}
 
@@ -2914,20 +2708,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-
-			traits = { scientist_trait_aircraft_specialist }
-
-			skills = {
-				specialization_air = 3
-			}
-
-			visible = {
-				owner = {
-					always = no
-				}
-			}
-		}
 
 	}
 
@@ -2940,12 +2720,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-			traits = { scientist_trait_nuclear_power_expert }
-			skills = {
-				specialization_nuclear = 2
-			}
-		}
 
 	}
 
@@ -2958,12 +2732,6 @@ characters = {
 			}
 		}
 
-		scientist = {
-			traits = { scientist_trait_electronics_specialist }
-			skills = {
-				specialization_air = 2
-			}
-		}
 
 	}
 

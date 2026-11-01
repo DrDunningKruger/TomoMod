@@ -27,4 +27,25 @@ sub_unit_categories = {
 	category_support_artillery
 	category_bus
 	category_marines
+	# TomoIHE port: 1.19 categories referenced by vanilla Grand Doctrines (empty here - no mod unit is in them). Missing ones are a suspected doctrine-screen crash.
+	category_amphibious_tanks
+	category_carrier_cas
+	category_carrier_fighter
+	category_carrier_nav_bomber
+	category_cavalry
+	category_helicopter_support_companies
+	category_marines_and_amphibious
+	category_maritime_patrol_bomber
+	category_mobile_and_mobile_combat_sup
+	category_mountaineers
+	category_paratroopers
+	category_rangers
+	category_regimental_support_artillery
+	category_regimental_support_battalions
+	category_self_propelled_anti_air
+	category_self_propelled_anti_air_regimental_support
+	category_self_propelled_artillery
+	category_tank_destroyer_regimental_support
+	category_tank_destroyers
+	category_vehicle_infantry
 }

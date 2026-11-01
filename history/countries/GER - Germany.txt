@@ -5,6 +5,7 @@ oob = "GER_1936"
 set_fuel_ratio = 1.0
 
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -21,8 +22,6 @@ set_technology = {
 	interwar_antitank = 1
 	radio = 1
 	radio_detection = 1
-	mobile_warfare = 1
-	trade_interdiction = 1
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1

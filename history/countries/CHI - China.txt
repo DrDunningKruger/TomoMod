@@ -15,6 +15,7 @@ set_stability = 0.2
 set_war_support = 0.5
 set_fuel_ratio = 1.0
 # Starting tech
+
 set_technology = {
     cap_everyone = 1
 	infantry_weapons = 1

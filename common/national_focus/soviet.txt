@@ -254,7 +254,7 @@ focus_tree = {
 			}
 			# Stalingrad - Astrakhan
 			build_railway = {
-				path = { 3529 11474 520 6516 6486 9455 11429 6620 9753 }
+				path = { 3529 11005 11474 520 6516 6486 9455 11429 6620 9753 }
 			}
 			# Tbilisi - Yerevan
 			build_railway = {
@@ -743,7 +743,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_tech = rubber_processing
 			SOV_third_five_year_plan_available = yes
 			has_full_control_of_state = 219 #MOSCOW
 			OR = {
@@ -1560,9 +1559,11 @@ focus_tree = {
 		id = SOV_soviet_atomic_bomb_project
 		icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_closed_city_network }
-		x = 0
-		y = 1
-		relative_position_id = SOV_closed_city_network
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_closed_city_network is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to SOV_closed_city_network). Same on-screen position.
+		x = 6
+		y = 6
+		#relative_position_id = SOV_closed_city_network
 		cost = 10
 
 		available = {
@@ -1615,9 +1616,11 @@ focus_tree = {
 		id = SOV_the_road_of_life
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = SOV_positive_heroism_ihe }
-		x = 0
-		y = 2
-		relative_position_id = SOV_positive_heroism_ihe
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_positive_heroism_ihe is defined later,
+		# so the position is converted to absolute (was x = 0 y = 2 relative to SOV_positive_heroism_ihe). Same on-screen position.
+		x = 21
+		y = 4
+		#relative_position_id = SOV_positive_heroism_ihe
 		cost = 5
 
 		available = {
@@ -1916,9 +1919,11 @@ focus_tree = {
 		id = SOV_the_defense_of_moscow
 		icon = GFX_SOV_the_defense_of_moscow_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_positive_heroism_ihe focus = SOV_improve_stalin_line focus = SOV_the_molotov_line }
-		x = 1
-		y = 1
-		relative_position_id = SOV_positive_heroism_ihe
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_positive_heroism_ihe is defined later,
+		# so the position is converted to absolute (was x = 1 y = 1 relative to SOV_positive_heroism_ihe). Same on-screen position.
+		x = 22
+		y = 3
+		#relative_position_id = SOV_positive_heroism_ihe
 		cost = 5
 
 		available = {
@@ -2050,9 +2055,11 @@ focus_tree = {
 		id = SOV_impregnable_forts
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = SOV_improve_stalin_line focus = SOV_the_molotov_line }
-		x = -1
-		y = 1
-		relative_position_id = SOV_improve_stalin_line
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_improve_stalin_line is defined later,
+		# so the position is converted to absolute (was x = -1 y = 1 relative to SOV_improve_stalin_line). Same on-screen position.
+		x = 24
+		y = 3
+		#relative_position_id = SOV_improve_stalin_line
 		cost = 10
 
 		available = {
@@ -2852,7 +2859,7 @@ focus_tree = {
 
 			#New
 			hidden_effect = {
-				set_technology = { masterful_blitz = 1 popup = no }
+				unlock_tactic = tactic_masterful_blitz
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 		}
@@ -3139,9 +3146,11 @@ focus_tree = {
 		id = SOV_the_workers_dictatorship
 		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_great_purge }
-		x = 0
-		y = 1
-		relative_position_id = SOV_great_purge
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_great_purge is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to SOV_great_purge). Same on-screen position.
+		x = 42
+		y = 6
+		#relative_position_id = SOV_great_purge
 		cost = 5
 
 		available = {
@@ -3667,11 +3676,13 @@ focus = {
 	id = SOV_addressing_internal_affairs
 	icon = GFX_focus_generic_self_management
 	prerequisite = { focus = SOV_expand_the_agitprop }
-	x = 0
-	y = 1
+	# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_expand_the_agitprop is defined later,
+	# so the position is converted to absolute (was x = 0 y = 1 relative to SOV_expand_the_agitprop). Same on-screen position.
+	x = 48
+	y = 2
 	
 
-	relative_position_id = SOV_expand_the_agitprop
+	#relative_position_id = SOV_expand_the_agitprop
 	cost = 5
 
 
@@ -3691,9 +3702,11 @@ focus = {
 	id = SOV_the_new_soviet_woman
 	icon = GFX_SOV_the_new_soviet_woman_ccp_2d_sov_compatibility
 	prerequisite = { focus = SOV_expand_the_agitprop }
-	x = 2
-	y = 1
-	relative_position_id = SOV_expand_the_agitprop
+	# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_expand_the_agitprop is defined later,
+	# so the position is converted to absolute (was x = 2 y = 1 relative to SOV_expand_the_agitprop). Same on-screen position.
+	x = 50
+	y = 2
+	#relative_position_id = SOV_expand_the_agitprop
 	cost = 5
 
 	available = {
@@ -4491,9 +4504,11 @@ focus = {
 			}			
 			}		
 		}		
-		x = -2
-		y = 1
-		relative_position_id = SOV_tank_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_tank_focus is defined later,
+		# so the position is converted to absolute (was x = -2 y = 1 relative to SOV_tank_focus). Same on-screen position.
+		x = 15
+		y = 5
+		#relative_position_id = SOV_tank_focus
 		will_lead_to_war_with = JAP
 		cost = 10
 
@@ -4656,9 +4671,11 @@ focus = {
 			has_war_with = GER
 		}
 		will_lead_to_war_with = GER
-		x = 2
-		y = 1
-		relative_position_id = SOV_tank_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_tank_focus is defined later,
+		# so the position is converted to absolute (was x = 2 y = 1 relative to SOV_tank_focus). Same on-screen position.
+		x = 19
+		y = 5
+		#relative_position_id = SOV_tank_focus
 		cost = 1	
 		completion_reward = {
             #declare_war_on = { target = POL type = annex_everything }
@@ -4717,9 +4734,11 @@ focus = {
 			has_war_with = FIN
 		}
 		will_lead_to_war_with = FIN
-		x = 0
-		y = 1
-		relative_position_id = SOV_tank_focus
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SOV_tank_focus is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to SOV_tank_focus). Same on-screen position.
+		x = 17
+		y = 5
+		#relative_position_id = SOV_tank_focus
 		cost = 1	
 		completion_reward = {
 			create_wargoal = {
@@ -5312,9 +5331,11 @@ focus = {
 		id = SOV_new_airframes
 		icon = GFX_SOV_latewarfighters
 		prerequisite = { focus = lendlease4 }
-		x = 1
-		y = 1
-		relative_position_id = lendlease4
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; lendlease4 is defined later,
+		# so the position is converted to absolute (was x = 1 y = 1 relative to lendlease4). Same on-screen position.
+		x = 12
+		y = 4
+		#relative_position_id = lendlease4
 		cost = 2
 		ai_will_do = {
 			factor = 5

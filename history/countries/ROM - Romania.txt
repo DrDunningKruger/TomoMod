@@ -15,6 +15,7 @@ set_war_support = 0.6
 set_fuel_ratio = 1.0
 
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -41,7 +42,6 @@ set_technology = {
 	iw_large_airframe = 1
 	early_bombs = 1
 	aa_lmg = 1	
-	superior_firepower = 1
     jaegers = 1
     desertinfantry_at = 1	
     paratroopers = 1	

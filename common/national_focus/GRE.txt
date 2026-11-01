@@ -27,12 +27,12 @@ focus_tree = {
 			available_if_capitulated = yes
 			completion_reward = {
 					army_experience = 50
-					add_tech_bonus = {
-							name = land_doc_bonus
-							bonus = 0.50
-							uses = 1
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = land_doc_bonus
+						cost_reduction = 0.33
+						uses = 1
+						category = land_doctrine
+					}
 				}
 	}
 
@@ -667,16 +667,12 @@ focus_tree = {
 		y = 2
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
-							name = sub_op_bonus
-							bonus = 1.0
-							uses = 1
-							technology = convoy_interdiction_ti
-							technology = unrestricted_submarine_warfare
-							technology = wolfpacks
-							technology = advanced_submarine_warfare
-							technology = combined_operations_raiding
-						}
+					add_doctrine_cost_reduction = {
+						name = sub_op_bonus
+						cost_reduction = 0.5
+						uses = 1
+						category = naval_doctrine
+					}
 				}
 	}
 

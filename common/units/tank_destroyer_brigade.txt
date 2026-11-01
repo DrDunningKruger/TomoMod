@@ -16,6 +16,7 @@ sub_units = {
 		group = armor
 		
 		categories = {
+			category_tank_destroyers
 			category_front_line
 			category_all_armor
 			category_army
@@ -88,6 +89,7 @@ sub_units = {
 		group = armor
 		
 		categories = {
+			category_tank_destroyers
 			category_front_line
 			category_all_armor
 			category_army
@@ -166,6 +168,7 @@ sub_units = {
 		group = armor
 		
 		categories = {
+			category_tank_destroyers
 			category_front_line
 			category_all_armor
 			category_army
@@ -248,6 +251,7 @@ sub_units = {
 		group = armor
 		
 		categories = {
+			category_tank_destroyers
 			category_front_line
 			category_all_armor
 			category_army
@@ -330,6 +334,7 @@ sub_units = {
 		group = armor
 		
 		categories = {
+			category_tank_destroyers
 			category_front_line
 			category_all_armor
 			category_army

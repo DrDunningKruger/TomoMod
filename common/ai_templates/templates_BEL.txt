@@ -6,9 +6,7 @@ infantry_BEL = {
     available_for = {
         BEL
     }
-    roles = { 
-        infantry
-    }
+    role = infantry # TomoIHE port: 1.19 syntax, was "roles = { infantry }"
 
     upgrade_prio = {
         factor = 2.17
@@ -30,7 +28,7 @@ infantry_BEL = {
         }
     }
 
-    match_to_count = 0.5
+    # TomoIHE port (deprecated in 1.19): match_to_count = 0.5
 
     infatry_default_BEL = {
 
@@ -41,52 +39,53 @@ infantry_BEL = {
 #replace_with = my_other_template assigns a different template that serves as a more modern version of this one. When it becomes possible to create that template, AI will try to move towards using that one.
 #can_upgrade_in_field = { ... } is a trigger block that decides when AI will try to upgrade divisions that are already assigned this template to the one that it's set to be replaced with.
 		
-		target_width = 20.0
-        width_weight = 10.0
-        column_swap_factor = 0.1
+		# TomoIHE port (deprecated in 1.19): target_width = 20.0
+        # TomoIHE port (deprecated in 1.19): width_weight = 10.0
+        # TomoIHE port (deprecated in 1.19): column_swap_factor = 0.1
 
 #stat_weights = { ... } is a list of decimal values. Each one applies to different stats and decides what exactly AI should try to prioritise and what it should try to avoid. As within NDefines.NAI.DIVISION_DESIGN_WEIGHTS in Defines, these stats are first the 17 army values, then air_attack, then common values and special values. In other words, Air and Navy values get skipped aside from air_attack, which is used by anti-air equipment. The value would be added to the default in defines: a 0.00 would mean it's the same priority as default.
-        stat_weights = {
-            0.00 #-- default_morale
-            5.00 #-- defense
-            0.00 #-- breakthrough
-            0.00 #-- hardness
-            3.00 #-- soft_attack
-            0.00 #-- hard_attack
-            0.00 #-- recon
-            1.00 #-- entrenchment
-            0.00 #-- initiative
-            0.00 #-- casualty_trickleback
-            0.00 #-- supply_consumption_factor
-            0.00 #-- supply_consumption
-            0.00 #-- suppression
-            0.00 #-- suppression_factor
-            0.00 #-- experience_loss_factor
-            0.00 #-- equipment_capture_factor
-            0.00 #-- fuel_capacity
-            #-- Air Values
-            1.00 #-- air_attack
-            #-- Common Values
-            0.00 #-- max_organisation
-            0.00 #-- max_strength
-            0.00 #-- maximum_speed
-            0.00 #-- armor_value
-            0.00 #-- ap_attack
-            0.00 #-- reliability
-            0.00 #-- reliability_factor
-            0.00 #-- weight
-            0.00 #-- fuel_consumption
-            0.00 #-- fuel_consumption_factor
-            0.00 #-- strat_attack
-            0.00 #-- carrier_size
-            0.00 #-- acc_hot_gain
-            0.00 #-- acc_cold_gain
-            0.00 #-- build_cost_ic
-        }
+        # TomoIHE port: "stat_weights" is deprecated/removed in 1.19 AI templates, commented out
+#        stat_weights = {
+#            0.00 #-- default_morale
+#            5.00 #-- defense
+#            0.00 #-- breakthrough
+#            0.00 #-- hardness
+#            3.00 #-- soft_attack
+#            0.00 #-- hard_attack
+#            0.00 #-- recon
+#            1.00 #-- entrenchment
+#            0.00 #-- initiative
+#            0.00 #-- casualty_trickleback
+#            0.00 #-- supply_consumption_factor
+#            0.00 #-- supply_consumption
+#            0.00 #-- suppression
+#            0.00 #-- suppression_factor
+#            0.00 #-- experience_loss_factor
+#            0.00 #-- equipment_capture_factor
+#            0.00 #-- fuel_capacity
+#            #-- Air Values
+#            1.00 #-- air_attack
+#            #-- Common Values
+#            0.00 #-- max_organisation
+#            0.00 #-- max_strength
+#            0.00 #-- maximum_speed
+#            0.00 #-- armor_value
+#            0.00 #-- ap_attack
+#            0.00 #-- reliability
+#            0.00 #-- reliability_factor
+#            0.00 #-- weight
+#            0.00 #-- fuel_consumption
+#            0.00 #-- fuel_consumption_factor
+#            0.00 #-- strat_attack
+#            0.00 #-- carrier_size
+#            0.00 #-- acc_hot_gain
+#            0.00 #-- acc_cold_gain
+#            0.00 #-- build_cost_ic
+#        }
 
         target_template = {
-            weight = 1.0 #weight = 0.8 is how much the AI should aim towards having that template.
-            match_value = 7000.0 #match_value = 5000 is a value that decides how much the template is worth to AI if it's matched.
+            # TomoIHE port (deprecated in 1.19): weight = 1.0 #weight = 0.8 is how much the AI should aim towards having that template.
+            # TomoIHE port (deprecated in 1.19): match_value = 7000.0 #match_value = 5000 is a value that decides how much the template is worth to AI if it's matched.
 
             support = {
                 engineer = 1
@@ -107,31 +106,32 @@ infantry_BEL = {
             }
         }
 
-        allowed_types = {
-            modern_armor
-            medium_armor
-            motorized
-            mechanized
-            infantry
-			artillery
-			artillery_brigade
-
-            motorized_rocket_brigade
-
-            engineer
-            mot_recon
-            armored_car_recon
-            light_tank_recon
-            signal_company
-            maintenance_company
-            logistics_company
-
-            anti_tank
-            military_police
-            artillery
-            anti_air
-            rocket_artillery
-        }
+        # TomoIHE port: "allowed_types" is deprecated/removed in 1.19 AI templates, commented out
+#        allowed_types = {
+#            modern_armor
+#            medium_armor
+#            motorized
+#            mechanized
+#            infantry
+#			artillery
+#			artillery_brigade
+#
+#            motorized_rocket_brigade
+#
+#            engineer
+#            mot_recon
+#            armored_car_recon
+#            light_tank_recon
+#            signal_company
+#            maintenance_company
+#            logistics_company
+#
+#            anti_tank
+#            military_police
+#            artillery
+#            anti_air
+#            rocket_artillery
+#        }
     }
 }
 

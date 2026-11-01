@@ -54,9 +54,8 @@ focus_tree = {
 		id = JAP_intervene_in_china1
 		icon = GFX_JAP_marcopolo
 		prerequisite = { focus = JAP_hokushin_ron }
-		x = 0
-		y = 1
-		relative_position_id = JAP_hokushin_ron
+		x = 2
+		y = 2
 
 		cost = 30
 
@@ -288,9 +287,8 @@ focus_tree = {
 		id = JAP_strike_south_doctrine
 		icon = GFX_JAP_war
 		prerequisite = { focus = JAP_demand_tonkinese_bases }
-		x = 0
-		y = 1
-		relative_position_id = JAP_demand_tonkinese_bases
+		x = 7
+		y = 3
 
 		cost = 5
 
@@ -324,9 +322,8 @@ focus_tree = {
 		id = JAP_strike_on_the_southern_resource_area
 		icon = GFX_Singapore_Strategy
 		prerequisite = { focus = JAP_sea_pressure_siam }
-		x = 0
-		y = 1
-		relative_position_id = JAP_sea_pressure_siam
+		x = 7
+		y = 5
 
 		cost = 1
 
@@ -581,9 +578,8 @@ focus_tree = {
 	focus = {
 		id = JAP_coal_liquification
 		icon = GFX_JAP_oil
-		x = 0
-		y = 4
-		relative_position_id = JAP_nanshin_ron
+		x = 9
+		y = 5
 		prerequisite = { focus = JAP_oil }
 
 		cost = 5
@@ -692,9 +688,8 @@ focus_tree = {
 	focus = {
 		id = JAP_oil
 		icon = GFX_JAP_oil
-		x = 0
-		y = 3
-		relative_position_id = JAP_nanshin_ron
+		x = 9
+		y = 4
 		prerequisite = { focus = JAP_airfields }
 
 		cost = 5
@@ -786,9 +781,8 @@ focus_tree = {
 		has_full_control_of_state = 533
 		}
 		}
-		x = 0
-		y = 2
-		relative_position_id = JAP_nanshin_ron
+		x = 9
+		y = 3
 		prerequisite = { focus = JAP_islands }
 		cost = 5		
 		completion_reward = {
@@ -834,9 +828,8 @@ focus_tree = {
 		has_full_control_of_state = 526
 		}
 		}
-		x = 0
-		y = 1
-		relative_position_id = JAP_nanshin_ron
+		x = 9
+		y = 2
 		prerequisite = { focus = JAP_nanshin_ron }
 		cost = 5	
 		completion_reward = {
@@ -936,9 +929,8 @@ focus_tree = {
 		id = JAP_supremacy_of_technology
 		icon = GFX_JAP_tech
 		prerequisite = { focus = JAP_reform_the_army focus = JAP_rely_on_supremacy_of_the_will }
-		x = 0
-		y = 1
-		relative_position_id = JAP_reform_the_army
+		x = 49
+		y = 3
 
 		cost = 5
 
@@ -966,9 +958,8 @@ focus_tree = {
 		id = JAP_modern_guns
 		icon = GFX_JAP_type_100
 		prerequisite = { focus = JAP_jungle_adaptation focus = JAP_expand_the_irago_proving_ground }
-		x = 1
-		y = 1
-		relative_position_id = JAP_jungle_adaptation
+		x = 53
+		y = 6
 
 		cost = 8
 
@@ -1010,9 +1001,8 @@ focus_tree = {
 		id = JAP_amphibious_armor
 		icon = GFX_JAP_amphibious_tank
 		prerequisite = { focus = JAP_the_ultimate_tank focus = JAP_sea_mountaineers }
-		x = 1
-		y = 1
-		relative_position_id = JAP_the_ultimate_tank
+		x = 47
+		y = 6
 
 		cost = 3
 
@@ -1054,9 +1044,8 @@ focus_tree = {
 		id = JAP_fighter_modernization
 		icon = GFX_JAP_plane
 		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
-		x = -1
-		y = 1
-		relative_position_id = JAP_establish_showa_aircraft_idnsutry
+		x = 58
+		y = 2
 
 		cost = 5
 
@@ -1133,9 +1122,8 @@ focus_tree = {
 		id = JAP_agility_focus
 		icon = GFX_JAP_navyair
 		prerequisite = { focus = JAP_establish_showa_aircraft_idnsutry }
-		x = 1
-		y = 1
-		relative_position_id = JAP_establish_showa_aircraft_idnsutry
+		x = 60
+		y = 2
 
 		cost = 5
 
@@ -1163,9 +1151,8 @@ focus_tree = {
 		id = JAP_B6N
 		icon = GFX_JAP_nakajima_b6n
 		prerequisite = { focus = JAP_sea_long_operational_range focus = JAP_sea_sturdy_aircraft }
-		x = -1
-		y = 1
-		relative_position_id = JAP_sea_long_operational_range
+		x = 59
+		y = 5
 
 		cost = 5
 
@@ -1248,9 +1235,8 @@ focus_tree = {
 		id = JAP_the_zero
 		icon = GFX_focus_jap_zero
 		prerequisite = { focus = JAP_sea_unify_the_air_forces }
-		x = -1
-		y = 1
-		relative_position_id = JAP_sea_unify_the_air_forces
+		x = 57
+		y = 7
 
 		cost = 10
 
@@ -1272,9 +1258,8 @@ focus_tree = {
 		icon = GFX_JAP_jet
 		prerequisite = { focus = JAP_sea_unify_the_air_forces }
 		prerequisite = { focus = JAP_the_divine_wind }
-		x = 3
-		y = 1
-		relative_position_id = JAP_sea_unify_the_air_forces
+		x = 61
+		y = 7
 
 		cost = 10
 
@@ -1300,9 +1285,8 @@ focus_tree = {
 		id = JAP_new_naval_estimates
 		icon = GFX_JAP_navy
 		prerequisite = { focus = JAP_the_imperial_defense_plan }
-		x = 9
+		x = 68
 		y = 1
-		relative_position_id = JAP_the_imperial_defense_plan
 
 		cost = 5
 
@@ -1443,9 +1427,8 @@ focus_tree = {
 		icon = GFX_AST_training
 		prerequisite = { focus = JAP_improved_radio_communications }
 		prerequisite = { focus = JAP_naval_armaments_program }
-		x = 4
-		y = 1
-		relative_position_id = JAP_improved_radio_communications
+		x = 63
+		y = 8
 
 		cost = 5
 
@@ -1476,9 +1459,8 @@ focus_tree = {
 		id = JAP_first_air_fleet
 		icon = GFX_JAP_airfleet
 		prerequisite = { focus = JAP_yokosuka_naval_air_technical_arsenal }
-		x = -2
-		y = 1
-		relative_position_id = JAP_yokosuka_naval_air_technical_arsenal
+		x = 63
+		y = 6
 
 		cost = 5
 
@@ -1546,9 +1528,8 @@ focus_tree = {
 		id = JAP_kagero
 		icon = GFX_JAP_kagari_class
 		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
-		x = 1
-		y = 1
-		relative_position_id = JAP_focus_on_aircraft_carriers
+		x = 67
+		y = 5
 
 		cost = 5
 
@@ -1780,9 +1761,8 @@ focus_tree = {
 		id = JAP_OperationTenGo
 		icon = GFX_JAP_battleship
 		prerequisite = { focus = JAP_sea_bigger_better_yamato }
-		x = 2
-		y = 1
-		relative_position_id = JAP_sea_bigger_better_yamato
+		x = 73
+		y = 6
 
 		cost = 1
 
@@ -1844,9 +1824,8 @@ focus_tree = {
 		id = JAP_the_ultimate_battleship
 		icon = GFX_JAP_bb
 		prerequisite = { focus = JAP_sea_bigger_better_yamato }
-		x = 0
-		y = 1
-		relative_position_id = JAP_sea_bigger_better_yamato
+		x = 71
+		y = 6
 
 		cost = 5
 
@@ -1918,9 +1897,8 @@ focus_tree = {
 		id = JAP_cruiser_modernization
 		icon = GFX_Nav_cruisiers
 		prerequisite = { focus = JAP_focus_on_aircraft_carriers focus = JAP_balanced_naval_approach focus = JAP_sea_battleship_initiative }
-		x = 3
-		y = 1
-		relative_position_id = JAP_focus_on_aircraft_carriers
+		x = 69
+		y = 5
 
 		cost = 5
 
@@ -2295,9 +2273,8 @@ focus_tree = {
 		id = JAP_new_order_in_east_asia
 		icon = GFX_focus_JAP_new_order_in_east_asia
 		#mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
-		x = 0
-		y = 1
-		relative_position_id = JAP_ministry_of_greater_east_asia
+		x = 28
+		y = 14
 
 		prerequisite = { focus = JAP_ministry_of_greater_east_asia }
 		prerequisite = { focus = JAP_develop_the_yen_bloc }
@@ -2484,9 +2461,8 @@ focus_tree = {
 		id = JAP_expand_the_showa_research_association
 		icon = GFX_focus_JAP_expand_the_showa_research_association
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 2
-		relative_position_id = JAP_sea_state_general_mobilization_law
+		x = 20
+		y = 6
 
 		prerequisite = { focus = JAP_sea_state_general_mobilization_law }
 
@@ -5516,7 +5492,6 @@ focus_tree = {
 				}
 			}
 
-			INS_cancel_hol_ally_strategy_entirely_effect = yes
 		}
 	}
 
@@ -9818,7 +9793,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_tech = improved_radio
+			has_tech = radio
 		}
 
 		bypass = {

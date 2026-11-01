@@ -1,0 +1,176 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea_with_trait = military_theorist
+						has_idea_with_trait = blitzkrieg_theorist
+						has_idea_with_trait = mobile_warfare_expert
+						has_idea_with_trait = superior_firepower_expert
+						has_idea_with_trait = grand_battle_plan_expert
+						has_idea_with_trait = council_of_theorists
+					}
+				}
+				add_mastery = {
+					amount = 5
+					track = infantry
+				}
+				add_mastery = {
+					amount = 5
+					track = combat_support
+				}
+				add_mastery = {
+					amount = 5
+					track = armor
+				}
+				add_mastery = {
+					amount = 5
+					track = operations
+				}
+				add_mastery = {
+					amount = 5
+					track = special_forces_first
+				}
+				add_mastery = {
+					amount = 5
+					track = special_forces_second
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_idea_with_trait = air_warfare_theorist
+						has_idea_with_trait = assault_avaition
+						has_idea_with_trait = dive_bomber
+						has_idea_with_trait = victory_through_airpower
+						has_idea_with_trait = council_of_theorists
+					}
+				}
+				add_mastery = {
+					amount = 5
+					track = fighter_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = strike_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = medium_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = heavy_aircraft
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_idea_with_trait = naval_theorist
+						has_idea_with_trait = grand_fleet_proponent
+						has_idea_with_trait = submarine_specialist
+						has_idea_with_trait = naval_aviation_pioneer
+						has_idea_with_trait = council_of_theorists
+					}
+				}
+				add_mastery = {
+					amount = 5
+					track = capital_ships
+				}
+				add_mastery = {
+					amount = 5
+					track = carriers
+				}
+				add_mastery = {
+					amount = 5
+					track = screens
+				}
+				add_mastery = {
+					amount = 5
+					track = submarines
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						has_advisor_role = army_chief
+						is_hired_as_advisor = yes
+					}
+				}
+				add_mastery = {
+					amount = 2.5
+					track = infantry
+				}
+				add_mastery = {
+					amount = 2.5
+					track = combat_support
+				}
+				add_mastery = {
+					amount = 2.5
+					track = armor
+				}
+				add_mastery = {
+					amount = 2.5
+					track = operations
+				}
+				add_mastery = {
+					amount = 2.5
+					track = special_forces_first
+				}
+				add_mastery = {
+					amount = 2.5
+					track = special_forces_second
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						has_advisor_role = navy_chief
+						is_hired_as_advisor = yes
+					}
+				}
+				add_mastery = {
+					amount = 5
+					track = capital_ships
+				}
+				add_mastery = {
+					amount = 5
+					track = carriers
+				}
+				add_mastery = {
+					amount = 5
+					track = screens
+				}
+				add_mastery = {
+					amount = 5
+					track = submarines
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						has_advisor_role = air_chief
+						is_hired_as_advisor = yes
+					}
+				}
+				add_mastery = {
+					amount = 5
+					track = fighter_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = strike_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = medium_aircraft
+				}
+				add_mastery = {
+					amount = 5
+					track = heavy_aircraft
+				}
+			}
+		}
+	}
+}

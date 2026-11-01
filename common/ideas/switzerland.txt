@@ -12,7 +12,7 @@ ideas = {
 
             removal_cost = -1
 			
-			picture = battlehammer			
+			picture = neutral_land			
             
             modifier = {
 			conscription = -1

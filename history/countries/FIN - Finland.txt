@@ -19,6 +19,7 @@ add_ideas = {
 	sisu
 }
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -29,7 +30,6 @@ set_technology = {
 	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
-	superior_firepower = 1	
 	fuel_silos = 1
 	gwtank_chassis = 1	
 	engines_1 = 1

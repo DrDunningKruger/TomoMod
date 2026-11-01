@@ -23,6 +23,7 @@ add_ideas = {
 	BEL_inflexible
 }
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -33,7 +34,6 @@ set_technology = {
 	tech_recon = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	superior_firepower = 1	
 	fuel_silos = 1
 	engines_1 = 1
 	iw_small_airframe = 1

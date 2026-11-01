@@ -3,6 +3,7 @@
 oob = "MAN_1936"
 set_research_slots = 3
 set_fuel_ratio = 1.0
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -32,7 +33,6 @@ set_technology = {
     easy_maintenance = 1
 	tank_improved_guns = 1	
 	radio_tech_1 = 1
-    superior_firepower = 1	
 }
 
 add_ideas = PACIFIC_JAPAN_6

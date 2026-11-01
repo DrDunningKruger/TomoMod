@@ -604,3 +604,18 @@ SOV_for_the_common_good_relation = { #For Right Oppo allies
 	license_production_speed = 0.25 #speed  increase for being a license
 	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level
 }
+# TomoIHE port: engine-required 1.19 static modifiers (applied to fleets by the game code); missing because this file overrides vanilla.
+# Copied from vanilla 1.19.3 common/modifiers/00_static_modifiers.txt (game logged "missing static modifier definition" without them).
+# This is scaled based on support ratio
+naval_general_support = {
+	max_organisation = 0.2
+	navy_max_range_factor = 0.2
+	naval_morale_factor = 0.2
+}
+
+# This is scaled based on support ratio
+naval_repair_support = {
+	naval_critical_effect_factor = -0.25
+	naval_ship_recovery_chance = 0.1
+	naval_attrition = -0.075
+}

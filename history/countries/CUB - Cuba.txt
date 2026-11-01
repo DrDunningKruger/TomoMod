@@ -2,10 +2,10 @@
 
 set_research_slots = 3
 # Starting tech
+
 set_technology = {
     cap_everyone = 1
 	infantry_weapons = 1
-	superior_firepower = 1	
 	fuel_silos = 1	
 	basic_train = 1	
 	engines_1 = 1

@@ -91,6 +91,7 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_mobile_and_mobile_combat_sup
 			category_army
 			category_line_artillery
 			category_artillery
@@ -242,6 +243,7 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_mobile_and_mobile_combat_sup
 			category_army
 			category_line_artillery
 			category_artillery
@@ -317,6 +319,7 @@ sub_units = {
 		group = mobile
 		
 		categories = {
+			category_mobile_and_mobile_combat_sup
 			category_army
 			category_line_artillery
 			category_artillery

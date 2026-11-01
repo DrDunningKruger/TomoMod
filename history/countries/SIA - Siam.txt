@@ -11,6 +11,7 @@ if = {
 set_research_slots = 3
 set_fuel_ratio = 1.0
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -27,7 +28,6 @@ set_technology = {
 	iw_large_airframe = 1
 	early_bombs = 1
 	aa_lmg = 1
-	superior_firepower = 1
 	engine_tech_1 = 1	
 	armor_tech_1 = 1	
 	basic_medium_tank_chassis = 1

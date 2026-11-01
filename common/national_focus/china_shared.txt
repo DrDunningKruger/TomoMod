@@ -1063,13 +1063,11 @@ shared_focus = {
 				uses = 1
 				category = dd_tech
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ITA_escort_effort
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
-				technology = convoy_escorts
-				technology = convoy_escorts_bs
-				technology = escort_carriers
+				category = naval_doctrine
 			}
 		}
 }

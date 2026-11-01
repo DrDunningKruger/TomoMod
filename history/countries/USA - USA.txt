@@ -79,6 +79,7 @@ recruit_character = USA_leonard_gerow
 
 
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -115,9 +116,7 @@ set_technology = {
 	range_improvements = 1
 	electronics_2 = 1	
 	fighter_guns = 1
-	base_strike = 1
 	
-	superior_firepower = 1	
 }
 
 if = {

@@ -528,7 +528,7 @@ on_actions = {
 						original_tag = NOR
 					}
 				}
-				if = { limit = { NOR = { is_ai = yes } }
+				if = { limit = { NOR = { is_ai = yes is_subject = no } } # TomoIHE port: skip if already a subject (puppet errored)
 				ENG = { puppet = NOR }
 				}
 			}	
@@ -538,7 +538,7 @@ on_actions = {
 						original_tag = HOL
 					}
 				}
-				if = { limit = { HOL = { is_ai = yes } }
+				if = { limit = { HOL = { is_ai = yes is_subject = no } } # TomoIHE port: skip if already a subject (puppet errored)
 				ENG = { puppet = HOL }
 				}
 			}
@@ -892,137 +892,137 @@ on_actions = {
                 #AFRICA SPEED MODIFIER
 				290 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				461 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				462 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				553 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				459 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				513 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				458 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				665 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				448 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				661 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				449 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				662 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				767 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				450 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				451 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				663 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				452 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				839 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				447 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				446 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				453 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				454 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				455 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				554 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				677 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}
 				680 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				460 = {
 					add_dynamic_modifier = {
-						modifier = AFRICA_SPEED
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 				457 = {

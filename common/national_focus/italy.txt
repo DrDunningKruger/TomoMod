@@ -630,9 +630,11 @@ focus_tree = {
 		id = ITA_resource_development
 		icon = GFX_focus_ETH_develop_the_horn_of_africa
 		prerequisite = { focus = ITA_concentrated_resources }
-		x = 0
-		y = 1
-		relative_position_id = ITA_concentrated_resources
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ITA_concentrated_resources is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to ITA_concentrated_resources). Same on-screen position.
+		x = 4
+		y = 4
+		#relative_position_id = ITA_concentrated_resources
 		cost = 5
 		available = {
 		}
@@ -1382,9 +1384,11 @@ focus_tree = {
 		icon = GFX_ITA_industrial_triangle
 		prerequisite = { focus = ITA_redirect_alfa_romeo_production }
 		mutually_exclusive = { focus = ITA_expand_foggia_farm_fields }
-		x = -1
-		y = 2
-		relative_position_id = ITA_redirect_alfa_romeo_production
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ITA_redirect_alfa_romeo_production is defined later,
+		# so the position is converted to absolute (was x = -1 y = 2 relative to ITA_redirect_alfa_romeo_production). Same on-screen position.
+		x = 15
+		y = 5
+		#relative_position_id = ITA_redirect_alfa_romeo_production
 		cost = 5
 		available = {
 
@@ -1785,9 +1789,11 @@ focus_tree = {
 		icon = GFX_airdefense
 		prerequisite = { focus = ITA_secret_weapons }
 
-		x = 0
-		y = 1
-		relative_position_id = ITA_secret_weapons
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ITA_secret_weapons is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to ITA_secret_weapons). Same on-screen position.
+		x = 18
+		y = 4
+		#relative_position_id = ITA_secret_weapons
 		cost = 5
 		available = {
 		}
@@ -1851,9 +1857,11 @@ focus_tree = {
 		id = ITA_maneuver_warfare
 		icon = GFX_IEA_butcher
 		prerequisite = { focus = ITA_italian_tanks }
-		x = -2
-		y = 1
-		relative_position_id = ITA_italian_tanks
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; ITA_italian_tanks is defined later,
+		# so the position is converted to absolute (was x = -2 y = 1 relative to ITA_italian_tanks). Same on-screen position.
+		x = 26
+		y = 2
+		#relative_position_id = ITA_italian_tanks
 		cost = 2
 		available = {
 		}
@@ -4626,3 +4634,5 @@ focus = {
 		}
 	}
 }
+
+} # TomoIHE port: closes focus_tree (file was missing one closing brace at EOF)

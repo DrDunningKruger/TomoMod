@@ -268,9 +268,11 @@ focus_tree = {
 		id = SAF_outlaw_strikes
 		icon = GFX_GRE_strike
 		prerequisite = { focus = SAF_work_for_all_poor }
-		x = 0
-		y = 1
-		relative_position_id = SAF_work_for_all_poor
+		# TomoIHE port: 1.19 requires relative_position_id targets to be defined earlier in the file; SAF_work_for_all_poor is defined later,
+		# so the position is converted to absolute (was x = 0 y = 1 relative to SAF_work_for_all_poor). Same on-screen position.
+		x = 5
+		y = 5
+		#relative_position_id = SAF_work_for_all_poor
 
 		cost = 10
 

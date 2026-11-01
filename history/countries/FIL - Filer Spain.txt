@@ -12,6 +12,7 @@ add_ideas = {
 }
 
 
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -22,7 +23,6 @@ set_technology = {
 	tech_recon = 1
 	tech_engineers = 1
 	motorised_infantry = 1
-	superior_firepower = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	gw_artillery = 1

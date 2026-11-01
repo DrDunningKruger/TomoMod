@@ -50,6 +50,7 @@ add_ideas = {
 
 set_stability = 0.5
 set_war_support = 0.05
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -60,7 +61,6 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	superior_firepower = 1	
 	fuel_silos = 1		
 	engines_1 = 1
 	iw_small_airframe = 1

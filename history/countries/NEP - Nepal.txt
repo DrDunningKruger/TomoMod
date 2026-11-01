@@ -2,6 +2,7 @@
 
 
 # Starting tech
+
 set_technology = {
     cap_everyone = 1
 	infantry_weapons = 1
@@ -16,7 +17,6 @@ set_technology = {
 	iw_large_airframe = 1
 	early_bombs = 1
 	aa_lmg = 1	
-	superior_firepower = 1
 }
 set_war_support = 0.15
 set_stability = 0.8

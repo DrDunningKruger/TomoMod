@@ -32,7 +32,7 @@ scripted_gui = {
 					GER = {
 						news_event={id=hosttool.5}
 					}
-					NIG = {change_tag_from =var:marks}
+					#NIG = {change_tag_from =var:marks} # TomoIHE port: NIG is not a tag in the mod (errored)
 
 				}
 

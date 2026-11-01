@@ -27,6 +27,7 @@ if = {
 }
 
 # Starting tech
+
 set_technology = {
 	basic_train = 1	
     cap_everyone = 1
@@ -37,8 +38,6 @@ set_technology = {
 	tech_mountaineers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	trench_warfare = 1
-	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	desertinfantry_at = 1

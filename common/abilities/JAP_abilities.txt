@@ -18,15 +18,13 @@ ability = {
 		cost = 0.05
 		duration = 168
 		
-		one_time_effect = {
-			add_temporary_buff_to_units = {
+		# TomoIHE port: 1.19 removed the add_temporary_buff_to_units effect. Was:
+		#   one_time_effect = { add_temporary_buff_to_units = { <same 3 modifiers> days = 7 tooltip = ABILITY_LAST_STAND_TOOLTIP } }
+		# 1.19 abilities apply unit_modifiers for the ability duration (168 h = the same 7 days), like vanilla jap_last_stand.
+		unit_modifiers = {
 				org_damage_multiplier = -1.0
 				str_damage_multiplier = 0.6
 				cannot_retreat_while_defending = 1.0
-				
-				days = 7
-				tooltip = ABILITY_LAST_STAND_TOOLTIP
-			}
 		}
 	}
 }

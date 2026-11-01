@@ -1,0 +1,1 @@
+﻿# TomoIHE 1.19 port: disabled - references vanilla content removed by TomoIHE's replace_path (tag GSM does not exist in TomoIHE)

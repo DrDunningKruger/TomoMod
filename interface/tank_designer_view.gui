@@ -1,3 +1,4 @@
+# TomoIHE 1.19 port: rebased on vanilla 1.19.3; re-applied IH&E/TomoIHE extra tank module slots (custom slot 5 on the lower row, special slots renumbered 6-9, extra special slot 10).
 guiTypes = {
 
 	containerWindowType = {
@@ -35,28 +36,6 @@ guiTypes = {
 			pdx_tooltip = "CURRENT_EXPERIENCE"
 		}
 
-		containerWindowType = {
-			name = "icon_selection_container"
-			position = { x=310 y=55 }
-			size = { width = 210 height = 75 }
-
-			background = {
-				name = "background"
-				spriteType = "GFX_equipment_designer_equipment_icon_bg"
-				pdx_tooltip = "SELECT_2D_ICON"
-			}
-
-			buttonType = {
-				name = "btn_equipment_icon"
-				position = { x = 0 y = 0 }
-				spriteType = "GFX_locked_icon"
-				Orientation = "center"
-				centerPosition = yes
-				clicksound = "ui_tank_designer_equipment_icon"
-				alwaystransparent = yes
-			}
-		}
-
 		instantTextboxType = {
 			name = "designer_title"
 			position = { x = 335 y = 6 }
@@ -68,7 +47,44 @@ guiTypes = {
 			maxHeight = 20
 			format = centre
 		}
+				
+		iconType = {
+			name = "resources_bg"
+			position = { x = 540 y = 501 }
+			SpriteType = "GFX_resources_bg"
+			alwaystransparent = yes
+		}
 
+		instantTextboxType = {
+			name = "production_resources"
+			position = { x= 548 y= 510 }
+			font = "hoi_18mbs"
+			maxWidth = 90
+			maxHeight = 25
+			pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_RESOURCE_DESC"
+			format = left
+		}
+
+		instantTextboxType = {
+			name = "refit_cost"
+			position = { x= 650 y=510 }
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 25
+			format = center
+			text = "Refit Cost: XXXX"
+		}
+
+		instantTextboxType = {
+			name = "production_value"
+			position = { x= 850 y=510 }
+			font = "hoi_18mbs"
+			maxWidth = 210
+			maxHeight = 25
+			#pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_COST_DESC"
+			format = right
+		}
+		
 		# window with the equipment preview and the buttons to select the modules
 		containerWindowType = {
 			name = "equipment_modules"
@@ -140,8 +156,9 @@ guiTypes = {
 			positionType = {
 				name = "pos_custom_module_slot_window_4"
 				position = { x=@fixed_btn_mod_col_2 y=@fixed_btn_mod_row_1 }
-			}		
+			}
 
+			# TomoIHE: extra regular custom module slot (vanilla special slots 5-8 renumbered to 6-9)
 			positionType = {
 				name = "pos_custom_module_slot_window_5"
 				position = { x=@fixed_btn_mod_col_3 y=@fixed_btn_mod_row_1 }
@@ -152,25 +169,26 @@ guiTypes = {
 			######################################################################
 
 			positionType = {
-				name = "pos_custom_module_slot_window_6"
+				name = "pos_custom_module_slot_window_6" # TomoIHE: was slot 5
 				position = { x=@fixed_btn_mod_col_2 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_7"
+				name = "pos_custom_module_slot_window_7" # TomoIHE: was slot 6
 				position = { x=@fixed_btn_mod_col_3 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_8"
+				name = "pos_custom_module_slot_window_8" # TomoIHE: was slot 7
 				position = { x=@fixed_btn_mod_col_4 y=@fixed_btn_mod_row_0 }
 			}
 
 			positionType = {
-				name = "pos_custom_module_slot_window_9"
+				name = "pos_custom_module_slot_window_9" # TomoIHE: was slot 8
 				position = { x=@fixed_btn_mod_col_5 y=@fixed_btn_mod_row_0 }
-			}		
+			}
 
+			# TomoIHE: extra special module slot
 			positionType = {
 				name = "pos_custom_module_slot_window_10"
 				position = { x=@fixed_btn_mod_col_6 y=@fixed_btn_mod_row_0 }
@@ -269,19 +287,19 @@ guiTypes = {
 		iconType = {
 			name = "tag_icon_bg"
 			spriteType = "GFX_role_icon_bg"
-			position = { x = 470 y = 200 }
+			position = { x = 465 y = 143 }
 			alwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "niche_button"
-			position = { x = 470 y = 200 }
+			position = { x = 474 y = 150 }
 			spriteType = "GFX_niche_icon_strip"
 			clicksound = "ui_tank_designer_company_icon"
 			pdx_tooltip = "DESIGNER_SELECT_NICHE"
 			pdx_tooltip_delayed = "DESIGNER_SELECT_NICHE_DELAYED"
 		}
-
+		
 		ButtonType = {
 			name = "save_to_file_button"
 			position = { x=18 y=380 }
@@ -299,7 +317,7 @@ guiTypes = {
 			#clicksound = "ui_tank_designer_save"
 			pdx_tooltip = "OPEN_PRESETS_TOOLTIP"
 		}
-
+		
 		iconType = {
 			name = "design_company_icon"
 			spriteType = "GFX_idea_porsche"
@@ -320,7 +338,7 @@ guiTypes = {
 			position = { x = 461 y = 382 }
 		}
 
-		# right hand side, stats and terrain adjusters
+		# right hand side stats
 		containerWindowType = {
 			name = "info"
 			position = { x=536 y=13}
@@ -428,7 +446,7 @@ guiTypes = {
 				}
 			}
 		}
-
+		
 		iconType = {
 			name = "select_model"
 			position = { x=540 y=265 }
@@ -459,11 +477,33 @@ guiTypes = {
 			clicksound = "ui_tank_designer_select_3d_model"
 
 		}	
+		
+		containerWindowType = {
+			name = "icon_selection_container"
+			position = { x=340 y=68 }
+			size = { width = 154 height = 56 }
 
+			background = {
+				name = "background"
+				spriteType = "GFX_equipment_designer_equipment_icon_bg"
+				pdx_tooltip = "SELECT_2D_ICON"
+			}
+
+			buttonType = {
+				name = "btn_equipment_icon"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_locked_icon"
+				Orientation = "center"
+				centerPosition = yes
+				clicksound = "ui_tank_designer_equipment_icon"
+				alwaystransparent = yes
+			}
+		}
+		
 		containerWindowType = {
 			name = "equipment_select_model"
 			position = { x=538 y=40 }
-			size = { width=567 height=460 }
+			size = { width=567 height=510 }
 			
 			background = {
 				name = "Background"		
@@ -493,18 +533,43 @@ guiTypes = {
 				
 			buttonType = {
 				name = "back_button"
-				position = { x=395 y=412 }
-				size = { x=504 y=22 }
+				position = { x=395 y=25 }
 				font = "hoi_16mbs"				
-				buttontext = "BACK"
+				buttontext = "CLOSE"
 				quadTextureSprite = "GFX_button_123x34"
 				clicksound = click_close
 			}		
 
 			containerWindowType = {
+				name = "best_match_window"
+				position = { x=382 y=204 }
+				size = { width = 123 height = 34 }
+				clipping = no
+
+				buttonType = {
+					name = "best_match_button"
+					position = { x=-11 y=-3 }
+					font = "hoi_16mbs"			
+					quadTextureSprite = "GFX_generic_checkbox"
+					clicksound = click_default
+					pdx_tooltip = "USE_DEFAULT_MODEL_IN_EQUIPMENT_DESIGNER_TOOLTIP"
+				}	
+				
+				instantTextboxType = {
+					name = "best_match_text"
+					position = { x = 28 y = 6 }
+					font = "hoi_16mbs"
+					text = "USE_DEFAULT_MODEL_IN_EQUIPMENT_DESIGNER"
+					fixedsize = yes
+					format = left
+					alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
 				name = "grid_container"
 				position = { x=5 y=235}	
-				size = { width=533 height=176 }
+				size = { width=533 height=260 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 42
 				smooth_scrolling = yes
@@ -518,15 +583,14 @@ guiTypes = {
 				gridBoxType = { 
 					name = "buttons_grid"
 					position = { x = 0 y = 0 }
-					size = { width = 490 height = 100%% }
-					slotsize = { width = 490 height = 42 }
-					max_slots_horizontal = 1
+					size = { width = 510 height = 100%% }
+					slotsize = { width = 255 height = 42 }
+					max_slots_horizontal = 2
 					format = "UPPER_LEFT"
 					
 				}
 			}
 		}
-			
 			
 		containerWindowType = {
 			name = "equipment_select_sprite"
@@ -594,7 +658,6 @@ guiTypes = {
 			position = { x=538 y=40 }
 			size = { width=567 height=460 }
 			
-			
 			background = {
 				name = "Background"		
 				spriteType ="GFX_tiled_window"
@@ -609,7 +672,7 @@ guiTypes = {
 				clicksound = "ui_ship_designer_save"
 				pdx_tooltip = "IMPORT_PRESET_TOOLTIP"
 			}
-
+			
 			ButtonType = {
 				name = "export_preset_folder_button"
 				position = { x=2 y=408 }
@@ -617,7 +680,7 @@ guiTypes = {
 				buttonFont = "hoi_18mbs"
 				clicksound = "ui_ship_designer_save"
 				pdx_tooltip = "EXPORT_PRESET_FOLDER_TOOLTIP"
-			}			
+			}
 
 			buttonType = {
 				name = "back_button"
@@ -628,11 +691,11 @@ guiTypes = {
 				quadTextureSprite = "GFX_button_123x34"
 				clicksound = click_close
 			}		
-
+			
 			containerWindowType = {
 				name = "border_container"
-				position = { x=20 y=20 }
-				size = { width = 495 height = 380 }
+				position = { x=0 y=20 }
+				size = { width = 530 height = 380 }
 				
 				background = {
 					name ="bg_tech_button"
@@ -644,8 +707,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "grid_container"
-				position = { x=65 y=30}	
-				size = { width=430 height=360 }
+				position = { x=154 y=30}	
+				size = { width=370 height=360 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 80
 				smooth_scrolling = yes
@@ -659,7 +722,7 @@ guiTypes = {
 				gridBoxType = {
 					name = "buttons_grid"
 					position = { x = 0 y = 0 }
-					size = { width = 460 height = 100%% }
+					size = { width = 350 height = 100%% }
 					slotsize = { width = 430 height = 80 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
@@ -699,8 +762,9 @@ guiTypes = {
 					max_slots_horizontal = 1
 					format = "UPPER_RIGHT"
 				}
-			}			
-		}		
+			}
+			
+		}
 
 		containerWindowType = {
 			name = "niche_icon_selector"
@@ -776,14 +840,21 @@ guiTypes = {
 			frame = 1
 		}
 		
+		iconType = {
+			name = "nubbin"
+			quadTextureSprite ="GFX_tank_designer_nubbin"
+			position = { x=300 y =74 }
+			scale = 1.0
+		}
+		
 		buttonType = {
 			name = "dynamic_version_checkbox_button"
-			position = { x=275 y =63 }
+			position = { x=310 y =63 }
 			quadTextureSprite ="GFX_generic_checkbox3"
 			pdx_tooltip = "EQUIPMENT_DESIGNER_DYNAMIC_VERSION_CHECKBOX_BUTTON_DESC"
 			clicksound = click_checkbox
 			frame = 1
-		}		
+		}
 
 		ButtonType = {
 			name = "save_button"
@@ -793,7 +864,7 @@ guiTypes = {
 			buttonFont = "hoi_18mbs"
 			clicksound = "ui_tank_designer_save"
 		}
-
+		
 		# drop down for equipment variants
 		dropDownBoxType = {
 			name = "equipments"
@@ -816,22 +887,22 @@ guiTypes = {
 				name = "name"
 				position = { x = 35 y = 5 }
 				font = "hoi_18mbs"
-				size = { x=230 y=20 }
+				size = { x=178 y=20 }
 			}
-
-			buttonType = {
-				name = "name_reset"
-				position = { x = -31 y = -1 }
-				quadTextureSprite ="GFX_NV_btn_reset"
-				clicksound = "ui_tank_designer_reset"
-				orientation = "upper_right"
-			}
-
+			
 			iconType = {
 				name = "tank_design_icon"
 				spriteType = "GFX_tank_design_icon"
 				position = { x = 5 y = 1 }
 				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "name_reset"
+				position = { x = 2 y = -1 }
+				quadTextureSprite ="GFX_NV_btn_reset"
+				clicksound = "ui_tank_designer_reset"
+				orientation = "upper_left"
 			}
 
 			expandedWindow = {
@@ -865,7 +936,7 @@ guiTypes = {
 				}
 			}
 		}
-
+		
 		instantTextboxType = {
 			name = "position_version"
 			position = { x = 212 y = 65 }
@@ -955,7 +1026,7 @@ guiTypes = {
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
 
-					# contains designer_role_entry
+					# contains tank_designer_role_entry
 
 				}
 			}
@@ -979,43 +1050,6 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
-		}
-		
-		iconType = {
-			name = "resources_bg"
-			position = { x = 540 y = 501 }
-			SpriteType = "GFX_resources_bg"
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "production_resources"
-			position = { x= 548 y= 510 }
-			font = "hoi_18mbs"
-			maxWidth = 90
-			maxHeight = 25
-			pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_RESOURCE_DESC"
-			format = left
-		}
-
-		instantTextboxType = {
-			name = "refit_cost"
-			position = { x= 650 y=510 }
-			font = "hoi_18mbs"
-			maxWidth = 200
-			maxHeight = 25
-			format = center
-			text = "Refit Cost: XXXX"
-		}
-
-		instantTextboxType = {
-			name = "production_value"
-			position = { x= 850 y=510 }
-			font = "hoi_18mbs"
-			maxWidth = 210
-			maxHeight = 25
-			#pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_COST_DESC"
-			format = right
 		}
 
 		# Module selection sub-window
@@ -1069,13 +1103,14 @@ guiTypes = {
 				name = "gb_modules"
 				position = { x=17 y=70 }
 				size = { width=510 height=10 }
-				slotsize = { width = 247 height = 69 }
+				slotsize = { width = 247 height = 69 } 
 				max_slots_horizontal = 2
 				format = UPPER_LEFT
 
 				# code inserts equipment_module_category_entry or equipment_module_entry here
-			}			
+			}
 		}
+		
 		
 		containerWindowType = {
 			name = "designer_intel_container"
@@ -1371,7 +1406,7 @@ guiTypes = {
 					format = "UPPER_LEFT"
 				}
 			}
-		}		
+		}
 		
 	}
 
@@ -1416,8 +1451,86 @@ guiTypes = {
 			position = { x = 247 y = 17 }
 			alwaystransparent = yes
 		}
+		
 	}
 	
+	# entry for all historical designs
+	containerWindowType = {
+		name = "historical_design_entry"
+		size = { width=340 height=80 }
+		
+		background = {
+			name = "Background"
+			spriteType ="GFX_naval_equipment_item_340_simple"
+		}
+		
+		#background_margin = {
+		#	top = 5
+		#	bottom = 5
+		#}
+
+		iconType = {
+			name ="role"
+			spriteType = "GFX_land_equipment_role_icons"
+			position = { x = 300 y = 5 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_technology_medium"
+			position = { x=152 y=19 }
+			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 14 y = -4 }
+			font = "hoi_18mbs"
+			maxWidth = 300
+			maxHeight = 38
+			fixedsize = yes
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="forbidden"
+			spriteType = "GFX_role_forbidden"
+			position = { x = 369 y = 30 }
+			alwaystransparent = yes
+		}
+		
+		ButtonType = {
+			name = "export_to_clipboard_button"
+			position = { x=5 y=43 }
+			quadTextureSprite ="GFX_preset_button_export"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "EXPORT_PRESET_TOOLTIP"
+		}
+		
+		ButtonType = {
+			name = "designer_note_button"
+			position = { x=35 y=43 }
+			quadTextureSprite ="GFX_edit_designer_notes_button"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "DESIGNER_NOTE_TOOLTIP"
+		}
+		
+		ButtonType = {
+			name = "bin_button"
+			position = { x=304 y=43 }
+			quadTextureSprite ="GFX_NV_btn_delete"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "DELETE_PRESET_TOOLTIP"
+		}
+		
+	}
+	
+	# entry for all user design folders
 	containerWindowType = {
 		name = "design_folder"
 		size = { width=123 height=34 }
@@ -1441,5 +1554,6 @@ guiTypes = {
 			alwaystransparent = yes
 			multiline = no
 		}
-	}	
+	}
+	
 }
