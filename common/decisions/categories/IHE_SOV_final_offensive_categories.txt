@@ -1,0 +1,13 @@
+IHE_SOV_final_offensive_category = {
+	icon = sov_great_patriotic_war
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		date > 1941.1.1
+	}
+
+	priority = 200
+}

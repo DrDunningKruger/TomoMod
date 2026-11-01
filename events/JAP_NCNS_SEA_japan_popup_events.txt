@@ -1,0 +1,2334 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = SEA_japan_popup_events
+
+country_event = {
+	id = SEA_japan_popup_events.3
+	title = SEA_japan_popup_events.3.t
+	desc = SEA_japan_popup_events.3.desc
+	picture = GFX_report_event_JAP_diet_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# This is a disaster!
+	option = {
+		name = SEA_japan_popup_events.3.a
+
+		add_ideas = JAP_collapsing_government_idea	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_small_army_faction_gain = yes
+
+		hidden_effect = {
+			set_country_flag = JAP_harakiri_debate_has_taken_place_flag
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.4
+	title = SEA_japan_popup_events.4.t
+	desc = SEA_japan_popup_events.4.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We must gain his support, by any means necessary!
+	option = {
+		name = SEA_japan_popup_events.4.a
+		ai_chance = {
+			base = 50
+		}
+		
+		add_political_power = -150
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.5
+			days = 7
+			random_days = 4
+		}	
+
+	}
+
+	# We have other candidates in mind
+	option = {
+		name = SEA_japan_popup_events.4.b
+		ai_chance = {
+			base = 45
+		}
+
+		IF = {
+			limit = {
+				NOT = {
+					divisions_in_state = {
+						state = 282
+						size > 4
+						unit = cavalry 
+					}
+				}
+			}
+			random_list = {
+			    50 = {
+			    	ROOT = {
+			    		country_event = {
+			    			id = SEA_japan_popup_events.5
+			    			days = 7
+			    			random_days = 4
+			    		}
+			    	}
+			    }
+			    50 = {
+			    	ROOT = {
+			    		country_event = {
+			    			id = SEA_japan_popup_events.6
+			    			days = 7
+			    			random_days = 4
+			    		}	
+			    	}
+			    }
+			}
+		}
+		ELSE = {
+			country_event = {
+				id = SEA_japan_popup_events.6
+				days = 7
+				random_days = 4
+			}
+		}
+
+	}
+
+	# If he doesn't support us, he must go
+	option = {
+		name = SEA_japan_popup_events.4.c
+		ai_chance = {
+			base = 5
+		}
+		
+		add_stability = -0.15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.7
+			days = 7
+			random_days = 4
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.5
+	title = SEA_japan_popup_events.5.t
+	desc = SEA_japan_popup_events.5.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Excellent!
+	option = {
+		name = SEA_japan_popup_events.5.a
+
+		add_stability = 0.05
+		
+		hidden_effect = {
+			set_country_flag = JAP_kodoha_the_emperor_cooperated_flag
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.6
+	title = SEA_japan_popup_events.6.t
+	desc = SEA_japan_popup_events.6.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Then he must abdicate in favor of his son
+	option = {
+		name = SEA_japan_popup_events.6.a
+		ai_chance = {
+			base = 75
+		}
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = -25
+
+		hidden_effect = {
+			set_country_flag = JAP_emperor_hirohito_has_abdicated_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			set_country_flag = JAP_yasuhito_is_a_sessho_flag 
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	# Place him under house arrest!
+	option = {
+		name = SEA_japan_popup_events.6.b
+		ai_chance = {
+			base = 25
+		}
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = -50
+		add_war_support = 0.02
+
+		hidden_effect = {
+			set_country_flag = JAP_emperor_hirohito_under_house_arrest_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.7
+	title = SEA_japan_popup_events.7.t
+	desc = SEA_japan_popup_events.7.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Yasuhito will take his place
+	option = {
+		name = SEA_japan_popup_events.7.a
+
+		custom_effect_tooltip = JAP_yasuhito_takes_up_the_throne_tt
+
+		hidden_effect = {
+			set_country_flag = JAP_hirohito_has_been_killed_flag
+			set_country_flag = JAP_yasuhito_is_the_current_regent_or_emperor_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.8
+	title = SEA_japan_popup_events.8.t
+	desc = SEA_japan_popup_events.8.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Mazaki is more popular among the men
+	option = {
+		name = SEA_japan_popup_events.8.a
+		ai_chance = {
+			base = 50
+		}
+
+		JAP_jinzaburo_masaki = {
+			add_country_leader_trait = JAP_soto_trait
+		}
+
+		hidden_effect = { # For if you choose to go fascist in a later event 
+			JAP_jinzaburo_masaki = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1966.1.1.1"
+						traits = { JAP_military_prime_minister JAP_soto_trait } 
+					}
+				}	
+			}
+		}
+
+	}
+
+	# Araki should be the nation's Sōtō
+	option = {
+		name = SEA_japan_popup_events.8.b
+		ai_chance = {
+			base = 50
+		}
+
+		JAP_sadao_araki = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1966.1.1.1"
+					traits = { JAP_staunch_traditionalist_trait JAP_soto_trait } 
+				}
+			}	
+		}
+
+		hidden_effect = { # For if you choose to go fascist in a later event 
+			JAP_sadao_araki = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1966.1.1.1"
+						traits = { JAP_staunch_traditionalist_trait JAP_soto_trait } 
+					}
+				}	
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.9
+	title = SEA_japan_popup_events.9.t
+	desc = SEA_japan_popup_events.9.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We must stay clear of such western concepts!
+	option = {
+		name = SEA_japan_popup_events.9.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_stability = 0.05
+		add_political_power = 50
+
+	}
+
+	# Araki is right, and we should embrace those ideas
+	option = {
+		name = SEA_japan_popup_events.9.b
+		ai_chance = {
+			base = 0
+		}
+		trigger = {
+			has_government = neutrality
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_emperor_yasuhito
+				}	
+				#has_country_leader = {
+				#	ruling_only = yes
+				#	character = JAP_jinzaburo_masaki
+				#}	
+				has_country_leader = {
+					ruling_only = yes
+					character = JAP_sadao_araki
+				}	
+			}
+		}
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			long_name = JAP_fascism_party_kodoha_long
+			name = JAP_fascism_party_kodoha
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.35
+		}	
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.10
+	title = SEA_japan_popup_events.10.t
+	desc = SEA_japan_popup_events.10.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# How dishonorable! We must act swiftly!
+	option = {
+		name = SEA_japan_popup_events.10.a
+
+		add_stability = -0.02
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		unlock_decision_tooltip = JAP_increase_takahashi_korekiyo_security_decision
+		unlock_decision_tooltip = JAP_increase_jotaro_watanabe_security_decision
+
+		hidden_effect = {
+			set_country_flag = JAP_can_now_save_advisors_flag
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.11
+	title = SEA_japan_popup_events.11.t
+	desc = SEA_japan_popup_events.11.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Very well, but try not to leave evidence
+	option = {
+		name = SEA_japan_popup_events.11.a
+		ai_chance = {
+			base = 90
+		}
+
+		add_political_power = 25
+
+		country_event = {
+			id = SEA_japan_popup_events.12
+			days = 14
+			random_days = 7
+		}		
+
+	}
+
+	# No, the former Emperor must live!
+	option = {
+		name = SEA_japan_popup_events.11.b
+		ai_chance = {
+			base = 10
+		}
+
+		add_stability = 0.1
+
+		add_political_power = -75
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.12
+	title = SEA_japan_popup_events.12.t
+	desc = SEA_japan_popup_events.12.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The nation mourns
+	option = {
+		name = SEA_japan_popup_events.12.a
+		ai_chance = {
+			base = 90
+		}
+
+		add_stability = 0.03	
+
+	}
+
+	# Find the perpetrators, Nagako demands answers!
+	option = {
+		name = SEA_japan_popup_events.12.b
+		ai_chance = {
+			base = 10
+		}
+
+		country_event = {
+			id = SEA_japan_popup_events.13
+			days = 7
+		}		
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.13
+	title = SEA_japan_popup_events.13.t
+	desc = SEA_japan_popup_events.13.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Declare martial law, Nagako will solve the nations instability!
+	option = {
+		name = SEA_japan_popup_events.13.a
+
+		IF = {
+			limit = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}	
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}	
+		}
+
+		add_stability = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_country_leader_role = {
+			character = JAP_empress_nagako
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1989.1.1.1"
+				traits = {  } 
+			}
+		}	
+
+		hidden_effect = {
+			set_country_flag = JAP_empress_nagako_became_queen_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.14
+	title = SEA_japan_popup_events.14.t
+	desc = SEA_japan_popup_events.14.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# May Machida Chūji lad the Rikken Minseitō well
+	option = {
+		name = SEA_japan_popup_events.14.a
+
+
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_minseito_party_long
+			name = JAP_minseito_party
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.025
+		}	
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.15
+	title = SEA_japan_popup_events.15.t
+	desc = SEA_japan_popup_events.15.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# They must be stopped!
+	option = {
+		name = SEA_japan_popup_events.15.a
+
+		kill_country_leader = yes 
+
+		add_stability = -0.1
+
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.16
+			days = 6
+		}	
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.16
+	title = SEA_japan_popup_events.16.t
+	desc = SEA_japan_popup_events.16.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The Liberal Machida Chūji
+	option = {
+		name = SEA_japan_popup_events.16.a
+		ai_chance = {
+			base = 50 
+			modifier = {
+				factor = 0 
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = COMMUNIST
+					}
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
+					always = no
+				}
+			}
+		}
+		
+		IF = {
+			limit = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = JAP_machida_chuuji
+					}	
+				}
+			}
+			add_country_leader_role = {
+				character = JAP_machida_chuuji
+				promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = "1989.1.1.1"
+					traits = { } 
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = JAP_unity_cabinet_party_long
+				name = JAP_unity_cabinet_party
+			}	
+		}
+		ELSE = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}	
+			add_political_power = 75
+			set_party_name = {
+				ideology = democratic
+				long_name = JAP_unity_cabinet_party_long
+				name = JAP_unity_cabinet_party
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+	# The Socialist Abe Isoo
+	option = {
+		name = SEA_japan_popup_events.16.b
+		ai_chance = {
+			base = 30 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC
+					}
+				}
+			}
+		}
+		
+		add_country_leader_role = {
+			character = JAP_abe_isoo
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
+				expire = "1989.1.1.1"
+				traits = { JAP_socialist_politician } 
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_unity_cabinet_party_long
+			name = JAP_unity_cabinet_party
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+	# President of the House of Peers, Tokugawa Iesato
+	option = {
+		name = SEA_japan_popup_events.16.c
+		ai_chance = {
+			base = 20 
+			modifier = {
+				factor = 0 
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = COMMUNIST
+					}
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
+					always = no
+				}
+			}
+		}
+		
+		add_country_leader_role = {
+			character = JAP_tokugawa_iesato
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1989.1.1.1"
+				traits = { JAP_popular_diplomat } 
+			}
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_unity_cabinet_party_long
+			name = JAP_unity_cabinet_party
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.17
+			days = 7
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.17
+	title = SEA_japan_popup_events.17.t
+	desc = SEA_japan_popup_events.17.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Things are ramping up...
+	option = {
+		name = SEA_japan_popup_events.17.a
+
+		add_ideas = JAP_military_strike_idea
+
+		country_lock_all_division_template = {
+			is_locked = yes
+			desc = JAP_cannot_train_due_to_military_strike
+		}
+		custom_effect_tooltip = JAP_must_take_revoke_ppl_focus_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_army_leader = {
+			limit = {
+				NOT = {
+					has_trait = JAP_tohokai_sympathies
+					has_trait = JAP_government_supporter
+					has_trait = JAP_communist_sympathizer
+					has_trait = JAP_IJA_loyalist
+					has_character_flag = JAP_do_not_align_me_flag
+				}
+			}
+			add_trait = {
+				trait = JAP_IJA_loyalist
+			}	
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_navy_leader = {
+			limit = {
+				NOT = {
+					has_trait = JAP_tohokai_sympathies
+					has_trait = JAP_government_supporter
+					has_trait = JAP_communist_sympathizer
+					has_trait = JAP_IJA_loyalist
+					has_character_flag = JAP_do_not_align_me_flag
+				}
+			}
+			add_trait = {
+				trait = JAP_IJA_loyalist
+			}	
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		country_event = {
+			id = SEA_japan_popup_events.18
+			days = 5
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.18
+	title = SEA_japan_popup_events.18.t
+	desc = SEA_japan_popup_events.18.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Deploy the Metropolitcan Police to Tokyo Immediatly!
+	option = {
+		name = SEA_japan_popup_events.18.a
+		ai_chance = {
+			base = 70
+		}
+		
+		every_core_state = {
+			limit = {
+				NOT = {
+					state = 282 # Kanto
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = JAP_state_under_army_control
+			}	
+		}
+
+		282 = {
+			add_dynamic_modifier = {
+				modifier = JAP_state_under_rebel_control
+			}	
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = enables_the_civil_war_decisions_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.19
+	title = SEA_japan_popup_events.19.t
+	desc = SEA_japan_popup_events.19.desc
+	picture = GFX_report_event_generic_shanghai_clash
+	
+	is_triggered_only = yes
+	
+	option = { # Breaking point!
+		name = SEA_japan_popup_events.19.a
+		ai_chance = { 
+			base = 98 
+		}
+
+		effect_tooltip = {
+			FROM = {
+				add_war_support = 0.05
+				country_event = { id = SEA_japan_popup_events.20 }
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
+		}
+
+		hidden_effect = {
+			FROM = { country_event = { id = SEA_japan_popup_events.20 } }
+		}
+
+	}
+
+	option = { # Make more concessions
+		name = SEA_japan_popup_events.19.b
+		ai_chance = { 
+			base = 2
+		}
+
+		FROM = {
+			set_truce = { target = ROOT days = 180 }
+			effect_tooltip = {
+				IF = {
+					limit = {
+						ROOT = { controls_state = 613 }
+					}
+					transfer_state = 613
+				}
+				add_state_claim = 1034
+			}
+			country_event = { id = SEA_japan_popup_events.21 }
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.20
+	title = SEA_japan_popup_events.20.t
+	desc = SEA_japan_popup_events.20.desc
+	picture = GFX_report_event_generic_shanghai_clash
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SEA_japan_popup_events.20.a
+
+		add_war_support = 0.05
+
+		IF = {
+			limit = {
+			}
+			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				CHI = {
+					exists = yes
+					owns_state = 613
+					NOT = {
+						is_ally_with = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+					}
+					CHI = {
+						set_country_flag = JAP_first_strike_principle_blocked
+					}
+				}
+			}
+			declare_war_on = {
+				target = CHI
+				type = annex_everything
+			}
+			IF = {
+				limit = {
+					MAN = {
+						is_subject_of = ROOT
+					}
+				}
+				MAN = {
+					add_to_war = {
+					    targeted_alliance = ROOT
+					    enemy = CHI
+					    hostility_reason = asked_to_join
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		ELSE_IF = {
+			limit = {
+				613 = {
+					OWNER = {
+						NOT = {
+							tag = CHI
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				IF = {
+					limit = {
+					}
+					613 = {
+						OWNER = {
+							set_country_flag = JAP_first_strike_principle_blocked
+						}
+					}
+				}
+			}
+
+			613 = {
+				OWNER = {
+					ROOT = {
+						declare_war_on = {
+							target = PREV
+							type = annex_everything
+						}
+					}
+				}
+			}
+
+		}
+		
+		USA = { set_country_flag = { flag = USA_china_window days = 60 value = 1 } }
+
+	}
+	
+}
+
+country_event = {
+	id = SEA_japan_popup_events.21
+	title = SEA_japan_popup_events.21.t
+	desc = SEA_japan_popup_events.21.desc
+	picture = GFX_report_event_chinese_soldiers_running
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SEA_japan_popup_events.21.a
+		effect_tooltip = {
+			set_truce = { target = FROM days = 180 }
+		}
+
+		#hidden_effect = {
+		#	country_event = { days = 5 id = news.2 }
+		#}
+
+		IF = {
+			limit = {
+				613 = {
+					is_controlled_by = FROM
+				}
+			}
+			JAP = {
+				transfer_state = 613
+			}
+		}
+
+		add_state_claim = 1034
+		
+		add_ai_strategy = {
+			type = antagonize
+			id = FROM
+			value = 500
+		}
+		
+	}
+}
+
+country_event = {
+	id = SEA_japan_popup_events.22
+	title = SEA_japan_popup_events.22.t
+	desc = SEA_japan_popup_events.22.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The time has come to bring back the spirit of the Taishō Era!
+	option = {
+		name = SEA_japan_popup_events.22.a
+		
+		# Kick off the democratic civil war 
+
+		JAP_trigger_democratic_civil_war = yes
+
+	}
+
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.23
+	title = SEA_japan_popup_events.23.t
+	desc = SEA_japan_popup_events.23.desc
+	picture = GFX_report_event_JAP_diet_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Very well, Nobuhito will take his place
+	option = {
+		name = SEA_japan_popup_events.23.a
+
+		custom_effect_tooltip = JAP_nobuhito_takes_up_the_throne_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_timed_idea = {
+			idea = JAP_royal_support_for_civilian_government_idea
+			days = 365
+		}	
+
+		hidden_effect = {
+			set_country_flag = JAP_nobuhito_is_the_current_regent_or_emperor_flag
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.24
+	title = SEA_japan_popup_events.24.t
+	desc = SEA_japan_popup_events.24.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We have reclaimed our future!
+	option = {
+		name = SEA_japan_popup_events.24.a
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_war_support = 0.05
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.25
+	title = SEA_japan_popup_events.25.t
+	desc = SEA_japan_popup_events.25.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The Rikken Minseitō is victorious!
+	option = {
+		name = SEA_japan_popup_events.25.a
+		ai_chance = { 
+			base = 50 
+		}
+		
+		JAP_small_government_faction_gain = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+	}
+
+	# The Rikken Seiyūkai is victorious!
+	option = {
+		name = SEA_japan_popup_events.25.b
+		ai_chance = { 
+			base = 50 
+		}
+		
+		JAP_small_government_faction_gain = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.26
+	title = SEA_japan_popup_events.26.t
+	desc = SEA_japan_popup_events.26.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# There is no use resisting them
+	option = {
+		name = SEA_japan_popup_events.26.a
+		ai_chance = { 
+			base = 100 
+		}
+		
+		set_cosmetic_tag = MAN_kwantung_army
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				has_idea = MAN_kwantung_veto 
+			}
+			remove_ideas = MAN_kwantung_veto 
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+
+		add_ideas = MAN_militarism 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.25
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = MAN_kwantung_will_try_to_occupy_east_hebei_tt
+
+		hidden_effect = {
+			set_country_flag = MAN_kwantung_army_took_control_flag
+			IF = {
+				limit = {
+					609 = {
+						OWNER = {
+							OR = {
+								original_tag = JAP
+								is_ally_with = JAP
+							}
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+				}
+				country_event = {
+					id = SEA_japan_popup_events.45 
+					days = 4
+					random_days = 7
+				}	
+			}
+		}
+
+	}
+
+	# It is time to crush this Japanese yoke!
+	option = {
+		name = SEA_japan_popup_events.26.b
+		ai_chance = { 
+			base = 0 
+		}
+		
+		IF = {
+			limit = {
+				has_idea = MAN_kwantung_veto 
+			}
+			remove_ideas = MAN_kwantung_veto 
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+
+		add_manpower = -7500
+		add_war_support = -0.1
+		add_stability = -0.1
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.27
+	title = SEA_japan_popup_events.27.t
+	desc = SEA_japan_popup_events.27.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Throw the invaders back into the sea!
+	option = {
+		name = SEA_japan_popup_events.27.a
+		
+		add_political_power = 100
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.28
+	title = SEA_japan_popup_events.28.t
+	desc = SEA_japan_popup_events.28.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	# Hokkaido is perfect
+	option = {
+		name = SEA_japan_popup_events.28.a
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+
+			536 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+		IF = {
+			limit = {
+				536 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			536 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+
+	}
+
+	# Shikoku is remote enough
+	option = {
+		name = SEA_japan_popup_events.28.b
+		ai_chance = {
+			base = 30
+		}
+		trigger = {
+
+			530 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+		IF = {
+			limit = {
+				530 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			530 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+
+	}
+
+	# Establish a branch in Kagoshima
+	option = {
+		name = SEA_japan_popup_events.28.c
+		ai_chance = {
+			base = 20
+		}
+		trigger = {
+
+			1018 = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = JAP_state_infiltrated_by_the_jcp
+					}	
+				}
+			}
+
+		}
+		
+
+		IF = {
+			limit = {
+				1018 = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_infiltrated_by_the_jcp
+						}	
+					}
+				}
+			}
+			1018 = {
+				IF = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = JAP_state_under_army_control
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = JAP_state_under_army_control
+					}
+				}
+				IF = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = JAP_state_under_rebel_control
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_state_under_rebel_control
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = JAP_state_infiltrated_by_the_jcp
+				}
+				set_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_popup_events.29
+	title = SEA_japan_popup_events.29.t
+	desc = SEA_japan_popup_events.29.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The Revolution has finally begun!
+	option = {
+		name = SEA_japan_popup_events.29.a
+		
+		# Kick off the communist civil war 
+
+		JAP_trigger_communist_civil_war = yes
+
+	}
+
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.30
+	title = SEA_japan_popup_events.30.t
+	desc = SEA_japan_popup_events.30.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# The Kōza-ha are in the right here
+	option = {
+		name = SEA_japan_popup_events.30.a
+		ai_chance = { 
+			base = 50 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
+					always = no
+				}
+			}
+		}
+		
+		custom_effect_tooltip = JAP_supported_the_kozaha_idea_tt
+
+		hidden_effect = {
+			set_country_flag = JAP_supported_the_kozaha_idea_flag
+		}
+
+	}
+
+	# The Rōnō-ha's ideals shine brightest today
+	option = {
+		name = SEA_japan_popup_events.30.b
+		ai_chance = { 
+			base = 50 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = COMMUNIST
+					}
+				}
+			}
+		}
+		
+		custom_effect_tooltip = JAP_supported_the_rounoha_idea_tt
+
+		hidden_effect = {
+			set_country_flag = JAP_supported_the_rounoha_idea_flag
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.31
+	title = SEA_japan_popup_events.31.t
+	desc = SEA_japan_popup_events.31.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Sanzō Nosaka has the popularity
+	option = {
+		name = SEA_japan_popup_events.31.a
+		ai_chance = { 
+			base = 50 
+		}
+		
+
+	}
+
+	# Kyūichi Tokuda has the experience
+	option = {
+		name = SEA_japan_popup_events.31.b
+		ai_chance = { 
+			base = 50 
+		}
+		
+		add_political_power = 50
+		add_stability = 0.05
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.32
+	title = SEA_japan_popup_events.32.t
+	desc = SEA_japan_popup_events.32.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Hitoshi Yamakawa has the experience
+	option = {
+		name = SEA_japan_popup_events.32.a
+		ai_chance = { 
+			base = 33 
+		}
+		
+		add_country_leader_role = {
+			character = JAP_hitoshi_yamakawa
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				expire = "1993.1.1.1"
+				traits = { JAP_socialist_revolutionary } 
+			}
+		}
+
+	}
+
+	# Kanson Arahata has the people's support
+	option = {
+		name = SEA_japan_popup_events.32.b
+		ai_chance = { 
+			base = 33 
+		}
+		
+		add_country_leader_role = {
+			character = JAP_kanson_arahata
+			promote_leader = yes
+			country_leader = {
+				ideology = marxism
+				expire = "1993.1.1.1"
+				traits = { JAP_marxist_writer } 
+			}
+		}
+
+	}
+
+	# Yamakawa Kikue has the most revolutionary ideas
+	option = {
+		name = SEA_japan_popup_events.32.c
+		ai_chance = { 
+			base = 33 
+		}
+		
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.33
+	title = SEA_japan_popup_events.33.t
+	desc = SEA_japan_popup_events.33.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Make them live as normal people
+	option = {
+		name = SEA_japan_popup_events.33.a
+		ai_chance = { 
+			base = 50 
+		}
+		
+		add_stability = -0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 50
+
+	}
+
+	# Let them serve their term in prison
+	option = {
+		name = SEA_japan_popup_events.33.b
+		ai_chance = { 
+			base = 40 
+		}
+		
+		add_stability = -0.1
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 75
+		add_war_support = 0.05
+
+	}
+
+	# They are too dangerous to be kept alive!
+	option = {
+		name = SEA_japan_popup_events.33.c
+		ai_chance = { 
+			base = 10 
+		}
+		
+		add_stability = -0.15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_war_support = 0.1
+
+	}
+
+	# Send them into exile
+	option = {
+		name = SEA_japan_popup_events.33.d
+		ai_chance = { 
+			base = 0 
+		}
+
+		MAN = {
+			add_ideas = MAN_exiled_imperial_family
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.34
+	title = SEA_japan_popup_events.34.t
+	desc = SEA_japan_popup_events.34.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We should make use of their fascinating traditions
+	option = {
+		name = SEA_japan_popup_events.34.a
+		ai_chance = { 
+			base = 75
+		}
+		
+		every_owned_state = {
+			limit = {
+				is_core_of = ANU
+			}
+			add_dynamic_modifier = {
+				modifier = JAP_ainu_revoluton_theory_implemented_dm
+				scope = ROOT
+			}	
+		}
+
+	}
+
+	# These revolutionary leaders must be granted the autonomy the deserve!
+	option = {
+		name = SEA_japan_popup_events.34.b
+		ai_chance = { 
+			base = 25 
+		}
+		trigger = {
+			always = no
+		}
+		
+		every_owned_state = {
+			limit = {
+				is_core_of = ANU
+			}
+			transfer_state_to = ANU
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		puppet = ANU
+
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.35
+	title = SEA_japan_popup_events.35.t
+	desc = SEA_japan_popup_events.35.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We will graciously accept
+	option = {
+		name = SEA_japan_popup_events.35.a
+		ai_chance = {
+			base = 100
+		}
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}	
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.3
+		}	
+		add_political_power = 100
+
+	}
+
+	# No, the governorship must stay!
+	option = {
+		name = SEA_japan_popup_events.35.b
+		ai_chance = {
+			base = 0
+		}
+
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_popup_events.36
+	title = SEA_japan_popup_events.36.t
+	desc = SEA_japan_popup_events.36.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { #Accept Communism
+		ai_chance = {
+			base = 100
+		}
+		name = SEA_japan_popup_events.36.a
+
+		add_timed_idea = {
+			idea = JAP_fifth_international_agitation
+			days = 720
+		}
+		set_country_flag = received_JAP_communist_international_agitation
+	}
+
+	option = { #Clamp Down on Communism
+		ai_chance = {
+			base = 0
+		}
+		name = SEA_japan_popup_events.36.b
+		
+		add_political_power = -50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = SEA_japan_popup_events.37
+	title = SEA_japan_popup_events.37.t
+	desc = SEA_japan_popup_events.37.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = { #Accept Communism
+		ai_chance = {
+			base = 100
+		}
+		name = SEA_japan_popup_events.37.a
+
+		add_timed_idea = {
+			idea = JAP_fifth_international_agitation
+			days = 720
+		}
+		add_stability = -0.05
+		set_country_flag = received_JAP_communist_international_agitation
+	}
+
+	option = { #Clamp Down on Communism
+		ai_chance = {
+			base = 0
+		}
+		name = SEA_japan_popup_events.37.b
+		
+		add_political_power = -150
+		add_stability = 0.05
+	}
+}
+
+country_event = { #The Civil War broke out
+	id = SEA_japan_popup_events.38
+	title = SEA_japan_popup_events.38.t
+	desc = SEA_japan_popup_events.38.desc
+	picture = GFX_report_event_generic_communist_militia
+
+	is_triggered_only = yes
+
+	option = { #we are communist now!
+		name = SEA_japan_popup_events.38.a
+		ai_chance = {
+			base = 10
+		}
+
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				set_variable = { ROOT.temp_capital = THIS.id }
+			}
+		}
+
+		start_civil_war = {
+			ideology = ROOT
+			ruling_party = communism
+			size = 0.5 #since this triggers when the country goes over 50% communism
+			capital = var:ROOT.temp_capital
+		}
+
+		every_country = {
+			limit = {
+				original_tag = ROOT
+				has_government = communism
+			}
+
+			set_country_flag = JAP_spurred_communist_cw_flag
+		}
+
+	}
+
+	option = { #Fight back the red menace!
+		name = SEA_japan_popup_events.38.b
+		ai_chance = {
+			base = 2
+		}
+
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				set_variable = { ROOT.temp_capital = THIS.id }
+			}
+		}
+
+		start_civil_war = {
+			ideology = communism
+			ruling_party = ROOT
+			size = 0.5 #since this triggers when the country goes over 50% communism
+			capital = var:ROOT.temp_capital
+		}
+
+		every_country = {
+			limit = {
+				original_tag = ROOT
+				has_government = communism
+			}
+
+			set_country_flag = JAP_spurred_communist_cw_flag
+		}
+	}
+}
+
+country_event = {
+	id = SEA_japan_popup_events.39
+	title = SEA_japan_popup_events.39.t
+	desc = SEA_japan_popup_events.39.desc
+	picture = GFX_report_event_JAP_workers_celebrating
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# This is the way forward!
+	option = {
+		name = SEA_japan_popup_events.39.a
+		ai_chance = { 
+			base = 95 # If they happen to have this specific combo, sure go for it! 
+		}
+		
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_party_name = {
+			ideology = communism
+			long_name = JAP_youth_league_for_buddhism_party_long
+			name = JAP_youth_league_for_buddhism_party
+		}	
+
+		hidden_effect = {
+			set_country_flag = JAP_buddhist_socialist_takeover_flag
+			mark_focus_tree_layout_dirty = yes 
+		}
+
+	}
+
+	# No, [ROOT.GetLeader] will continue to lead
+	option = {
+		name = SEA_japan_popup_events.39.b
+		ai_chance = { 
+			base = 5 
+		}
+		
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}	
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.43
+	title = SEA_japan_popup_events.43.t
+	desc = SEA_japan_popup_events.43.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# How dare they oppose the Emperors wish? 
+	option = {
+		name = SEA_japan_popup_events.43.a
+		ai_chance = { 
+			base = 100 
+		}
+
+		add_country_leader_role = {
+			character = JAP_naruhiko_higashikuni
+			promote_leader = yes
+			country_leader = {
+				ideology = fascism_ideology
+				expire = "1952.1.1.1"
+				traits = { JAP_noble_prime_minister }
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		IF = {
+			limit = {
+				has_idea = korechika_anami
+			}
+			remove_ideas = korechika_anami
+		}
+		retire_character = JAP_korechika_anami
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		swap_ideas = {
+			remove_idea = JAP_crumbling_military_cabinet_idea_2
+			add_idea = JAP_crumbling_military_cabinet_idea_3
+		}	
+
+		custom_effect_tooltip = JAP_unlock_surrender_broadcast_tt
+		
+		set_country_flag = JAP_kyujo_incident_rebels_lost_flag 
+
+		hidden_effect = {
+			JAP_tetsu_katayama = {
+				promote_character = {
+				    ideology = liberalism
+				}
+			}
+		}
+
+	}
+
+	# The dark clouds must disappear from the reign of the Emperor!
+	option = {
+		name = SEA_japan_popup_events.43.b
+		ai_chance = { 
+			base = 0 
+		}
+
+		add_country_leader_role = {
+			character = JAP_yasuhiko_asaka
+			promote_leader = yes
+			country_leader = {
+				ideology = fascism_ideology
+				expire = "1952.1.1.1"
+				traits = { JAP_noble_prime_minister }
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		swap_ideas = {
+			remove_idea = JAP_crumbling_military_cabinet_idea_2
+			add_idea = JAP_crumbling_military_cabinet_idea_4
+		}	
+
+		custom_effect_tooltip = JAP_unlock_japans_longest_day_tt
+		
+		set_country_flag = JAP_kyujo_incident_rebels_won_flag 
+
+		hidden_effect = {
+			JAP_tetsu_katayama = {
+				promote_character = {
+				    ideology = liberalism
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.45
+	title = SEA_japan_popup_events.45.t
+	desc = SEA_japan_popup_events.45.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_preparation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Our consolidation continues
+	option = {
+		name = SEA_japan_popup_events.45.a
+		
+		609 = {
+			transfer_state_to = ROOT
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP = {
+			country_event = {
+				id = SEA_japan_popup_events.46
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.46
+	title = SEA_japan_popup_events.46.t
+	desc = SEA_japan_popup_events.46.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_preparation
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We will deal with them later... 
+	option = {
+		name = SEA_japan_popup_events.46.a
+		
+		effect_tooltip = {
+			609 = {
+				transfer_state_to = FROM
+				add_core_of = FROM
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_popup_events.50
+	title = SEA_japan_popup_events.50.t
+	desc = SEA_japan_popup_events.50.desc
+	picture = GFX_report_event_JAP_diet_speech
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Very well, if that is the Prime minister they want...
+	option = {
+		name = SEA_japan_popup_events.50.a
+		ai_chance = {
+			base = 50
+		}
+		
+		add_country_leader_role = {
+			character = JAP_seigo_nakano
+			promote_leader = yes
+			country_leader = {
+				ideology = nazism
+				expire = "1952.1.1.1"
+				traits = { JAP_tohokai_leader } 
+			}
+		}
+
+		hidden_effect = {
+			set_cosmetic_tag = JAP_tohokai_rule
+			set_country_flag = JAP_tohokai_prime_minister_added 
+			mark_focus_tree_layout_dirty = yes
+		}	
+
+	}
+
+	# We will not comply with their demands!
+	option = {
+		name = SEA_japan_popup_events.50.b
+		ai_chance = {
+			base = 50
+		}
+		
+		add_stability = -0.15
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_big_zaibatsu_faction_loss = yes
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_popup_events.51
+	title = SEA_japan_popup_events.51.t
+	desc = SEA_japan_popup_events.51.desc
+	picture = GFX_report_event_battle_of_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.51.a
+
+		add_war_support = 0.05 
+		navy_experience = 25 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		random_unit_leader = {
+			limit = {
+				has_character_flag = was_the_japanese_admiral_in_midway
+			}
+			add_skill_level = 1
+			add_attack = 1
+			add_coordination = 1
+			add_maneuver = 1
+		}	
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_popup_events.52
+	title = SEA_japan_popup_events.52.t
+	desc = SEA_japan_popup_events.52.desc
+	picture = GFX_report_event_battle_of_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.52.a
+
+		add_war_support = 0.05 
+		navy_experience = 25 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		random_unit_leader = {
+			limit = {
+				has_character_flag = was_the_american_admiral_in_midway
+			}
+			add_skill_level = 1
+			add_attack = 1
+			add_coordination = 1
+			add_maneuver = 1
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_popup_events.53
+	title = SEA_japan_popup_events.53.t
+	desc = SEA_japan_popup_events.53.desc
+	picture = GFX_report_event_JAP_loss_at_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.53.a
+		
+		add_war_support = -0.1 
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_popup_events.54
+	title = SEA_japan_popup_events.54.t
+	desc = SEA_japan_popup_events.54.desc
+	picture = GFX_report_event_USA_loss_at_midway
+
+	is_triggered_only = yes
+
+	fire_only_once = yes 
+
+	option = {
+		name = SEA_japan_popup_events.54.a
+		
+		add_war_support = -0.1 
+
+	}
+}

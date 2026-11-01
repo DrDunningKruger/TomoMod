@@ -316,7 +316,7 @@
  BUL_peaceful_development_desc:0 "Why join a war that will bring nothing but death and calamity to our people, when we can simply play the role of peacekeepers over the occupied Balkan regions, reaping territorial gains without having to send a single man to a certain death in some remote battlefront?"
  BUL_military_secrets_sharing:0 "Military Secrets Sharing"
  BUL_military_secrets_sharing_desc:0 "German technology is far superior to ours, and it could be very beneficial for us to sign an agreement allowing Bulgarian scientists and engineers to access some of Germany's technological wonders, paving the way for us to further develop our own research."
- BUL_bulgarisation_of_the_balkans:0 "Bulgarisation of the Balkans"
+ BUL_bulgarisation_of_the_balkans:0 "Bulgarianisation of the Balkans"
  BUL_bulgarisation_of_the_balkans_desc:1 "To strengthen our claims on the Balkans, we must carry out a Bulgarisation of the occupied regions, so that, after [GetGermanFactionNameDef] victory in the war, [GetGermanOrIndependent] will be able to see the Bulgarian nature of those territories and will not dare break our national integrity, like the British did in 1878."
  BUL_bulgarisation_of_the_balkans_axis_name_def:0 "an Axis"
  BUL_bulgarisation_of_the_balkans_central_powers_name_def:0 "a Central Powers"

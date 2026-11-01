@@ -1,0 +1,86 @@
+add_namespace = ihe_jap_china_war
+
+
+country_event = {
+	id = ihe_jap_china_war.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		activate_shine_on_focus = JAP_intervene_in_china1
+		set_country_flag = { flag = JAP_intervene_in_china1_in_progress days = 211 value = 1 }
+		country_event = { id = ihe_jap_china_war.2 days = 210 }
+	}
+}
+
+country_event = {
+	id = ihe_jap_china_war.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = JAP_intervene_in_china1
+		clr_country_flag = JAP_intervene_in_china1_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = JAP_intervene_in_china1 } }
+			complete_national_focus = JAP_intervene_in_china1
+		}
+
+		activate_shine_on_focus = JAP_1stbattle
+		set_country_flag = { flag = JAP_1stbattle_in_progress days = 211 value = 1 }
+		country_event = { id = ihe_jap_china_war.3 days = 210 }
+	}
+}
+
+country_event = {
+	id = ihe_jap_china_war.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = JAP_1stbattle
+		clr_country_flag = JAP_1stbattle_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = JAP_1stbattle } }
+			complete_national_focus = JAP_1stbattle
+		}
+
+		activate_shine_on_focus = JAP_2ndbattle
+		set_country_flag = { flag = JAP_2ndbattle_in_progress days = 211 value = 1 }
+		country_event = { id = ihe_jap_china_war.4 days = 210 }
+	}
+}
+
+country_event = {
+	id = ihe_jap_china_war.4
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = JAP_2ndbattle
+		clr_country_flag = JAP_2ndbattle_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = JAP_2ndbattle } }
+			complete_national_focus = JAP_2ndbattle
+		}
+
+		activate_shine_on_focus = JAP_3rdbattle
+		set_country_flag = { flag = JAP_3rdbattle_in_progress days = 211 value = 1 }
+		country_event = { id = ihe_jap_china_war.5 days = 210 }
+	}
+}
+
+country_event = {
+	id = ihe_jap_china_war.5
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = JAP_3rdbattle
+		clr_country_flag = JAP_3rdbattle_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = JAP_3rdbattle } }
+			complete_national_focus = JAP_3rdbattle
+		}
+	}
+}

@@ -1,0 +1,27 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_IHE_SOV_final_offensive_trait"
+		texturefile = "gfx/interface/traits/trait_IHE_SOV_final_offensive.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_IHE_SOV_retake_leningrad"
+		texturefile = "gfx/interface/decisions/decision_IHE_SOV_retake_leningrad.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_IHE_SOV_retake_moscow"
+		texturefile = "gfx/interface/decisions/decision_IHE_SOV_retake_moscow.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_IHE_SOV_retake_stalingrad"
+		texturefile = "gfx/interface/decisions/decision_IHE_SOV_retake_stalingrad.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_IHE_SOV_retake_baku"
+		texturefile = "gfx/interface/decisions/decision_IHE_SOV_retake_baku.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_IHE_SOV_retake_kazan"
+		texturefile = "gfx/interface/decisions/decision_IHE_SOV_retake_kazan.dds"
+	}
+}

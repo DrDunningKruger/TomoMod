@@ -39,3 +39,42 @@ country_event = {
 		custom_effect_tooltip = SOV_150_DIVS
 	}
 }
+
+country_event = {
+	id = ihe_sov_reserves.4
+	title = ihe_sov_reserves.4.t
+	desc = ihe_sov_reserves.4.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.4.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}
+
+country_event = {
+	id = ihe_sov_reserves.5
+	title = ihe_sov_reserves.5.t
+	desc = ihe_sov_reserves.5.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.5.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}
+
+country_event = {
+	id = ihe_sov_reserves.6
+	title = ihe_sov_reserves.6.t
+	desc = ihe_sov_reserves.6.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_sov_reserves.6.a
+		custom_effect_tooltip = SOV_150_DIVS
+	}
+}

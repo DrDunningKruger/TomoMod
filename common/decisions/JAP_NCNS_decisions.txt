@@ -1,0 +1,887 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+
+
+
+JAP_kodoha_insurgency_decisions = {
+
+	JAP_increase_takahashi_korekiyo_security_decision  = {
+
+		priority = 80
+
+		icon = GFX_decision_SWI_no_elected_president
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC
+					}
+				}
+			}
+		}
+
+		allowed = {  
+		}
+
+		visible = { 
+			always = no # This is to make it dissappear afterwards
+			has_country_flag = JAP_can_now_save_advisors_flag
+		}
+
+		available = {
+			always = no # This is to show that it will dissappear afterwards
+		}
+
+		fire_only_once = yes
+
+		cost = 40
+
+		complete_effect = {
+
+			custom_effect_tooltip = JAP_increase_takahashi_korekiyo_security_decision_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_will_not_impact_focus_choices_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			show_ideas_tooltip = JAP_takahashi_korekiyo
+
+			hidden_effect = {
+				set_country_flag = JAP_korekiyo_protected_flag
+			}
+
+		}
+
+		remove_effect = {
+		}
+
+	}
+
+	JAP_increase_jotaro_watanabe_security_decision  = {
+
+		priority = 70
+
+		icon = GFX_decision_generic_belgian_colonial_helmet
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC
+					}
+				}
+			}
+		}
+
+		allowed = {  
+		}
+
+		visible = { 
+			always = no # This is to make it dissappear afterwards
+			has_country_flag = JAP_can_now_save_advisors_flag
+		}
+
+		available = {
+			always = no # This is to show that it will dissappear afterwards
+		}
+
+		fire_only_once = yes
+
+		cost = 40
+
+		complete_effect = {
+
+			custom_effect_tooltip = JAP_increase_jotaro_watanabe_security_decision_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_will_not_impact_focus_choices_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			show_ideas_tooltip = JAP_jotaro_watanabe
+
+			hidden_effect = {
+				set_country_flag = JAP_watanabe_protected_flag
+			}
+
+		}
+
+		#modifier = {
+		#	command_power_gain = -0.2
+		#}
+
+		remove_effect = {
+		}
+
+	}
+}
+
+
+
+JAP_spiritual_mobilization_decisions = {
+	JAP_luxury_is_the_enemy_decision  = {
+
+		priority = 10
+
+		icon = GFX_decision_generic_consumer_goods
+
+		ai_will_do = {
+			base = 30
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			OR = {
+				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 75
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			IF = {
+				limit = {
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+				}
+				JAP_add_or_modify_showa_statism = yes
+
+				add_to_variable = { JAP_showa_statism_consumer_goods_factor = -0.05 tooltip = consumer_goods_expected_value_tt }
+			}
+			ELSE = {
+				JAP_add_or_modify_imperial_way = yes
+
+				add_to_variable = { JAP_the_imperial_way_consumer_goods_factor = -0.05 tooltip = consumer_goods_expected_value_tt }
+			}
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_form_a_labor_patriot_corps_decision  = {
+
+		priority = 9
+
+		icon = GFX_decision_generic_merge_plant_materiel
+
+		ai_will_do = {
+			base = 20
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			OR = {
+				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 100
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			JAP_add_or_modify_early_industrialization = yes
+
+			add_to_variable = { JAP_industry_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_produce_bullet_stamps_decision  = {
+
+		priority = 8
+
+		icon = GFX_decision_generic_industry
+
+		ai_will_do = {
+			base = 20
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			OR = {
+				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
+			}
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 75
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}	
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}	
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_distribute_rations_decision  = {
+
+		priority = 7
+
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+
+		ai_will_do = {
+			base = 25
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			has_completed_focus = JAP_formalize_the_tonarigumi
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 50
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			add_timed_idea = {
+				idea = JAP_distributing_rations
+				days = 180
+			}	
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_develop_sufu_materials_decision  = {
+
+		priority = 6
+
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 5
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			has_completed_focus = JAP_the_metal_collection_order
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 50
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			add_timed_idea = {
+				idea = JAP_sufu_materials
+				days = 360
+			}	
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_collect_civilian_donations_decision  = {
+
+		priority = 5
+
+		icon = GFX_decision_hol_attract_foreign_investors
+
+		ai_will_do = {
+			base = 30
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			has_completed_focus = JAP_form_the_dai_nippon_fujinkai
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 75
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			add_stability = -0.03
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}	
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_raise_military_moreale_decision  = {
+
+		priority = 4
+
+		icon = GFX_decision_generic_political_rally
+
+		ai_will_do = {
+			base = 30
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			has_completed_focus = JAP_form_the_dai_nippon_fujinkai
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 75
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			JAP_add_or_modify_imperial_army = yes
+
+			add_to_variable = { JAP_army_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }	
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+
+	JAP_women_in_military_production_decision  = {
+
+		priority = 3
+
+		icon = GFX_decision_generic_merge_plant_tank
+
+		ai_will_do = {
+			base = 20
+		}
+	
+		allowed = {  
+			original_tag = JAP 
+		}
+
+		visible = { 
+			has_completed_focus = JAP_form_the_dai_nippon_fujinkai
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	
+		available = {
+			has_war = yes
+		}
+
+		#days_remove = 70
+
+		#days_re_enable = 180
+
+		cost = 50
+
+		cancel_trigger = {
+		}
+
+        cancel_effect = {
+        }
+
+		modifier = {
+		}
+
+		complete_effect = { 
+
+			JAP_add_or_modify_showa_statism = yes
+
+			add_to_variable = { JAP_showa_statism_industrial_capacity_dockyard = 0.03 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = 0.03 tooltip = industrial_capacity_factory_tt }
+
+		}
+
+		fire_only_once = yes
+
+		remove_effect = {
+
+		}
+
+	}
+}
+
+JAP_the_co_prosperity_sphere_decisions = {
+
+	JAP_establish_the_provisional_government_of_free_india_decision = {
+	
+		priority = 45
+	
+		icon = GFX_decision_generic_nationalism
+	
+		ai_will_do = {
+			base = 800
+		}
+	
+		allowed = {  
+			original_tag = JAP
+		}
+	
+		visible = { 
+			always = no
+			NOT = { has_country_flag = JAP_created_provisional_government_of_free_india_flag }
+		} 
+	
+		available = {
+			is_subject = no
+			OR = {
+				RAJ = {
+					exists = no
+				}
+				RAJ = {
+					is_subject = yes
+					has_war_with = ROOT
+					has_civil_war = no
+				}
+			}
+			RAJ = {
+				any_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+	
+		cost = 25
+
+		complete_effect = {
+
+			IF = {
+				limit = {
+					RAJ = {
+						exists = no
+					}
+				}
+				RAJ = {
+					every_core_state = {
+						limit = {
+							is_controlled_by_ROOT_or_subject = yes
+						}
+						transfer_state_to = RAJ
+					}
+				}
+				set_autonomy = {
+					target = RAJ
+					autonomous_state = autonomy_wtt_imperial_protectorate
+					end_wars = no
+					end_civil_wars = no
+				}
+				RAJ = {
+					country_event = {
+						id = SEA_japan_foreign_policy.66
+						hours = 2
+					}	
+				}
+			}
+			ELSE = {
+				hidden_effect = {
+					RAJ = {
+						every_core_state = {
+							limit = {
+								controller = {
+									OR = {
+										original_tag = ROOT
+										is_subject_of = ROOT
+									}
+								}
+							}
+							set_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag 
+						}
+					}
+					every_state = {
+						limit = {
+							is_in_array = {
+							    array = RAJ.owned_states_at_game_start
+							    value = THIS
+							}
+							controller = {
+								OR = {
+									original_tag = ROOT
+									is_subject_of = ROOT
+								}
+							}
+						}
+						set_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag 
+					}
+				}
+				RAJ = {
+					country_event = {
+						id = SEA_japan_foreign_policy.67
+						hours = 1
+					}	
+				}
+			}
+
+			hidden_effect = {
+				set_country_flag = JAP_created_provisional_government_of_free_india_flag 
+			}
+		}
+	
+	}
+
+	JAP_establish_the_second_philippine_republic_decision = {
+	
+		priority = 40
+	
+		icon = GFX_decision_generic_nationalism
+	
+		ai_will_do = {
+			base = 800
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 623
+				state = 1027
+				state = 327
+				state = 626
+				state = 624
+				state = 625
+				state = 628
+				state = 1026
+				state = 627
+				state = 1025
+			}
+		}
+	
+		allowed = {  
+			original_tag = JAP
+		}
+	
+		visible = { 
+			always = no
+			NOT = { has_country_flag = JAP_created_second_philippine_republic_flag }
+		} 
+	
+		available = {
+			is_subject = no
+			OR = {
+				PHI = {
+					exists = no
+				}
+				PHI = {
+					is_subject = yes
+					has_war_with = ROOT
+					has_civil_war = no
+				}
+			}
+			PHI = {
+				any_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+	
+		cost = 25
+
+		complete_effect = {
+
+			IF = {
+				limit = {
+					PHI = {
+						exists = no
+					}
+				}
+				PHI = {
+					every_core_state = {
+						limit = {
+							is_controlled_by_ROOT_or_subject = yes
+						}
+						transfer_state_to = PHI
+					}
+				}
+				set_autonomy = {
+					target = PHI
+					autonomous_state = autonomy_wtt_imperial_protectorate
+					end_wars = no
+					end_civil_wars = no
+				}
+				PHI = {
+					country_event = {
+						id = SEA_japan_foreign_policy.68
+						hours = 2
+					}	
+				}
+			}
+			ELSE = {
+				random_state = {
+					limit = {
+						is_core_of = PHI
+						is_controlled_by = ROOT
+					}
+					transfer_state_to = PSR
+					add_core_of = PSR
+				}
+				PHI = {
+					every_core_state = {
+						add_claim_by = PSR
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = PHI
+						is_controlled_by = ROOT
+					}
+					set_state_controller_to = PSR
+				}
+
+				custom_effect_tooltip =  generic_skip_one_line_tt
+
+				set_autonomy = {
+					autonomous_state = autonomy_wtt_imperial_protectorate
+					end_wars = no
+					end_civil_wars = no
+				}
+
+
+
+				#PHI = {
+				#	country_event = {
+				#		id = SEA_japan_foreign_policy.69
+				#		hours = 1
+				#	}	
+				#}
+			}
+
+			hidden_effect = {
+				set_country_flag = JAP_created_second_philippine_republic_flag 
+			}
+		}
+	
+	}
+
+}
+
+
+
+
+
+

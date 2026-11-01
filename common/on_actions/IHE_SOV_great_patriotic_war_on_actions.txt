@@ -34,6 +34,49 @@ on_actions = {
 					set_country_flag = SOV_factory_relocation_inefficiency_given
 					add_timed_idea = { idea = SOV_factory_relocation_inefficiency days = 120 }
 				}
+				# Lend-Lease I-III start automatically, 120 days each, once per game (events/IHE_SOV_lendlease.txt)
+				every_country = {
+					limit = {
+						original_tag = SOV
+						exists = yes
+						NOT = { has_country_flag = SOV_lendlease_started }
+					}
+					set_country_flag = SOV_lendlease_started
+					activate_shine_on_focus = lendlease
+					set_country_flag = { flag = SOV_lendlease_in_progress days = 121 value = 1 }
+					country_event = { id = ihe_sov_lendlease.1 days = 120 }
+				}
+				every_country = {
+					limit = {
+						original_tag = GER
+						exists = yes
+						NOT = { has_country_flag = GER_barbarossa_mission_started }
+					}
+					set_country_flag = GER_barbarossa_mission_started
+					activate_mission = GER_barbarossa_moscow_mission
+					activate_mission = GER_barbarossa_leningrad_mission
+					activate_mission = GER_barbarossa_stalingrad_mission
+					activate_mission = GER_barbarossa_sevastopol_mission
+					if = {
+						limit = { NOT = { has_completed_focus = GER_fuhrer_directive_21 } }
+						complete_national_focus = GER_fuhrer_directive_21
+					}
+					every_country = {
+						limit = {
+							OR = {
+								is_in_faction_with = PREV
+								original_tag = BUL
+								original_tag = YUG
+							}
+							NOT = { original_tag = ITA }
+							NOT = { original_tag = GER }
+						}
+						activate_mission = GER_barbarossa_moscow_mission_axis
+						activate_mission = GER_barbarossa_leningrad_mission_axis
+						activate_mission = GER_barbarossa_stalingrad_mission_axis
+						activate_mission = GER_barbarossa_sevastopol_mission_axis
+					}
+				}
 			}
 		}
 	}

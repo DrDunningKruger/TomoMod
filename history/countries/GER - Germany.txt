@@ -146,7 +146,7 @@ add_ideas = {
 	GER_stayoutofafrica
     AFRICA_AXIS_6	
 }
-add_ideas = GER_mefo_bills_1
+add_timed_idea = { idea = GER_mefo_bills_1 days = 1339 }
 
 activate_mission = GER_mefo_bills_mission
 

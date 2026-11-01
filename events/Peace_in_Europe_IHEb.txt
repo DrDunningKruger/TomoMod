@@ -1,43 +1,5 @@
 add_namespace = peace_in_europe
 
-# Vday in Europe - Soviets dominant
-news_event = {
-	id = peace_in_europe.1
-	title = "Axis defeat"
-	desc = "Soviet forces captured Berlin and the war is finally over. Or is it?"
-	picture = GFX_news_event_001
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Some people have work in the morning..."
-		trigger = {
-			always = yes
-		}
-	}
-}
-
-# Vday in Europe - Allies dominant
-news_event = {
-	id = peace_in_europe.2
-	title = "Axis defeat"
-	desc = "Germany is finally defeated, but what happens now?"
-	picture = GFX_news_event_001
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Some people have work in the morning..."
-		trigger = {
-			always = yes
-		}
-	}
-}
-
 # Vday in Europe - WW3
 news_event = {
 	id = peace_in_europe.3

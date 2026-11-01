@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_IHE_east_victory_pip_red"
+		texturefile = "gfx/interface/IHE_east_victory_pip_red.png"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_pip_green"
+		texturefile = "gfx/interface/IHE_east_victory_pip_green.png"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_hold1"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_hold1.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_hold2"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_hold2.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_count1"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_count1.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_count2"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_count2.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_paused1"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_paused1.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_paused2"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_paused2.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_east_victory_bar_bg_won"
+		texturefile = "gfx/interface/IHE_east_victory_bar_bg_won.dds"
+	}
+}

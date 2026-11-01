@@ -312,19 +312,6 @@ country_event = {
 }
 
 country_event = {
-	id = tutorial.24
-	title = tutorial.24.t
-	desc = tutorial.24.d
-	picture = ENG_Propaganda
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = tutorial.24.a
-	}
-}
-
-country_event = {
 	id = tutorial.25
 	title = tutorial.25.t
 	desc = tutorial.24.d
@@ -386,19 +373,6 @@ country_event = {
 	
 	option = {
 		name = tutorial.24.a
-	}
-}
-
-country_event = {
-	id = tutorial.30
-	title = tutorial.30.t
-	desc = tutorial.30.d
-	picture = CUB_Propaganda
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = tutorial.30.a
 	}
 }
 

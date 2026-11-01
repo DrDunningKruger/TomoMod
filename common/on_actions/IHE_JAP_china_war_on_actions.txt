@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { date < 1937.7.1 }
+				JAP = { country_event = { id = ihe_jap_china_war.1 days = 547 } }
+			}
+		}
+	}
+}

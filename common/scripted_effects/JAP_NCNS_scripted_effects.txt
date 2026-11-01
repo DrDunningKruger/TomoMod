@@ -1,0 +1,5855 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_potential_special_forces_tree = {
+	custom_effect_tooltip = add_potential_special_forces_tree_tt
+	if = {
+		limit = { NOT = { has_variable = sf_trees } }
+		set_variable = { sf_trees = 2 }
+	}
+	else = {
+		add_to_variable = { sf_trees = 1 }
+	}
+}
+
+store_core_states_on_game_start = { #Should be called from history file
+	every_core_state = {
+		ROOT = {
+			add_to_array = {
+				array = core_states_at_game_start
+				value = PREV
+			}
+		}
+	}
+}
+
+ETH_BOP_decentralization_large_effect = {
+}
+
+INS_remove_hol_ally_strategy_effect = {
+	event_target:INS_dutch_indonesia = {
+		PREV = {
+			add_ai_strategy = { 
+				type = dont_defend_ally_borders 
+				id = PREV
+				value = -100
+			}
+			add_ai_strategy = { 
+				type = ignore 
+				id = PREV
+				value = -100
+			}
+			remove_from_array = {
+				array = INS.INS_dutch_ally_tracker
+				value = THIS
+			}
+		}
+	}
+}
+
+
+JAP_create_patrick_heenan_operative = {
+	create_operative_leader = {
+		name = JAP_patrick_vaughan_heenan
+		GFX = GFX_portrait_JAP_patrick_vaughan_heenan
+		gender = male
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { ENG NZL MAL RAJ }
+	}
+}
+
+JAP_create_john_farnsworth_operative = {
+	create_operative_leader = {
+		name = JAP_john_semer_farnsworth
+		GFX = GFX_portrait_JAP_john_semer_farnsworth
+		gender = male
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { USA }
+	}
+}
+
+JAP_create_ignatius_lincoln_operative = {
+	create_operative_leader = {
+		name = JAP_ignatius_timothy_trebitsch_lincoln
+		GFX = GFX_portrait_JAP_ignatius_timothy_trebitsch_lincoln
+		gender = male
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { HUN AUS TIB CHI ISR }
+	}
+}
+
+JAP_create_yoshiko_kawashima_operative = {
+	create_operative_leader = {
+		name = JAP_yoshiko_kawashima
+		GFX = GFX_portrait_yoshiko_kawashima
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { MAN JAP CHI }
+	}
+}
+
+JAP_create_takeo_yoshikawa_operative = {
+	create_operative_leader = {
+		name = JAP_takeo_yoshikawa
+		GFX = GFX_portrait_takeo_yoshikawa
+		gender = male
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { JAP }
+	}
+}
+
+JAP_create_yoshio_kodama_operative = {
+	create_operative_leader = {
+		name = JAP_yoshio_kodama
+		GFX = GFX_portrait_JAP_yoshio_kodama_operative
+		gender = male
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { JAP }
+	}
+}
+
+JAP_add_or_modify_showa_statism = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_showa_statism_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_showa_statism_modifier_tt
+	}
+}
+
+JAP_add_or_modify_state_shintoism = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
+		}
+		custom_effect_tooltip = JAP_add_state_shinotism_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_state_shinotism_modifier_tt
+	}
+}
+
+JAP_add_or_modify_early_industrialization = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } 
+				has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm } 
+			}
+		}
+		custom_effect_tooltip = JAP_add_early_industrialization_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm }
+		}
+		custom_effect_tooltip = JAP_modify_early_industrialization_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm }
+		}
+		custom_effect_tooltip = JAP_modify_economic_mirale_modifier_tt
+	}
+}
+
+JAP_add_or_modify_imperial_army = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { 
+					modifier = JAP_imperial_army_dm 
+				} 
+				has_dynamic_modifier = { 
+					modifier = JAP_national_army_dm 
+				} 
+			}
+		}
+		custom_effect_tooltip = JAP_add_imperial_army_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_imperial_army_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_imperial_army_dm } 
+		}
+		custom_effect_tooltip = JAP_modify_imperial_army_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_national_army_dm } 
+		}
+		custom_effect_tooltip = JAP_modify_national_army_modifier_tt
+	}
+}
+
+JAP_add_or_modify_imperial_navy = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { 
+					modifier = JAP_imperial_navy_dm 
+				} 
+				has_dynamic_modifier = { 
+					modifier = JAP_japanese_navy_dm 
+				} 
+			}
+		}
+		custom_effect_tooltip = JAP_add_imperial_navy_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_imperial_navy_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_imperial_navy_dm }
+		}
+		custom_effect_tooltip = JAP_modify_imperial_navy_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_japanese_navy_dm }
+		}
+		custom_effect_tooltip = JAP_modify_japanese_navy_modifier_tt
+	}
+}
+
+JAP_add_or_modify_army_and_naval_air_services = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { 
+					modifier = JAP_army_and_naval_air_services_dm 
+				} 
+				has_dynamic_modifier = { 
+					modifier = JAP_japanese_airforce_dm 
+				} 
+			}
+		}
+		custom_effect_tooltip = JAP_add_army_and_naval_air_services_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_army_and_naval_air_services_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_army_and_naval_air_services_dm }
+		}
+		custom_effect_tooltip = JAP_modify_army_and_naval_air_services_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_japanese_airforce_dm }
+		}
+		custom_effect_tooltip = JAP_modify_japanese_airforce_modifier_tt
+	}
+}
+
+JAP_add_or_modify_east_asia_co_prosperity_sphere = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_east_asia_co_prosperity_sphere_dm } }
+		}
+		custom_effect_tooltip = JAP_add_east_asia_co_prosperity_sphere_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_east_asia_co_prosperity_sphere_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_east_asia_co_prosperity_sphere_modifier_tt
+	}
+}
+
+JAP_add_or_modify_imperial_way = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
+		}
+		custom_effect_tooltip = JAP_add_the_imperial_way_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_the_imperial_way_modifier_tt
+	}
+}
+
+JAP_add_or_modify_advanced_weapon_projects = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_advanced_weapon_projects_dm } }
+		}
+		custom_effect_tooltip = JAP_add_advanced_weapon_projects_dm
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_advanced_weapon_projects_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_advanced_weapon_projects_dm
+	}
+}
+
+JAP_add_or_modify_civilian_cabinet = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_civilian_cabinet_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_civilian_cabinet_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_civilian_cabinet_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_civilian_cabinet_modifier_tt
+	}
+}
+
+JAP_add_or_modify_communist_party_modifier = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_communist_party_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_communist_party_modifier_tt
+	}
+}
+
+JAP_add_or_modify_rounouha_modifier = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_rounouha_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_rounouha_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_rounouha_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_rounouha_modifier_tt
+	}
+}
+
+JAP_setup_faction_wide_aoe_effects_from = {
+	
+
+	IF = {
+		limit = {
+			FROM = {
+				original_tag = JAP
+				OR = {
+					has_completed_focus = JAP_develop_the_yen_bloc
+				}
+			}
+			ROOT = {
+				NOT = {
+					has_idea = JAP_yen_bloc_idea
+				}
+			}
+		}
+		add_ideas = JAP_yen_bloc_idea
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			FROM = {
+				original_tag = JAP
+				has_completed_focus = JAP_ministry_of_greater_east_asia
+			}
+			ROOT = {
+				NOT = {
+					has_idea = JAP_ministry_of_greater_east_asia_idea
+				}
+			}
+		}
+		add_ideas = JAP_ministry_of_greater_east_asia_idea
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+
+}
+
+JAP_setup_faction_wide_aoe_effects_root = {
+	
+
+	IF = {
+		limit = {
+			ROOT = {
+				original_tag = JAP
+				OR = {
+					has_completed_focus = JAP_develop_the_yen_bloc
+				}
+			}
+			FROM = {
+				NOT = {
+					has_idea = JAP_yen_bloc_idea
+				}
+			}
+		}
+		FROM = {
+			add_ideas = JAP_yen_bloc_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			ROOT = {
+				original_tag = JAP
+				has_completed_focus = JAP_ministry_of_greater_east_asia
+			}
+			FROM = {
+				NOT = {
+					has_idea = JAP_ministry_of_greater_east_asia_idea
+				}
+			}
+		}
+		FROM = {
+			add_ideas = JAP_ministry_of_greater_east_asia_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+
+}
+
+JAP_setup_faction_wide_aoe_effects_JAP = {
+	
+
+	IF = {
+		limit = {
+			JAP = {
+				OR = {
+					has_completed_focus = JAP_develop_the_yen_bloc
+				}
+			}
+			ROOT = {
+				NOT = {
+					has_idea = JAP_yen_bloc_idea
+				}
+			}
+		}
+		ROOT = {
+			add_ideas = JAP_yen_bloc_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			JAP = {
+				has_completed_focus = JAP_ministry_of_greater_east_asia
+			}
+			ROOT = {
+				NOT = {
+					has_idea = JAP_ministry_of_greater_east_asia_idea
+				}
+			}
+		}
+		ROOT = {
+			add_ideas = JAP_ministry_of_greater_east_asia_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+
+}
+
+JAP_one_more_member_increase_peasants_education_strength = {
+	add_to_variable = { #always add a faction member
+		JAP_educating_the_peasants_modifier_allies_count = 1
+	}
+	IF = {
+		limit = {
+			check_variable = { #only add RnD bonus if you haven't reached 10 faction member yet
+				var = JAP_educating_the_peasants_modifier_allies_count
+				value = 11
+				compare = less_than
+			}	
+		}
+		add_to_variable = { 
+			JAP_educating_the_peasants_modifier_research_speed_factor = 0.01
+		}
+	}
+}
+
+JAP_one_less_member_decrease_peasants_education_strength = {
+	subtract_from_variable = { #always remove faction members
+		JAP_educating_the_peasants_modifier_allies_count = 1
+	}
+	IF = {
+		limit = {
+			check_variable = { #Gotta have at least one ally
+				var = JAP_educating_the_peasants_modifier_allies_count
+				value = 1
+				compare = greater_than
+			}	
+			check_variable = { #Only start reducing RnD bonus if you go below 10 allies
+				var = JAP_educating_the_peasants_modifier_allies_count
+				value = 10
+				compare = less_than
+			}	
+		}
+		add_to_variable = { 
+			JAP_educating_the_peasants_modifier_research_speed_factor = -0.01
+		}
+
+	}
+}
+
+JAP_mobilize_railway_guns = {
+	custom_effect_tooltip = JAP_divert_naval_guns_to_the_army_tt
+	hidden_effect = {
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = "I Kyūrei-shiki Nijyūyon-miri Resshahō"
+		}
+		create_railway_gun = {
+			equipment = railway_gun_equipment_1
+			name = "Ni Kyūrei-shiki Nijyūyon-miri Resshahō"
+		}
+	}
+}
+
+JAP_trigger_democratic_civil_war = {
+
+	# The Colonies and Imperial Protectorates Break Ties 
+	IF = {
+		limit = {
+			MAN = { is_subject_of = ROOT }
+		}
+		set_autonomy = { target = MAN autonomy_state = autonomy_free }
+		MAN = {
+			country_event = {
+				id = SEA_japan_popup_events.26
+				hours = 4
+			}	
+			effect_tooltip = {
+				set_cosmetic_tag = MAN_kwantung_army
+				IF = {
+					limit = {
+						has_idea = MAN_kwantung_veto 
+					}
+					remove_ideas = MAN_kwantung_veto 
+				}
+				add_ideas = MAN_militarism 
+			}
+		}
+	}
+	
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = KOR
+			}
+		}
+		release = KOR # Korea
+	}
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = PLU
+			}
+		}
+		release = PLU # Palau
+	}
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = FOR
+			}
+		}
+		release = FOR # Formosa/Taiwan
+	}
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	# The Militarism is tranfered to MAN which inherits Kwantung Army stuff
+	remove_ideas = JAP_militarism
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	# Set War Flag
+	set_global_flag = JAP_demcoratic_civil_war
+
+	# Get Ideology Support
+	set_variable = { JAP_communist_support_before_civil_war = party_popularity_100@communism }
+	set_variable = { JAP_democratic_support_before_civil_war = party_popularity_100@democratic }
+	set_variable = { JAP_fascist_support_before_civil_war = party_popularity_100@fascism }
+	set_variable = { JAP_neutrality_support_before_civil_war = party_popularity_100@neutrality }
+
+
+	# Setup for Army, Navy and Air Sizes
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_army_support }
+		}
+		set_variable = { ROOT.JAP_opposition_army_support = 0.4 }
+	}
+	IF = { 
+		limit = { 
+			JAP = { is_ai = yes } 
+			check_variable = { ROOT.JAP_opposition_army_support < 0.6 }
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = 0.25 }
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_army_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_first_bit_of_army_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_army_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_army_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_navy_support }
+		}
+		set_variable = { ROOT.JAP_opposition_navy_support = 0.6 }
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_navy_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_navy_support = -0.1 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_navy_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_navy_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_air_support }
+		}
+		set_variable = { ROOT.JAP_opposition_air_support = 0.5 }
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_air_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_air_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_air_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	set_temp_variable = { temp_imperial_army = 1 }
+	subtract_from_temp_variable = { temp_imperial_army = ROOT.JAP_opposition_army_support }
+	set_temp_variable = { temp_imperial_navy = 1 }
+	subtract_from_temp_variable = { temp_imperial_navy = ROOT.JAP_opposition_navy_support }
+	set_temp_variable = { temp_imperial_air = 1 }
+	subtract_from_temp_variable = { temp_imperial_air = ROOT.JAP_opposition_air_support }
+	
+	hidden_effect = {
+		MAN = {
+			every_owned_state = {
+				teleport_armies = {
+					limit = {
+						original_tag = JAP
+					}
+					to_state_array = JAP.owned_controlled_states
+				}
+			}
+		}
+	}
+
+	# Start the Actual Civil War 
+	start_civil_war = {
+	    ideology = fascism
+	    ruling_party = ROOT
+	    size = 0.6
+	    army_ratio = var:temp_imperial_army
+	    navy_ratio = var:temp_imperial_navy
+	    air_ratio = var:temp_imperial_air
+	    keep_all_characters = yes
+	    states = all
+	    states_filter = {
+	       	has_dynamic_modifier = {
+	       		modifier = JAP_state_under_army_control
+	       	}	
+	        is_controlled_by = ROOT
+	    }
+
+	    # Tranfers the Imperial Army Loyalists to the Imperial Army Side 
+    	PREV = {  # Original country
+    		JAP_hideki_tojo = { # Character
+    		    set_nationality = PREV.PREV
+    		    # Transfers to breakaway
+    		}
+    		every_unit_leader = {
+    			limit = {
+    				has_trait = JAP_IJA_loyalist
+    			}
+    			set_nationality = PREV.PREV
+    			# Transfers to breakaway
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV.PREV = {
+    				NOT = {
+    					has_country_leader = {
+    						ruling_only = yes
+    						character = JAP_hideki_tojo
+    					}
+    				}
+    				has_civil_war = yes
+    			}
+    		}
+    		PREV.PREV = {
+    			add_country_leader_role = {
+    				character = JAP_hideki_tojo
+    				promote_leader = yes
+    				country_leader = {
+    					ideology = fascism_ideology
+    					expire = "1952.1.1.1"
+    					traits = { JAP_IJA_prime_minister_trait } 
+    				}
+    			}	
+    		}
+    	}
+
+    	custom_effect_tooltip = generic_skip_one_line_tt
+
+    	PREV.PREV = {
+    		set_capital = {
+    			state = 531
+    			remember_old_capital = no
+    		}
+    	}
+
+    	custom_effect_tooltip = generic_skip_one_line_tt
+
+    	hidden_effect = {
+
+    		PREV.PREV = {
+
+	    		delete_unit_template_and_units = {
+	    			division_template = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+	    			disband = yes #if yes, will refund equipment/manpower.
+	    		}
+
+	    		division_template = {
+	    		    name = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+	    		    is_locked = yes
+					role = infantry
+	    		    priority = 0
+	    		    regiments = {
+	    		        infantry = { x = 0 y = 0 }
+	    		        infantry = { x = 0 y = 1 }
+	    		        infantry = { x = 0 y = 2 }
+	    		        infantry = { x = 0 y = 3 }
+	    		        infantry = { x = 1 y = 0 }
+	    		        infantry = { x = 1 y = 1 }
+	    		    }
+	    		    support = {
+	    		    	engineer = { x = 0 y = 0 }
+	    		    	artillery = { x = 0 y = 1 }
+	    		    }
+	    		}
+	    		random_state = {
+	    			limit = {
+	    				is_core_of = JAP
+	    				is_controlled_by = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"1. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"2. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"3. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    		}
+	    		random_state = {
+	    			limit = {
+	    				is_core_of = JAP
+	    				is_controlled_by = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"4. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"5. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"6. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    		}
+	    	}
+
+	    	IF = {
+	    		limit = {
+	    			PREV = {
+	    				has_country_flag = JAP_IJA_recruited_more_conscripts_flag
+	    			}
+	    		}
+	    		PREV.PREV = {
+	    			random_state = {
+	    				limit = {
+	    					is_core_of = JAP
+	    					is_controlled_by = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"7. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"8. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"9. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"10. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    			}
+	    		}
+	    	}
+
+	    	IF = {
+	    		limit = {
+	    			PREV = {
+	    				has_country_flag = JAP_IJA_recruited_kwantung_army_units_for_cw_flag
+	    			}
+	    		}
+	    		PREV.PREV = {
+
+	    			delete_unit_template_and_units = {
+	    				division_template = "Kantō-gun Hohei Shidan"
+	    				disband = yes #if yes, will refund equipment/manpower.
+	    			}
+
+		    		division_template = {
+		    		    name = "Kantō-gun Hohei Shidan"
+		    		    is_locked = yes
+						role = infantry
+		    		    priority = 0
+		    		    regiments = {
+		    		        cavalry = { x = 0 y = 0 }
+		    		        cavalry = { x = 0 y = 1 }
+		    		        cavalry = { x = 0 y = 2 }
+		    		        cavalry = { x = 0 y = 3 }
+		    		        cavalry = { x = 1 y = 0 }
+		    		        cavalry = { x = 1 y = 1 }
+		    		    }
+		    		    support = {
+		    		    }
+		    		}
+
+	    			random_state = {
+	    				limit = {
+	    					is_core_of = JAP
+	    					is_controlled_by = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"1. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"2. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"3. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    			}
+	    		}
+	    	}
+
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV.PREV = {
+    				NOT = {
+    					has_idea = JAP_militarism 
+    				}
+    			}
+    		}
+    		PREV.PREV = {
+    			add_ideas = JAP_militarism
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_diverted_military_funds_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_low_on_funds_idea
+    				days = 365
+    			}	
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_limited_the_militarys_power_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_low_popular_support_idea
+    				days = 365
+    			}	
+    			custom_effect_tooltip = generic_skip_one_line_tt
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_organized_student_protests_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_widespread_protests_and_sabotage_idea
+    				days = 365
+    			}	
+    			custom_effect_tooltip = generic_skip_one_line_tt
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				OR = {
+    					has_country_flag = JAP_communists_siezed_trucks_flag
+    					has_country_flag = JAP_communists_siezed_artillery_flag
+    					has_country_flag = JAP_communists_siezed_infantry_weapons_flag
+    				}
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_stolen_equipment_idea
+    				days = 180
+    			}	
+    		}
+    	}
+
+    	hidden_effect = {
+    		PREV.PREV = {
+    			set_cosmetic_tag = JAP_army_dominant
+    		}
+    	}
+
+    }
+
+    hidden_effect = {
+    	delete_unit_template_and_units = {
+    		division_template = "Keishichō"
+    		disband = yes #if yes, will refund equipment/manpower.
+    	}
+
+    	division_template = {
+    	    name = "Keishichō"
+    	    is_locked = no
+    	    template_counter = 120
+    		role = infantry
+    	    priority = 0
+    	    regiments = {
+    	        militia = { x = 0 y = 0 }
+    	        militia = { x = 0 y = 1 }
+    	        militia = { x = 0 y = 2 }
+    	        militia = { x = 1 y = 0 }
+    	        militia = { x = 1 y = 1 }
+    	    }
+    	    support = {
+    	    }
+    	}
+    	282 = {
+    		create_unit = {
+    		    division = "name = \"1. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    owner = ROOT
+    		}
+    		create_unit = {
+    		    division = "name = \"2. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    owner = ROOT
+    		}
+    		create_unit = {
+    		    division = "name = \"3. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    owner = ROOT
+    		}
+    		create_unit = {
+    		    division = "name = \"4. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    owner = ROOT
+    		}
+    		create_unit = {
+    		    division = "name = \"5. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    owner = ROOT
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			has_country_flag = JAP_secured_more_police_forces_flag
+    		}
+    		282 = {
+    			create_unit = {
+    			    division = "name = \"6. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"7. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"8. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"9. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"10. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"11. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"12. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    			create_unit = {
+    			    division = "name = \"13. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = ROOT
+    			}
+    		}
+    	}
+    }
+
+    custom_effect_tooltip = generic_skip_one_line_tt
+
+    # Clear the civil war prep state modifiers 
+    every_core_state = {
+    	limit = {
+    		has_dynamic_modifier = {
+    			modifier = JAP_state_under_army_control
+    		}	
+    	}
+    	remove_dynamic_modifier = {
+    		modifier = JAP_state_under_army_control
+    	}	
+    }
+    every_core_state = {
+    	limit = {
+    		has_dynamic_modifier = {
+    			modifier = JAP_state_under_rebel_control
+    		}	
+    	}
+    	remove_dynamic_modifier = {
+    		modifier = JAP_state_under_rebel_control
+    	}	
+    }
+    every_core_state = {
+    	limit = {
+    		has_dynamic_modifier = {
+    			modifier = JAP_state_infiltrated_by_the_jcp
+    		}	
+    	}
+    	remove_dynamic_modifier = {
+    		modifier = JAP_state_infiltrated_by_the_jcp
+    	}	
+    }
+	
+    custom_effect_tooltip = generic_skip_one_line_tt
+
+
+    custom_effect_tooltip = generic_skip_one_line_tt
+
+    IF = {
+    	limit = {
+    		has_country_flag = JAP_will_replace_hirohito_with_nobuhito_flag
+    	}
+    	country_event = {
+    		id = SEA_japan_popup_events.23
+    		hours = 24
+    		random_hours = 72
+    	}	
+    }
+
+    hidden_effect = {
+    	IF = {
+    		limit = {
+    			has_country_flag = JAP_communists_siezed_infantry_weapons_flag
+    		}
+    		add_equipment_to_stockpile = { 
+    			type = infantry_equipment
+    			amount = 500 
+    			producer = ROOT
+    		}	
+    	}
+    	IF = {
+    		limit = {
+    			has_country_flag = JAP_communists_siezed_artillery_flag
+    		}
+    		add_equipment_to_stockpile = { 
+    			type = artillery_equipment
+    			amount = 250 
+    			producer = ROOT
+    		}	
+    	}
+    	IF = {
+    		limit = {
+    			has_country_flag = JAP_communists_siezed_trucks_flag
+    		}
+    		add_equipment_to_stockpile = { 
+    			type = motorized_equipment
+    			amount = 250 
+    			producer = ROOT
+    		}	
+    	}
+    	IF = {
+    		limit = {
+    			has_country_flag = JAP_IJA_secured_army_arsenals_flag
+    		}
+    		add_timed_idea = {
+    			idea = JAP_army_arsenals_emptied_idea
+    			days = 365
+    		}	
+    	}
+    }
+
+
+}
+
+JAP_trigger_communist_civil_war = {
+	
+	# The Colonies and Imperial Protectorates Break Ties 
+	IF = {
+		limit = {
+			MAN = { is_subject_of = ROOT }
+		}
+		set_autonomy = { target = MAN autonomy_state = autonomy_free }
+		MAN = {
+			country_event = {
+				id = SEA_japan_popup_events.26
+				hours = 4
+			}	
+			effect_tooltip = {
+				set_cosmetic_tag = MAN_kwantung_army
+				IF = {
+					limit = {
+						has_idea = MAN_kwantung_veto 
+					}
+					remove_ideas = MAN_kwantung_veto 
+				}
+				add_ideas = MAN_militarism 
+			}
+		}
+	}
+	
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = KOR
+			}
+		}
+		release = KOR # Korea
+	}
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = PLU
+			}
+		}
+		release = PLU # Palau
+	}
+	IF = {
+		limit = {
+			any_controlled_state = {
+				is_core_of = FOR
+			}
+		}
+		release = FOR # Formosa/Taiwan
+	}
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	# The Militarism is tranfered to MAN which inherits Kwantung Army stuff
+	remove_ideas = JAP_militarism
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	# Set War Flag
+	set_global_flag = JAP_communist_civil_war
+
+	# Get Ideology Support
+	set_variable = { JAP_communist_support_before_civil_war = party_popularity_100@communism }
+	set_variable = { JAP_democratic_support_before_civil_war = party_popularity_100@democratic }
+	set_variable = { JAP_fascist_support_before_civil_war = party_popularity_100@fascism }
+	set_variable = { JAP_neutrality_support_before_civil_war = party_popularity_100@neutrality }
+
+
+	# Setup for Army, Navy and Air Sizes
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_army_support }
+		}
+		set_variable = { ROOT.JAP_opposition_army_support = 0.4 }
+	}
+	IF = { 
+		limit = { 
+			JAP = { is_ai = yes } 
+			check_variable = { ROOT.JAP_opposition_army_support < 0.6 }
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = 0.2 }
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_army_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_first_bit_of_army_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_army_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_army_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_army_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_navy_support }
+		}
+		set_variable = { ROOT.JAP_opposition_navy_support = 0.5 }
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_navy_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_navy_support = -0.1 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_navy_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_navy_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {
+			NOT = { has_variable = ROOT.JAP_opposition_air_support }
+		}
+		set_variable = { ROOT.JAP_opposition_air_support = 0.45 }
+	}
+	clamp_variable = {
+		var = ROOT.JAP_opposition_air_support
+		min = 0
+		max = 0.9
+	}
+	IF = {
+		limit = {  
+			has_country_flag = JAP_IJA_secured_more_army_support_support_flag
+		}
+		add_to_variable = { ROOT.JAP_opposition_air_support = -0.05 }
+		clamp_variable = {
+			var = ROOT.JAP_opposition_air_support
+			max = 0.9
+			min = 0.1
+		}
+	}
+	set_temp_variable = { temp_imperial_army = 1 }
+	subtract_from_temp_variable = { temp_imperial_army = ROOT.JAP_opposition_army_support }
+	set_temp_variable = { temp_imperial_navy = 1 }
+	subtract_from_temp_variable = { temp_imperial_navy = ROOT.JAP_opposition_navy_support }
+	set_temp_variable = { temp_imperial_air = 1 }
+	subtract_from_temp_variable = { temp_imperial_air = ROOT.JAP_opposition_air_support }
+
+	hidden_effect = {
+		MAN = {
+			every_owned_state = {
+				teleport_armies = {
+					limit = {
+						original_tag = JAP
+					}
+					to_state_array = JAP.owned_controlled_states
+				}
+			}
+		}
+	}
+
+	# Start the Actual Civil War 
+	start_civil_war = {
+	    ideology = fascism
+	    ruling_party = communism
+	    size = 0.6
+	    army_ratio = var:temp_imperial_army
+	    navy_ratio = var:temp_imperial_navy
+	    air_ratio = var:temp_imperial_air
+	    keep_all_characters = yes
+	    states = all
+	    states_filter = {
+	       	has_dynamic_modifier = {
+	       		modifier = JAP_state_under_army_control
+	       	}	
+	       	NOT = {
+	       		has_dynamic_modifier = {
+	       			modifier = JAP_state_infiltrated_by_the_jcp
+	       		}	
+	       	}
+	        is_controlled_by = ROOT
+	    }
+
+	    # Tranfers the Imperial Army Loyalists to the Imperial Army Side 
+    	PREV = {  # Original country
+    		JAP_hideki_tojo = { # Character
+    		    set_nationality = PREV.PREV
+    		    # Transfers to breakaway
+    		}
+    		every_unit_leader = {
+    			limit = {
+    				has_trait = JAP_IJA_loyalist
+    			}
+    			set_nationality = PREV.PREV
+    			# Transfers to breakaway
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV.PREV = {
+    				NOT = {
+    					has_country_leader = {
+    						ruling_only = yes
+    						character = JAP_hideki_tojo
+    					}
+    				}
+    				has_civil_war = yes
+    			}
+    		}
+    		PREV.PREV = {
+    			add_country_leader_role = {
+    				character = JAP_hideki_tojo
+    				promote_leader = yes
+    				country_leader = {
+    					ideology = fascism_ideology
+    					expire = "1952.1.1.1"
+    					traits = { JAP_IJA_prime_minister_trait } 
+    				}
+    			}	
+    		}
+    	}
+
+    	custom_effect_tooltip = generic_skip_one_line_tt
+
+    	PREV.PREV = {
+    		set_capital = {
+    			state = 531
+    			remember_old_capital = no
+    		}
+    	}
+
+    	custom_effect_tooltip = generic_skip_one_line_tt
+
+    	hidden_effect = {
+
+    		PREV.PREV = {
+
+	    		delete_unit_template_and_units = {
+	    			division_template = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+	    			disband = yes #if yes, will refund equipment/manpower.
+	    		}
+
+	    		division_template = {
+	    		    name = "Dai-Nippon Teikoku Rikugun Hohei Shidan"
+	    		    is_locked = yes
+					role = infantry
+	    		    priority = 0
+	    		    regiments = {
+	    		        infantry = { x = 0 y = 0 }
+	    		        infantry = { x = 0 y = 1 }
+	    		        infantry = { x = 0 y = 2 }
+	    		        infantry = { x = 0 y = 3 }
+	    		        infantry = { x = 1 y = 0 }
+	    		        infantry = { x = 1 y = 1 }
+	    		    }
+	    		    support = {
+	    		    	engineer = { x = 0 y = 0 }
+	    		    	artillery = { x = 0 y = 1 }
+	    		    }
+	    		}
+	    		random_state = {
+	    			limit = {
+	    				is_core_of = JAP
+	    				is_controlled_by = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"1. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"2. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"3. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    		}
+	    		random_state = {
+	    			limit = {
+	    				is_core_of = JAP
+	    				is_controlled_by = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"4. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"5. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"6. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    		}
+	    		random_state = {
+	    			limit = {
+	    				is_core_of = JAP
+	    				is_controlled_by = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"7. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"8. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    			create_unit = {
+	    			    division = "name = \"9. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    			    owner = PREV
+	    			}
+	    		}
+	    	}
+
+	    	IF = {
+	    		limit = {
+	    			PREV = {
+	    				has_country_flag = JAP_IJA_recruited_more_conscripts_flag
+	    			}
+	    		}
+	    		PREV.PREV = {
+	    			random_state = {
+	    				limit = {
+	    					is_core_of = JAP
+	    					is_controlled_by = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"10. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"11. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"12. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"13. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    			}
+	    		}
+	    	}
+
+	    	IF = {
+	    		limit = {
+	    			PREV = {
+	    				has_country_flag = JAP_IJA_recruited_kwantung_army_units_for_cw_flag
+	    			}
+	    		}
+	    		PREV.PREV = {
+
+	    			delete_unit_template_and_units = {
+	    				division_template = "Kantō-gun Hohei Shidan"
+	    				disband = yes #if yes, will refund equipment/manpower.
+	    			}
+
+		    		division_template = {
+		    		    name = "Kantō-gun Hohei Shidan"
+		    		    is_locked = yes
+						role = infantry
+		    		    priority = 0
+		    		    regiments = {
+		    		        cavalry = { x = 0 y = 0 }
+		    		        cavalry = { x = 0 y = 1 }
+		    		        cavalry = { x = 0 y = 2 }
+		    		        cavalry = { x = 0 y = 3 }
+		    		        cavalry = { x = 1 y = 0 }
+		    		        cavalry = { x = 1 y = 1 }
+		    		    }
+		    		    support = {
+		    		    }
+		    		}
+
+	    			random_state = {
+	    				limit = {
+	    					is_core_of = JAP
+	    					is_controlled_by = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"1. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"2. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    				create_unit = {
+	    				    division = "name = \"3. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    owner = PREV
+	    				}
+	    			}
+	    		}
+	    	}
+
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV.PREV = {
+    				NOT = {
+    					has_idea = JAP_militarism 
+    				}
+    			}
+    		}
+    		PREV.PREV = {
+    			add_ideas = JAP_militarism
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_diverted_military_funds_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_low_on_funds_idea
+    				days = 365
+    			}	
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_limited_the_militarys_power_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_low_popular_support_idea
+    				days = 365
+    			}	
+    			custom_effect_tooltip = generic_skip_one_line_tt
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				has_country_flag = JAP_organized_student_protests_flag
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_widespread_protests_and_sabotage_idea
+    				days = 365
+    			}	
+    			custom_effect_tooltip = generic_skip_one_line_tt
+    		}
+    	}
+
+    	IF = {
+    		limit = {
+    			PREV = {
+    				OR = {
+    					has_country_flag = JAP_communists_siezed_trucks_flag
+    					has_country_flag = JAP_communists_siezed_artillery_flag
+    					has_country_flag = JAP_communists_siezed_infantry_weapons_flag
+    				}
+    			}
+    		}
+    		PREV.PREV = {
+    			add_timed_idea = {
+    				idea = JAP_stolen_equipment_idea
+    				days = 180
+    			}	
+    		}
+    	}
+
+    	hidden_effect = {
+    		PREV.PREV = {
+    			set_cosmetic_tag = JAP_army_dominant
+    		}
+    	}
+
+    }
+
+    hidden_effect = {
+    	delete_unit_template_and_units = {
+    		division_template = "Sanson Kōsakutai"
+    		disband = yes #if yes, will refund equipment/manpower.
+    	}
+
+    	division_template = {
+    	    name = "Sanson Kōsakutai"
+    	    is_locked = no
+    	    template_counter = 118
+    		role = infantry
+    		override_model = JAP_militia_alt_0_entity
+    	    priority = 0
+    	    regiments = {
+    	        militia = { x = 0 y = 0 }
+    	        militia = { x = 0 y = 1 }
+    	        militia = { x = 0 y = 2 }
+    	        militia = { x = 1 y = 0 }
+    	        militia = { x = 1 y = 1 }
+    	    }
+    	    support = {
+    	    }
+    	}
+    }
+
+    random_owned_controlled_state = {
+    	limit = {
+    		has_state_flag = JAP_communists_chose_this_state_as_headquarters_flag
+    	}
+    	ROOT = {
+    		set_capital = {
+    			state = PREV
+    			remember_old_capital = no
+    		}
+    	}
+    	create_unit = {
+    	    division = "name = \"1. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    	create_unit = {
+    	    division = "name = \"2. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    	create_unit = {
+    	    division = "name = \"3. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    	create_unit = {
+    	    division = "name = \"4. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    	create_unit = {
+    	    division = "name = \"5. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    	create_unit = {
+    	    division = "name = \"6. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
+    	    owner = ROOT
+    	}
+    }
+
+    custom_effect_tooltip = JAP_democratic_side_also_spawns_tt
+    hidden_effect = {
+    	create_dynamic_country = {
+    	    original_tag = JAP
+    	    set_politics = {
+    	    	ruling_party = democratic
+    	    	elections_allowed = yes
+    	    	last_election = "1936.1.1"
+    	    	election_frequency = 48
+    	    }	
+    	    add_popularity = {
+    	    	ideology = democratic
+    	    	popularity = 0.7
+    	    }	
+    	    set_country_flag = JAP_is_demo_in_three_way_cw_country_flag  
+    	    every_state = {
+    	    	limit = {
+    	    		has_dynamic_modifier = {
+    	    			modifier = JAP_state_under_rebel_control
+    	    		}		
+    	    		NOT = {
+    	    			has_dynamic_modifier = {
+    	    				modifier = JAP_state_infiltrated_by_the_jcp
+    	    			}
+    	    		}
+    	    	}
+    	    	transfer_state_to = PREV
+    	    }
+    	    282 = { # Just teleport all units in Tokyo 
+    	    	teleport_armies = {
+    	    	    limit = {
+    	    	    }
+    	    	    to_state_array = owned_controlled_states
+    	    	}
+    	    }
+    	    
+    	    # Transfers the Democratic Leader to the Democratic Side 
+    		every_possible_country = { 
+    			limit = {
+    				has_character = JAP_machida_chuuji
+    			}
+    			JAP_machida_chuuji = { # Character
+    			    set_nationality = PREV.PREV
+    			    # Transfers to democratic breakaway
+    			}
+    		}
+
+    		IF = {
+    			limit = {
+    				#PREV = {
+    					NOT = {
+    						has_country_leader = {
+    							ruling_only = yes
+    							character = JAP_machida_chuuji
+    						}
+    					}
+    				#}
+    			}
+    			promote_character = JAP_machida_chuuji
+    		}
+
+    		every_army_leader = {
+    			limit = {
+    				OWNER = { tag = ROOT }
+    				AND = {
+    					has_trait = JAP_royal_lineage
+    					has_trait = JAP_government_supporter
+    				}
+    			}
+    			set_nationality = PREV 
+    		}
+
+    		delete_unit_template_and_units = {
+    			division_template = "Keishichō"
+    			disband = yes #if yes, will refund equipment/manpower.
+    		}
+
+    		division_template = {
+    		    name = "Keishichō"
+    		    is_locked = no
+    		    template_counter = 120
+    			role = infantry
+    		    priority = 0
+    		    regiments = {
+    		        militia = { x = 0 y = 0 }
+    		        militia = { x = 0 y = 1 }
+    		        militia = { x = 0 y = 2 }
+    		        militia = { x = 1 y = 0 }
+    		        militia = { x = 1 y = 1 }
+    		    }
+    		    support = {
+    		    }
+    		}
+    		282 = {
+    			create_unit = {
+    			    division = "name = \"1. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"2. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"3. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"4. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"5. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"6. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"7. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"8. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"9. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    			create_unit = {
+    			    division = "name = \"10. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    owner = PREV
+    			}
+    		}
+    		IF = {
+    			limit = {
+    				ROOT = {
+    					has_country_flag = JAP_secured_more_police_forces_flag
+    				}
+    			}
+    			282 = {
+    				create_unit = {
+    				    division = "name = \"11. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"12. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"13. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"14. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"15. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"16. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"17. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    				create_unit = {
+    				    division = "name = \"18. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    owner = PREV
+    				}
+    			}
+    		}
+    	}
+    }
+
+    #Transfer troops in territory belonging to the Democrats back "home" 
+    every_core_state = {
+    	limit = {
+    		NOT = { is_fully_controlled_by = ROOT }
+    		OWNER = {
+    			has_government = democratic
+    		}
+    	}
+    	teleport_armies = {
+    		limit = { 
+    			tag = ROOT
+    		}
+    		to_state_array = owned_controlled_states
+    	}
+    }
+
+	# Clear the civil war prep state modifiers 
+	every_core_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = JAP_state_under_army_control
+			}	
+		}
+		remove_dynamic_modifier = {
+			modifier = JAP_state_under_army_control
+		}	
+	}
+	every_core_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = JAP_state_under_rebel_control
+			}	
+		}
+		remove_dynamic_modifier = {
+			modifier = JAP_state_under_rebel_control
+		}	
+	}
+	every_core_state = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = JAP_state_infiltrated_by_the_jcp
+			}	
+		}
+		remove_dynamic_modifier = {
+			modifier = JAP_state_infiltrated_by_the_jcp
+		}	
+	}
+	
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+
+	hidden_effect = {
+		IF = {
+			limit = {
+				has_country_flag = JAP_communists_siezed_infantry_weapons_flag
+			}
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = 500 
+				producer = ROOT
+			}	
+		}
+		IF = {
+			limit = {
+				has_country_flag = JAP_communists_siezed_artillery_flag
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment
+				amount = 250 
+				producer = ROOT
+			}	
+		}
+		IF = {
+			limit = {
+				has_country_flag = JAP_communists_siezed_trucks_flag
+			}
+			add_equipment_to_stockpile = { 
+				type = motorized_equipment
+				amount = 250 
+				producer = ROOT
+			}	
+		}
+		IF = {
+			limit = {
+				has_country_flag = JAP_IJA_secured_army_arsenals_flag
+			}
+			add_timed_idea = {
+				idea = JAP_army_arsenals_emptied_idea
+				days = 365
+			}	
+		}
+	}
+
+
+
+}
+
+JAP_set_up_asian_resistance_states = {
+	
+	hidden_effect = {
+		for_each_scope_loop = {
+			array = global.countries 
+			IF = {
+				limit = {
+					# Find countries with cores in asia that do not already exist as free or puppeted nations
+					exists = no 
+					any_core_state = { 
+						OR = {
+							is_on_continent = asia 
+							is_on_continent = australia 
+							is_on_continent = middle_east 
+						}
+						OWNER = {
+							NOT = { is_in_faction_with = ROOT }
+							NOT = { tag = ROOT }
+						}
+					}
+				}
+
+				# add Asian+ states of theirs to the array
+				every_core_state = {
+					limit = {  
+						OR = {
+							is_on_continent = asia 
+							is_on_continent = australia 
+							is_on_continent = middle_east 
+						}
+						has_resistance = yes
+						NOT = { # no point adding if already in there
+							is_in_array = {
+								array = JAP.asian_colonial_states_array
+								value = THIS 
+							}
+						}
+					}
+					add_to_array = { JAP.asian_colonial_states_array = THIS }
+				}
+			}
+			
+		}
+	}
+}
+
+JAP_small_army_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_army_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				JAP_army_faction_is_tier_1 = yes
+			}
+			if = { #Army WON'T level up
+				limit = {
+					check_variable = { JAP_army_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+			}
+			else = { #Army WILL level up
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+				JAP_army_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_2 = yes
+			}
+			if = { #Army WON'T level up
+				limit = {
+					check_variable = { JAP_army_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+			}
+			else = { #Army WILL level up
+
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+				JAP_army_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_3 = yes
+			}
+			if = { #Army WON'T level up
+				limit = {
+					check_variable = { JAP_army_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+			}
+			else = { #Army WILL level up
+				custom_effect_tooltip = JAP_small_army_faction_gain_tt
+				JAP_army_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_army_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_army_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = { #Army WILL level up
+			limit = {
+				JAP_army_faction_is_tier_1 = yes
+			}
+			custom_effect_tooltip = JAP_big_army_faction_gain_tt
+			JAP_army_faction_goes_up_from_tier_1_to_tier_2 = yes
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_2 = yes
+			}
+			if = { #Army WON'T level up
+				limit = {
+					check_variable = { JAP_army_faction_influence_level < JAP_tier_2_to_tier_3_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_army_faction_gain_tt
+			}
+			else = { #Army WILL level up
+
+				custom_effect_tooltip = JAP_big_army_faction_gain_tt
+				JAP_army_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_3 = yes
+			}
+			if = { #Army WON'T level up
+				limit = {
+					check_variable = { JAP_army_faction_influence_level < JAP_tier_3_to_tier_4_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_army_faction_gain_tt
+			}
+			else = { #Army WILL level up
+				custom_effect_tooltip = JAP_big_army_faction_gain_tt
+				JAP_army_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_army_faction_influence_level = JAP_big_influence_point }
+	}
+}
+
+JAP_small_army_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_army_faction_influence_level > JAP_minimum_faction_level }
+		}
+		if = {
+			limit = {
+				JAP_army_faction_is_tier_4 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_tier_4_top_limit_check }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+				JAP_army_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_3 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+
+				JAP_army_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_2 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_1_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+				JAP_army_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Army Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_small_army_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_army_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_army_faction_influence_level > JAP_tier_1_gate }
+		}
+		if = {
+			limit = {
+				JAP_army_faction_is_tier_4 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_maximum_faction_level_check }
+				}
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+				JAP_army_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_3 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+				JAP_army_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_army_faction_is_tier_2 = yes
+			}
+			if = { #Army WON'T level down
+				limit = {
+					check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_1_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+			}
+			else = { #Army WILL level down
+				custom_effect_tooltip = JAP_big_army_faction_loss_tt
+				JAP_army_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Army Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_big_army_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_army_faction_influence_level = JAP_big_influence_point }
+	}
+	else_if = { #Army Faction is already at rock bottom and can't go lower than this
+		limit = {
+			check_variable = { JAP_army_faction_influence_level > JAP_tier_1_minimum_limit }
+		}
+		custom_effect_tooltip = JAP_small_army_faction_loss_tt
+		subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_small_naval_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_naval_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				JAP_naval_faction_is_tier_1 = yes
+			}
+			if = { #Navy WON'T level up
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+			}
+			else = { #Navy WILL level up
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+				JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_2 = yes
+			}
+			if = { #Navy WON'T level up
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+			}
+			else = { #Navy WILL level up
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+
+				JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_3 = yes
+			}
+			if = { #Navy WON'T level up
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+			}
+			else = { #Navy WILL level up
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+				
+				JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_naval_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_naval_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = { #Navy WILL level up
+			limit = {
+				JAP_naval_faction_is_tier_1 = yes
+			}
+			custom_effect_tooltip = JAP_big_naval_faction_gain_tt
+			JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = yes
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_2 = yes
+			}
+			if = { #Navy WON'T level up
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_naval_faction_gain_tt
+			}
+			else = { #Navy WILL level up
+				custom_effect_tooltip = JAP_big_naval_faction_gain_tt
+
+				JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_3 = yes
+			}
+			if = { #Navy WON'T level up
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_naval_faction_gain_tt
+			}
+			else = { #Navy WILL level up
+				custom_effect_tooltip = JAP_big_naval_faction_gain_tt
+				JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_naval_faction_influence_level = JAP_big_influence_point }
+	}
+}
+
+JAP_small_naval_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_naval_faction_influence_level > JAP_minimum_faction_level }
+		}
+		if = {
+			limit = {
+				JAP_naval_faction_is_tier_4 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_tier_4_top_limit_check }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+				
+				JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_3 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_tier_3_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+				
+				JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_2 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_tier_2_to_tier_1_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+				custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+				
+				JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Navy Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_naval_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_naval_faction_influence_level > JAP_tier_1_gate }
+		}
+		if = {
+			limit = {
+				JAP_naval_faction_is_tier_4 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_maximum_faction_level_check }
+				}
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+
+				JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_3 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_tier_3_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+				
+				JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				JAP_naval_faction_is_tier_2 = yes
+			}
+			if = { #Navy WON'T level down
+				limit = {
+					check_variable = { JAP_naval_faction_influence_level > JAP_tier_2_to_tier_1_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+			}
+			else = { #Navy WILL level down
+				custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+				
+				JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Navy Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_big_naval_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_naval_faction_influence_level = JAP_big_influence_point }
+	}
+	else_if = { #Navy Faction is already at rock bottom and can't go lower than this
+		limit = {
+			check_variable = { JAP_naval_faction_influence_level > JAP_tier_1_minimum_limit }
+		}
+		custom_effect_tooltip = JAP_small_naval_faction_loss_tt
+		subtract_from_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_small_zaibatsu_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_1
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+				
+				JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_2
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+
+				JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_3
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+				
+				JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_zaibatsu_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_zaibatsu_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_1
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_1_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+
+				JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_2
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_2_to_tier_3_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+
+				JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_3
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_3_to_tier_4_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_gain_tt
+				
+				JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_zaibatsu_faction_influence_level = JAP_big_influence_point }
+	}
+}
+
+JAP_small_zaibatsu_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level > JAP_minimum_faction_level  }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_4
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_maximum_faction_level_check  }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+
+				JAP_zaibatsu_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_3
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_tier_3_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+				
+				JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_2
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_tier_2_to_tier_1_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+				
+				JAP_zaibatsu_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Zaibatsu Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+		}
+	}
+	subtract_from_variable = { JAP_zaibatsu_faction_influence_level = JAP_small_influence_point }
+}
+
+JAP_big_zaibatsu_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level > JAP_minimum_faction_level  }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_4
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_maximum_faction_level_check  }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+
+				JAP_zaibatsu_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_3
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_tier_3_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+				
+				JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_2
+			}
+			if = { #Zaibatsu WON'T level down
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level > JAP_tier_2_to_tier_1_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+			}
+			else = { #Zaibatsu WILL level down
+				custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+				
+				JAP_zaibatsu_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Zaibatsu Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_big_zaibatsu_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_zaibatsu_faction_influence_level = JAP_big_influence_point }
+	}
+	else_if = { #Zaibatsu Faction is already at rock bottom and can't go lower than this
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level > JAP_tier_1_minimum_limit }
+		}
+		custom_effect_tooltip = JAP_small_zaibatsu_faction_loss_tt
+		subtract_from_variable = { JAP_zaibatsu_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_small_government_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_government_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_1
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+				
+				JAP_government_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_2
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+
+				JAP_government_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_3
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_small_government_faction_gain_tt
+				
+				JAP_government_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_government_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_big_government_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_government_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_1
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_1_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+				JAP_government_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_2
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_2_to_tier_3_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+
+				JAP_government_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_3
+			}
+			if = { #Government WON'T level up
+				limit = {
+					check_variable = { JAP_government_faction_influence_level < JAP_tier_3_to_tier_4_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+			}
+			else = { #Government WILL level up
+				custom_effect_tooltip = JAP_big_government_faction_gain_tt
+				
+				JAP_government_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_government_faction_influence_level = JAP_big_influence_point }
+	}
+}
+
+JAP_small_government_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_government_faction_influence_level > JAP_minimum_faction_level  }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_4
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_maximum_faction_level_check  }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+
+				JAP_government_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_3
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_tier_3_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+				
+				JAP_government_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_2
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_tier_2_to_tier_1_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_small_government_faction_loss_tt
+				
+				JAP_government_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Government Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_small_government_faction_loss_tt
+		}
+	}
+	subtract_from_variable = { JAP_government_faction_influence_level = JAP_small_influence_point }
+}
+
+JAP_big_government_faction_loss = {
+	if = {
+		limit = {
+			check_variable = { JAP_government_faction_influence_level > JAP_minimum_faction_level  }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_4
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_maximum_faction_level_check  }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+
+				JAP_government_faction_goes_down_from_tier_4_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_3
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_tier_3_to_tier_2_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+				
+				JAP_government_faction_goes_down_from_tier_3_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_2
+			}
+			if = { #Government WON'T level down
+				limit = {
+					check_variable = { JAP_government_faction_influence_level > JAP_tier_2_to_tier_1_big_gate }
+				}
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+			}
+			else = { #Government WILL level down
+				custom_effect_tooltip = JAP_big_government_faction_loss_tt
+				
+
+				JAP_government_faction_goes_down_from_tier_2_to_tier_1 = yes
+			}
+		}
+		else = { #Government Faction is already at rock bottom and can't go lower than this
+			custom_effect_tooltip = JAP_big_government_faction_loss_tt
+		}
+		subtract_from_variable = { JAP_government_faction_influence_level = JAP_big_influence_point }
+	}
+	else_if = { #Government Faction is already at rock bottom and can't go lower than this
+		limit = {
+			check_variable = { JAP_government_faction_influence_level > JAP_tier_1_minimum_limit }
+		}
+		custom_effect_tooltip = JAP_small_government_faction_loss_tt
+		subtract_from_variable = { JAP_government_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+JAP_small_naval_gain_and_small_army_loss = {
+	if = {
+		limit = {
+			#check_variable = { JAP_naval_faction_influence_level < JAP_tier_4_minimum_limit } #Can promote Army higher
+			check_variable = { JAP_army_faction_influence_level > JAP_minimum_faction_level } #Can demote Navy lower
+		}
+		if = { #Navy WON'T level up but Army MIGHT level down
+			limit = { #Checking to make sure Navy WON'T actually level up
+				OR = {
+					AND = {
+						JAP_naval_faction_is_tier_1 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+					}
+					AND = {
+						JAP_naval_faction_is_tier_2 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+					}
+					AND = {
+						JAP_naval_faction_is_tier_3 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+					}
+					JAP_naval_faction_is_tier_4 = yes						
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							JAP_naval_faction_is_tier_1 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+						}
+						AND = {
+							JAP_naval_faction_is_tier_2 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+						}
+						AND = {
+							JAP_naval_faction_is_tier_3 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+						}	
+						#No need to check if Army Faction is Tier 4 because they ain't getting anything then!			
+					}
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+				add_to_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+			}
+
+			JAP_small_army_faction_loss = yes
+			#log = "Only Army Should be Demoted"
+		}
+		else_if = { #Navy WILL level up but Army WON'T level down
+			limit = { #Checking so that Army WON'T actually level down
+				OR = {
+					AND = {
+						JAP_army_faction_is_tier_4 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_4_top_limit_check }
+					}
+					AND = {
+						JAP_army_faction_is_tier_3 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_4_small_gate }
+					}
+					AND = {
+						JAP_army_faction_is_tier_2 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_3_small_gate }
+					}
+					JAP_army_faction_is_tier_1 = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							JAP_army_faction_is_tier_4 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_4_top_limit_check }
+						}
+						AND = {
+							JAP_army_faction_is_tier_3 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_4_small_gate }
+						}
+						AND = {
+							JAP_army_faction_is_tier_2 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_3_small_gate }
+						}
+						AND = { #Only reduce Navy Influence further if they're above the minimum limit
+							JAP_army_faction_is_tier_1 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_1_minimum_limit }
+						}
+					}
+				}
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+				subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+			}
+			
+			JAP_small_naval_faction_gain = yes
+			#log = "Only Navy should be promoted"
+		}
+		else = { #Navy will level UP and Army will level DOWN
+			custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+			add_to_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+			custom_effect_tooltip = JAP_small_army_faction_loss_tt
+			subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+			
+			JAP_naval_faction_goes_up_and_army_goes_down = yes
+			#log = "Navy Goes up, Army goes Down"
+		}
+	}
+}
+
+JAP_add_influential_imperial_faction = {
+	add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
+	#If there are already 2 Influential Factions, trigger an event to choose which one to boot
+	if = { 
+		limit = {
+			check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+		}
+		hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+		country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+}
+
+JAP_army_faction_goes_up_from_tier_1_to_tier_2 = {
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no
+			}
+		}
+
+		if = { #Army is EQUAL to Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_1_equal_navy
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_equal_navy
+				add_idea = JAP_army_faction_tier_2_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_equal_army
+				add_idea = JAP_naval_faction_tier_1_lesser_1
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_1_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_1
+				add_idea = JAP_army_faction_tier_2_equal_navy
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_greater_1
+				add_idea = JAP_naval_faction_tier_2_equal_army
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_1_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_2
+				add_idea = JAP_army_faction_tier_2_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_2
+				add_idea = JAP_naval_faction_tier_3_greater_1
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_1_lesser_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_3
+				add_idea = JAP_army_faction_tier_2_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_3
+				add_idea = JAP_naval_faction_tier_3_greater_2
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1 
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+		
+}
+
+JAP_army_faction_goes_up_from_tier_2_to_tier_3 = {
+
+	JAP_add_influential_imperial_faction = yes
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = { #Army is EQUAL to Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_equal_navy
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_equal_navy
+				add_idea = JAP_army_faction_tier_3_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_equal_army
+				add_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_greater_1
+				add_idea = JAP_army_faction_tier_3_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_1
+				add_idea = JAP_naval_faction_tier_2_lesser_2
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_1
+				add_idea = JAP_army_faction_tier_3_equal_navy
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_1
+				add_idea = JAP_naval_faction_tier_3_equal_army
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_2
+				add_idea = JAP_army_faction_tier_3_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_2
+				add_idea = JAP_naval_faction_tier_4_greater_1
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2 
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+	
+}
+
+JAP_army_faction_goes_up_from_tier_3_to_tier_4 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+		
+		if = { #Army is EQUAL to Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_equal_navy
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_equal_navy
+				add_idea = JAP_army_faction_tier_4_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_equal_army
+				add_idea = JAP_naval_faction_tier_3_lesser_1
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_1
+				add_idea = JAP_army_faction_tier_4_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_1
+				add_idea = JAP_naval_faction_tier_2_lesser_2
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_2
+				add_idea = JAP_army_faction_tier_4_greater_3
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_2
+				add_idea = JAP_naval_faction_tier_1_lesser_3
+			}
+		}
+
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_lesser_1
+			}
+
+			JAP_add_influential_imperial_faction = yes
+			
+			set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_lesser_1
+				add_idea = JAP_army_faction_tier_4_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_1
+				add_idea = JAP_naval_faction_tier_3_lesser_1
+			}
+		}
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					has_idea = JAP_government_faction_tier_4
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3 
+			add_idea = JAP_army_faction_tier_4
+		}
+
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					has_idea = JAP_government_faction_tier_4
+					has_idea = JAP_naval_faction_tier_4
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_naval_faction_tier_4
+				}
+				set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_naval_faction_tier_4
+					add_idea = JAP_naval_faction_tier_3
+				}
+			}
+
+		}
+
+	}
+
+	
+}
+
+JAP_army_faction_goes_down_from_tier_4_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4_greater_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_3
+				add_idea = JAP_army_faction_tier_3_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_3
+				add_idea = JAP_naval_faction_tier_1_lesser_2
+			}
+		}
+		if = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_2
+				add_idea = JAP_army_faction_tier_3_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_2
+				add_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+		}
+		if = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_1
+				add_idea = JAP_army_faction_tier_3_equal_navy
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_lesser_1
+				add_idea = JAP_naval_faction_tier_3_equal_army
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+
+	
+}
+
+JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = { #Army is EQUAL to Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_equal_navy
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_equal_navy
+				add_idea = JAP_army_faction_tier_2_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_equal_army
+				add_idea = JAP_naval_faction_tier_3_greater_1
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_1
+				add_idea = JAP_army_faction_tier_2_equal_navy
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_1
+				add_idea = JAP_naval_faction_tier_2_equal_army
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_2
+				add_idea = JAP_army_faction_tier_2_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_2
+				add_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+		}	
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_3_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_lesser_1
+				add_idea = JAP_army_faction_tier_2_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_1
+				add_idea = JAP_naval_faction_tier_4_greater_2
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+	
+	
+}
+
+JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = { #Army is EQUAL to Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_equal_navy
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_equal_navy
+				add_idea = JAP_army_faction_tier_1_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_equal_army
+				add_idea = JAP_naval_faction_tier_2_greater_1
+			}
+		}
+		else_if = { #Army is GREATER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_greater_1
+				add_idea = JAP_army_faction_tier_1_equal_navy
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_1
+				add_idea = JAP_naval_faction_tier_1_equal_army
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_1
+				add_idea = JAP_army_faction_tier_1_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_1
+				add_idea = JAP_naval_faction_tier_3_greater_2
+			}
+		}
+		else_if = { #Army is LESSER than Navy
+			limit = {
+				has_idea = JAP_army_faction_tier_2_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_2
+				add_idea = JAP_army_faction_tier_1_lesser_3
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_2
+				add_idea = JAP_naval_faction_tier_4_greater_3
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2
+			add_idea = JAP_army_faction_tier_1
+		}
+	}
+
+	
+}
+
+JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = {
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+		
+		if = { #Navy is EQUAL to Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_1_equal_army
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_equal_army
+				add_idea = JAP_naval_faction_tier_2_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_equal_navy
+				add_idea = JAP_army_faction_tier_1_lesser_1
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_1_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_1
+				add_idea = JAP_naval_faction_tier_2_equal_army
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_greater_1
+				add_idea = JAP_army_faction_tier_2_equal_navy
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_1_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_2
+				add_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_2
+				add_idea = JAP_army_faction_tier_3_greater_1
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_1_lesser_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_1_lesser_3
+				add_idea = JAP_naval_faction_tier_1_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_3
+				add_idea = JAP_army_faction_tier_3_greater_2
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1 
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+
+	
+}
+
+JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = { #Navy is EQUAL to Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_equal_army
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_equal_army
+				add_idea = JAP_naval_faction_tier_3_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_equal_navy
+				add_idea = JAP_army_faction_tier_2_lesser_1
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_greater_1
+				add_idea = JAP_naval_faction_tier_3_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_1
+				add_idea = JAP_army_faction_tier_2_lesser_2
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_1
+				add_idea = JAP_naval_faction_tier_3_equal_army
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_1
+				add_idea = JAP_army_faction_tier_3_equal_navy
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_2
+				add_idea = JAP_naval_faction_tier_3_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_2
+				add_idea = JAP_army_faction_tier_4_greater_1
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2 
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+	
+}
+
+JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+		
+		if = { #Navy is EQUAL to Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_equal_army
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_equal_army
+				add_idea = JAP_naval_faction_tier_4_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_equal_navy
+				add_idea = JAP_army_faction_tier_3_lesser_1
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_1
+				add_idea = JAP_naval_faction_tier_4_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_1
+				add_idea = JAP_army_faction_tier_2_lesser_2
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_2
+				add_idea = JAP_naval_faction_tier_4_greater_3
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_2
+				add_idea = JAP_army_faction_tier_1_lesser_3
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_lesser_1
+			}
+			
+			JAP_add_influential_imperial_faction = yes
+
+			#Demote Army Faction
+			set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+			
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_lesser_1
+				add_idea = JAP_naval_faction_tier_4_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_1
+				add_idea = JAP_army_faction_tier_3_lesser_1
+			}
+		}
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					has_idea = JAP_government_faction_tier_4
+				}
+			}
+
+			add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
+			if = { #This is a fallback check and shouldn't really happen
+				limit = {
+					check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+				}
+				hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+				country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3 
+			add_idea = JAP_naval_faction_tier_4
+		}
+
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					has_idea = JAP_government_faction_tier_4
+					has_idea = JAP_army_faction_tier_4
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = JAP_army_faction_tier_4
+				}
+				set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_army_faction_tier_4
+					add_idea = JAP_army_faction_tier_3
+				}
+			}
+
+		}
+
+	}
+
+	
+}
+
+JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = JAP_naval_faction_tier_4_greater_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_3
+				add_idea = JAP_naval_faction_tier_3_greater_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_3
+				add_idea = JAP_army_faction_tier_1_lesser_2
+			}
+		}
+		if = {
+			limit = {
+				has_idea = JAP_naval_faction_tier_4_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_2
+				add_idea = JAP_naval_faction_tier_3_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_2
+				add_idea = JAP_army_faction_tier_2_lesser_1
+			}
+		}
+		if = {
+			limit = {
+				has_idea = JAP_naval_faction_tier_4_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_4_greater_1
+				add_idea = JAP_naval_faction_tier_3_equal_army
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_lesser_1
+				add_idea = JAP_army_faction_tier_3_equal_navy
+			}
+		}
+		
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_4
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+
+	
+}
+
+JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+		
+		if = { #Navy is EQUAL to Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_equal_army
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_equal_army
+				add_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_equal_navy
+				add_idea = JAP_army_faction_tier_3_greater_1
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_1
+				add_idea = JAP_naval_faction_tier_2_equal_army
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_lesser_1
+				add_idea = JAP_army_faction_tier_2_equal_navy
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_greater_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_greater_2
+				add_idea = JAP_naval_faction_tier_2_greater_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_2
+				add_idea = JAP_army_faction_tier_2_lesser_1
+			}
+		}	
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_3_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_3_lesser_1
+				add_idea = JAP_naval_faction_tier_2_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_1
+				add_idea = JAP_army_faction_tier_4_greater_2
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+
+	
+}
+
+JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = {
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+		
+		if = { #Navy is EQUAL to Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_equal_army
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_equal_army
+				add_idea = JAP_naval_faction_tier_1_lesser_1
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2_equal_navy
+				add_idea = JAP_army_faction_tier_2_greater_1
+			}
+		}
+		else_if = { #Navy is GREATER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_greater_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_greater_1
+				add_idea = JAP_naval_faction_tier_1_equal_army
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_1_lesser_1
+				add_idea = JAP_army_faction_tier_1_equal_navy
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_lesser_1
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_1
+				add_idea = JAP_naval_faction_tier_1_lesser_2
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3_greater_1
+				add_idea = JAP_army_faction_tier_3_greater_2
+			}
+		}
+		else_if = { #Navy is LESSER than Army
+			limit = {
+				has_idea = JAP_naval_faction_tier_2_lesser_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_naval_faction_tier_2_lesser_2
+				add_idea = JAP_naval_faction_tier_1_lesser_3
+			}
+			custom_effect_tooltip = JAP_interservice_rivalry_effects
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4_greater_2
+				add_idea = JAP_army_faction_tier_4_greater_3
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2
+			add_idea = JAP_naval_faction_tier_1
+		}
+	}
+
+	
+}
+
+JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = {
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_1
+		add_idea = JAP_zaibatsu_faction_tier_2
+	}
+}
+
+JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_2
+		add_idea = JAP_zaibatsu_faction_tier_3
+	}
+}
+
+JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_3
+		add_idea = JAP_zaibatsu_faction_tier_4
+	}
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_government_faction_tier_4
+					JAP_army_faction_is_tier_4 = yes
+					JAP_naval_faction_is_tier_4 = yes
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes
+
+			#Demote the Dominant Faction:
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_army_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_3
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_3
+						add_idea = JAP_army_faction_tier_3_greater_2
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_1_lesser_3
+						add_idea = JAP_naval_faction_tier_1_lesser_2
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_2
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_2
+						add_idea = JAP_army_faction_tier_3_greater_1
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_2_lesser_2
+						add_idea = JAP_naval_faction_tier_2_lesser_1
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_1
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_1
+						add_idea = JAP_army_faction_tier_3_equal_navy
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_3_lesser_1
+						add_idea = JAP_naval_faction_tier_3_equal_army
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_naval_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_3
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_3
+						add_idea = JAP_naval_faction_tier_3_greater_2
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_1_lesser_3
+						add_idea = JAP_army_faction_tier_1_lesser_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_2
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_2
+						add_idea = JAP_naval_faction_tier_3_greater_1
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_2_lesser_2
+						add_idea = JAP_army_faction_tier_2_lesser_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_1
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_1
+						add_idea = JAP_naval_faction_tier_3_equal_army
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_3_lesser_1
+						add_idea = JAP_army_faction_tier_3_equal_navy
+					}
+				}
+			}
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_government_faction_tier_4
+					JAP_army_faction_is_tier_4 = yes
+					JAP_naval_faction_is_tier_4 = yes
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes
+
+			#Demote the Dominant Faction:
+			if = {
+				limit = {
+					has_idea = JAP_government_faction_tier_4
+				}
+				set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_government_faction_tier_4
+					add_idea = JAP_government_faction_tier_3
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_army_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4
+						add_idea = JAP_army_faction_tier_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_naval_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4
+						add_idea = JAP_naval_faction_tier_3
+					}
+				}
+			}
+		}
+	}
+	
+
+}
+
+JAP_zaibatsu_faction_goes_down_from_tier_4_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_4
+		add_idea = JAP_zaibatsu_faction_tier_3
+	}
+}
+
+JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_3
+		add_idea = JAP_zaibatsu_faction_tier_2
+	}
+}
+
+JAP_zaibatsu_faction_goes_down_from_tier_2_to_tier_1 = {
+	swap_ideas = {
+		remove_idea = JAP_zaibatsu_faction_tier_2
+		add_idea = JAP_zaibatsu_faction_tier_1
+	}
+}
+
+JAP_government_faction_goes_up_from_tier_1_to_tier_2 = {
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_1
+		add_idea = JAP_government_faction_tier_2
+	}
+}
+
+JAP_government_faction_goes_up_from_tier_2_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+	
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_2
+		add_idea = JAP_government_faction_tier_3
+	}
+}
+
+JAP_government_faction_goes_up_from_tier_3_to_tier_4 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_3
+		add_idea = JAP_government_faction_tier_4
+	}
+
+	IF = {
+		limit = {
+			NOT = {
+				always = no 
+			}
+		}
+
+		#Demote the Dominant Faction:
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					JAP_army_faction_is_tier_4 = yes
+					JAP_naval_faction_is_tier_4 = yes
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes 
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_army_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_3
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_3
+						add_idea = JAP_army_faction_tier_3_greater_2
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_1_lesser_3
+						add_idea = JAP_naval_faction_tier_1_lesser_2
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_2
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_2
+						add_idea = JAP_army_faction_tier_3_greater_1
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_2_lesser_2
+						add_idea = JAP_naval_faction_tier_2_lesser_1
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4_greater_1
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4_greater_1
+						add_idea = JAP_army_faction_tier_3_equal_navy
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_3_lesser_1
+						add_idea = JAP_naval_faction_tier_3_equal_army
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_naval_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_3
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_3
+						add_idea = JAP_naval_faction_tier_3_greater_2
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_1_lesser_3
+						add_idea = JAP_army_faction_tier_1_lesser_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_2
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_2
+						add_idea = JAP_naval_faction_tier_3_greater_1
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_2_lesser_2
+						add_idea = JAP_army_faction_tier_2_lesser_1
+					}
+				}
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4_greater_1
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4_greater_1
+						add_idea = JAP_naval_faction_tier_3_equal_army
+					}
+					custom_effect_tooltip = JAP_interservice_rivalry_effects
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_3_lesser_1
+						add_idea = JAP_army_faction_tier_3_equal_navy
+					}
+				}
+			}
+
+		}
+
+	}
+	# If Army and Navy no longer compare themselves to eachother 
+	ELSE = {
+
+		#Demote the Dominant Faction:
+		if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+			limit = {
+				OR = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+					JAP_army_faction_is_tier_4 = yes
+					JAP_naval_faction_is_tier_4 = yes
+				}
+			}
+
+			JAP_add_influential_imperial_faction = yes 
+
+			if = {
+				limit = {
+					has_idea = JAP_zaibatsu_faction_tier_4
+				}
+				set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				swap_ideas = {
+					remove_idea = JAP_zaibatsu_faction_tier_4
+					add_idea = JAP_zaibatsu_faction_tier_3
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_army_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_army_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_army_faction_tier_4
+					}
+					swap_ideas = {
+						remove_idea = JAP_army_faction_tier_4
+						add_idea = JAP_army_faction_tier_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					JAP_naval_faction_is_tier_4 = yes
+				}
+				set_variable = { JAP_naval_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+				if = {
+					limit = {
+						has_idea = JAP_naval_faction_tier_4
+					}
+					swap_ideas = {
+						remove_idea = JAP_naval_faction_tier_4
+						add_idea = JAP_naval_faction_tier_3
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+JAP_government_faction_goes_down_from_tier_4_to_tier_3 = {
+	
+	JAP_add_influential_imperial_faction = yes
+	
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_4
+		add_idea = JAP_government_faction_tier_3
+	}
+}
+
+JAP_government_faction_goes_down_from_tier_3_to_tier_2 = {
+
+	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_3
+		add_idea = JAP_government_faction_tier_2
+	}
+}
+
+JAP_government_faction_goes_down_from_tier_2_to_tier_1 = {
+	swap_ideas = {
+		remove_idea = JAP_government_faction_tier_2
+		add_idea = JAP_government_faction_tier_1
+	}
+}
+
+JAP_naval_faction_goes_up_and_army_goes_down = {
+	#Army and Navy cannot be equals if one has to go down while the other one goes up - that functionality is handled elsewhere
+	if = { #Navy Tier 1 is LESSER than Army
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_1
+			add_idea = JAP_naval_faction_tier_2_greater_1
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_greater_1
+			add_idea = JAP_army_faction_tier_1_lesser_1
+		}
+	}
+	else_if = { #Navy Tier 1 is LESSER than Army
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_2
+			add_idea = JAP_naval_faction_tier_2_equal_army
+		}
+
+		subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_greater_2
+			add_idea = JAP_army_faction_tier_2_equal_navy
+		}
+	}
+	else_if = { #Navy Tier 1 is LESSER than Army
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_3
+		}
+
+		JAP_add_influential_imperial_faction = yes
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_3
+			add_idea = JAP_naval_faction_tier_2_lesser_1
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4_greater_3
+			add_idea = JAP_army_faction_tier_3_greater_1
+		}
+	}
+	else_if = { #Navy Tier 1 (no rivalry)
+		limit = {
+			has_idea = JAP_naval_faction_tier_1
+		}
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1
+			add_idea = JAP_naval_faction_tier_2
+		}
+
+		IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4
+				add_idea = JAP_army_faction_tier_3
+			}
+			JAP_add_influential_imperial_faction = yes
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3
+				add_idea = JAP_army_faction_tier_2
+			}
+			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2
+				add_idea = JAP_army_faction_tier_1
+			}
+		}
+
+	}
+	#NAVY TIER 2
+	else_if = { #Navy Tier 2 Tier 2 is EQUAL to Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_equal_army
+		}
+	
+		JAP_add_influential_imperial_faction = yes
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_equal_army
+			add_idea = JAP_naval_faction_tier_3_greater_2
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_equal_navy
+			add_idea = JAP_army_faction_tier_1_lesser_2
+		}
+	}
+	else_if = { #Navy Tier 2 is GREATER than Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_greater_1
+		}
+
+		JAP_add_influential_imperial_faction = yes
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_greater_1
+			add_idea = JAP_naval_faction_tier_3_greater_2
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1_lesser_1
+			add_idea = JAP_army_faction_tier_1_lesser_2
+		}
+	}
+	else_if = { #Navy Tier 2 is LESSER than Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_lesser_1
+		}
+
+		subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+		JAP_add_influential_imperial_faction = yes
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_lesser_1
+			add_idea = JAP_naval_faction_tier_3_greater_1
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_greater_1
+			add_idea = JAP_army_faction_tier_2_lesser_1
+		}
+	}
+	else_if = { #Navy Tier 2 is LESSER than Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_lesser_2
+		}
+
+		#We're gonna have to add an extra Influential Faction point here
+		add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
+
+		JAP_add_influential_imperial_faction = yes
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_lesser_2
+			add_idea = JAP_naval_faction_tier_3_equal_army
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4_greater_2
+			add_idea = JAP_army_faction_tier_3_equal_navy
+		}
+	}
+	else_if = { #Navy Tier 2 (no rivalry)
+		limit = {
+			has_idea = JAP_naval_faction_tier_2
+		}
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2
+			add_idea = JAP_naval_faction_tier_3
+		}
+		
+		IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4
+				add_idea = JAP_army_faction_tier_3
+			}
+			#We're gonna have to add an extra Influential Faction point here
+			add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3
+				add_idea = JAP_army_faction_tier_2
+			}
+			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 }  #Gotta keep track of how many Influential Factions there are!
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2
+				add_idea = JAP_army_faction_tier_1
+			}
+		}
+
+		JAP_add_influential_imperial_faction = yes
+
+	}
+	#NAVY TIER 3
+	else_if = { #Army is EQUAL to Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_equal_army
+		}
+
+		subtract_from_variable = { JAP_num_of_influential_imperial_factions = 2 } #Gotta keep track of how many Influential Factions there are! And here, TWO Factions are leaving the Influential Level
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_equal_army
+			add_idea = JAP_naval_faction_tier_4_greater_2
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_equal_navy
+			add_idea = JAP_army_faction_tier_2_lesser_2
+		}
+	}
+	else_if = { #Army is GREATER than Navy
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_greater_1
+		}
+
+		subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_greater_1
+			add_idea = JAP_naval_faction_tier_4_greater_3
+		}
+		custom_effect_tooltip = JAP_interservice_rivalry_effects
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_lesser_1
+			add_idea = JAP_army_faction_tier_1_lesser_3
+		}
+	}
+	else_if = { # Navy tier 3 (no rivalry)
+		limit = {
+			has_idea = JAP_naval_faction_tier_3
+		}
+
+		subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3
+			add_idea = JAP_naval_faction_tier_4
+		}
+		
+		IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_4
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_4
+				add_idea = JAP_army_faction_tier_3
+			}
+			JAP_add_influential_imperial_faction = yes
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_3
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_3
+				add_idea = JAP_army_faction_tier_2
+			}
+			subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
+		}
+		ELSE_IF = {
+			limit = {
+				has_idea = JAP_army_faction_tier_2
+			}
+			swap_ideas = {
+				remove_idea = JAP_army_faction_tier_2
+				add_idea = JAP_army_faction_tier_1
+			}
+		}
+		
+	}
+	#No need to check if the Naval faction is Tier 1 here since they cannot be demoted further. This is handled elsewhere
+	if = { #Gotta check if there already is a Tier 4 Faction; in that case they need to be demoted to Tier 3
+		limit = {
+			OR = {
+				has_idea = JAP_zaibatsu_faction_tier_4
+				has_idea = JAP_government_faction_tier_4
+			}
+		}
+
+		JAP_add_influential_imperial_faction = yes
+
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_4
+			}
+			set_variable = { JAP_zaibatsu_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+			swap_ideas = {
+				remove_idea = JAP_zaibatsu_faction_tier_4
+				add_idea = JAP_zaibatsu_faction_tier_3
+			}
+		}
+		if = {
+			limit = {
+				has_idea = JAP_government_faction_tier_4
+			}
+			set_variable = { JAP_government_faction_influence_level = JAP_tier_3_to_tier_4_small_gate } #Sets the Influence Level to a variable already used to check tier gates
+			swap_ideas = {
+				remove_idea = JAP_government_faction_tier_4
+				add_idea = JAP_government_faction_tier_3
+			}
+		}
+	}
+
+}
+
+JAP_army_faction_swap_away_from_interservice_rivalry_effect = {
+	
+	## ON TIER 1 ##
+	IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_1_equal_navy
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1_equal_navy
+			add_idea = JAP_army_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_1_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1_lesser_1
+			add_idea = JAP_army_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_1_lesser_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1_lesser_2
+			add_idea = JAP_army_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_1_lesser_3
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_1_lesser_3
+			add_idea = JAP_army_faction_tier_1
+		}	
+	}
+	## ON TIER 2 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_2_equal_navy
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_equal_navy
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_2_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_greater_1
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_2_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_lesser_1
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_2_lesser_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_2_lesser_2
+			add_idea = JAP_army_faction_tier_2
+		}
+	}
+	## ON TIER 3 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_3_equal_navy
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_equal_navy
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_3_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_greater_1
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_3_greater_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_greater_2
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_3_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_3_lesser_1
+			add_idea = JAP_army_faction_tier_3
+		}
+	}
+	## ON TIER 4 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_4_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4_greater_1
+			add_idea = JAP_army_faction_tier_4
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_4_greater_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4_greater_2
+			add_idea = JAP_army_faction_tier_4
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_army_faction_tier_4_greater_3
+		}
+		swap_ideas = {
+			remove_idea = JAP_army_faction_tier_4_greater_3
+			add_idea = JAP_army_faction_tier_4
+		}
+	}
+
+}
+
+JAP_naval_faction_swap_away_from_interservice_rivalry_effect = {
+	
+	## ON TIER 1 ##
+	IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_equal_army
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_equal_army
+			add_idea = JAP_naval_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_1
+			add_idea = JAP_naval_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_2
+			add_idea = JAP_naval_faction_tier_1
+		}	
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_1_lesser_3
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_1_lesser_3
+			add_idea = JAP_naval_faction_tier_1
+		}	
+	}
+	## ON TIER 2 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_equal_army
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_equal_army
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_greater_1
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_lesser_1
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_2_lesser_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_2_lesser_2
+			add_idea = JAP_naval_faction_tier_2
+		}
+	}
+	## ON TIER 3 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_equal_army
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_equal_army
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_greater_1
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_greater_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_greater_2
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_3_lesser_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_3_lesser_1
+			add_idea = JAP_naval_faction_tier_3
+		}
+	}
+	## ON TIER 4 ##
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_4_greater_1
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_4_greater_1
+			add_idea = JAP_naval_faction_tier_4
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_4_greater_2
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_4_greater_2
+			add_idea = JAP_naval_faction_tier_4
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			has_idea = JAP_naval_faction_tier_4_greater_3
+		}
+		swap_ideas = {
+			remove_idea = JAP_naval_faction_tier_4_greater_3
+			add_idea = JAP_naval_faction_tier_4
+		}
+	}
+
+}
+
+JAP_faction_demand_activation_effects = {
+	add_to_variable = { JAP_num_of_faction_demands = 1 }
+	add_to_variable = { JAP_num_of_faction_demands_total = 1 }
+
+	set_country_flag = { #This is needed so we don't spam the player with these events
+		flag = JAP_faction_demands_cooldown_flag
+		days = 200
+		value = 1
+	}
+}
+
+JAP_faction_demand_finalize_mission_effect = { #Sets flags and everything necessary to end a mission and keep track of ongoing missions, etc.
+	subtract_from_variable = { JAP_num_of_faction_demands = 1 }
+	add_to_variable = { JAP_faction_demand_number_of_missions_resolved = 1 }
+}
+
+JAP_faction_demand_add_to_successful_missions = {
+	add_to_variable = { JAP_faction_demand_successful_missions = 1 }
+	
+}
+
+JAP_faction_demand_add_to_failed_missions = {
+	add_to_variable = { JAP_faction_demand_failed_missions = 1 }
+}
+
+PHI_check_japanese_ideology_and_adapt = {
+	
+	set_variable = { PHI_japan_aligned_ideology_fascism = 0 } # Needs to reset all here so we can set the current value to 10 instead when improved ideology focus
+	set_variable = { PHI_japan_aligned_ideology_communism = 0 } 
+	set_variable = { PHI_japan_aligned_ideology_neutrality = 0 } 
+	set_variable = { PHI_japan_aligned_ideology_democratic = 0 } 
+
+	if = { ## If doesn't have the modifier, then add modifier
+		limit = { 
+			NOT = {
+				has_dynamic_modifier = { modifier = PHI_japan_aligned_ideology }
+			}
+		}
+		add_dynamic_modifier = { modifier = PHI_japan_aligned_ideology }
+	}
+	else_if = {
+		limit = {
+			has_variable = PHI_jap_alignment_value_change
+		}
+		effect_tooltip = {
+			custom_effect_tooltip = PHI_japan_aligned_ideology_improved_tt	
+			if = {
+				limit = { JAP = { has_government = democratic } }
+				add_to_variable = {
+					PHI_japan_aligned_ideology_democratic = PHI_jap_alignment_value_change
+					tooltip = democratic_drift_tt 
+				}
+			}
+			else_if = {
+				limit = { JAP = { has_government = neutrality } }
+				PHI = { 
+					add_to_variable = {
+						PHI_japan_aligned_ideology_neutrality = PHI_jap_alignment_value_change
+						tooltip = neutrality_drift_tt 
+					}		
+				}		
+			}
+			else_if = {
+				limit = { JAP = { has_government = communism } }
+				PHI = {
+					add_to_variable = {
+						PHI_japan_aligned_ideology_communism = PHI_jap_alignment_value_change
+						tooltip = communism_drift_tt 
+					}
+				}
+			}
+			else_if = {
+				limit = { JAP = { has_government = fascism } }
+				add_to_variable = {
+					PHI_japan_aligned_ideology_fascism = PHI_jap_alignment_value_change
+					tooltip = fascism_drift_tt 
+				}
+			}
+		}
+	}
+	hidden_effect = {
+		if = {
+			limit = {
+				has_variable = PHI_jap_alignment_value_change
+			}
+			add_to_variable = {
+				PHI_jap_alignment_value = PHI_jap_alignment_value_change
+			}
+		}
+		if = {
+			limit = {
+				JAP = {
+					has_government = democratic
+				}
+			}
+			set_variable = { PHI_japan_aligned_ideology_democratic = PHI_jap_alignment_value }
+		}
+		else_if = {
+			limit = {
+				JAP = {
+					has_government = fascism
+				}
+			}
+			set_variable = { PHI_japan_aligned_ideology_fascism = PHI_jap_alignment_value }
+		}
+		else_if = {
+			limit = {
+				JAP = {
+					has_government = communism
+				}
+			}
+			set_variable = { PHI_japan_aligned_ideology_communism = PHI_jap_alignment_value }
+		}
+		else_if = {
+			limit = {
+				JAP = {
+					has_government = neutrality
+				}
+			}
+			set_variable = { PHI_japan_aligned_ideology_neutrality = PHI_jap_alignment_value }
+		}
+	}
+}
+
+SIA_refresh_indochina_controllers = {
+	clear_array = SIA.indochina_controllers
+	
+	for_each_scope_loop = {
+		array = SIA.indochina_states
+		if = {
+			limit = {
+				NOT = {
+					controller = {
+						is_in_array = { array = SIA.indochina_controllers value = THIS }
+					}
+				}
+			}
+
+			controller = {
+				add_to_array = { array = SIA.indochina_controllers value = THIS }
+			}
+		}
+	}
+}
+
+SIA_refresh_malaysia_burma_controllers = {
+	clear_array = SIA.malaysia_burma_controllers
+	
+	for_each_scope_loop = {
+		array = SIA.malaysia_burma_states
+		if = {
+			limit = {
+				NOT = {
+					controller = {
+						is_in_array = { array = SIA.malaysia_burma_controllers value = THIS }
+					}
+				}
+			}
+
+			controller = {
+				add_to_array = { array = SIA.malaysia_burma_controllers value = THIS }
+			}
+		}
+	}
+}
+
+SIA_clear_limited_war_variables = {
+	hidden_effect = {
+		clear_variable = SIA.limited_war_lost_state_concession
+		clear_array = SIA.limited_war_states
+		clear_array = SIA.limited_war_target_allies
+		clear_variable = SIA.pre_limited_war_faction_leader 
+		clear_variable = SIA.limited_war_target
+		SIA_refresh_indochina_controllers = yes
+		SIA_refresh_malaysia_burma_controllers = yes
+		set_rule = { can_join_factions = yes }
+	}
+}
+
+SIA_re_add_to_old_faction = {
+	if = {
+		limit = {
+			has_variable = pre_limited_war_faction_leader	
+			NOT = { has_war_with = var:pre_limited_war_faction_leader }
+			var:pre_limited_war_faction_leader = {
+				exists = yes
+				is_subject = no
+				has_capitulated = no
+				is_faction_leader = yes
+			}
+		}
+
+	    set_rule = { can_join_factions = yes }
+		var:pre_limited_war_faction_leader = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+SIA_peace_out = {
+	for_each_scope_loop = {
+		array = SIA.limited_war_target_allies
+		
+		if = {
+			limit = { 
+				has_war_with = SIA 
+			}
+			
+			white_peace = { tag = SIA } 
+			every_subject_country = {
+				limit = { has_war_with = SIA }
+				white_peace = {
+					tag = SIA
+				}
+			}
+		}
+	}		
+
+	if = {
+		limit = { has_variable = SIA.limited_war_target }
+		white_peace = { tag = var:SIA.limited_war_target }
+	}
+}
+
+
+# NCNS Japan tree port (2026-10-25): vanilla 1.19.3 Japan history setup the NCNS systems need
+# (Imperial Influence flags/variables/dynamic modifiers, faction-tier and hidden ideas, NCNS characters, align flags).
+# NOT CALLED YET - call it from JAP history (JAP_NCNS_history_setup = yes) once you decide to enable it.
+# Vanilla laws, politics/popularities, operatives, MIO design teams and the 1939 block were deliberately left out.
+JAP_NCNS_history_setup = {
+	# This can't be used in a civil war duh
+	set_country_flag = JAP_first_strike_principle_blocked
+	set_country_flag = JAP_kantai_kessen_blocked
+	
+	
+	### THE IMPERIAL INFLUENCE SYSTEM ###
+	
+	add_dynamic_modifier = {
+		modifier = JAP_imperial_influence_dm
+	}
+	
+	#Setting up the Faction Levels within the Imperial Influence
+	#Current Tiers and Influence Points:
+	#Tier 1: 0-9 points
+	#Tier 2: 10-24 points
+	#Tier 3: 25-39 points
+	#Tier 4: 40+ points - should however never be able to go above 45
+	
+	set_variable = { JAP_tier_1_to_tier_2_small_gate = 5 }
+	set_variable = { JAP_tier_2_to_tier_3_small_gate = 20 }
+	set_variable = { JAP_tier_2_to_tier_3_big_gate = 15 }
+	set_variable = { JAP_tier_3_to_tier_4_small_gate = 35 }
+	set_variable = { JAP_tier_3_to_tier_4_big_gate = 30 }
+	set_variable = { JAP_tier_4_minimum_limit = 40 }
+	set_variable = { JAP_tier_4_top_limit_check = 44 }
+	set_variable = { JAP_tier_3_to_tier_2_small_gate = 29 }
+	set_variable = { JAP_tier_3_to_tier_2_big_gate = 34 }
+	set_variable = { JAP_tier_2_to_tier_1_small_gate = 14 }
+	set_variable = { JAP_tier_2_to_tier_1_big_gate = 19 }
+	set_variable = { JAP_tier_1_minimum_limit = 4 }
+	set_variable = { JAP_minimum_faction_level = 0 }
+	set_variable = { JAP_tier_1_gate = 9 }
+	set_variable = { JAP_maximum_faction_level_check = 49 }
+	
+	set_variable = { JAP_small_influence_point = 5 }
+	set_variable = { JAP_big_influence_point = 10 } #Should probably be used rather sparingly
+	set_variable = { JAP_imperial_influence_interference_reset_days = 181 }
+	
+	set_variable = { JAP_army_faction_influence_level = 20 } #Meddling
+	set_variable = { JAP_naval_faction_influence_level = 15 } #Meddling
+	set_variable = { JAP_zaibatsu_faction_influence_level = 15 } #Meddling
+	set_variable = { JAP_government_faction_influence_level = 10 } #Meddling
+	
+	set_variable = { JAP_num_of_influential_imperial_factions = 0 } #Check how many Influential Faction there are
+	set_variable = { JAP_num_of_faction_demands = 0 } #Checks how many Demands the Imperial Factions have going on simultaneously
+	set_variable = { JAP_num_of_faction_demands_total = 0 } #Checks how many Demands the Imperial Factions have done throughout the game 
+	set_variable = { JAP_faction_demand_number_of_missions_resolved = 0 } #Checks how many Demands have been resolved throughout the game 
+	set_variable = { JAP_faction_demand_successful_missions = 0 } #Checks how many Demands have been achieved/successfully completed throughout the game 
+	set_variable = { JAP_faction_demand_failed_missions = 0 } #Checks how many Demands have been failed throughout the game 
+	
+	
+	
+	
+	
+	## STATE SHINTOISM
+	add_dynamic_modifier = {
+		modifier = JAP_state_shinotism_dm
+	}
+	set_variable = { JAP_state_shinotism_surrender_limit = 0.1 } 
+	set_variable = { JAP_state_shinotism_war_support_factor = 0.2 }
+	set_variable = { JAP_state_shinotism_stability_factor = 0 }
+	set_variable = { JAP_state_shinotism_pocket_penalty = 0 }
+	set_variable = { JAP_state_shinotism_justify_war_goal_time = 0 }
+	set_variable = { JAP_state_shinotism_research_speed_factor = 0 }
+	
+	# THE IMPERIAL ARMY
+	add_dynamic_modifier = {
+		modifier = JAP_imperial_army_dm
+	}
+	set_variable = { JAP_army_army_infantry_attack_factor = 0 }
+	set_variable = { JAP_army_army_morale_factor = 0.05 }
+	set_variable = { JAP_army_army_defence_factor = -0.05 }
+	set_variable = { JAP_army_initiative_factor = 0.1 }
+	set_variable = { JAP_army_army_army_artillery_attack_factor = -0.1 }
+	set_variable = { JAP_army_supply_consumption_factor = 0.2 }
+	set_variable = { JAP_army_acclimatization_cold_climate_gain_factor = 0 }
+	set_variable = { JAP_army_acclimatization_hot_climate_gain_factor = 0 }
+	set_variable = { JAP_army_army_core_attack_factor = 0 }
+	set_variable = { JAP_army_army_core_defence_factor = 0 }
+	set_variable = { JAP_army_planning_speed = 0 }
+	set_variable = { JAP_army_army_armor_attack_factor = 0 }
+	set_variable = { JAP_army_army_armor_speed_factor = 0 }
+	set_variable = { JAP_army_motorized_attack_factor = 0 }
+	set_variable = { JAP_army_mechanized_attack_factor = 0 }
+	set_variable = { JAP_army_org_loss_when_moving = 0 }
+	set_variable = { JAP_army_army_org_factor = 0 }
+	set_variable = { JAP_army_attrition = 0 }
+	set_variable = { JAP_army_air_superiority_bonus_in_combat = 0 }
+	set_variable = { JAP_army_coordination_bonus = 0 }
+	set_variable = { JAP_army_conscription = 0 }
+	set_variable = { JAP_army_training_time_factor = 0 }
+	set_variable = { JAP_army_experience_loss_factor = 0 }
+	set_variable = { JAP_army_max_planning_factor = 0 }
+	set_variable = { JAP_army_conscription_factor = 0 }
+	set_variable = { JAP_army_max_dig_in = 0 }
+	set_variable = { JAP_army_dig_in_speed_factor = 0 }
+	
+	# THE IMPERIAL NAVY
+	add_dynamic_modifier = {
+		modifier = JAP_imperial_navy_dm
+	}
+	set_variable = { JAP_navy_naval_torpedo_hit_chance_factor = 0.15 }
+	#set_variable = { JAP_navy_naval_torpedo_screen_penetration_factor = 0.1 }
+	set_variable = { JAP_navy_ships_at_battle_start = 0.1 }
+	set_variable = { JAP_navy_navy_max_range_factor = 0.1 }
+	set_variable = { JAP_navy_spotting_chance = -0.1 }
+	set_variable = { JAP_navy_naval_detection = -0.1 }
+	set_variable = { JAP_navy_naval_accidents_chance = 0.1 }
+	set_variable = { JAP_navy_convoy_escort_efficiency = -0.15 }
+	set_variable = { JAP_navy_naval_coordination = 0 }
+	set_variable = { JAP_navy_naval_invasion_prep_speed = 0 }
+	set_variable = { JAP_navy_amphibious_invasion = 0 }
+	set_variable = { JAP_navy_naval_heavy_gun_hit_chance_factor = 0 }
+	set_variable = { JAP_navy_navy_anti_air_attack_factor = 0 }
+	set_variable = { JAP_navy_naval_mine_hit_chance = 0 }
+	set_variable = { JAP_navy_naval_mines_damage_factor = 0 }
+	set_variable = { JAP_navy_navy_org_factor = 0 }
+	set_variable = { JAP_navy_experience_gain_navy_unit_factor = 0 }
+	set_variable = { JAP_navy_repair_speed_factor = 0}
+	set_variable = { JAP_navy_refit_speed = 0}
+	set_variable = { JAP_navy_naval_ship_recovery_chance = 0}
+	
+	# THE IMPERIAL AIRFORCE SERVICES
+	add_dynamic_modifier = {
+		modifier = JAP_army_and_naval_air_services_dm
+	}
+	set_variable = { JAP_airforce_air_nav_efficiency = 0.1 }
+	set_variable = { JAP_airforce_air_wing_xp_loss_when_killed_factor = 0.1 }
+	set_variable = { JAP_airforce_air_untrained_pilots_penalty_factor = 0.1 }
+	set_variable = { JAP_airforce_air_cas_efficiency = 0 }
+	set_variable = { JAP_airforce_sortie_efficiency = 0 }
+	set_variable = { JAP_airforce_air_escort_efficiency = 0 }
+	set_variable = { JAP_airforce_air_range_factor = 0 }
+	set_variable = { JAP_airforce_air_defence_factor = 0 }
+	set_variable = { JAP_airforce_mines_planting_by_air_factor = 0 }
+	set_variable = { JAP_airforce_port_strike = 0 }
+	set_variable = { JAP_airforce_air_mission_efficiency = 0 }
+	set_variable = { JAP_airforce_air_accidents_factor = 0 }
+	#set_variable = { JAP_airforce_navy_carrier_air_attack_factor = 0 }
+	#set_variable = { JAP_airforce_navy_carrier_air_targetting_factor = 0 }
+	
+	# THE JAPANESE INDUSTRY
+	add_dynamic_modifier = {
+		modifier = JAP_early_industrialization_efforts_dm
+	}
+	set_variable = { JAP_industry_industry_air_damage_factor = 0.25 } 
+	set_variable = { JAP_industry_lack_of_resource_penalty_factor = 0.1 }
+	set_variable = { JAP_industry_research_speed_factor = -0.03 }
+	set_variable = { JAP_industry_consumer_goods_factor = 0.3 }
+	set_variable = { JAP_industry_production_speed_industrial_complex_factor = 0 } 
+	set_variable = { JAP_industry_production_speed_arms_factory_factor = 0 } 
+	set_variable = { JAP_industry_production_speed_dockyard_factor = 0 }
+	set_variable = { JAP_industry_production_speed_buildings_factor = 0 }
+	set_variable = { JAP_industry_industrial_capacity_dockyard = 0 }
+	set_variable = { JAP_industry_industrial_capacity_factory = 0 }
+	set_variable = { JAP_industry_local_resources_factor = 0 }
+	set_variable = { JAP_industry_local_resources_coal_factor = 0 }
+	set_variable = { JAP_industry_convoy_retreat_speed = 0 }
+	set_variable = { JAP_industry_production_factory_max_efficiency_factor = 0 }
+	set_variable = { JAP_industry_production_factory_efficiency_gain_factor = 0 }
+	set_variable = { JAP_industry_special_project_speed_factor = 0 }
+	set_variable = { JAP_industry_line_change_production_efficiency_factor = 0 }
+	
+	#ADVANCED WEAPON PROJECTS
+	set_variable = { JAP_advanced_weapons_production_speed_land_facility_factor = 0 }
+	set_variable = { JAP_advanced_weapons_production_speed_air_facility_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_tag_jet_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_tag_rocket_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_tag_tank_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_tag_artillery_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_tag_surface_ship_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_commercial_nuclear_reactor_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_nuclear_warheads_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_nuclear_bomb_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_production_speed_nuclear_reactor_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_air_intercontinental_bomber_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_air_intercontinental_bomber_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_air_mothership_aircraft_speed_factor = 0 }
+	set_variable = { JAP_advanced_weapons_sp_nuclear_engines_speed_factor = 0 }
+	
+	# SHOWA STATISM
+	set_variable = { JAP_showa_statism_stability_factor = 0 } 
+	set_variable = { JAP_showa_statism_conscription_factor = 0 } 
+	set_variable = { JAP_showa_statism_consumer_goods_factor = 0 } 
+	set_variable = { JAP_showa_statism_political_power_factor = 0 } 
+	set_variable = { JAP_showa_statism_fascism_drift = 0 } 
+	#set_variable = { JAP_showa_statism_production_speed_industrial_complex_factor = 0 } 
+	#set_variable = { JAP_showa_statism_production_speed_arms_factory_factor = 0 } 
+	set_variable = { JAP_showa_statism_monthly_population = 0 } 
+	set_variable = { JAP_showa_statism_industrial_capacity_dockyard = 0 } 
+	set_variable = { JAP_showa_statism_industrial_capacity_factory = 0 } 
+	set_variable = { JAP_showa_statism_weekly_casualties_war_support = 0 } 
+	set_variable = { JAP_showa_statism_weekly_convoys_war_support = 0 } 
+	set_variable = { JAP_showa_statism_weekly_bombing_war_support = 0 } 
+	set_variable = { JAP_showa_statism_industry_repair_factor = 0 } 
+	set_variable = { JAP_showa_statism_operative_slot = 0 } 
+	
+	# DAI TOA KYOUEIKEN
+	set_variable = { JAP_east_asia_co_prosperity_sphere_autonomy_manpower_share_from_subjects = 0 } 
+	set_variable = { JAP_east_asia_co_prosperity_sphere_resources_to_overlord_factor = 0 } 
+	set_variable = { JAP_east_asia_co_prosperity_sphere_production_speed_rail_way_factor = 0 } 
+	set_variable = { JAP_east_asia_co_prosperity_sphere_production_speed_supply_node_factor = 0 } 
+	set_variable = { JAP_east_asia_co_prosperity_sphere_research_speed_factor = 0 } 
+	set_variable = { JAP_east_asia_co_prosperity_sphere_non_core_manpower = 0 } 
+	
+	# THE IMPERIAL WAY
+	set_variable = { JAP_the_imperial_way_war_support_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_drift_defence_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_conscription_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_political_advisor_cost_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_stability_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_army_core_defence_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_army_core_attack_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_consumer_goods_factor = 0 } 
+	set_variable = { JAP_the_imperial_way_offensive_war_stability_factor = 0 } 
+	
+	# THE CIVILIAN CABINET
+	set_variable = { JAP_civilian_cabinet_political_advisor_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_high_command_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_army_chief_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_mobilization_laws_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_consumer_goods_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_resource_trade_cost_bonus_per_factory = 0 } 
+	set_variable = { JAP_civilian_cabinet_military_leader_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_political_power_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_stability_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_war_support_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_military_industrial_organization_research_bonus = 0 } 
+	set_variable = { JAP_civilian_cabinet_conscription = 0 } 
+	set_variable = { JAP_civilian_cabinet_unit_leader_as_advisor_cp_cost_factor = 0 } 
+	set_variable = { JAP_civilian_cabinet_army_leader_start_defense_level = 0 } 
+	set_variable = { JAP_civilian_cabinet_justify_war_goal_time = 0 } 
+	set_variable = { JAP_civilian_cabinet_democratic_drift = 0 } 
+	
+	# THE JAPANESE COMMUNIST PARTY
+	set_variable = { JAP_communist_party_communism_drift = 0 } 
+	set_variable = { JAP_communist_party_political_power_factor = 0 } 
+	set_variable = { JAP_communist_party_conscription_factor = 0 } 
+	set_variable = { JAP_communist_party_research_speed_factor = 0 } 
+	set_variable = { JAP_communist_party_offensive_war_stability_factor = 0 } 
+	set_variable = { JAP_communist_party_annex_cost_factor = 0 } 
+	set_variable = { JAP_communist_party_puppet_cost_factor = 0 } 
+	set_variable = { JAP_communist_party_defensive_war_stability_factor = 0 } 
+	set_variable = { JAP_communist_party_operative_slot = 0 } 
+	set_variable = { JAP_communist_party_enemy_operative_detection_chance_factor = 0 } 
+	set_variable = { JAP_communist_party_enemy_operative_intel_extraction_rate = 0 } 
+	set_variable = { JAP_communist_party_enemy_operative_capture_chance_factor = 0 } 
+	set_variable = { JAP_communist_party_army_core_defence_factor = 0 } 
+	set_variable = { JAP_communist_party_weekly_manpower = 0 } 
+	
+	# THE ROUNOUHA GOVERNMENT
+	# The Same modifiers as the above plus some 
+	
+	
+	# RESOURCES FOR INDUSTRY
+	set_variable = { JAP_industrial_relocation_resources_country_resource_oil = 0 }
+	set_variable = { JAP_industrial_relocation_resources_country_resource_tungsten = 0 }
+	set_variable = { JAP_industrial_relocation_resources_country_resource_chromium = 0 }
+	set_variable = { JAP_industrial_relocation_resources_country_resource_rubber = 0 }
+	
+	# EDUCATE THE PEASANTS 
+	set_variable = { JAP_educating_the_peasants_modifier_research_speed_factor = 0.01 }
+	set_variable = { JAP_educating_the_peasants_modifier_allies_count = 1 }
+	
+	## Other Variables
+	set_variable = { JAP_democratic_state_flipping_cost_cost = 35 }
+	set_variable = { JAP_communist_state_infiltrating_cost_cost = 20 }
+	set_variable = { kwantung_army_timeout_time_var = 725 }
+	set_variable = { JAP_levy_cap_max = 48 }
+	set_variable = { JAP_levy_cap_min = 0 }
+	set_variable = { JAP_levy_cap = 12 }
+	set_variable = { JAP_levy_deployed = 0 }
+	clamp_variable = {
+		var = JAP_levy_cap
+		min = JAP_levy_cap_min
+		max = JAP_levy_cap_max
+	}
+	set_variable = { JAP_economic_redistribtuion_level = 0 }
+	set_variable = { JAP_economic_redistribtuion_min = 0 }
+	set_variable = { JAP_economic_redistribtuion_max = 6 }
+	clamp_variable = {
+		var = JAP_economic_redistribtuion_level
+		min = JAP_economic_redistribtuion_min
+		max = JAP_economic_redistribtuion_max
+	}
+	
+	add_ideas = {
+		#Imperial Influence Ideas
+		JAP_army_faction_tier_2_equal_navy
+		JAP_naval_faction_tier_2_equal_army
+		JAP_zaibatsu_faction_tier_2
+		JAP_government_faction_tier_2
+		#Hidden Ideas
+		JAP_separate_air_services
+		JAP_japanese_armor_doctrine
+	}
+	
+	### DLC-SPECIFIC CHARACTERS ###
+	
+	
+	# Tojo leads the army side of the cw, and should not be aligned
+	JAP_hideki_tojo = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+	
+	# Do not align any scientists plz 
+	JAP_yuzuru_hiraga = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+	JAP_hideo_iwakuro = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+	JAP_hideo_iwakuro = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+	JAP_yoshitoshi_tokugawa = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+	
+	# Yamamoto will not join the militarists 
+	JAP_isoroku_yamamoto = {
+		set_character_flag = JAP_do_not_align_me_flag
+	}
+}

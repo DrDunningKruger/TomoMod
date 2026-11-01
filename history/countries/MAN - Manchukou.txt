@@ -35,6 +35,7 @@ set_technology = {
     superior_firepower = 1	
 }
 
+add_ideas = PACIFIC_JAPAN_6
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
 	set_country_flag = MAN_northern_bandits

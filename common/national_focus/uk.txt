@@ -2228,7 +2228,7 @@ focus_tree = {
 				bonus = 2.0
 				ahead_reduction = 2
 				uses = 1
-				technology = late_bombs			
+				technology = late_bombs
 			}
 		}
 	}

@@ -92,8 +92,8 @@ sub_units = {
 		
 		#Size Definitions
 		max_strength = 20
-		max_organisation = 65
-		default_morale = 0.4
+		max_organisation = 63
+		default_morale = 0.43
 		manpower = 1050
 
 		#Misc Abilities
@@ -106,13 +106,21 @@ sub_units = {
         transport = motorized_equipment	
 	
 		need = {
-			infantry_equipment = 250
-			motorized_equipment = 20
+			infantry_equipment = 200
+			motorized_equipment = 15
 		}
 
 		desert = {
-			attack = 0.1
-			defence = 0.2
+			attack = 0.2
+			defence = 0.20
+		}
+		plains = {
+			attack = -0.2
+			defence = -0.2
+		}
+		mountain = {
+			attack = -0.2
+			defence = -0.2
 		}
 		hills = {
 			attack = 0.15
@@ -139,6 +147,7 @@ sub_units = {
 		}
 		urban = {
 			attack = -0.1
-		}		
+			defence = -0.1
+		}
 	}
 }

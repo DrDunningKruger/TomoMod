@@ -1,6 +1,6 @@
 fra_holds_vs_germany_observer_category = {
 
-	# Visual copies of the FRA_should_hold missions for Germany and the Allies, no effects
+	# Visual copies of the FRA_should_hold missions for Germany, the Allies and the Comintern, no effects
 	# each one starts when France's matching mission is active and disappears when it ends
 
 	FRA_should_hold_1_obs = {
@@ -14,6 +14,8 @@ fra_holds_vs_germany_observer_category = {
 				is_in_faction_with = GER
 				tag = ENG
 				is_in_faction_with = ENG
+				tag = SOV
+				is_in_faction_with = SOV
 			}
 		}
 		available = {
@@ -25,7 +27,7 @@ fra_holds_vs_germany_observer_category = {
 		icon = mission_icon
 		is_good = no
 		fire_only_once = yes
-		days_mission_timeout = 60
+		days_mission_timeout = 30
 		selectable_mission = no
 	}
 
@@ -40,6 +42,8 @@ fra_holds_vs_germany_observer_category = {
 				is_in_faction_with = GER
 				tag = ENG
 				is_in_faction_with = ENG
+				tag = SOV
+				is_in_faction_with = SOV
 			}
 		}
 		available = {
@@ -66,6 +70,8 @@ fra_holds_vs_germany_observer_category = {
 				is_in_faction_with = GER
 				tag = ENG
 				is_in_faction_with = ENG
+				tag = SOV
+				is_in_faction_with = SOV
 			}
 		}
 		available = {
@@ -92,6 +98,8 @@ fra_holds_vs_germany_observer_category = {
 				is_in_faction_with = GER
 				tag = ENG
 				is_in_faction_with = ENG
+				tag = SOV
+				is_in_faction_with = SOV
 			}
 		}
 		available = {
@@ -104,6 +112,26 @@ fra_holds_vs_germany_observer_category = {
 		is_good = no
 		fire_only_once = yes
 		days_mission_timeout = 30
+		selectable_mission = no
+	}
+
+	FRA_relocate_industrial_core_obs = {
+		allowed = {
+			original_tag = GER
+		}
+		activation = {
+			FRA = { has_active_mission = FRA_relocate_industrial_core }
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			FRA = { NOT = { has_active_mission = FRA_relocate_industrial_core } }
+		}
+		icon = generic_construction
+		is_good = no
+		fire_only_once = no
+		days_mission_timeout = 14
 		selectable_mission = no
 	}
 }

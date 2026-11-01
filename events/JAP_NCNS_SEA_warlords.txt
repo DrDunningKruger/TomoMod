@@ -1,0 +1,49 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = SEA_warlords
+
+country_event = {
+	id = SEA_warlords.75
+	title = SEA_warlords.75.t
+	desc = SEA_warlords.75.desc
+	picture = GFX_report_event_manchukuo_army_2
+
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We welcome you brothers
+	option = { 
+		name = SEA_warlords.75.a
+		ai_chance = {
+			base = 100 # Ai should always accept 
+		}
+
+		custom_effect_tooltip = JAP_launch_the_suiyuan_campaign_tt
+		declare_war_on = {
+			type = take_state_focus
+		}	
+		add_named_threat = { threat = 1 name = JAP_began_the_suiyuan_campaign }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+		hidden_effect = {
+			set_country_flag = JAP_suiyuan_campaign_has_started_flag
+		}
+
+	}
+
+	# We welcome you brothers
+	option = { 
+		name = SEA_warlords.75.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_political_power = -25
+
+	}
+}

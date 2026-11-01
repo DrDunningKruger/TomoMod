@@ -31,7 +31,11 @@ on_actions = {
 
 				FRA = { 
 					set_country_flag = france_is_capped
-					add_timed_idea = { idea = FRA_fighting_on days = 90 }
+					add_ideas = FRA_disorganised_military
+					every_state = {
+						limit = { AXIS_Africa_is_long_timer_state = yes }
+						AXIS_Africa_remove_FRA = yes
+					}
                     create_country_leader = {
                         name = "Charles de Gaulle"
                         desc = "POLITICS_CHARLES_DE_GAULLE_DESC"

@@ -1,0 +1,37 @@
+IHE_SOV_frontier_deployment_category = {
+
+	IHE_SOV_frontier_deployment = {
+		icon = GFX_decision_generic_military
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			is_ai = no
+		}
+
+		available = {
+			has_manpower > 500000
+			date > 1940.1.1
+			date < 1941.5.1
+			NOT = { has_war_with = GER }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = 500000
+			custom_effect_tooltip = IHE_SOV_frontier_deployment_tt
+			hidden_effect = {
+				country_event = { id = ihe_sov_deployment.1 days = 1 }
+				country_event = { id = ihe_sov_deployment.2 days = 3 }
+				country_event = { id = ihe_sov_deployment.3 days = 5 }
+				country_event = { id = ihe_sov_deployment.4 days = 7 }
+				country_event = { id = ihe_sov_deployment.5 days = 9 }
+			}
+		}
+	}
+}

@@ -71,8 +71,8 @@ ideas = {
 			removal_cost = -1
 			picture = sovietafpurged
 			modifier = {
-				army_attack_factor = -0.1
-				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_org_factor = -0.025
 				army_speed_factor = -0.05
 			}
 		}
@@ -82,8 +82,8 @@ ideas = {
 			removal_cost = -1
 			picture = sovietafpurged
 			modifier = {
-				army_attack_factor = -0.05
-				army_org_factor = -0.025
+				army_attack_factor = -0.025
+				army_org_factor = -0.0125
 				army_speed_factor = -0.025
 			}
 		}
@@ -120,47 +120,47 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = SPR
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = ROM
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = FIN
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = IEA
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = YUG
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}			
 		}
@@ -179,47 +179,47 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = SPR
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = ROM
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = FIN
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = IEA
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = {
 				tag = YUG
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.075
 				defense_bonus_against = 0.05
 			}
 		}
@@ -515,6 +515,17 @@ ideas = {
 			}
 		}
 
+		SOV_tank_industry_0 = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = tankograd
+		}
+
 		SOV_tank_industry = {
 			allowed = {
 				always = no
@@ -528,7 +539,7 @@ ideas = {
 			equipment_bonus = {
                 armored_car_chassis = {
 				build_cost_ic = -0.10 instant = yes
-				}        
+				}
 				light_tank_chassis = {
 				build_cost_ic = -0.10 instant = yes
 				}         
@@ -866,7 +877,8 @@ ideas = {
 				send_volunteer_size = 0
 				send_volunteer_factor = -1
 				air_volunteer_cap = -16
-				surrender_limit = -0.075
+				license_production_speed = -0.15
+				conscription = 0.03
 			}
 			rule = {
 				can_create_factions = yes
@@ -2322,7 +2334,6 @@ ideas = {
 				stability_factor = 0.1
 				conscription_factor = 0.15
 				non_core_manpower = 0.05
-				army_morale_factor = 0.05
 			}
 		}
 
@@ -4404,6 +4415,64 @@ ideas = {
 
 
 	hidden_ideas = {
+		SOV_red_army_cheap_guns_ns = {
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+					soft_attack = -0.1
+				}
+			}
+		}
+
+		SOV_red_army_cheap_guns_2_ns = {
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		SOV_red_army_cheap_guns_3_ns = {
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
 		SOV_non_communism_aversion_ns = {
 			removal_cost = -1
 

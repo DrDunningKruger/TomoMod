@@ -1,0 +1,7 @@
+﻿l_english:
+ FRA_relocate_industrial_core:0 "Relocate Industrial Core to the Colonies"
+ FRA_relocate_industrial_core_desc:0 "With the Germans at the gates, whole factories are being dismantled and shipped to Africa. Every 14 days, every factory in the band of states closest to the German and Belgian borders leaves for our colonies in West and Central Africa, keeping its type, followed by the next band back.
+
+This continues until the mainland has no factories left under our control, the war with Germany ends, or France capitulates."
+ FRA_relocate_industrial_core_obs:0 "Relocate Industrial Core to the Colonies"
+ FRA_relocate_industrial_core_obs_desc:0 "France is shipping its industry to Africa. Every 14 days, every factory in the band of French states closest to our border leaves for its colonies in West and Central Africa, followed by the next band back. Every factory we capture before then is one that stays in France."

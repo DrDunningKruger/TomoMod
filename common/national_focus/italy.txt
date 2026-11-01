@@ -1996,17 +1996,6 @@ focus_tree = {
 				technology = jaegers2
 				technology = jaegers3
 			}
-			if = {
-				limit = { has_idea = SPA_expand_conscription }
-				swap_ideas = {
-						add_idea = SPA_expand_conscription_II
-						remove_idea = SPA_expand_conscription
-				}
-			}
-			if = {
-				limit = { NOT = { has_idea = SPA_expand_conscription }}
-				add_ideas = SPA_expand_conscription	
-			}
 		}
 	}
 
@@ -3863,7 +3852,6 @@ focus_tree = {
 				controls_state = 461
 				controls_state = 462
 				controls_state = 553
-				controls_state = 783
 			}
 			custom_trigger_tooltip = {
 				tooltip = ITA_imperium_romanum_algeria_tt
@@ -3910,7 +3898,13 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_imperium_romanum_tag_tt
-			hidden_effect = { set_cosmetic_tag = ITA_IMPERIUM }
+			hidden_effect = {
+				set_cosmetic_tag = ITA_IMPERIUM
+				set_portraits = {
+					character = ITA_benito_mussolini
+					civilian = { large = "gfx/leaders/ITA/Portrait_Italy_Benito_Mussolini_Imperator.dds" }
+				}
+			}
 			add_ideas = ITA_exercitus_romanus
 		}
 	}
@@ -4156,8 +4150,19 @@ focus_tree = {
 			GER = {
 				every_enemy_country = { limit = { is_in_faction_with = ENG}
 					SPR = {
-						declare_war_on = { type = annex_everything target = PREV } 
+						declare_war_on = { type = annex_everything target = PREV }
 						every_subject_country = { declare_war_on = { type = annex_everything target = PREV.PREV }}}
+				}
+			}
+			if = { limit = { BUL = { exists = yes } }
+				GER = { add_to_faction = BUL }
+				if = { limit = { BUL = { NOT = { has_war_with = GRE } } }
+					BUL = { declare_war_on = { type = annex_everything target = GRE } }
+				}
+				GER = {
+					every_enemy_country = { limit = { is_in_faction_with = ENG BUL = { NOT = { has_war_with = PREV } } }
+						BUL = { declare_war_on = { type = annex_everything target = PREV } }
+					}
 				}
 			}
 

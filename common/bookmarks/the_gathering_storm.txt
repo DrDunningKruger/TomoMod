@@ -105,8 +105,6 @@ bookmarks = {
 				JAP_militarism
 			}	
 			focuses = {
-				JAP_the_zero
-				JAP_warrior_spirit
 				JAP_strike_on_the_southern_resource_area
 			}			
 		}
@@ -272,21 +270,6 @@ bookmarks = {
 				MON_centraltheatershowtrials
 			}
 		}
-		"NEP"={
-		    minor = yes
-			history = "RAJ_BLITZKRIEG_DESC"
-			ideology = neutrality
-			ideas = {
-				NEP_gurkhas
-				NEP_bank
-				NEP_SLC
-			}
-			focuses = {
-				NEP_gurkhas
-				NEP_home_defense
-				NEP_father_of_industry
-			}
-		}		
 		"BRA"={
 			minor = yes
 			history = "BRA_GATHERING_STORM_DESC"

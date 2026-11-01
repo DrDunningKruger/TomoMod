@@ -1,7 +1,7 @@
 ﻿l_english:
  SOV_the_collectivization_process_ns_tt:1 "$SOV_modify_the_politburo_ns_intro$ \nMax Factories in a State: §G+10%§! \n\n"
  SOV_restore_cossack_units_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDivision Speed: §G+5.0%§! \nBreakthrough: §G+5.0%§! \n\n"
- SOV_cohesion_first_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDivision Organization: §G+5.0%§! \nTraining time: §R+10.00%§! \nDivision Defense: §R-5.0%§! \n\n"
+ SOV_cohesion_first_ns_tt:0 "$SOV_modify_the_red_army_ns_intro$ \nDivision Organization: §G+5.0%§! \nTraining time: §R+10.00%§! \n\n"
  SOV_optimize_production_lines_ns_tt:0 "$SOV_modify_fyp_ns_intro$ \nFactory Output: §G+5.00%§! \n£prod_eff Production Efficiency growth: §G+5.00%§! \nProduction Efficiency Base: §G+5.00%§! \n\n"
  SOV_found_the_pcdi:0 "Early War Economy"
  SOV_found_the_pcdi_name_default:0 "Early War Economy"
@@ -15,3 +15,4 @@
  SOV_propaganda_anti_fascism_tt:0 "Gains '§Y$SOV_anti_fascist_campaign_generic$§!' against the §Ymost industrialized fascist country in the world§!, which grants (Attack bonus against country: §G+2.5%§!, Defense bonus against country: §G+2.5%§!) for §Y90§! days."
  SOV_propaganda_sweep_scum_out_cooldown_tt:0 "This campaign will be available again §Y180 days§! after its removal. Cost will be multiplied by §R[?ROOT.SOV_propaganda_cost_increase]§!."
  SOV_propaganda_anti_fascism_cooldown_tt:0 "This campaign will be available again §Y180 days§! after its removal. Cost will be multiplied by §R[?ROOT.SOV_propaganda_cost_increase]§!."
+ SOV_lessons_of_war_ns_tt:0 "Modify §Y$SOV_the_red_army_dynamic_modifier$§! by \nDivision Organization: §G+2.5%§! \nArmy Experience Gain: §G+10.0%§! \nExperienced soldier losses: §G-25.0%§! \n\n"

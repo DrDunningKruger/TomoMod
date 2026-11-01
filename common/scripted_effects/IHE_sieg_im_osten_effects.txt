@@ -1,0 +1,378 @@
+IHE_sieg_im_osten_effect = {
+	
+	# effects
+	
+	set_global_flag = IHE_Sieg_im_Osten
+	
+	##################################################################################
+	#Puppeting
+	#	
+
+	GER = {
+		set_autonomy = {
+			target = SOV
+			autonomy_state = autonomy_puppet
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		add_to_faction = SOV
+	}				
+	
+	GER = {
+		set_autonomy = {
+			target = MON
+			autonomy_state = autonomy_puppet
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		add_to_faction = MON
+	}
+	
+	
+
+	##################################################################################
+	#Finland
+	#				
+
+	if = {
+		limit = { FIN = { exists = yes is_ai = no } } # if Finland is a player, it gets rewards
+
+		FIN = {
+			set_cosmetic_tag = FIN					
+		}
+		
+		# give finland to finland
+		FIN = {
+			# finland proper
+			transfer_state = 111
+			transfer_state = 149
+			transfer_state = 150
+			transfer_state = 148
+			transfer_state = 145
+			transfer_state = 722
+			# pre winter war borders
+			transfer_state = 147
+			transfer_state = 146
+			# greater finland
+			transfer_state = 213
+			transfer_state = 215	
+			transfer_state = 216						
+			transfer_state = 195
+			transfer_state = 847
+			transfer_state = 244
+			transfer_state = 208
+			transfer_state = 813
+			transfer_state = 812
+			transfer_state = 811
+			transfer_state = 13
+			transfer_state = 191
+			transfer_state = 209
+			transfer_state = 263						
+		}
+	}
+	else = {
+		GER = {
+			# pre winter war borders
+			transfer_state = 147
+			transfer_state = 146
+			# greater finland
+			transfer_state = 213
+			transfer_state = 215	
+			transfer_state = 216						
+			transfer_state = 195
+			transfer_state = 847
+			transfer_state = 244
+			transfer_state = 208
+			transfer_state = 813
+			transfer_state = 812
+			transfer_state = 811
+			transfer_state = 13
+			transfer_state = 191
+			transfer_state = 209
+			transfer_state = 263	
+		}
+	}
+	
+	##################################################################################
+	#Romania
+	#				
+
+	if = {
+		limit = { 
+			and = {
+				ROM = { is_ai = no } # if Romania is a player, it gets rewards
+				country_exists = ROM
+			}
+		}
+
+
+		ROM = {
+			set_cosmetic_tag = ROM
+		}
+		
+		# give stuff to Romania
+		ROM = {
+			# Bessarabia
+			transfer_state = 766
+			transfer_state = 78
+			transfer_state = 80
+			# and a bit more
+			transfer_state = 192
+			transfer_state = 834
+			transfer_state = 198
+			transfer_state = 203
+			transfer_state = 197
+			transfer_state = 489						
+		}
+	}
+	else = {
+		GER = {
+			# Bessarabia
+			transfer_state = 766
+			transfer_state = 78
+			transfer_state = 80
+			# and a bit more
+			transfer_state = 192
+			transfer_state = 834
+			transfer_state = 198
+			transfer_state = 203
+			transfer_state = 197
+			transfer_state = 489
+		}
+	}
+	
+	##################################################################################
+	#Italy
+	#				
+
+	if = {
+		limit = { 
+			and = {
+				ITA = { is_ai = no } # if Romania is a player, it gets rewards
+				country_exists = ITA
+				ITA = { has_capitulated = no }
+			}
+		}
+
+		
+		# give stuff to Italy
+		ITA = {
+			transfer_state = 137
+			transfer_state = 196
+			transfer_state = 200
+			# and a bit more
+			transfer_state = 226
+			transfer_state = 227
+			transfer_state = 228
+			transfer_state = 245
+			transfer_state = 218
+			transfer_state = 238		
+			# and a bit more
+			transfer_state = 234
+			transfer_state = 235
+			transfer_state = 232
+			transfer_state = 821
+			transfer_state = 828
+			transfer_state = 827							
+			# and a bit more
+			transfer_state = 233
+			transfer_state = 826
+			transfer_state = 231
+			transfer_state = 230
+			transfer_state = 229
+			transfer_state = 419
+			transfer_state = 420
+		}
+	}
+	else = {
+		GER = {
+			transfer_state = 137
+			transfer_state = 196
+			transfer_state = 200
+			# and a bit more
+			transfer_state = 226
+			transfer_state = 227
+			transfer_state = 228
+			transfer_state = 245
+			transfer_state = 218
+			transfer_state = 238		
+			# and a bit more
+			transfer_state = 234
+			transfer_state = 235
+			transfer_state = 232
+			transfer_state = 821
+			transfer_state = 828
+			transfer_state = 827							
+			# and a bit more
+			transfer_state = 233
+			transfer_state = 826
+			transfer_state = 231
+			transfer_state = 230
+			transfer_state = 229
+			transfer_state = 419
+			transfer_state = 420
+		}
+	}	
+
+
+	##################################################################################
+	#Japan
+	#				
+
+	if = {
+		limit = { 
+			and = {
+				JAP = { is_ai = no } # 
+				country_exists = JAP
+				JAP = { has_capitulated = no }
+			}
+		}
+
+		
+		# give stuff to Japan
+		JAP = {
+			transfer_state = 408
+			transfer_state = 409
+			transfer_state = 655
+			# and a bit more
+			transfer_state = 657
+			transfer_state = 560
+			transfer_state = 561
+			transfer_state = 562
+			transfer_state = 637
+			transfer_state = 822		
+			# and a bit more
+			transfer_state = 644
+			transfer_state = 574
+			transfer_state = 232
+			transfer_state = 821
+			transfer_state = 828
+			transfer_state = 827							
+			# and a bit more
+			transfer_state = 233
+			transfer_state = 826
+			transfer_state = 231
+			transfer_state = 230
+			transfer_state = 229
+			transfer_state = 419
+			transfer_state = 420
+		}
+	}
+
+	
+
+
+	##################################################################################
+	#GERMAN EAST
+	#				
+
+	# give stuff to Germany
+	GER = {
+		# Baltics
+		transfer_state = 189
+		transfer_state = 190
+		transfer_state = 809
+		transfer_state = 815
+		transfer_state = 11
+		transfer_state = 814
+		transfer_state = 784
+		transfer_state = 810
+		transfer_state = 808
+		transfer_state = 12
+		# Poland and Belarus
+		transfer_state = 97
+		transfer_state = 95
+		transfer_state = 94						
+		transfer_state = 93
+		transfer_state = 91
+		transfer_state = 89
+		transfer_state = 199
+		transfer_state = 201
+		transfer_state = 202
+		transfer_state = 194
+		transfer_state = 204
+		transfer_state = 206
+		transfer_state = 96
+		transfer_state = 193
+		transfer_state = 241
+		transfer_state = 207
+		transfer_state = 210
+		transfer_state = 246
+		transfer_state = 242
+		transfer_state = 243
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 259
+		transfer_state = 221
+		transfer_state = 240
+		transfer_state = 220
+		transfer_state = 222
+		transfer_state = 205
+		transfer_state = 219
+		transfer_state = 247
+		transfer_state = 264
+		transfer_state = 223
+		transfer_state = 254
+		transfer_state = 258
+		transfer_state = 257
+		transfer_state = 255
+		transfer_state = 260
+		transfer_state = 265
+		transfer_state = 239
+		transfer_state = 250
+		transfer_state = 252
+		transfer_state = 253
+		transfer_state = 248
+		transfer_state = 351
+		transfer_state = 214
+		transfer_state = 825
+		transfer_state = 262
+		transfer_state = 397
+		transfer_state = 400
+		transfer_state = 833
+		transfer_state = 256
+		transfer_state = 249
+		transfer_state = 399
+		transfer_state = 398
+		transfer_state = 581
+		transfer_state = 573
+		transfer_state = 651
+		transfer_state = 652
+		transfer_state = 251
+		transfer_state = 407
+		transfer_state = 279
+		transfer_state = 406
+		transfer_state = 236
+		transfer_state = 401
+		transfer_state = 829
+		transfer_state = 217
+		transfer_state = 237
+		transfer_state = 841
+	}
+	
+	
+
+
+	
+	
+	##########################################################
+	# Commie members that control a state but down own it, need to return it to owner, because some Commie members maybe did not capitulate
+	###
+	every_country = {
+		limit = { 
+			NOT = { has_war_with = ENG } 
+			NOT = { is_in_faction_with = ENG } 
+		}
+		#white_peace	= every_country
+		every_owned_state = {
+			transfer_state_to = PREV
+		}
+	}				
+	
+	SOV = {
+		every_owned_state = {
+			transfer_state_to = PREV
+		}
+	}
+
+}

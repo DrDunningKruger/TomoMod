@@ -8,7 +8,7 @@ state=
 	
 	history=
 	{
-		owner = CHI
+		owner = SWI
 		add_core_of = CHI
 		victory_points = {
 			1519 3 

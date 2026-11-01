@@ -274,3 +274,123 @@ has_any_occupation_cost_trigger = {
 		has_idea = FRA_occupation_costs_4
 	}
 }
+
+FRA_is_relocation_source_state = {
+	is_owned_and_controlled_by = FRA
+	OR = {
+		state = 14
+		state = 15
+		state = 16
+		state = 17
+		state = 18
+		state = 19
+		state = 20
+		state = 21
+		state = 22
+		state = 23
+		state = 24
+		state = 25
+		state = 26
+		state = 27
+		state = 28
+		state = 29
+		state = 30
+		state = 31
+		state = 32
+		state = 33
+		state = 735
+		state = 785
+		state = 806
+	}
+	OR = {
+		industrial_complex > 0
+		arms_factory > 0
+	}
+}
+
+FRA_can_relocate_industry = {
+	has_war_with = GER
+	NOT = { has_country_flag = france_is_capped }
+	any_state = { FRA_is_relocation_source_state = yes }
+}
+
+FRA_is_relocation_target_state = {
+	is_owned_and_controlled_by = FRA
+	OR = {
+		state = 272
+		state = 515
+		state = 539
+		state = 556
+		state = 557
+		state = 660
+		state = 772
+		state = 773
+		state = 774
+		state = 776
+		state = 777
+		state = 778
+		state = 779
+		state = 780
+		state = 781
+		state = 845
+	}
+}
+
+FRA_relocation_tier_1 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 18
+		state = 28
+		state = 29
+		state = 785
+	}
+}
+
+FRA_relocation_tier_2 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 15
+		state = 16
+		state = 17
+		state = 27
+	}
+}
+
+FRA_relocation_tier_3 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 14
+		state = 20
+		state = 24
+		state = 26
+		state = 30
+	}
+}
+
+FRA_relocation_tier_4 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 21
+		state = 22
+		state = 23
+		state = 25
+		state = 32
+		state = 33
+		state = 735
+	}
+}
+
+FRA_relocation_tier_5 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 19
+		state = 31
+	}
+}
+
+FRA_relocation_tier_6 = {
+	FRA_is_relocation_source_state = yes
+	OR = {
+		state = 806
+	}
+}

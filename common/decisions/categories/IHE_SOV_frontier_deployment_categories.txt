@@ -1,0 +1,13 @@
+IHE_SOV_frontier_deployment_category = {
+	icon = sov_great_patriotic_war
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+		is_ai = no
+	}
+
+	priority = 20
+}

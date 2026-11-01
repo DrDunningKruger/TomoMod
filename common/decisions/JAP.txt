@@ -208,7 +208,7 @@ foreign_politics = {
 			}			
 			if = {
 					limit = {	
-						NOT = {	has_completed_focus = JAP_expand_the_showa_steel_works }
+						always = yes
 				  }
 				716 = {
 						add_resource = {
@@ -225,7 +225,7 @@ foreign_politics = {
 			}
 			if = {
 					limit = {	
-						NOT = {	has_completed_focus = JAP_expand_manchurian_railways }
+						always = yes
 				  }
 				716 = {
 						add_building_construction = {
@@ -237,7 +237,7 @@ foreign_politics = {
 			}
 			if = {
 					limit = {	
-						NOT = {	has_completed_focus = JAP_light_industry_development }
+						always = yes
 				  }
 				715 = {
 					add_extra_state_shared_building_slots = 2
@@ -250,7 +250,7 @@ foreign_politics = {
 			}
 			if = {
 					limit = {	
-						NOT = {	has_completed_focus = JAP_heavy_industry_development }
+						always = yes
 				  }
 				716 = {
 					add_extra_state_shared_building_slots = 2
@@ -263,7 +263,7 @@ foreign_politics = {
 			}		
 			if = {
 					limit = {	
-						NOT = {	has_completed_focus = JAP_manchuoil }
+						always = yes
 				  }
 				714 = {
 					add_resource = {
@@ -779,6 +779,9 @@ JAP_southern_expansion = {
 					286 = { is_fully_controlled_by = FRA }
 					670 = { is_fully_controlled_by = FRA }
 					671 = { is_fully_controlled_by = FRA }
+					286 = { is_fully_controlled_by = SWI }
+					670 = { is_fully_controlled_by = SWI }
+					671 = { is_fully_controlled_by = SWI }
 				}
 			}
 		}
@@ -792,14 +795,47 @@ JAP_southern_expansion = {
 		cost = 75
 
 		complete_effect = {
-			FRA = { country_event = { id = france.1 } }
-			
+			if = {
+				limit = {
+					OR = {
+						286 = { is_owned_by = FRA }
+						670 = { is_owned_by = FRA }
+						671 = { is_owned_by = FRA }
+						741 = { is_owned_by = FRA }
+						728 = { is_owned_by = FRA }
+					}
+				}
+				FRA = { country_event = { id = france.1 } }
+			}
+
+			if = {
+				limit = {
+					SIA = {
+						exists = yes
+						is_ai = no
+					}
+				}
+				SIA = {
+					transfer_state = 286
+					transfer_state = 670
+					transfer_state = 671
+					transfer_state = 741
+					transfer_state = 728
+					add_state_core = 286
+					add_state_core = 670
+					add_state_core = 671
+					add_state_core = 741
+					add_state_core = 728
+				}
+			}
+			else = {
 				transfer_state = 286
 				transfer_state = 670
-				transfer_state = 671		
+				transfer_state = 671
 				transfer_state = 741
 				transfer_state = 728
 				728 = { add_core_of = CHI }
+			}
 		}
 
 	}
@@ -886,7 +922,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			623 = {
 				NOT = {
 					has_state_flag = luzon_chromium_developed
@@ -935,7 +971,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			627 = {
 				NOT = {
 					has_state_flag = mindanao_steel_developed
@@ -984,7 +1020,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			625 = {
 				NOT = {
 					has_state_flag = samar_steel_developed
@@ -1033,7 +1069,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			725 = {
 				NOT = {
 					has_state_flag = nauru_tungsten_developed
@@ -1077,7 +1113,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			671 = {
 				NOT = {
 					has_state_flag = tonkin_aluminium_developed
@@ -1122,7 +1158,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_exploit_the_southern_resource_area
+			has_completed_focus = JAP_sea_exploit_southern_resource_area
 			336 = {
 				NOT = {
 					has_state_flag = singapore_aluminium_developed

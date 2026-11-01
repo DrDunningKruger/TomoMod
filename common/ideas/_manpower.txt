@@ -445,7 +445,6 @@ ideas = {
 					has_war_support > 0.85
 					surrender_progress > 0.25
 				}
-				enemies_strength_ratio > 1
 				#any_enemy_country = {
 				#	strength_ratio = {
 				#		tag = ROOT 

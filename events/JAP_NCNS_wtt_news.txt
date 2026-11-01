@@ -1,0 +1,68 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = wtt_news
+
+news_event = {
+	id = wtt_news.27
+	title = wtt_news.27.t
+	desc = wtt_news.27.desc
+	picture = GFX_news_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = wtt_news.27.a
+		trigger = {
+			OR = {
+				original_tag = JAP
+				AND = {
+					original_tag = MAN
+					has_government = fascism
+				}
+			}
+		}
+	}
+	option = {
+		name = wtt_news.27.b
+		trigger = {
+			original_tag = SOV
+		}
+	}
+	option = {
+		name = wtt_news.27.c
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = ENG
+				original_tag = USA
+				original_tag = CHI
+				original_tag = AST
+				original_tag = NZL
+				original_tag = RAJ
+			}
+		}
+	}
+	option = {
+		name = wtt_news.27.d
+		trigger = {
+			NOT = {
+				original_tag = JAP
+				original_tag = SOV
+				original_tag = HOL
+				original_tag = ENG
+				original_tag = USA
+				original_tag = CHI
+				original_tag = AST
+				original_tag = NZL
+				original_tag = RAJ
+				AND = {
+					original_tag = MAN
+					has_government = fascism
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,166 @@
+guiTypes = {
+	containerWindowType = {
+		name = "IHE_super_event_window"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 640 }
+		orientation = center
+		origo = center
+		moveable = yes
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType = "GFX_IHE_super_event_window"
+		}
+
+		iconType = {
+			name = "IHE_super_image_pax_germanica"
+			spriteType = "GFX_news_event_germany_victory"
+			position = { x = 102 y = 150 }
+		}
+		iconType = {
+			name = "IHE_super_image_allied_victory"
+			spriteType = "GFX_news_event_german_reichstag_ruins"
+			position = { x = 102 y = 150 }
+		}
+
+		iconType = {
+			name = "IHE_super_underlay"
+			spriteType = "GFX_IHE_super_event_underlay"
+			position = { x = -3 y = 332 }
+		}
+
+		iconType = {
+			name = "IHE_super_flag_left_ger"
+			spriteType = "GFX_IHE_super_ger"
+			position = { x = 21 y = 89 }
+		}
+		iconType = {
+			name = "IHE_super_flag_right_ger"
+			spriteType = "GFX_IHE_super_ger"
+			position = { x = 511 y = 89 }
+		}
+		iconType = {
+			name = "IHE_super_flag_left_sov"
+			spriteType = "GFX_IHE_super_sov"
+			position = { x = 21 y = 89 }
+		}
+		iconType = {
+			name = "IHE_super_flag_right_eng"
+			spriteType = "GFX_IHE_super_eng"
+			position = { x = 511 y = 89 }
+		}
+
+		instantTextBoxType = {
+			name = "IHE_super_quote"
+			position = { x = 50 y = 355 }
+			font = "hoi_30header"
+			borderSize = { x = 0 y = 0 }
+			text = "[GetIHESuperEventQuote]"
+			maxWidth = 500
+			maxHeight = 240
+			fixedsize = yes
+			format = center
+		}
+		instantTextboxType = {
+			name = "IHE_super_title"
+			position = { x = -50 y = 34 }
+			font = "Bebas_Neue_45"
+			format = center
+			borderSize = { x = 0 y = 0 }
+			text = "[GetIHESuperEventTitle]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "IHE_super_date"
+			position = { x = -50 y = 91 }
+			font = "Bebas_Neue_45"
+			format = center
+			borderSize = { x = 0 y = 0 }
+			text = "[GetIHESuperEventDate]"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType = {
+			name = "IHE_super_event_close_button"
+			spriteType = "GFX_IHE_super_event_close_button"
+			position = { x = 187 y = 605 }
+			clicksound = click_close
+			buttonText = "[GetIHESuperEventRemark]"
+			buttonFont = "Bebas_Neue_20"
+		}
+	}
+	containerWindowType = {
+		name = "IHE_super_event_window_directive_21"
+		position = { x = 0 y = 0 }
+		size = { width = 600 height = 675 }
+		orientation = center
+		origo = center
+		moveable = yes
+		click_to_front = no
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType = "GFX_IHE_super_event_window_tall"
+		}
+
+		iconType = {
+			name = "IHE_super_image_directive_21"
+			spriteType = "GFX_IHE_super_image_directive_21"
+			position = { x = 90 y = 148 }
+		}
+
+		iconType = {
+			name = "IHE_super_underlay"
+			spriteType = "GFX_IHE_super_event_underlay_short"
+			position = { x = -3 y = 457 }
+		}
+
+		instantTextBoxType = {
+			name = "IHE_super_quote"
+			position = { x = 50 y = 480 }
+			font = "hoi_30header"
+			borderSize = { x = 0 y = 0 }
+			text = "IHE_super_directive_21_QUOTE"
+			maxWidth = 500
+			maxHeight = 150
+			fixedsize = yes
+			format = center
+		}
+		instantTextboxType = {
+			name = "IHE_super_title"
+			position = { x = -50 y = 34 }
+			font = "Bebas_Neue_45"
+			format = center
+			borderSize = { x = 0 y = 0 }
+			text = "IHE_super_directive_21"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "IHE_super_date"
+			position = { x = -50 y = 91 }
+			font = "Bebas_Neue_45"
+			format = center
+			borderSize = { x = 0 y = 0 }
+			text = "IHE_super_directive_21_DATE"
+			maxWidth = 700
+			maxHeight = 50
+			fixedsize = yes
+		}
+		buttonType = {
+			name = "IHE_super_event_directive_21_close_button"
+			spriteType = "GFX_IHE_super_event_close_button"
+			position = { x = 187 y = 640 }
+			clicksound = click_close
+			buttonText = "IHE_super_directive_21_REMARK"
+			buttonFont = "Bebas_Neue_20"
+		}
+	}
+}

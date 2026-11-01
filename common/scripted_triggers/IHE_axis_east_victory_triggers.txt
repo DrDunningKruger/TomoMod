@@ -1,0 +1,57 @@
+axis_east_holds_leningrad = {
+	any_country = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
+		controls_province = 3151
+	}
+}
+
+axis_east_holds_moscow = {
+	any_country = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
+		controls_province = 6380
+	}
+}
+
+axis_east_holds_kazan = {
+	any_country = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
+		controls_province = 6338
+	}
+}
+
+axis_east_holds_stalingrad = {
+	any_country = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
+		controls_province = 11005
+	}
+}
+
+axis_east_holds_baku = {
+	any_country = {
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
+		controls_province = 7661
+	}
+}
+
+axis_east_pips_all = {
+	has_global_flag = axis_east_pip_leningrad
+	has_global_flag = axis_east_pip_moscow
+	has_global_flag = axis_east_pip_kazan
+	has_global_flag = axis_east_pip_stalingrad
+	has_global_flag = axis_east_pip_baku
+}

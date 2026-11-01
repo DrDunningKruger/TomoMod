@@ -1,0 +1,174 @@
+guiTypes = {
+	containerWindowType = {
+		name = "IHE_axis_east_victory_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1920 height = 1080 }
+		Orientation = UPPER_LEFT
+		clipping = yes
+
+		containerWindowType = {
+			name = "IHE_axis_east_victory_inner"
+			position = { x = 1330 y = 0 }
+			size = { width = 202 height = 36 }
+			Orientation = UPPER_LEFT
+			clipping = no
+			moveable = yes
+
+			background = {
+				name = "Background"
+				spriteType = "GFX_button_transparent2"
+				alwaystransparent = no
+			}
+
+			iconType = {
+				name = "bar_bg_hold1"
+				spriteType = "GFX_IHE_east_victory_bar_bg_hold1"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_hold2"
+				spriteType = "GFX_IHE_east_victory_bar_bg_hold2"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_count1"
+				spriteType = "GFX_IHE_east_victory_bar_bg_count1"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_count2"
+				spriteType = "GFX_IHE_east_victory_bar_bg_count2"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_paused1"
+				spriteType = "GFX_IHE_east_victory_bar_bg_paused1"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_paused2"
+				spriteType = "GFX_IHE_east_victory_bar_bg_paused2"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "bar_bg_won"
+				spriteType = "GFX_IHE_east_victory_bar_bg_won"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "pip_leningrad_red"
+				spriteType = "GFX_IHE_east_victory_pip_red"
+				position = { x = 6 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_LENINGRAD_RED_TT"
+			}
+
+			iconType = {
+				name = "pip_leningrad_green"
+				spriteType = "GFX_IHE_east_victory_pip_green"
+				position = { x = 6 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_LENINGRAD_GREEN_TT"
+			}
+
+			iconType = {
+				name = "pip_moscow_red"
+				spriteType = "GFX_IHE_east_victory_pip_red"
+				position = { x = 30 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_MOSCOW_RED_TT"
+			}
+
+			iconType = {
+				name = "pip_moscow_green"
+				spriteType = "GFX_IHE_east_victory_pip_green"
+				position = { x = 30 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_MOSCOW_GREEN_TT"
+			}
+
+			iconType = {
+				name = "pip_kazan_red"
+				spriteType = "GFX_IHE_east_victory_pip_red"
+				position = { x = 102 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_KAZAN_RED_TT"
+			}
+
+			iconType = {
+				name = "pip_kazan_green"
+				spriteType = "GFX_IHE_east_victory_pip_green"
+				position = { x = 102 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_KAZAN_GREEN_TT"
+			}
+
+			iconType = {
+				name = "pip_stalingrad_red"
+				spriteType = "GFX_IHE_east_victory_pip_red"
+				position = { x = 54 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_STALINGRAD_RED_TT"
+			}
+
+			iconType = {
+				name = "pip_stalingrad_green"
+				spriteType = "GFX_IHE_east_victory_pip_green"
+				position = { x = 54 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_STALINGRAD_GREEN_TT"
+			}
+
+			iconType = {
+				name = "pip_baku_red"
+				spriteType = "GFX_IHE_east_victory_pip_red"
+				position = { x = 78 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_BAKU_RED_TT"
+			}
+
+			iconType = {
+				name = "pip_baku_green"
+				spriteType = "GFX_IHE_east_victory_pip_green"
+				position = { x = 78 y = 7 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "AXIS_EAST_PIP_BAKU_GREEN_TT"
+			}
+
+			instantTextboxType = {
+				name = "axis_east_status"
+				position = { x = 128 y = 9 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				borderSize = { x = 0 y = 0 }
+				text = "[GetAxisEastVictoryStatus]"
+				maxWidth = 95
+				maxHeight = 20
+				fixedsize = yes
+				format = left
+				pdx_tooltip = "AXIS_EAST_STATUS_TT"
+			}
+		}
+	}
+}

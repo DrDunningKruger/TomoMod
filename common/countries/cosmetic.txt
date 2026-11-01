@@ -73,3 +73,27 @@ ITA_SOC	= {
 	color = rgb { 44 81 41 }
 	color_ui = rgb { 44 81 41 }
 }
+
+JAP_greater_army_dominant_fascism = {
+	color = rgb { 255 174 0 }
+	color_ui = rgb { 255 174 0 }
+}
+
+JAP_greater_navy_dominant_fascism = {
+	color = rgb { 255 174 0 }
+	color_ui = rgb { 255 174 0 }
+}
+
+JAP_greater_emperor_dominant_fascism = {
+	color = rgb { 255 174 0 }
+	color_ui = rgb { 255 174 0 }
+}
+
+JAP_greater_tohokai_rule = {
+	color = rgb { 255 174 0 }
+	color_ui = rgb { 255 174 0 }
+}
+GER_THOUSAND_YEAR_REICH = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}

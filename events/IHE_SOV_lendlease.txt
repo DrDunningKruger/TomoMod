@@ -1,0 +1,62 @@
+add_namespace = ihe_sov_lendlease
+
+# Lend-Lease I-III run automatically from the start of Barbarossa, 120 days each.
+# Stage 1 is started in common/on_actions/IHE_SOV_great_patriotic_war_on_actions.txt
+# Each stage: the focus shines, SOV_<focus>_in_progress is set for 121 days (drives the progress tooltip in the focus)
+# and the next event fires after 120 days to complete it.
+
+# Lend-Lease I arrives, Lend-Lease II starts
+country_event = {
+	id = ihe_sov_lendlease.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = lendlease
+		clr_country_flag = SOV_lendlease_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = lendlease } }
+			complete_national_focus = lendlease
+		}
+
+		activate_shine_on_focus = lendlease2
+		set_country_flag = { flag = SOV_lendlease2_in_progress days = 121 value = 1 }
+		country_event = { id = ihe_sov_lendlease.2 days = 120 }
+	}
+}
+
+# Lend-Lease II arrives, Lend-Lease III starts
+country_event = {
+	id = ihe_sov_lendlease.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = lendlease2
+		clr_country_flag = SOV_lendlease2_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = lendlease2 } }
+			complete_national_focus = lendlease2
+		}
+
+		activate_shine_on_focus = lendlease3
+		set_country_flag = { flag = SOV_lendlease3_in_progress days = 121 value = 1 }
+		country_event = { id = ihe_sov_lendlease.3 days = 120 }
+	}
+}
+
+# Lend-Lease III arrives
+country_event = {
+	id = ihe_sov_lendlease.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		deactivate_shine_on_focus = lendlease3
+		clr_country_flag = SOV_lendlease3_in_progress
+		if = {
+			limit = { NOT = { has_completed_focus = lendlease3 } }
+			complete_national_focus = lendlease3
+		}
+	}
+}

@@ -19,6 +19,7 @@ state={
 			}	
 			149 = {
 				naval_base = 5
+				coastal_bunker = 2
 			}
 
 		}
@@ -27,9 +28,9 @@ state={
 	}
 
 	provinces={
-		79 149 2199 3151 6174 8161 8229 11068 12920 
+		149 3151 8161 8229 12920
 	}
-	manpower=3750158
+	manpower=3500158
 	buildings_max_level_factor=1.000
 	state_category=metropolis
 	local_supplies=11.000

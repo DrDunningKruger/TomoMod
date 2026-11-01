@@ -1,0 +1,18 @@
+leader_traits = {
+
+	IHE_SOV_final_offensive_trait = {
+
+		type = land
+		trait_type = status_trait
+
+		allowed = {
+			FROM = {
+				original_tag = SOV
+			}
+		}
+
+		modifier = {
+			terrain_penalty_reduction = 0.75
+		}
+	}
+}

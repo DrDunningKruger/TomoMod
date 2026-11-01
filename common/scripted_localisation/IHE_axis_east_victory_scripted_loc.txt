@@ -1,0 +1,21 @@
+defined_text = {
+	name = GetAxisEastVictoryStatus
+	text = {
+		trigger = { has_global_flag = axis_east_victory }
+		localization_key = AXIS_EAST_STATUS_WON
+	}
+	text = {
+		trigger = { has_global_flag = axis_east_countdown }
+		localization_key = AXIS_EAST_STATUS_COUNTDOWN
+	}
+	text = {
+		trigger = {
+			axis_east_pips_all = no
+			check_variable = { global.axis_east_held_days > 0 }
+		}
+		localization_key = AXIS_EAST_STATUS_PAUSED
+	}
+	text = {
+		localization_key = AXIS_EAST_STATUS_HOLDING
+	}
+}

@@ -3,6 +3,7 @@
 
 oob = "BRA_1936"
 
+add_ideas = PACIFIC_ALLIES_6
 add_ideas = {
 	BRA_Army_for_Internal_Security
 	BRA_Vargas_power

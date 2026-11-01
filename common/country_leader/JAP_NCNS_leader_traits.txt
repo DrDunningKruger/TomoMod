@@ -1,0 +1,361 @@
+# NCNS Japan port (2026-10-25): country leader traits from vanilla 1.19.3 used by the NCNS Japan content, missing on 1.16.9
+
+leader_traits = {
+
+	JAP_IJA_prime_minister_trait = {
+		random = no
+		sprite = 13
+
+		army_attack_factor = 0.05
+		army_org_factor = 0.05
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		navy_org_factor = -0.10
+		naval_hit_chance = -0.05
+
+	}
+
+	JAP_IJN_prime_minister_trait = {
+		random = no
+		sprite = 13
+
+		navy_org_factor = 0.05
+		naval_hit_chance = 0.05
+		industrial_capacity_dockyard = 0.10
+		war_support_factor = 0.20
+		stability_factor = -0.15
+		industrial_capacity_factory = -0.05
+
+	}
+
+	JAP_anti_communist_pm = {
+		random = no
+		sprite = 13
+
+		fascism_acceptance = 20
+		war_support_factor = -0.05
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		communism_drift = -0.03
+		
+	}
+
+	JAP_diplomatic_prime_minister = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.05
+		war_support_factor = -0.05
+		political_power_factor = 0.05
+		democratic_acceptance = 15
+
+	}
+
+	JAP_embodying_empress_jingu = {
+		random = no
+		sprite = 13
+		
+		justify_war_goal_time = -0.2
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		conscription_factor = 0.1
+		generate_wargoal_tension = -0.5
+
+	}
+
+	JAP_first_secretary_of_the_jcp_trait = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.05
+		communism_drift = 0.04
+
+	}
+
+	JAP_guided_by_amaterasu_trait = {
+		random = no
+		sprite = 13
+		
+		justify_war_goal_time = -0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		conscription_factor = 0.05
+
+	}
+
+	JAP_ldp_leader = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.1
+		war_support_factor = 0.1
+		political_power_factor = 0.1
+		production_speed_arms_factory_factor = 0.05
+		
+	}
+
+	JAP_marxist_writer = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.05
+		research_speed_factor = 0.05
+		communism_drift = 0.1
+	}
+
+	JAP_meijis_true_successor_trait = {
+		random = no
+		sprite = 13
+		
+		production_speed_buildings_factor = 0.05
+		research_speed_factor = 0.02
+
+	}
+
+	JAP_military_prime_minister = {
+		random = no
+		sprite = 13
+
+		neutrality_drift = 0.05
+		land_doctrine_cost_factor = -0.10
+		experience_gain_army = 0.03
+		political_power_factor = -0.1
+
+	}
+
+	JAP_minseito_leader = {
+		random = no
+		sprite = 13
+		stability_factor = 0.1
+		political_power_factor = 0.1
+		democratic_drift = 0.05
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	JAP_moderate_navy_leader = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.05
+		war_support_factor = 0.1
+		experience_gain_navy = 0.05
+		production_speed_dockyard_factor = 0.1
+		
+	}
+
+	JAP_moderate_politician_dem = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.02
+		stability_factor = -0.05
+		war_support_factor = -0.05
+		political_power_factor = 0.1
+		
+	}
+
+	JAP_moderate_politician_neu = {
+		random = no
+		sprite = 13
+
+		democratic_acceptance = 20
+		drift_defence_factor = -0.15
+		war_support_factor = -0.05
+		political_power_factor = 0.1
+		
+	}
+
+	JAP_nichiren_marxist_trait = {
+		random = no
+		sprite = 13
+		
+		stability_factor = 0.1
+		war_support_factor = -0.1
+		political_power_factor = 0.1
+		justify_war_goal_time = -0.25
+
+	}
+
+	JAP_noble_prime_minister = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.05
+		political_power_factor = 0.1
+
+	}
+
+	JAP_popular_diplomat = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.05
+		war_support_factor = -0.05
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		
+	}
+
+	JAP_protector_of_the_eternal_kingdom = {
+		random = no
+		sprite = 13
+
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		army_morale_factor = 0.05
+		army_org_factor = 0.05
+
+	}
+
+	JAP_rikken_seiyukai_leader = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.05
+		war_support_factor = 0.05
+		political_power_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+		
+	}
+
+	JAP_shakai_taishuto_leader = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.05
+		communism_drift = 0.03
+		political_power_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+		stability_factor = 0.05
+		
+	}
+
+	JAP_socialist_politician = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.03
+		communism_drift = 0.03
+		war_support_factor = -0.05
+		political_power_factor = 0.1
+		
+	}
+
+	JAP_socialist_revolutionary = {
+		random = no
+		sprite = 13
+
+		communism_drift = 0.05
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	JAP_soto_trait = {
+		random = no
+		sprite = 13
+		
+		political_power_factor = 0.1
+		experience_gain_army_factor = 0.1
+
+	}
+
+	JAP_staunch_traditionalist_trait = {
+		random = no
+		sprite = 13
+		
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		naval_doctrine_cost_factor = 0.1
+		air_doctrine_cost_factor = 0.1
+		research_speed_factor = -0.02
+
+	}
+
+	JAP_the_heavenly_sovereign_trait = {
+		random = no
+		sprite = 13
+		
+		justify_war_goal_time = -0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		conscription_factor = 0.05
+
+	}
+
+	JAP_the_tokugawa_heir = {
+		random = no
+		sprite = 13
+
+		democratic_drift = 0.05
+		war_support_factor = -0.05
+		stability_factor = 0.05
+		political_power_factor = 0.15
+		
+	}
+
+	JAP_tohokai_leader = {
+		random = no
+		sprite = 13
+
+		fascism_drift = 0.1
+		war_support_factor = 0.1
+		conscription_factor = 0.05
+		
+	}
+
+	MEN_borjigin_descendant = {
+		random = no
+		sprite = 13 
+
+		cavalry_attack_factor = 0.05
+		war_support_factor = 0.1
+		justify_war_goal_time = -0.15
+		
+	}
+
+	PHI_philippine_nationalist_leader = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.10
+		fascism_drift = 0.1
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+	}
+
+	emperor_genka = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.1
+		political_power_factor = 0.1
+		justify_war_goal_time = -0.1
+
+	}
+
+	emperor_showa_2 = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.30
+		war_support_factor = 0.30
+		industrial_capacity_factory = 0.10
+		local_resources_factor = 0.10
+		navy_org_factor = -0.05
+		army_org_factor = -0.05
+
+	}
+
+	sessho_trait = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.05
+		political_power_factor = 0.05
+		stability_factor = 0.05
+
+	}
+}

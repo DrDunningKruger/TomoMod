@@ -1,0 +1,101 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			SOV = { add_ideas = IHE_SOV_no_surrender }
+		}
+	}
+
+	on_daily_GER = {
+		effect = {
+			if = {
+				limit = {
+					has_capitulated = no
+					NOT = { has_global_flag = axis_east_victory }
+					NOT = { has_global_flag = allies_east_victory }
+					NOT = { has_global_flag = victory_in_europe }
+				}
+				if = {
+					limit = { axis_east_holds_leningrad = yes }
+					set_global_flag = axis_east_pip_leningrad
+				}
+				else = { clr_global_flag = axis_east_pip_leningrad }
+				if = {
+					limit = { axis_east_holds_moscow = yes }
+					set_global_flag = axis_east_pip_moscow
+				}
+				else = { clr_global_flag = axis_east_pip_moscow }
+				if = {
+					limit = { axis_east_holds_kazan = yes }
+					set_global_flag = axis_east_pip_kazan
+				}
+				else = { clr_global_flag = axis_east_pip_kazan }
+				if = {
+					limit = { axis_east_holds_stalingrad = yes }
+					set_global_flag = axis_east_pip_stalingrad
+				}
+				else = { clr_global_flag = axis_east_pip_stalingrad }
+				if = {
+					limit = { axis_east_holds_baku = yes }
+					set_global_flag = axis_east_pip_baku
+				}
+				else = { clr_global_flag = axis_east_pip_baku }
+				if = {
+					limit = { axis_east_pips_all = yes }
+					set_global_flag = axis_east_all_cities_taken
+				}
+
+				if = {
+					limit = { has_global_flag = axis_east_countdown }
+					add_to_variable = { global.axis_east_countdown_days = 1 }
+					if = {
+						limit = { check_variable = { global.axis_east_countdown_days > 119 } }
+						set_global_flag = axis_east_victory
+						set_variable = { global.IHE_super_pax_germanica_date = global.date }
+						every_country = {
+							limit = { is_ai = no }
+							set_country_flag = IHE_super_pax_germanica
+							scoped_sound_effect = IHE_pax_germanica_tomo
+						}
+					}
+				}
+				else_if = {
+					limit = { axis_east_pips_all = yes }
+					add_to_variable = { global.axis_east_held_days = 1 }
+					if = {
+						limit = { check_variable = { global.axis_east_held_days > 29 } }
+						set_global_flag = axis_east_countdown
+						set_variable = { global.axis_east_countdown_days = 0 }
+						if = {
+							limit = {
+								NOT = { has_global_flag = IHE_Sieg_im_Osten }
+								country_exists = SOV
+							}
+							SOV = { remove_ideas = IHE_SOV_no_surrender }
+							IHE_sieg_im_osten_effect = yes
+						}
+						news_event = { id = ihe_axis_east_victory.1 }
+					}
+				}
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = GER }
+					NOT = { has_global_flag = axis_east_victory }
+					NOT = { has_global_flag = allies_east_victory }
+				}
+				set_global_flag = allies_east_victory
+				set_variable = { global.IHE_super_allied_victory_date = global.date }
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = IHE_super_allied_victory
+					scoped_sound_effect = IHE_victory_in_europe_tomo
+				}
+			}
+		}
+	}
+}

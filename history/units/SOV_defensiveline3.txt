@@ -43,25 +43,11 @@ units = {
 	}
 	division = {
 		name = "Reserve Division"
-		location = 13076
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
 		location = 12502
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
 	}
-	division = {
-		name = "Reserve Division"
-		location = 12502
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}	
 	division = {
 		name = "Reserve Division"
 		location = 12502
@@ -86,27 +72,6 @@ units = {
 	division = {
 		name = "Reserve Division"
 		location = 10677
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 10677
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 10677
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 12200
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
@@ -155,13 +120,6 @@ units = {
 	}
 	division = {
 		name = "Reserve Division"
-		location = 7824
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
 		location = 12659
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
@@ -170,27 +128,6 @@ units = {
 	division = {
 		name = "Reserve Division"
 		location = 12659
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 12659
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 12659
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 4874
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
@@ -239,27 +176,6 @@ units = {
 	}
 	division = {
 		name = "Reserve Division"
-		location = 10216
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 278
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 278
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
 		location = 278
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
@@ -289,20 +205,6 @@ units = {
 	division = {
 		name = "Reserve Division"
 		location = 237
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 237
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 3280
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
@@ -338,20 +240,6 @@ units = {
 	division = {
 		name = "Reserve Division"
 		location = 11223
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 11223
-		division_template = "RKKA Reserve"
-		start_experience_factor = 0.5
-		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
-	}
-	division = {
-		name = "Reserve Division"
-		location = 10329
 		division_template = "RKKA Reserve"
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
@@ -370,4 +258,46 @@ units = {
 		start_experience_factor = 0.5
 		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
 	}	
+	division = {
+		name = "Reserve Division"
+		location = 10185
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 10185
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 10329
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 11223
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 13076
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
+	division = {
+		name = "Reserve Division"
+		location = 12502
+		division_template = "RKKA Reserve"
+		start_experience_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SOV" } }	
+	}
 }

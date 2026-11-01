@@ -1,0 +1,73 @@
+# NCNS Japan tree port (2026-10-25): game rules from vanilla 1.19.3 that the NCNS Japan tree/AI checks.
+# The mod overrides 00_game_rules.txt, so these were missing.
+
+JAP_ai_behavior = {
+	name = "JAP_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		required_dlc = "Waking the Tiger"
+		name = COMMUNIST
+		text = "RULE_OPTION_COMMUNIST_JAP_AI"
+		desc = "RULE_OPTION_COMMUNIST_JAP_AI_DESC"
+	}
+	option = {
+		name = NEUTRALITY
+		text = "RULE_OPTION_JAP_NEUTRALITY"
+		desc = "RULE_OPTION_NEUTRALITY_JAP_AI_DESC"
+	}
+	option = {
+		required_dlc = "Waking the Tiger"
+		name = DEMOCRATIC
+		text = "RULE_OPTION_JAP_DEMOCRATIC"
+		desc = "RULE_DEMOCRATIC_JAP_AI_DESC"
+	}
+	option = {
+		name = FASCIST
+		text = "RULE_OPTION_JAP_FASCIST"
+		desc = "RULE_FASCIST_JAP_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
+
+asia_colonization_status = {
+	name = "ASIA_COLONIZATION_STATUS"
+	required_dlc = "Man the Guns"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_COLONIZATION_DESC"
+	}
+	option = {
+		name = ASIA_DECOLONIZED
+		text = "RULE_OPTION_ASIA_DECOLONIZED"
+		desc = "RULE_OPTION_ASIA_DECOLONIZED_DESC"
+	}
+}
+
+obsolete_focus_branches_visibility = {
+	name = "OBSOLETE_FOCUS_BRANCHES_VISIBILITY"
+	group = "RULE_GROUP_GENERAL_UI"
+	default = {
+		name = HIDE
+		text = "RULE_OPTION_HIDE"
+		desc = "RULE_OPTION_HIDE_DESC"
+	}
+	option = {
+		name = SHOW
+		text = "RULE_OPTION_SHOW"
+		desc = "RULE_OPTION_SHOW_DESC_DESC"
+		allow_achievements = yes
+	}
+}
+

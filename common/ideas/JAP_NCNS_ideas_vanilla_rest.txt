@@ -1,0 +1,581 @@
+# NCNS Japan port (2026-10-25): every remaining vanilla 1.19.3 Japanese idea TomoIHE didn't already have
+# Military MIO-era designers (aircraft/materiel/naval/tank manufacturer) deliberately left out - TomoIHE uses the old designers.
+# (common/ideas/japan.txt plus JAP_ ideas from other vanilla idea files). Ideas the tree needed are in JAP_NCNS_ideas.txt.
+
+ideas = {
+	country = {
+
+		JAP_public_awareness_of_war_ns = {
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		JAP_public_awareness_of_war_worse_ns = {
+			name = JAP_public_awareness_of_war_ns
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = -0.05
+			}
+		}
+
+		JAP_public_awareness_of_war_worst_ns = {
+			name = JAP_public_awareness_of_war_ns
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+
+		JAP_ichi_go_sea = {		
+
+			name = JAP_ichi_go
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_ichi_go
+			
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+		}
+
+		JAP_supremacy_of_the_battlefleet = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_navy_bonus
+
+			modifier = {
+				navy_capital_ship_defence_factor = 0.10
+				sp_naval_super_heavy_battleship_speed_factor = 1
+			}
+		}
+
+		JAP_japanese_influence_growing_tibet_2 = {
+
+			name = JAP_japanese_influence_growing_tibet
+
+			picture = JAP_japanese_influence_growing
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.12
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				defense_bonus_against = -0.05
+				attack_bonus_against = -0.05
+			}
+
+		}
+
+		JAP_increased_national_security_no_lar = {
+
+			picture = generic_spy_political
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = -0.2
+				encryption = 1
+			}
+
+			cancel = {
+			}
+
+			on_remove = {		
+			}
+
+		}
+
+		JAP_increased_national_security_lar = {
+
+			name = JAP_increased_national_security_no_lar
+
+			picture = generic_spy_political
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				enemy_operative_capture_chance_factor = 0.15
+				enemy_operative_detection_chance_factor = 0.1
+				intelligence_agency_defense = 0.1
+				enemy_operative_intel_extraction_rate = 0.1
+			}
+
+			cancel = {
+			}
+
+			on_remove = {		
+			}
+
+		}
+
+		JAP_supported_pro_japanese_sentiments_idea = {
+
+			picture = JAP_pro_japanese_sentiments
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+
+		}
+
+		JAP_japanese_influence_growing_mongolia = {
+
+			name = JAP_japanese_influence_growing_tibet
+
+			picture = JAP_japanese_influence_growing
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.12
+			}
+
+			targeted_modifier = {
+				tag = JAP
+				defense_bonus_against = -0.05
+				attack_bonus_against = -0.05
+			}
+		}
+
+		SOV_full_focus_on_the_west = {
+
+			picture = saf_soviet_advisers
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.05
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				surrender_limit = 0.1
+				stability_factor = -0.1
+				political_power_gain = -0.05
+			}
+		}
+
+		JAP_1936_fake_industrial_idea = {
+
+			name = JAP_early_industrialization_efforts_dm
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {     
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = JAP_japanese_economy
+
+			modifier = {
+				industry_air_damage_factor = 0.25
+				production_lack_of_resource_penalty_factor = 0.1
+				research_speed_factor = -0.03
+				consumer_goods_expected_value = 0.3
+			}
+
+		}
+
+		JAP_1936_fake_state_shintoism_idea = {
+
+			name = JAP_state_shinotism_dm
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = state_shintoism
+
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.2
+			}
+
+		}
+
+		JAP_1939_fake_state_shintoism_idea = {
+
+			name = JAP_state_shinotism_dm
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = state_shintoism
+
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.2
+				pocket_penalty = -0.05
+			}
+
+		}
+
+		JAP_day_of_infamy_1 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.05
+				navy_anti_air_attack_factor = -0.1
+			}
+
+			targeted_modifier = {
+				tag = JAP
+			}
+		}
+
+		JAP_day_of_infamy_2 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.1
+				navy_anti_air_attack_factor = -0.2
+			}
+
+			targeted_modifier = {
+				tag = JAP
+			}
+		}
+
+		JAP_day_of_infamy_3 = {
+			name = JAP_day_of_infamy
+			picture = generic_japanese_conflict
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				repair_speed_factor = -0.15
+				navy_anti_air_attack_factor = -0.25
+			}
+
+			targeted_modifier = {
+				tag = JAP
+			}
+		}
+
+		USA_wounded_national_pride_idea = {
+			
+			picture = tur_disorganised_armed_forces
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			on_remove = {
+			}
+
+			modifier = {
+				surrender_limit = -0.1
+			}
+
+		}
+	}
+}
+
+ideas = {
+	industrial_concern = {
+
+		hitachi_civilian = {
+
+			picture = JAP_hitachi
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+				excavation_tech = 0.05
+			}
+
+			ai_will_do = {
+				base = 2
+			}
+			
+			traits = { electronics_concern }
+			modifier = {
+				industrial_concern_cost_factor = -0.50
+			}
+		}
+
+		tetsudou_shou = { 
+
+			picture = JAP_tetsudo_sho
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			available = {
+
+			}
+
+			visible = {
+				
+			}
+
+			research_bonus = {
+			}
+
+			ai_will_do = {
+				base = 2
+			}
+		
+			traits = { railway_company } 
+
+			modifier = {
+				industrial_concern_cost_factor = -0.50
+			}
+		}
+	}
+}
+

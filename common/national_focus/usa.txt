@@ -2030,10 +2030,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = cat_air_guns
-			}				
+			}
 		}
-	}	
-	
+	}
+
 	focus = {
 		id = USA_escort_planes
 		icon = GFX_USA_escort_fighters
@@ -2128,10 +2128,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
+				name = bomber_bonuss
+				bonus = 2.0
+				ahead_reduction = 2
 				uses = 1
-				technology = late_bombs			
+				technology = late_bombs
 			}		
 		}
 	}

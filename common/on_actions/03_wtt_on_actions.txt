@@ -123,7 +123,7 @@ on_actions = {
 					}
 				}
 				load_focus_tree = { tree = japan_wtt_focus keep_completed = no }
-				unlock_national_focus = JAP_purge_the_kodoha_faction
+				unlock_national_focus = JAP_sea_purge_the_kodoha_faction # NCNS tree equivalent (vanilla 1.19.3)
 			}
 			# Give back RAJ focus tree to Unaligned RAJ if they win the communist or fascist civil war.
 			if = {

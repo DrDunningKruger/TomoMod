@@ -1047,7 +1047,6 @@ technologies = {
 		mountaineers = {
 			mountain = {
 				attack = 0.05
-				defence = 0.05
 				movement = 0.1
 			}
 		}

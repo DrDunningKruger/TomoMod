@@ -1,0 +1,52 @@
+ideas = {
+
+	country = {
+
+		IHE_SOV_no_surrender = {
+
+			picture = SOV_restore_the_glory_of_the_motherland_ccp_sov_compatibility
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				forced_surrender_limit = 1
+			}
+		}
+
+		IHE_SOV_final_offensive = {
+
+			picture = SOV_restore_the_glory_of_the_motherland_ccp_sov_compatibility
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.4
+			}
+
+			targeted_modifier = { tag = GER attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = ITA attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = JAP attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = ROM attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = HUN attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = BUL attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = FIN attack_bonus_against = 0.10 }
+			targeted_modifier = { tag = SPR attack_bonus_against = 0.10 }
+		}
+	}
+}

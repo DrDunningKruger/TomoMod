@@ -35,6 +35,7 @@ set_technology = {
 	basic_light_tank_chassis = 1	
 }
 
+add_ideas = PACIFIC_ALLIES_6
 add_ideas = {
        training_spirit
        PHI_depression

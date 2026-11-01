@@ -1399,7 +1399,13 @@
 				add_offsite_building = {
 					type = arms_factory
 					level = 4
-				}			
+				}
+				add_tech_bonus = {
+					name = FRA_form_the_state_arsenals
+					bonus = 1.0
+					uses = 1
+					category = tank_modules
+				}
 		}
 	}
 	focus = {
@@ -2395,7 +2401,7 @@
 		prerequisite = {}
 		mutually_exclusive = { }
 		
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -2553,7 +2559,7 @@
 		}
 		relative_position_id = FRA_appeal_to_the_french_nation
 		
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -2599,7 +2605,7 @@
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2629,10 +2635,54 @@
 
 			set_technology = {
 				jaegers = 1
-			}				
+			}
 		}
 	}
-	
+
+	focus = {
+		id = FRA_reorganise_the_military
+		icon = GFX_FRA_armyreform
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = FRA_appeal_to_the_french_nation
+		}
+		relative_position_id = FRA_appeal_to_the_french_nation
+
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = FRA_disorganised_military
+		}
+	}
+
+	focus = {
+		id = FRA_rebuild_armor_corps
+		icon = GFX_FRA_armor
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = FRA_reorganise_the_military
+		}
+		relative_position_id = FRA_reorganise_the_military
+
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_timed_idea = { idea = FRA_rebuilt_armor_corps days = 60 }
+		}
+	}
+
 	focus = {
 		id = FRA_continue_the_fight
 		icon = GFX_FRA_fight2
@@ -2683,7 +2733,7 @@
 		}
 		prerequisite = { focus = FRA_continue_the_fight }
 		relative_position_id = FRA_continue_the_fight
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2823,7 +2873,7 @@
 		}
 		relative_position_id = FRA_continue_the_fight
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2893,7 +2943,7 @@
 		prerequisite = { focus = FRA_colonial_recruitment }
 		mutually_exclusive = { }
 		relative_position_id = FRA_colonial_recruitment
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2934,7 +2984,7 @@
 		}
 		prerequisite = { focus = FRA_colonial_recruitment }
 		relative_position_id = FRA_colonial_recruitment
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3019,210 +3069,6 @@
 		}
 	}
 
-	focus = {
-		id = FRA_retake_lands_stage_4
-		icon = GFX_FRA_specialforces
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = FRA_appeal_to_the_french_nation
-		}
-		relative_position_id = FRA_appeal_to_the_french_nation
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_global_flag = FRA_stage_4
-		}
-	
-		bypass = {
-			NOT = {
-				has_global_flag = FRA_stage_4
-			}
-		}
-
-		cancel_if_invalid = yes
-
-		continue_if_invalid = no
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			clr_global_flag = FRA_stage_4
-			set_global_flag = FRA_stage_3
-
-			FRA = {
-				#Subsaharan africa
-				transfer_state = 781
-				transfer_state = 778
-				transfer_state = 556
-				transfer_state = 272
-				transfer_state = 557
-				transfer_state = 786
-				transfer_state = 782
-				transfer_state = 515
-				transfer_state = 775
-			}
-		}
-	}
-	
-	focus = {
-		id = FRA_retake_lands_stage_3
-		icon = GFX_FRA_specialforces
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 2
-		}
-		prerequisite = { 
-			focus = FRA_retake_lands_stage_4
-		}
-		relative_position_id = FRA_retake_lands_stage_4
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_global_flag = FRA_stage_3
-		}
-		
-		bypass = {
-			NOT = {
-				has_global_flag = FRA_stage_3
-			}
-		}
-		
-		cancel_if_invalid = yes
-
-		continue_if_invalid = no
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			clr_global_flag = FRA_stage_3
-			set_global_flag = FRA_stage_2
-
-			FRA = {
-				#Guinea, Togo, Ivory Coast, Basically coastal french west africa
-				transfer_state = 776
-				transfer_state = 777
-				transfer_state = 779
-				transfer_state = 298
-				transfer_state = 780
-				transfer_state = 296
-			}
-
-		}
-	}
-
-	focus = {
-		id = FRA_retake_lands_stage_2
-		icon = GFX_FRA_specialforces
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 2
-		}
-		prerequisite = { 
-			focus = FRA_retake_lands_stage_1
-		}
-		relative_position_id = FRA_retake_lands_stage_1
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_global_flag = FRA_stage_1
-		}
-		
-		bypass = {
-			NOT = {
-				has_global_flag = FRA_stage_1
-			}
-		}
-
-		cancel_if_invalid = yes
-
-		continue_if_invalid = no
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			clr_global_flag = FRA_stage_1
-
-			FRA = {
-				#America, Asian island, Carribean
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_retake_lands_stage_1
-		icon = GFX_FRA_specialforces
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 2
-		}
-		prerequisite = { 
-			focus = FRA_retake_lands_stage_3
-		}
-		relative_position_id = FRA_retake_lands_stage_3
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_global_flag = FRA_stage_2
-		}
-		
-		
-		bypass = {
-			NOT = {
-				has_global_flag = FRA_stage_2
-			}
-		}
-
-		cancel_if_invalid = yes
-
-		continue_if_invalid = no
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			clr_global_flag = FRA_stage_2
-			set_global_flag = FRA_stage_1
-
-			FRA = {
-				#French somaliland, Madagascar & surrounding islands
-				transfer_state = 543
-				transfer_state = 708
-				transfer_state = 706
-				transfer_state = 713
-			}
-		}
-	}
 	focus = {
 		id = FRA_war_economy_time
 		icon = GFX_focus_AUS_courting_the_princess_of_industry

@@ -2,28 +2,6 @@ ideas = {
 
 	country = {
 
-		# Granted by the deep_operations doctrine tech (common/technologies/land_doctrine.txt)
-		SOV_deep_operations_rifles = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = sovietrifles
-
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.10 instant = yes
-				}
-			}
-		}
-
 		# Granted for 120 days when the war with Germany starts (common/on_actions/IHE_SOV_great_patriotic_war_on_actions.txt)
 		SOV_factory_relocation_inefficiency = {
 

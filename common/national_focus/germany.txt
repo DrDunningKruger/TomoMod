@@ -948,402 +948,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_ostwall
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = GER_west_wall }
-		available = {
-			any_country = {
-				OR = {
-					tag = GER
-					is_in_faction_with = GER
-				}
-				OR = {
-					has_full_control_of_state = 191
-					has_full_control_of_state = 209
-					has_full_control_of_state = 210
-					has_full_control_of_state = 207
-					has_full_control_of_state = 206
-					has_full_control_of_state = 204
-					has_full_control_of_state = 194
-					has_full_control_of_state = 202
-					has_full_control_of_state = 203
-					has_full_control_of_state = 226
-					has_full_control_of_state = 200
-				}
-			}
-		}
-		x = 1
-		y = 1
-		relative_position_id = GER_west_wall
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			custom_effect_tooltip = GER_ostwall_forts
-			custom_effect_tooltip = GER_ostwall_forts_2
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 191 
-					}
-				}
-				hidden_effect = {
-					191 = {
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 4640
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 209
-					}
-				}
-				hidden_effect = {
-					209 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 415
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3310
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 210 
-					}
-				}
-				hidden_effect = {
-					210 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3333
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 11259
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 9386
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 207 
-					}
-				}
-				hidden_effect = {
-					207 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 323
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 11241
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 11220
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3331
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 206 
-					}
-				}
-				hidden_effect = {
-					206 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 9289
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3378
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 204 
-					}
-				}
-				hidden_effect = {
-					204 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 6373
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 194 
-					}
-				}
-				hidden_effect = {
-					194 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 6319
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 9249
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3507
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 202 
-					}
-				}
-				hidden_effect = {
-					202 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 9568
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3543
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 525
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 12978
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 12982
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 2169
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3494
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 203 
-					}
-				}
-				hidden_effect = {
-					203 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 11454
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 488
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 3468
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 6478
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 226 
-					}
-				}
-				hidden_effect = {
-					226 = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 9433
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 11437
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = { 
-					any_country = {
-						OR = {
-							tag = GER
-							is_in_faction_with = GER
-						}
-						has_full_control_of_state = 200 
-					}
-				}
-				hidden_effect = {
-					200 = {
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = 11405
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 6596
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = 11700
-							instant_build = yes
-						}
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = GER_autarky
 		icon = GFX_GER_fouryear
 		prerequisite = { focus = GER_four_year_plan }
@@ -2505,7 +2109,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_air_innovation
-		cost = 5
+		cost = 2
 		available = {
 		    OR = {
             controls_state = 16
@@ -2562,7 +2166,7 @@ focus_tree = {
 	focus = {
 		id = GER_army_innovation
 		icon = GFX_GER_army
-		x = -12
+		x = -13
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -2622,7 +2226,7 @@ focus_tree = {
 	focus = {
 		id = GER_artillery
 		icon = GFX_GER_arty
-		x = -2
+		x = -3
 		y = 1
 		cost = 5 
 		ai_will_do = {
@@ -3202,7 +2806,7 @@ focus_tree = {
 		icon = GFX_GER_Panzertruppen
 		prerequisite = { focus = GER_rearm_the_wehrmacht }
 		prerequisite = { focus = GER_soviet_treaty }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_rearm_the_wehrmacht
 		cost = 5
@@ -3293,7 +2897,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = GER_soviet_treaty
 		cost = 5
@@ -3563,10 +3167,10 @@ focus_tree = {
 	focus = {
 		id = GER_wartime_economic_reorganisation
 		icon = GFX_focus_GER_prussian_legacy
-		prerequisite = { focus = GER_continuetheoffence focus = GER_halttheoffence }
-		x = -1
+		prerequisite = { focus = GER_apointalbertspeer }
+		x = 0
 		y = 1
-		relative_position_id = GER_continuetheoffence
+		relative_position_id = GER_apointalbertspeer
 		cost = 5
 		ai_will_do = {
 			factor = 50
@@ -3575,15 +3179,15 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_ideas = GER_wartime_economic_reorganisation
+			add_ideas = GER_total_war_economy
 		}
 	}
 
 	focus = {
 		id = GER_fallblau
 		icon = GFX_GER_barb
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		cost = 1
 		ai_will_do = {
 			factor = 500
@@ -3592,8 +3196,8 @@ focus_tree = {
 		always = no
 		}
 		available_if_capitulated = yes
-		prerequisite = { focus = GER_wartime_economic_reorganisation }
-		relative_position_id = GER_wartime_economic_reorganisation
+		prerequisite = { focus = GER_continuetheoffence focus = GER_halttheoffence }
+		relative_position_id = GER_continuetheoffence
 
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
         completion_reward = {
@@ -3636,7 +3240,7 @@ focus_tree = {
 		x =-1
 		y = 1
 		relative_position_id = GER_fallblau
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3802,10 +3406,116 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_winter
-		icon = GFX_GER_winter
+		id = GER_fuhrer_directive_21
+		icon = GFX_focus_USSR
+		prerequisite = { focus = GER_ussr_war_goal }
 		x = -6
 		y = 2
+		relative_position_id = GER_ussr_war_goal
+		cost = 1
+		available = {
+			always = no
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			hidden_effect = {
+				set_variable = { global.IHE_super_directive_21_date = global.date }
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = IHE_super_directive_21
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_army_group_north
+		icon = GFX_GER_army_group_north
+		prerequisite = { focus = GER_fuhrer_directive_21 }
+		x = 2
+		y = 1
+		relative_position_id = GER_fuhrer_directive_21
+		cost = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_army_group_north_tt
+				always = no
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_army_group_centre
+		icon = GFX_GER_army_group_centre
+		prerequisite = { focus = GER_fuhrer_directive_21 }
+		x = 0
+		y = 1
+		relative_position_id = GER_fuhrer_directive_21
+		cost = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_army_group_centre_tt
+				always = no
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_army_group_south
+		icon = GFX_GER_army_group_south
+		prerequisite = { focus = GER_fuhrer_directive_21 }
+		x = -2
+		y = 1
+		relative_position_id = GER_fuhrer_directive_21
+		cost = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_army_group_south_tt
+				always = no
+			}
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_aa_line
+		icon = GFX_focus_GER_brest_litovsk_borders
+		prerequisite = { focus = GER_army_group_north }
+		prerequisite = { focus = GER_army_group_centre }
+		prerequisite = { focus = GER_army_group_south }
+		x = 0
+		y = 1
+		relative_position_id = GER_army_group_centre
+		cost = 1
+		available_if_capitulated = yes
+		completion_reward = {
+			set_cosmetic_tag = GER_THOUSAND_YEAR_REICH
+			custom_effect_tooltip = GER_aa_line_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = triumphant_will }
+					swap_ideas = {
+						remove_idea = triumphant_will
+						add_idea = triumphant_will_2
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_winter
+		icon = GFX_GER_winter
+		x = -10
+		y = 1
 		cost = 1
 		ai_will_do = {
 			factor = 500
@@ -3833,11 +3543,11 @@ focus_tree = {
 	focus = {
 		id = GER_apointalbertspeer
 		icon = GFX_GER_ammunitions_miracle
-		prerequisite = { focus = GER_winter}
+		prerequisite = { focus = GER_declaretotalenkrieg }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_winter
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -3856,13 +3566,14 @@ focus_tree = {
 	}
 	
     focus = {
-		id = GER_mechanized1
+		id = GER_utilise_civilian_goods
 		icon = GFX_GER_halftrack
-		prerequisite = { focus = GER_apointalbertspeer}
-		x = 2
+
+		prerequisite = { focus = GER_temp_focus_2 }
+		x = -2
 		y = 1
-		relative_position_id = GER_apointalbertspeer
-		cost = 5
+		relative_position_id = GER_temp_focus_2
+		cost = 3
 
 		available_if_capitulated = yes
 		
@@ -3871,60 +3582,51 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-			limit = { NOT = { has_tech = mechanised_infantry  }}
-			set_technology = {
-				mechanised_infantry = 1
-			}}		
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				technology = mechanised_infantry3
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 30000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 8000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 2000
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 50
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 500
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_2
+				amount = 500
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_2
+				amount = 500
+				producer = GER
 			}
 		}
 	}
 	
 	focus = {
-		id = GER_puma
-		icon = GFX_GER_puma
-		prerequisite = { focus = GER_mechanized1}
-		x = 0
-		y = 2
-		relative_position_id = GER_mechanized1
-		cost = 1
-
-		available_if_capitulated = yes
-		
-		bypass = {
-		    has_tech = armored_car3
-		}
-		
-		available = {
-			has_war = yes
-			date > 1942.1.1
-		}
-
-		completion_reward = {
-		if = {
-			limit = {			
-			 NOT = {
-			 	has_tech = armored_car3
-             }		
-             }
-				set_technology = {
-				armored_car3 = 1
-			}}
-		}
-	}
-
-	focus = {
 		id = GER_stg44
 		icon = GFX_GER_STG
-		prerequisite = { focus = GER_apointalbertspeer }
+		prerequisite = { focus = GER_temp_focus_3 }
 		x = 0
-		y = 2
-		relative_position_id = GER_apointalbertspeer
+		y = 1
+		relative_position_id = GER_temp_focus_3
 		cost = 5
 
 		available_if_capitulated = yes
@@ -3950,44 +3652,261 @@ focus_tree = {
 	}	
 	
 	focus = {
-		id = GER_winterequipement
-		icon = GFX_GER_winter2
-		prerequisite = { focus = GER_apointalbertspeer}
+		id = GER_temp_focus_2
+		icon = GFX_GER_exploit_and_plunder
+		prerequisite = { focus = GER_wartime_economic_reorganisation }
+		mutually_exclusive = { focus = GER_temp_focus_3 focus = GER_temp_focus_4 }
 		x = -2
 		y = 1
-		relative_position_id = GER_apointalbertspeer
+		relative_position_id = GER_wartime_economic_reorganisation
+		cost = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_total_war_economy
+				add_idea = GER_total_war_economy_2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_3
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = GER_wartime_economic_reorganisation }
+		mutually_exclusive = { focus = GER_temp_focus_2 focus = GER_temp_focus_4 }
+		x = 0
+		y = 1
+		relative_position_id = GER_wartime_economic_reorganisation
+		cost = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_total_war_economy
+				add_idea = GER_total_war_economy_3
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_4
+		icon = GFX_goal_ger_war_industry
+		prerequisite = { focus = GER_wartime_economic_reorganisation }
+		mutually_exclusive = { focus = GER_temp_focus_2 focus = GER_temp_focus_3 }
+		x = 2
+		y = 1
+		relative_position_id = GER_wartime_economic_reorganisation
+		cost = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_total_war_economy
+				add_idea = GER_total_war_economy_4
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_6
+		icon = GFX_goal_generic_german_construction
+		prerequisite = { focus = GER_temp_focus_2 }
+		x = 0
+		y = 1
+		relative_position_id = GER_temp_focus_2
 		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = GER_pillage_east_industry_tt
+			hidden_effect = {
+				set_variable = { GER_pillage_civ = 0 }
+				set_variable = { GER_pillage_mil = 0 }
+				every_state = {
+					limit = {
+						is_controlled_by = ROOT
+						NOT = { is_core_of = ROOT }
+						OR = {
+							is_core_of = SOV
+							is_owned_by = SOV
+						}
+					}
+					while_loop_effect = {
+						limit = { industrial_complex > 0 }
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+						ROOT = { add_to_variable = { GER_pillage_civ = 1 } }
+					}
+					while_loop_effect = {
+						limit = { arms_factory > 0 }
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						ROOT = { add_to_variable = { GER_pillage_mil = 1 } }
+					}
+				}
+				set_temp_variable = { GER_pillage_slots = GER_pillage_civ }
+				add_to_temp_variable = { GER_pillage_slots = GER_pillage_mil }
+				while_loop_effect = {
+					limit = { check_variable = { GER_pillage_slots > 0 } }
+					random_owned_controlled_state = {
+						limit = { is_core_of = ROOT }
+						add_extra_state_shared_building_slots = 2
+					}
+					subtract_from_temp_variable = { GER_pillage_slots = 1 }
+				}
+				country_event = { id = ihe_ger_pillage.1 days = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_8
+		icon = GFX_goal_ger_rocketry
+		prerequisite = { focus = GER_temp_focus_4 }
+		x = 0
+		y = 1
+		relative_position_id = GER_temp_focus_4
+		cost = 3
+		completion_reward = {
+			custom_effect_tooltip = GER_temp_focus_8_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = GER_total_war_economy_4 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_4
+						add_idea = GER_total_war_economy_10
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_9 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_9
+						add_idea = GER_total_war_economy_11
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_9
+		icon = GFX_focus_generic_industrial_experts
+		prerequisite = { focus = GER_temp_focus_6 focus = GER_stg44 }
+		mutually_exclusive = { focus = GER_temp_focus_10 }
+		x = -2
+		y = 1
+		relative_position_id = GER_stg44
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = GER_temp_focus_9_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = GER_total_war_economy_2 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_2
+						add_idea = GER_total_war_economy_5
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_3 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_3
+						add_idea = GER_total_war_economy_6
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_7 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_7
+						add_idea = GER_total_war_economy_8
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_temp_focus_10
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = GER_stg44 focus = GER_betterlogistics }
+		mutually_exclusive = { focus = GER_temp_focus_9 }
+		x = 2
+		y = 1
+		relative_position_id = GER_stg44
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = GER_temp_focus_10_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = GER_total_war_economy_3 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_3
+						add_idea = GER_total_war_economy_7
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_6 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_6
+						add_idea = GER_total_war_economy_8
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_4 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_4
+						add_idea = GER_total_war_economy_9
+					}
+				}
+				else_if = {
+					limit = { has_idea = GER_total_war_economy_10 }
+					swap_ideas = {
+						remove_idea = GER_total_war_economy_10
+						add_idea = GER_total_war_economy_11
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_winterequipement
+		icon = GFX_GER_winter2
+
+		prerequisite = { focus = GER_temp_focus_6 focus = GER_stg44 focus = GER_temp_focus_8 }
+		x = 0
+		y = 2
+		relative_position_id = GER_stg44
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			if = {
-			limit = { NOT = { has_tech = fueltank_tech  }}
-			set_technology = {
-				fueltank_tech = 1
-			}}
-			add_tech_bonus = {
-				name = AST_sentinel_tank_project
-				bonus = 1.0
-				uses = 1
-				category = tank_modules
-			}		
-			add_tech_bonus = {
-				name = SAF_sa_engineer_corps
-				bonus = 1.0
-				uses = 2
-				category = support_tech
-			}	
+			custom_effect_tooltip = GER_winterequipement_tt
+			show_ideas_tooltip = GER_winterdebuff_2
+			hidden_effect = {
+				if = {
+					limit = { has_idea = GER_winterdebuff }
+					swap_ideas = {
+						remove_idea = GER_winterdebuff
+						add_idea = GER_winterdebuff_2
+					}
+				}
+				every_other_country = {
+					limit = { has_idea = GER_winterdebuff }
+					swap_ideas = {
+						remove_idea = GER_winterdebuff
+						add_idea = GER_winterdebuff_2
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = GER_betterlogistics
 		icon = GFX_GER_mans_driving_somewhere
-		prerequisite = { focus = GER_winterequipement}
-		x = 0
-		y = 2
-		relative_position_id = GER_winterequipement
+		prerequisite = { focus = GER_temp_focus_4 }
+		x = 2
+		y = 1
+		relative_position_id = GER_temp_focus_4
 		cost = 5
 
 		available_if_capitulated = yes
@@ -3997,15 +3916,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-                 add_timed_idea ={ idea = GER_prepareforinevitable days = 100 }
+                 add_timed_idea ={ idea = GER_reinforce_supply_lines days = 100 }
                 hidden_effect = {
-                 ROM = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
-                 HUN = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
-                 BUL = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
-                 SPR = {add_timed_idea={ idea = GER_prepareforinevitable days = 100}}
+                 ROM = {add_timed_idea={ idea = GER_reinforce_supply_lines days = 100}}
+                 HUN = {add_timed_idea={ idea = GER_reinforce_supply_lines days = 100}}
+                 BUL = {add_timed_idea={ idea = GER_reinforce_supply_lines days = 100}}
+                 SPR = {add_timed_idea={ idea = GER_reinforce_supply_lines days = 100}}
                  }	
-    add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
-    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 400 }				 
+    add_equipment_to_stockpile = { type = train_equipment_1 amount = 150 }
+    add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5400 }				 
 		}
 	}
 	
@@ -4034,62 +3953,6 @@ focus_tree = {
 		}
 	}	
 	
-	focus = {
-		id = GER_nebelwerfer42
-		icon = GFX_GEN_rocket
-		prerequisite = { focus = GER_apointalbertspeer}
-		x = -4
-		y = 1
-		relative_position_id = GER_apointalbertspeer
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			if = {
-			limit = { NOT = { has_tech = rocket_artillery  }}
-			set_technology = {
-				rocket_artillery = 1
-			}}
-			add_tech_bonus = {
-				name = YUG_rocketry_focus
-				bonus = 2.0
-				ahead_reduction = 2
-				uses = 2
-				category = rocketry
-			}			
-		}
-	}	
-	
-	focus = {
-		id = GER_winterresiliance
-		icon = GFX_ger_osttruppenn
-		prerequisite = { focus = GER_betterlogistics }
-		prerequisite = { focus = GER_puma}
-		prerequisite = { focus = GER_stg44}
-		x = 0
-		y = 3
-		relative_position_id = GER_stg44
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		available = {
-			has_war = yes
-		}
-
-		completion_reward = {
-		remove_ideas = GER_winterdebuff
-             hidden_effect = {
-                 ROM = {remove_ideas = GER_winterdebuff}
-                 HUN = {remove_ideas = GER_winterdebuff}
-                 BUL = {remove_ideas = GER_winterdebuff}
-                 SPR = {remove_ideas = GER_winterdebuff}
-                 YUG = {remove_ideas = GER_winterdebuff}
-                 }    				
-		}
-	}	
-
 	focus = {
 		id = GER_demand_memel
 		icon = GFX_GER_RK_Ost
@@ -4219,10 +4082,24 @@ focus_tree = {
 				if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
 			}
 
+			if = { limit = { BUL = { exists = yes } }
+				GER = { add_to_faction = BUL }
+				BUL = {
+					if = { limit = { POL = { exists = yes }}  declare_war_on = { target = POL type = annex_everything } }
+					if = { limit = { ENG = { exists = yes }}  declare_war_on = { target = ENG type = annex_everything } }
+					if = { limit = { RAJ = { exists = yes }}  declare_war_on = { target = RAJ type = annex_everything } }
+					if = { limit = { CAN = { exists = yes }}  declare_war_on = { target = CAN type = annex_everything } }
+					if = { limit = { SAF = { exists = yes }}  declare_war_on = { target = SAF type = annex_everything } }
+					if = { limit = { NEP = { exists = yes }}  declare_war_on = { target = NEP type = annex_everything } }
+					if = { limit = { AST = { exists = yes }}  declare_war_on = { target = AST type = annex_everything } }
+					if = { limit = { NZL = { exists = yes }}  declare_war_on = { target = NZL type = annex_everything } }
+				}
+			}
+
 
 		}
 	}
-	
+
 	focus = {
 		id = GER_weserubung
 		icon = GFX_GER_invadenor
@@ -4472,12 +4349,7 @@ focus_tree = {
 			if = { limit = { FRA = { exists = yes }}  HUN = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  ITA = { declare_war_on = { target = FRA  type = annex_everything } } }
 			if = { limit = { FRA = { exists = yes }}  IEA = { declare_war_on = { target = FRA  type = annex_everything } } }
-
-			#BUL joins the Axis and the war on France
-			if = { limit = { BUL = { exists = yes } FRA = { exists = yes } }
-				GER = { add_to_faction = BUL }
-				BUL = { declare_war_on = { target = FRA  type = annex_everything } }
-			}
+			if = { limit = { FRA = { exists = yes } BUL = { exists = yes } }  BUL = { declare_war_on = { target = FRA  type = annex_everything } } }
 
 
 			add_timed_idea = { idea = GER_western_blitzkrieg days = 120 }
@@ -4738,6 +4610,22 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 8
 			add_state_core = 28
+			28 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			8 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			28 = { set_state_name = "Elsass-Lothringen" }
 			set_province_name = { id = 9503 name = "Strassburg" }
 			set_province_name = { id = 678 name = "Mulhausen" }
@@ -5413,6 +5301,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
 
 		completion_reward = {
+			add_timed_idea = { idea = GER_operation_zitadelle days = 60 }
 		    
 			hidden_effect = {
 			if = {
@@ -5590,10 +5479,6 @@ focus_tree = {
 		
 		available = {
 			date > 1941.05.01
-			has_tech = engine_tech_4
-			has_tech = antitank_guns
-			has_tech = armor_tech_3
-			has_tech = wet_ammo
 		}
 
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
@@ -5608,6 +5493,16 @@ focus_tree = {
 			set_technology = {
 				improved_heavy_tank_chassis = 1
 			}}
+			set_technology = {
+				engine_tech_3 = 1
+				engine_tech_4 = 1
+				antitank_guns = 1
+				armor_tech_2 = 1
+				armor_tech_3 = 1
+				wet_ammo = 1
+				radio_tech_2 = 1
+				three_man_turrets = 1
+			}
 
 				create_equipment_variant = {
 					name = "Tiger I"
@@ -5889,12 +5784,21 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}		
 		
 		completion_reward = {
-			add_ideas = triumphant_will
+			if = {
+				limit = { has_completed_focus = GER_aa_line }
+				add_ideas = triumphant_will_2
+			}
+			else = {
+				add_ideas = triumphant_will
+			}
 			hidden_effect = {
-			set_cosmetic_tag = GER_greater_german_reich
+			if = {
+				limit = { NOT = { has_completed_focus = GER_aa_line } }
+				set_cosmetic_tag = GER_greater_german_reich
+			}
 			hidden_effect = {
 				set_global_flag = form_greater_german_reich_flag
-			}			
+			}
 			}
 		}
 	}
@@ -6522,10 +6426,9 @@ focus_tree = {
 	focus = {
 		id = GER_thebeginningoftheend
 		icon = GFX_GER_end
-		prerequisite = { focus = GER_declaretotalenkrieg }
-		x = 0
-		y = 1
-		relative_position_id = GER_declaretotalenkrieg
+		x = 8
+		y = 2
+		relative_position_id = GER_ussr_war_goal
 		cost = 1
 		 ai_will_do = {
 			factor = 1
@@ -6584,9 +6487,10 @@ focus_tree = {
 		icon = GFX_GER_totalwar
 		prerequisite = { focus = GER_ussr_war_goal}
 		prerequisite = { focus = GER_reintegrate_luxemburg_and_alsace_lorraine}
-		x = 8
-		y = 3
-		relative_position_id = GER_ussr_war_goal
+		prerequisite = { focus = GER_winter }
+		x = 0
+		y = 1
+		relative_position_id = GER_winter
 		cost = 1
 		ai_will_do = {
 			factor = 1
@@ -7961,378 +7865,6 @@ focus_tree = {
 				load_oob = "GER_afrika"	
 				load_oob = "GER_afrika"
 				load_oob = "ITA_garrisons"
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-                SPR = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}      
-				BUL = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}	
-				ROM = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}			
-
-				YUG = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}			
-
-				HUN = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}
-				FRA = {	
-				448 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				661 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				662 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				663 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				449 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				450 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}		
-				451 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				452 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				839 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				447 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				446 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				677 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				680 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}
-				554 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				455 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				454 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}	
-				453 = {
-					remove_dynamic_modifier = { modifier = AXIS_Africa_modifier }				
-				}				
-				}					
 				}			
 			}
 		}
@@ -8344,7 +7876,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_africacampaign
-		cost = 5
+		cost = 4
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8357,15 +7889,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			hidden_effect = {
-				every_country = {
-					limit = { is_ai = no }
-					scoped_sound_effect = IHE_afrikakorps_tomo
-				}
-			}
-
 			custom_effect_tooltip = "GER_AF_TUNISIA"
-		
+
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 40000 }
+
 		    hidden_effect = {
 			458 = {
 					add_dynamic_modifier = {
@@ -8443,13 +7970,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		add_timed_idea={ idea = GER_africacampaign days = 30}
+			custom_effect_tooltip = GER_AFRICA_READINESS_tt
+			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
+		add_timed_idea={ idea = GER_africacampaign days = 90}
              hidden_effect = {
-                 ROM = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 HUN = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 BUL = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 SPR = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 ITA = {add_timed_idea={ idea = GER_africacampaign days = 30}}
+                 ROM = {add_timed_idea={ idea = GER_africacampaign days = 90}}
+                 HUN = {add_timed_idea={ idea = GER_africacampaign days = 90}}
+                 BUL = {add_timed_idea={ idea = GER_africacampaign days = 90}}
+                 SPR = {add_timed_idea={ idea = GER_africacampaign days = 90}}
+                 ITA = {add_timed_idea={ idea = GER_africacampaign days = 90}}
                  }	
 		}
 	}
@@ -8461,7 +7990,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_deployafrikakorps
-		cost = 2
+		cost = 1
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8478,6 +8007,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_AFRICA_READINESS_tt
+			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			add_timed_idea = { idea = GER_prepareforinevitable days = 45 }
 		}
 	}
@@ -8489,7 +8020,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_unternehmentheseus
-		cost = 5
+		cost = 1
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8497,6 +8028,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_AFRICA_READINESS_tt
+			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 		custom_effect_tooltip="GER_DESERTAF_tooltip"
 		
 			add_tech_bonus = {
@@ -8580,7 +8113,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_deployafrikakorps
-		cost = 2
+		cost = 1
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8588,6 +8121,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_AFRICA_READINESS_tt
+			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			if = {
 			limit = { NOT = { has_tech = desertinfantry_at  }}
 			set_technology = {
@@ -8621,7 +8156,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_desertequipement
-		cost = 2
+		cost = 1
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8629,6 +8164,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = GER_AFRICA_READINESS_tt
+			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			add_ideas = SAF_desert_equipment
 			}
 	}	
@@ -8646,11 +8183,37 @@ focus_tree = {
 		}
 		available = {
 	        date > 1941.1.1
-	        date < 1941.5.1
+	        date < 1941.7.1
 		}	
 		
 		bypass = {
-		  date > 1941.5.1
+		  date > 1941.7.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_timed_idea={ idea = GER_elalamein_scouting days = 30}
+             hidden_effect = {
+                 ROM = {add_timed_idea={ idea = GER_elalamein_scouting days = 30}}
+                 HUN = {add_timed_idea={ idea = GER_elalamein_scouting days = 30}}
+                 BUL = {add_timed_idea={ idea = GER_elalamein_scouting days = 30}}
+                 SPR = {add_timed_idea={ idea = GER_elalamein_scouting days = 30}}
+                 ITA = {add_timed_idea={ idea = GER_elalamein_scouting days = 30}}
+                 }
+		}
+	}
+
+	focus = {
+		id = GER_the_desert_fox
+		icon = GFX_GER_the_desert_fox
+		prerequisite = { focus = GER_firstbattleofelalamein }
+		x = 0
+		y = 1
+		relative_position_id = GER_firstbattleofelalamein
+		cost = 1
+		 ai_will_do = {
+			factor = 1
 		}
 
 		available_if_capitulated = yes
@@ -8664,17 +8227,9 @@ focus_tree = {
 					set_nationality = ITA
 				}
 			}
-				add_timed_idea={ idea = GER_africacampaign days = 30}
-             hidden_effect = {
-                 ROM = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 HUN = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 BUL = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 SPR = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 ITA = {add_timed_idea={ idea = GER_africacampaign days = 30}}
-                 }		
 		}
 	}
-		
+
 	focus = {
 		id = GER_Endsieg
 		icon = GFX_GER_hitlers_meddling
@@ -8832,21 +8387,6 @@ focus_tree = {
 			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = NOR  type = annex_everything } } }
 			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = RAJ  type = annex_everything } } }
 			if = { limit = { YUG = { exists = yes }}  YUG = { declare_war_on = { target = NEP  type = annex_everything } } }
-
-			#BUL
-			GER = { add_to_faction = BUL }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = ENG  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = POL  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = FRA  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = CAN  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = SAF  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = AST  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = NZL  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = BEL  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = HOL  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = NOR  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = RAJ  type = annex_everything } } }
-			if = { limit = { BUL = { exists = yes }}  BUL = { declare_war_on = { target = NEP  type = annex_everything } } }
 
 			custom_effect_tooltip = "GER_YUGOTOOLTIP"
 			hidden_effect = {

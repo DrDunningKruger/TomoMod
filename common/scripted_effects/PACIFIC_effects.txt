@@ -1,0 +1,285 @@
+######
+###### PACIFIC WAR
+######
+
+PACIFIC_recalculate = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = PACIFIC_war_started }
+			PACIFIC_war_has_started = yes
+		}
+		set_global_flag = PACIFIC_war_started
+		random_country = {
+			limit = { PACIFIC_is_japan_side = yes }
+			country_event = { id = pacific.1 days = 60 }
+		}
+		random_country = {
+			limit = { PACIFIC_is_allied_side = yes }
+			country_event = { id = pacific.1 days = 60 }
+		}
+	}
+
+	set_variable = { global.PACIFIC_score = 0 }
+	if = {
+		limit = { PACIFIC_allied_holds_sumatra = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_sumatra = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_borneo = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_borneo = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_java = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_java = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_new_guinea = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_new_guinea = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_philippines = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_philippines = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_bismarck_sea = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_bismarck_sea = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_south_west_pacific = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_south_west_pacific = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_hawaii = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_hawaii = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_western_pacific = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_western_pacific = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_banda_sea = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_banda_sea = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+	if = {
+		limit = { PACIFIC_allied_holds_malaya = yes }
+		add_to_variable = { global.PACIFIC_score = 1 }
+	}
+	else_if = {
+		limit = { PACIFIC_japan_holds_malaya = yes }
+		subtract_from_variable = { global.PACIFIC_score = 1 }
+	}
+
+	set_variable = { global.PACIFIC_standing = global.PACIFIC_score }
+	if = {
+		limit = { NOT = { has_global_flag = PACIFIC_active } }
+		set_variable = { global.PACIFIC_score = 0 }
+	}
+
+	if = {
+		limit = {
+			NOT = { check_variable = { var = global.PACIFIC_score value = global.PACIFIC_score_applied compare = equals } }
+		}
+		set_variable = { global.PACIFIC_score_applied = global.PACIFIC_score }
+		every_country = {
+			limit = { PACIFIC_has_allied_idea = yes }
+			PACIFIC_apply_allied_level = yes
+		}
+		every_country = {
+			limit = { PACIFIC_has_japan_idea = yes }
+			PACIFIC_apply_japan_level = yes
+		}
+	}
+}
+
+PACIFIC_remove_all = {
+	every_country = {
+		limit = {
+			OR = {
+				PACIFIC_has_allied_idea = yes
+				PACIFIC_has_japan_idea = yes
+			}
+		}
+		remove_ideas = {
+			PACIFIC_ALLIES_1
+			PACIFIC_ALLIES_2
+			PACIFIC_ALLIES_3
+			PACIFIC_ALLIES_4
+			PACIFIC_ALLIES_5
+			PACIFIC_ALLIES_6
+			PACIFIC_ALLIES_7
+			PACIFIC_ALLIES_8
+			PACIFIC_ALLIES_9
+			PACIFIC_ALLIES_10
+			PACIFIC_ALLIES_11
+			PACIFIC_JAPAN_1
+			PACIFIC_JAPAN_2
+			PACIFIC_JAPAN_3
+			PACIFIC_JAPAN_4
+			PACIFIC_JAPAN_5
+			PACIFIC_JAPAN_6
+			PACIFIC_JAPAN_7
+			PACIFIC_JAPAN_8
+			PACIFIC_JAPAN_9
+			PACIFIC_JAPAN_10
+			PACIFIC_JAPAN_11
+		}
+	}
+}
+
+PACIFIC_apply_allied_level = {
+	remove_ideas = {
+		PACIFIC_ALLIES_1
+		PACIFIC_ALLIES_2
+		PACIFIC_ALLIES_3
+		PACIFIC_ALLIES_4
+		PACIFIC_ALLIES_5
+		PACIFIC_ALLIES_6
+		PACIFIC_ALLIES_7
+		PACIFIC_ALLIES_8
+		PACIFIC_ALLIES_9
+		PACIFIC_ALLIES_10
+		PACIFIC_ALLIES_11
+	}
+	if = {
+		limit = { check_variable = { global.PACIFIC_score > 9 } }
+		add_ideas = PACIFIC_ALLIES_11
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 7 } }
+		add_ideas = PACIFIC_ALLIES_10
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 5 } }
+		add_ideas = PACIFIC_ALLIES_9
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 3 } }
+		add_ideas = PACIFIC_ALLIES_8
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 1 } }
+		add_ideas = PACIFIC_ALLIES_7
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -2 } }
+		add_ideas = PACIFIC_ALLIES_6
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -4 } }
+		add_ideas = PACIFIC_ALLIES_5
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -6 } }
+		add_ideas = PACIFIC_ALLIES_4
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -8 } }
+		add_ideas = PACIFIC_ALLIES_3
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -10 } }
+		add_ideas = PACIFIC_ALLIES_2
+	}
+	else = {
+		add_ideas = PACIFIC_ALLIES_1
+	}
+}
+
+PACIFIC_apply_japan_level = {
+	remove_ideas = {
+		PACIFIC_JAPAN_1
+		PACIFIC_JAPAN_2
+		PACIFIC_JAPAN_3
+		PACIFIC_JAPAN_4
+		PACIFIC_JAPAN_5
+		PACIFIC_JAPAN_6
+		PACIFIC_JAPAN_7
+		PACIFIC_JAPAN_8
+		PACIFIC_JAPAN_9
+		PACIFIC_JAPAN_10
+		PACIFIC_JAPAN_11
+	}
+	if = {
+		limit = { check_variable = { global.PACIFIC_score > 9 } }
+		add_ideas = PACIFIC_JAPAN_1
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 7 } }
+		add_ideas = PACIFIC_JAPAN_2
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 5 } }
+		add_ideas = PACIFIC_JAPAN_3
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 3 } }
+		add_ideas = PACIFIC_JAPAN_4
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > 1 } }
+		add_ideas = PACIFIC_JAPAN_5
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -2 } }
+		add_ideas = PACIFIC_JAPAN_6
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -4 } }
+		add_ideas = PACIFIC_JAPAN_7
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -6 } }
+		add_ideas = PACIFIC_JAPAN_8
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -8 } }
+		add_ideas = PACIFIC_JAPAN_9
+	}
+	else_if = {
+		limit = { check_variable = { global.PACIFIC_score > -10 } }
+		add_ideas = PACIFIC_JAPAN_10
+	}
+	else = {
+		add_ideas = PACIFIC_JAPAN_11
+	}
+}

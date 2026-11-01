@@ -1,10 +1,10 @@
 SOV_red_army_recovery_category = {
 
 	# Red Army attack modifier, fixed to the calendar from 01/06/41 (not war start)
-	# 01/06/41 -> 01/12/41 = -10% attack	SOV_red_army_unprepared_1
-	# 01/12/41 -> 01/06/42 = -5% attack	SOV_red_army_unprepared_2
-	# 01/06/42 -> 01/12/42 = neutral		SOV_red_army_unprepared_3
-	# 01/12/42 onward      = +5% attack	SOV_red_army_unprepared_4
+	# 01/06/41 -> 01/12/41 = -5% attack, -2.5% org		SOV_red_army_unprepared_1
+	# 01/12/41 -> 01/06/42 = -2.5% attack, -1.25% org	SOV_red_army_unprepared_2
+	# 01/06/42 -> 01/12/42 = neutral				SOV_red_army_unprepared_3
+	# 01/12/42 onward      = +5% attack, +2.5% org		SOV_red_army_unprepared_4
 
 	SOV_red_army_recovery_start = {
 		allowed = {

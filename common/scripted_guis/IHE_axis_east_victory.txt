@@ -1,0 +1,54 @@
+scripted_gui = {
+	IHE_axis_east_victory_bar = {
+		context_type = player_context
+		window_name = "IHE_axis_east_victory_window"
+
+		visible = {
+			NOT = { has_global_flag = allies_east_victory }
+			NOT = { has_global_flag = victory_in_europe }
+		}
+
+		triggers = {
+			pip_leningrad_green_visible = { has_global_flag = axis_east_pip_leningrad }
+			pip_moscow_green_visible = { has_global_flag = axis_east_pip_moscow }
+			pip_kazan_green_visible = { has_global_flag = axis_east_pip_kazan }
+			pip_stalingrad_green_visible = { has_global_flag = axis_east_pip_stalingrad }
+			pip_baku_green_visible = { has_global_flag = axis_east_pip_baku }
+			bar_bg_hold1_visible = {
+				NOT = { has_global_flag = axis_east_countdown }
+				OR = {
+					axis_east_pips_all = yes
+					check_variable = { global.axis_east_held_days < 1 }
+				}
+				check_variable = { global.axis_east_held_days < 10 }
+			}
+			bar_bg_hold2_visible = {
+				NOT = { has_global_flag = axis_east_countdown }
+				axis_east_pips_all = yes
+				check_variable = { global.axis_east_held_days > 9 }
+			}
+			bar_bg_paused1_visible = {
+				NOT = { has_global_flag = axis_east_countdown }
+				axis_east_pips_all = no
+				check_variable = { global.axis_east_held_days > 0 }
+				check_variable = { global.axis_east_held_days < 10 }
+			}
+			bar_bg_paused2_visible = {
+				NOT = { has_global_flag = axis_east_countdown }
+				axis_east_pips_all = no
+				check_variable = { global.axis_east_held_days > 9 }
+			}
+			bar_bg_count1_visible = {
+				has_global_flag = axis_east_countdown
+				NOT = { has_global_flag = axis_east_victory }
+				check_variable = { global.axis_east_countdown_days < 10 }
+			}
+			bar_bg_count2_visible = {
+				has_global_flag = axis_east_countdown
+				NOT = { has_global_flag = axis_east_victory }
+				check_variable = { global.axis_east_countdown_days > 9 }
+			}
+			bar_bg_won_visible = { has_global_flag = axis_east_victory }
+		}
+	}
+}

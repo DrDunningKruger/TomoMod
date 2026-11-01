@@ -225,41 +225,16 @@ ideas = {
 			
 			
 			available = {
-			OR = {
-				GER = {
-				has_war_with = SOV 
-				}			
-				AND = {
-					date > 1942.1.1
-					OR = { 
-					tag = ENG
-					tag = SAF	
-					tag = CAN
-					tag = AST					
-					tag = NZL	
-					tag = RAJ					
-					tag = FRA					
-					tag = NEP
-					tag = USA				
-					tag = BEL
-					tag = HOL					
-					tag = NOR
-					tag = GRE					
-					tag = MEX
-					tag = BRA
-					tag = POL
-					tag = PHI		
-					tag = CUB		
-					tag = MON
-					tag = SOV					
-					tag = CPL				
-					}
-				}
-			}
-					
 				if = {
 					limit = { tag = GER }
 					has_completed_focus = GER_declaretotalenkrieg
+				}
+				else_if = {
+					limit = { tag = SOV }
+					has_completed_focus = SOV_wareco
+				}
+				else = {
+					date > 1942.1.1
 				}
 				has_war_support > 0.8
 			}

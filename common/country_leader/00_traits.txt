@@ -96,7 +96,7 @@ leader_traits = {
 
 	emperor_showa = {
 		random = no
-		stability_factor = 0.6 #FOR THE EMPERAH
+		stability_factor = 0.2 #FOR THE EMPERAH
 
 		ai_will_do = {
 			factor = 1
@@ -6053,7 +6053,7 @@ leader_traits = {
         air_mission_xp_gain_factor = 0.50	
 		air_wing_xp_loss_when_killed_factor = -0.25		
 		#air_superiority_efficiency = 0.02
-        air_attack_factor = 0.075	
+        air_attack_factor = 0.05
 		
 		
 		
@@ -6104,8 +6104,7 @@ leader_traits = {
 	air_bomber_interception = { # Bomber Interception mission efficiency increased by 12%
 		sprite = 1
 		
-		air_night_penalty = -0.1	
-        air_detection = 0.1		
+		air_night_penalty = -0.1
 		air_intercept_efficiency = 0.05
 		
 		

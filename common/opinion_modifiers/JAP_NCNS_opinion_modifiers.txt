@@ -1,0 +1,47 @@
+# NCNS Japan port (2026-10-25): opinion modifiers from vanilla 1.19.3 so they exist when TomoIHE runs on 1.16.9
+
+opinion_modifiers = {
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	CHI_rejected_our_proposal_for_cooperation_opm = {
+		value = -50
+		months = 30
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	sino_japanese_alliance_threat = {
+		value = -70
+		months = 24
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	signed_the_sino_japanese_pact_opm = {
+		value = 45
+		months = 24
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	JAP_sent_eth_aid_opm = {
+		value = 50
+		months = 48
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	JAP_the_great_spiritual_evil_opm = {
+		value = -60
+		months = 60
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	JAP_enemy_of_our_enemy_opm = {
+		value = 75
+		months = 80
+	}
+
+	# from vanilla 1.19.3 common/opinion_modifiers/sea_opinion_modifiers.txt
+	JAP_trading_partners = {
+		trade = yes
+		value = 75
+	}
+
+}

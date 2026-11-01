@@ -1,0 +1,562 @@
+IHE_SOV_deploy_first_echelon = {
+	if = {
+		limit = { controls_state = 137 }
+		137 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9677 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9680 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3722 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11649 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6704 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 193 }
+		193 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6589 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3542 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9506 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3480 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6532 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6458 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 582 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 196 }
+		196 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 568 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 200 }
+		200 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 429 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9571 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3399 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3767 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9729 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 205 }
+		205 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 382 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11300 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6252 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9301 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3308 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 207 }
+		207 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 323 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 208 }
+		208 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 126 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 104 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 209 }
+		209 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11304 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11392 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6324 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11202 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9120 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 210 }
+		210 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 354 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11234 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 387 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 207 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9254 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3333 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6242 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9353 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11259 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9386 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6293 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 218 }
+		218 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 585 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11418 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9417 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9430 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11450 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 220 }
+		220 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3580 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6543 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11526 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9542 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6254 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 221 }
+		221 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9531 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6554 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9556 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 418 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 222 }
+		222 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9355 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 223 }
+		223 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3236 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9366 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 300 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11347 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6262 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 224 }
+		224 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11298 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11229 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6330 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6386 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3306 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3364 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3335 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3226 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 225 }
+		225 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3520 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 226 }
+		226 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9479 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11452 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 472 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 227 }
+		227 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3421 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6474 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3491 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 228 }
+		228 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6505 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6519 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9476 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9461 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9488 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 238 }
+		238 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11403 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 240 }
+		240 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9449 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6481 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 241 }
+		241 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11355 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9342 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 242 }
+		242 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11254 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9272 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9399 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6273 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6387 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9382 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3247 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 306 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3313 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3362 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 243 }
+		243 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9253 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3297 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3210 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6243 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11336 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 223 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 245 }
+		245 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11459 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 484 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 449 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 246 }
+		246 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6367 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6400 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11272 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9287 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 258 }
+		258 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6317 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 259 }
+		259 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3584 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9519 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 559 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11504 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 511 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 260 }
+		260 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 413 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 808 }
+		808 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9240 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 810 }
+		810 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3298 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 319 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11222 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9275 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 813 }
+		813 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 4640 count = 2 }
+		}
+	}
+}
+
+IHE_SOV_deploy_second_echelon = {
+	if = {
+		limit = { controls_state = 11 }
+		11 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9404 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6296 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 327 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 95 }
+		95 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6413 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9236 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3366 count = 1 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3393 count = 1 }
+		}
+	}
+	if = {
+		limit = { controls_state = 96 }
+		96 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 233 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 358 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11391 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9341 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6340 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 277 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 192 }
+		192 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11670 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9698 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9714 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3575 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 193 }
+		193 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9543 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11557 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 489 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3568 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 546 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 194 }
+		194 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3293 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6319 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 215 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3203 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6232 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6556 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11453 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3507 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9249 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 196 }
+		196 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 721 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 737 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3573 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 197 }
+		197 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6597 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11715 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 200 }
+		200 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 588 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11405 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 201 }
+		201 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9465 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3494 count = 3 }
+		}
+	}
+	if = {
+		limit = { controls_state = 202 }
+		202 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 525 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 203 }
+		203 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11409 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11424 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11454 count = 3 }
+		}
+	}
+	if = {
+		limit = { controls_state = 204 }
+		204 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6373 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 304 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 206 }
+		206 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11216 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11370 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3267 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 294 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3378 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 207 }
+		207 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11220 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11241 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9323 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6249 count = 6 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6326 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3219 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6371 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6220 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 226 }
+		226 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 453 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9463 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 241 }
+		241 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9288 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6344 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6233 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11271 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6354 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 242 }
+		242 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11290 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11353 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 259 }
+		259 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6507 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6495 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9491 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11530 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 489 }
+		489 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11437 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9433 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6423 count = 3 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11561 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 784 }
+		784 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11342 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9295 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3320 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9274 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 808 }
+		808 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 10323 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9340 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 809 }
+		809 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6222 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3255 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11358 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 265 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 810 }
+		810 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6459 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 310 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 7482 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 815 }
+		815 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11226 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11498 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 834 }
+		834 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3757 count = 3 }
+		}
+	}
+}
+
+IHE_SOV_deploy_reserve_echelon = {
+	if = {
+		limit = { controls_state = 137 }
+		137 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6724 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 705 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 3686 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 217 }
+		217 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11005 count = 4 }
+		}
+	}
+	if = {
+		limit = { controls_state = 219 }
+		219 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6380 count = 6 }
+		}
+	}
+	if = {
+		limit = { controls_state = 223 }
+		223 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6333 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 244 }
+		244 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 70 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6095 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6035 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 9197 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 263 }
+		263 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 71 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 6154 count = 2 }
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 117 count = 2 }
+		}
+	}
+	if = {
+		limit = { controls_state = 264 }
+		264 = {
+			create_unit = { division = "division_template = \"Prikrytiya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.01" owner = ROOT prioritize_location = 11059 count = 2 }
+		}
+	}
+}

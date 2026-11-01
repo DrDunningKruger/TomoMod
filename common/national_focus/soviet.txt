@@ -1352,7 +1352,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_ideas = SOV_rifles # moved from removed focus SOV_riflez
+			hidden_effect = {
+				add_ideas = SOV_red_army_cheap_guns_2_ns
+			}
+			custom_effect_tooltip = SOV_the_means_to_wage_war_mod_tt
 
 			add_tech_bonus = {
 				name = SOV_the_means_to_wage_war
@@ -1945,7 +1948,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 3391
 							instant_build = yes
 						}
@@ -1956,7 +1959,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 6414
 							instant_build = yes
 						}
@@ -1967,7 +1970,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 9348
 							instant_build = yes
 						}
@@ -1978,7 +1981,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 301
 							instant_build = yes
 						}
@@ -1989,7 +1992,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 9378
 							instant_build = yes
 						}
@@ -2000,7 +2003,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 6283
 							instant_build = yes
 						}
@@ -2011,7 +2014,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 3259
 							instant_build = yes
 						}
@@ -2022,7 +2025,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 1
 							province = 11282
 							instant_build = yes
 						}
@@ -2033,7 +2036,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 4
+							level = 2
 							province = 6380
 							instant_build = yes
 						}
@@ -2400,7 +2403,6 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
 			add_to_variable = { SOV_the_red_army_training_time_factor = 0.1 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = -0.05 }
 			custom_effect_tooltip = SOV_cohesion_first_ns_tt
 		}
 	}
@@ -2474,8 +2476,10 @@ focus_tree = {
 				remove_ideas = SOV_military_reorganization_ns
 			}
 
-			add_to_variable = { SOV_the_red_army_supply_consumption_factor = -0.05 }
-			custom_effect_tooltip = SOV_military_reorganization_supply_tt
+			hidden_effect = {
+				add_ideas = SOV_red_army_cheap_guns_3_ns
+			}
+			custom_effect_tooltip = SOV_military_reorganization_guns_tt
 
 			army_experience = 50
 			add_command_power = 25
@@ -2554,7 +2558,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.025 }
 			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
 			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
 
@@ -3266,7 +3270,6 @@ focus_tree = {
 							armor_type_slot = tank_welded_armor
 							engine_type_slot = tank_diesel_engine
 							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = sloped_armor
 							special_type_slot_3 = smoke_launchers
 						}
 						upgrades = {
@@ -3294,7 +3297,6 @@ focus_tree = {
 							armor_type_slot = tank_welded_armor
 							engine_type_slot = tank_diesel_engine
 							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = sloped_armor
 							special_type_slot_3 = smoke_launchers
 						}
 						upgrades = {
@@ -4997,10 +4999,19 @@ focus = {
 		completion_reward = {
           add_ideas = tot_economic_mobilisation		
 
-		   swap_ideas = {
-				remove_idea = SOV_tank_industry
-				add_idea = SOV_tank_industry_2		
-		   }			  
+		   if = {
+				limit = { has_idea = SOV_tank_industry }
+				swap_ideas = {
+					remove_idea = SOV_tank_industry
+					add_idea = SOV_tank_industry_2
+				}
+		   }
+		   else = {
+				swap_ideas = {
+					remove_idea = SOV_tank_industry_0
+					add_idea = SOV_tank_industry_2
+				}
+		   }
 		}
 	}
 	
@@ -5038,24 +5049,6 @@ focus = {
 					add_building_construction = {
 									type = bunker
 									level = 3
-									province = 2199
-									instant_build = yes
-					}
-					add_building_construction = {
-									type = bunker
-									level = 3
-									province = 6174
-									instant_build = yes
-					}		
-					add_building_construction = {
-									type = bunker
-									level = 3
-									province = 79
-									instant_build = yes
-					}	
-					add_building_construction = {
-									type = bunker
-									level = 3
 									province = 8161
 									instant_build = yes
 					}
@@ -5070,15 +5063,50 @@ focus = {
 									level = 3
 									province = 3151
 									instant_build = yes
-					}	
+					}
 					add_building_construction = {
 									type = bunker
 									level = 3
 									province = 8229
 									instant_build = yes
 					}
-				}	
-			}			
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 149
+									instant_build = yes
+					}
+				}
+			}
+			847 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 2199
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 6174
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 79
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 11068
+									instant_build = yes
+					}
+				}
+			}
 			219 = {
 			  if = {
 		         limit = { is_controlled_by = ROOT }	
@@ -5132,23 +5160,98 @@ focus = {
 					}
 				}	
 			}
-			137 = {
+			229 = {
 			  if = {
 		         limit = { is_controlled_by = ROOT }	
 					add_building_construction = {
 									type = bunker
 									level = 3
-									province = 3686
+									province = 4458
 									instant_build = yes
 					}
 					add_building_construction = {
 									type = bunker
 									level = 3
-									province = 12930
+									province = 11674
 									instant_build = yes
-					}	
-				}	
-			}	
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 4614
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 1536
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 7661
+									instant_build = yes
+					}
+				}
+			}
+			249 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 6338
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 260
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 372
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 11243
+									instant_build = yes
+					}
+				}
+			}
+			833 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 3315
+									instant_build = yes
+					}
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 11387
+									instant_build = yes
+					}
+				}
+			}
+			256 = {
+			  if = {
+		         limit = { is_controlled_by = ROOT }	
+					add_building_construction = {
+									type = bunker
+									level = 3
+									province = 11356
+									instant_build = yes
+					}
+				}
+			}
 			217 = {
 			  if = {
 		         limit = { is_controlled_by = ROOT }	
@@ -5353,17 +5456,17 @@ focus = {
 		x = -2
 		y = 3
 		relative_position_id = Great_patriotic_war
-		cost = 5		
+		cost = 2		
 		ai_will_do = {
 			factor = 1
 		}
 		bypass = {
-		NOT = { has_full_control_of_state = 253
-        } }
-		
+			NOT = { controls_province = 6269 }
+		}
+
 		cancel_if_invalid = yes
 		available = {
-			has_full_control_of_state = 253
+			controls_province = 6269
 			has_war_with = GER
 		}
 		
@@ -5383,9 +5486,12 @@ focus = {
 		x = 0
 		y = 3
 		relative_position_id = Great_patriotic_war
-		cost = 5		
+		cost = 2		
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			NOT = { controls_province = 9449 }
 		}
         cancel_if_invalid = yes
 
@@ -5430,14 +5536,17 @@ focus = {
 		x = 2
 		y = 3
 		relative_position_id = Great_patriotic_war
-		cost = 5		
+		cost = 2		
 		ai_will_do = {
 			factor = 1
+		}
+		bypass = {
+			NOT = { controls_province = 11005 }
 		}
         cancel_if_invalid = yes
 
 			available = {
-			has_full_control_of_state = 217 # Stalingrad, where SOV_guards3 spawns
+			controls_province = 11005 # Stalingrad, where SOV_guards3 spawns
 		    has_tech = improved_medium_tank_chassis
 		}
 
@@ -5975,20 +6084,37 @@ focus = {
 		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
 		x = 3
 		y = 1
+		# Lend-Lease I-III can't be picked: they start automatically when Germany and the Soviet Union go to war
+		# (common/on_actions/IHE_SOV_great_patriotic_war_on_actions.txt) and complete one after another, 120 days each
+		# (events/IHE_SOV_lendlease.txt)
 		available = {
-			if = { date > 1941.11.01 }
-            has_full_control_of_state = 416
+			if = { # shipment under way - show progress
+				limit = { has_country_flag = SOV_lendlease_in_progress }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_lendlease_in_progress_tt
+						FLAG_DAYS = [?SOV_lendlease_in_progress:days]
+					}
+					always = no
+				}
 			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = SOV_lendlease_automatic_tt
+					always = no
+				}
+			}
+		}
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 17.15 # 120 days, only for display - completed by ihe_sov_lendlease.1
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = yes
-		
+
 		completion_reward = {
-		hidden_effect = {		 
+		hidden_effect = {
 		SOV = {
 		add_timed_idea = { idea = SOVLL days = 1500 }
 		}			 
@@ -5996,12 +6122,12 @@ focus = {
 		limit = { ENG = { has_tech = improved_infantry_weapons }}
 		add_equipment_to_stockpile = {
 							type = infantry_equipment_2
-							amount = 10000
+							amount = 30000
 							producer = ENG
         }}
 		else = { add_equipment_to_stockpile = {
 							type = infantry_equipment_1
-							amount = 10000
+							amount = 30000
 							producer = ENG
         } }
 		add_equipment_to_stockpile = {
@@ -6046,10 +6172,24 @@ focus = {
 		y = 1
 		relative_position_id = lendlease
 		available = {
-			if = { date > 1942.01.01 } 
-			has_full_control_of_state = 416
+			if = { # shipment under way - show progress
+				limit = { has_country_flag = SOV_lendlease2_in_progress }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_lendlease_in_progress_tt
+						FLAG_DAYS = [?SOV_lendlease2_in_progress:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = SOV_lendlease_automatic_tt
+					always = no
+				}
+			}
 		}
-		cost = 10
+		cost = 17.15 # 120 days, only for display - completed by ihe_sov_lendlease.2
 		ai_will_do = {
 			factor = 1
 		}
@@ -6063,12 +6203,12 @@ focus = {
 		limit = { USA = { has_tech = improved_infantry_weapons }}
 		add_equipment_to_stockpile = {
 							type = infantry_equipment_2
-							amount = 10000
+							amount = 30000
 							producer = USA
         }}
 		else = { add_equipment_to_stockpile = {
 							type = infantry_equipment_1
-							amount = 10000
+							amount = 30000
 							producer = USA
         } }		
 			add_equipment_to_stockpile = {
@@ -6132,9 +6272,24 @@ focus = {
 		y = 1
 		relative_position_id = lendlease2
 		available = {
-			if = { date > 1942.01.01 } 
+			if = { # shipment under way - show progress
+				limit = { has_country_flag = SOV_lendlease3_in_progress }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_lendlease_in_progress_tt
+						FLAG_DAYS = [?SOV_lendlease3_in_progress:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = SOV_lendlease_automatic_tt
+					always = no
+				}
+			}
 		}
-		cost = 10
+		cost = 17.15 # 120 days, only for display - completed by ihe_sov_lendlease.3
 		ai_will_do = {
 			factor = 1
 		}
@@ -6160,12 +6315,12 @@ focus = {
 				limit = { USA = { has_tech = improved_infantry_weapons }}
 				add_equipment_to_stockpile = {
 									type = infantry_equipment_2
-									amount = 10000
+									amount = 30000
 									producer = USA
 				}}
 				else = { add_equipment_to_stockpile = {
 									type = infantry_equipment_1
-									amount = 10000
+									amount = 30000
 									producer = USA
 				} }				
 			
@@ -6275,9 +6430,21 @@ focus = {
 		
 		custom_effect_tooltip = "PLANE_LL_TOOLTIP"
 
-		custom_effect_tooltip = "FREE_IMPROVED_SMALL_AIRFRAME"		
-		
+		custom_effect_tooltip = "FREE_IMPROVED_SMALL_AIRFRAME"
+
 		hidden_effect = {
+			if = {
+			limit = { USA = { has_tech = improved_infantry_weapons }}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 20000
+				producer = USA
+			}}
+			else = { add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = USA
+			} }
 		
 			if = {
 			limit = { NOT = { has_tech = improved_small_airframe  }}
@@ -6401,6 +6568,18 @@ focus = {
 		custom_effect_tooltip = "PLANE_LL_II_TOOLTIP"
 		
 			hidden_effect = {
+			if = {
+			limit = { USA = { has_tech = improved_infantry_weapons }}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 20000
+				producer = USA
+			}}
+			else = { add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = USA
+			} }
 			
 			if = {
 			limit = { NOT = { has_tech = improved_medium_airframe  }}
@@ -6502,7 +6681,13 @@ focus = {
 		}
 
 		completion_reward = {
-		    add_ideas = SOV_tank_industry	
+		    if = {
+				limit = { NOT = { has_idea = SOV_tank_industry_2 } }
+				swap_ideas = {
+					remove_idea = SOV_tank_industry_0
+					add_idea = SOV_tank_industry
+				}
+		    }
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0

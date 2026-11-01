@@ -1,0 +1,411 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+has_naval_treaty_trigger = {
+	OR = {
+		has_idea = MTG_naval_treaty_adherent
+		has_idea = MTG_naval_treaty_cheating
+		has_idea = MTG_naval_treaty_adherent_reduced
+		has_idea = MTG_naval_treaty_cheating_reduced
+	}
+}
+
+state_is_fully_controlled_by_ROOT_or_subject = {
+	custom_trigger_tooltip = {
+		tooltip = state_is_fully_controlled_by_ROOT_or_subject_tt
+		OR = {
+			is_fully_controlled_by = ROOT
+			controller = {
+				is_subject_of = ROOT
+				has_full_control_of_state = PREV
+			}
+		}
+	}
+}
+
+state_is_fully_controlled_by_ROOT_subject_or_faction_member = {
+	custom_trigger_tooltip = {
+		tooltip = state_is_fully_controlled_by_ROOT_subject_or_faction_member_tt
+		OR = {
+			is_fully_controlled_by = ROOT
+			controller = {
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				has_full_control_of_state = PREV
+			}
+		}
+	}
+}
+
+has_anarchist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_anarchist_government_tt
+		OR = {
+			has_country_leader_ideology = anarchist_communism 
+		}
+	}	
+}
+
+JAP_is_home_islands_state = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_is_home_islands_state_tt
+		OR = {
+			state = 536 # Hokkaido 
+			state = 533 # Kita-Tohoku
+			state = 1019 # Minami-Tohoku
+			state = 534 # Koshinetsu
+			state = 535 # Hokuriku
+			state = 282 # Kanto
+			state = 532 # Tokai
+			state = 531 # Kansai
+			state = 530 # Shikoku
+			state = 529 # Sanyo
+			state = 1020 # Sanin
+			state = 528 # Hokubu Kyushu
+			state = 1018 # Minami Kyushu
+			state = 526 # Okinawa
+			#state = 537 # Karafuto
+		}
+	}
+}
+
+JAP_army_faction_is_tier_1 = {
+	OR = {
+		has_idea = JAP_army_faction_tier_1_equal_navy
+		has_idea = JAP_army_faction_tier_1_lesser_1
+		has_idea = JAP_army_faction_tier_1_lesser_2
+		has_idea = JAP_army_faction_tier_1_lesser_3 
+		has_idea = JAP_army_faction_tier_1
+	}
+}
+
+JAP_army_faction_is_tier_2 = {
+	OR = {
+		has_idea = JAP_army_faction_tier_2_equal_navy
+		has_idea = JAP_army_faction_tier_2_greater_1
+		has_idea = JAP_army_faction_tier_2_lesser_1
+		has_idea = JAP_army_faction_tier_2_lesser_2
+		has_idea = JAP_army_faction_tier_2
+	}
+}
+
+JAP_army_faction_is_tier_3 = {
+	OR = {
+		has_idea = JAP_army_faction_tier_3_equal_navy
+		has_idea = JAP_army_faction_tier_3_greater_1
+		has_idea = JAP_army_faction_tier_3_greater_2
+		has_idea = JAP_army_faction_tier_3_lesser_1
+		has_idea = JAP_army_faction_tier_3
+	}
+}
+
+JAP_army_faction_is_tier_4 = {
+	OR = {
+		has_idea = JAP_army_faction_tier_4_greater_1
+		has_idea = JAP_army_faction_tier_4_greater_2
+		has_idea = JAP_army_faction_tier_4_greater_3
+		has_idea = JAP_army_faction_tier_4
+	}
+}
+
+JAP_naval_faction_is_tier_1 = {
+	OR = {
+		has_idea = JAP_naval_faction_tier_1_equal_army
+		has_idea = JAP_naval_faction_tier_1_lesser_1
+		has_idea = JAP_naval_faction_tier_1_lesser_2
+		has_idea = JAP_naval_faction_tier_1_lesser_3 
+		has_idea = JAP_naval_faction_tier_1
+	}
+}
+
+JAP_naval_faction_is_tier_2 = {
+	OR = {
+		has_idea = JAP_naval_faction_tier_2_equal_army
+		has_idea = JAP_naval_faction_tier_2_greater_1
+		has_idea = JAP_naval_faction_tier_2_lesser_1
+		has_idea = JAP_naval_faction_tier_2_lesser_2
+		has_idea = JAP_naval_faction_tier_2
+	}
+}
+
+JAP_naval_faction_is_tier_3 = {
+	OR = {
+		has_idea = JAP_naval_faction_tier_3_equal_army
+		has_idea = JAP_naval_faction_tier_3_greater_1
+		has_idea = JAP_naval_faction_tier_3_greater_2
+		has_idea = JAP_naval_faction_tier_3_lesser_1
+		has_idea = JAP_naval_faction_tier_3
+	}
+}
+
+JAP_naval_faction_is_tier_4 = {
+	OR = {
+		has_idea = JAP_naval_faction_tier_4_greater_1
+		has_idea = JAP_naval_faction_tier_4_greater_2
+		has_idea = JAP_naval_faction_tier_4_greater_3
+		has_idea = JAP_naval_faction_tier_4
+	}
+}
+
+JAP_army_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_army_faction_is_tier_3 = yes
+		JAP_army_faction_is_tier_4 = yes
+	}
+}
+
+JAP_naval_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_naval_faction_is_tier_3 = yes
+		JAP_naval_faction_is_tier_4 = yes
+	}
+}
+
+JAP_zaibatsu_faction_is_tier_3_at_least = {
+	OR = {
+		has_idea = JAP_zaibatsu_faction_tier_3
+		has_idea = JAP_zaibatsu_faction_tier_4
+	}
+}
+
+JAP_government_faction_is_tier_3_at_least = {
+	OR = {
+		has_idea = JAP_government_faction_tier_3
+		has_idea = JAP_government_faction_tier_4
+	}
+}
+
+JAP_any_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_army_faction_is_tier_3_at_least = yes
+		JAP_naval_faction_is_tier_3_at_least = yes
+		JAP_zaibatsu_faction_is_tier_3_at_least = yes
+		JAP_government_faction_is_tier_3_at_least = yes
+	}
+}
+
+JAP_army_faction_is_at_least_influential = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_army_faction_is_at_least_influential_tt
+		OR = {
+			has_idea = JAP_army_faction_tier_3_equal_navy
+			has_idea = JAP_army_faction_tier_3_greater_1
+			has_idea = JAP_army_faction_tier_3_greater_2
+			has_idea = JAP_army_faction_tier_3_lesser_1
+			has_idea = JAP_army_faction_tier_3
+			has_idea = JAP_army_faction_tier_4_greater_1
+			has_idea = JAP_army_faction_tier_4_greater_2
+			has_idea = JAP_army_faction_tier_4_greater_3
+			has_idea = JAP_army_faction_tier_4
+		}
+	}
+}
+
+JAP_army_faction_is_not_subdued = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_army_faction_is_not_subdued_tt
+		NOT = {
+			has_idea = JAP_army_faction_tier_1_equal_navy
+			has_idea = JAP_army_faction_tier_1_lesser_1
+			has_idea = JAP_army_faction_tier_1_lesser_2
+			has_idea = JAP_army_faction_tier_1_lesser_3 
+			has_idea = JAP_army_faction_tier_1
+		}
+	}
+}
+
+JAP_army_faction_is_at_most_meddling = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_army_faction_is_at_most_meddling_tt
+		NOT = {
+			has_idea = JAP_army_faction_tier_3_equal_navy
+			has_idea = JAP_army_faction_tier_3_greater_1
+			has_idea = JAP_army_faction_tier_3_greater_2
+			has_idea = JAP_army_faction_tier_3_lesser_1
+			has_idea = JAP_army_faction_tier_3
+			has_idea = JAP_army_faction_tier_4_greater_1
+			has_idea = JAP_army_faction_tier_4_greater_2
+			has_idea = JAP_army_faction_tier_4_greater_3
+			has_idea = JAP_army_faction_tier_4
+		}
+	}
+}
+
+JAP_army_faction_is_greater_than_navy = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_army_faction_is_greater_than_naval_tt
+		OR = {
+			has_idea = JAP_army_faction_tier_2_greater_1
+			has_idea = JAP_army_faction_tier_3_greater_1
+			has_idea = JAP_army_faction_tier_3_greater_2
+			has_idea = JAP_army_faction_tier_3
+			has_idea = JAP_army_faction_tier_4_greater_1
+			has_idea = JAP_army_faction_tier_4_greater_2
+			has_idea = JAP_army_faction_tier_4_greater_3
+			has_idea = JAP_army_faction_tier_4
+		}
+	}
+}
+
+JAP_army_faction_is_not_dominant = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_army_faction_is_not_dominant_tt
+		NOT = {
+			has_idea = JAP_army_faction_tier_4_greater_1
+			has_idea = JAP_army_faction_tier_4_greater_2
+			has_idea = JAP_army_faction_tier_4_greater_3
+			has_idea = JAP_army_faction_tier_4
+		}
+	}
+}
+
+JAP_naval_faction_is_at_least_influential = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_at_least_influential_tt
+		OR = {
+			has_idea = JAP_naval_faction_tier_3_equal_army
+			has_idea = JAP_naval_faction_tier_3_greater_1
+			has_idea = JAP_naval_faction_tier_3_greater_2
+			has_idea = JAP_naval_faction_tier_3_lesser_1
+			has_idea = JAP_naval_faction_tier_3
+			has_idea = JAP_naval_faction_tier_4_greater_1
+			has_idea = JAP_naval_faction_tier_4_greater_2
+			has_idea = JAP_naval_faction_tier_4_greater_3
+			has_idea = JAP_naval_faction_tier_4
+		}
+	}
+}
+
+JAP_naval_faction_is_not_subdued = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_not_subdued_tt
+		NOT = {
+			has_idea = JAP_naval_faction_tier_1_equal_army
+			has_idea = JAP_naval_faction_tier_1_lesser_1
+			has_idea = JAP_naval_faction_tier_1_lesser_2
+			has_idea = JAP_naval_faction_tier_1_lesser_3 
+			has_idea = JAP_naval_faction_tier_1
+		}
+	}
+}
+
+JAP_naval_faction_is_at_most_meddling = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_at_most_meddling_tt
+		NOT = {
+			has_idea = JAP_naval_faction_tier_3_equal_army
+			has_idea = JAP_naval_faction_tier_3_greater_1
+			has_idea = JAP_naval_faction_tier_3_greater_2
+			has_idea = JAP_naval_faction_tier_3_lesser_1
+			has_idea = JAP_naval_faction_tier_3
+			has_idea = JAP_naval_faction_tier_4_greater_1
+			has_idea = JAP_naval_faction_tier_4_greater_2
+			has_idea = JAP_naval_faction_tier_4_greater_3
+			has_idea = JAP_naval_faction_tier_4
+		}
+	}
+}
+
+JAP_naval_faction_is_greater_than_army = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_greater_than_army_tt
+		OR = {
+			has_idea = JAP_naval_faction_tier_2_greater_1
+			has_idea = JAP_naval_faction_tier_3_greater_1
+			has_idea = JAP_naval_faction_tier_3_greater_2
+			has_idea = JAP_naval_faction_tier_3
+			has_idea = JAP_naval_faction_tier_4_greater_1
+			has_idea = JAP_naval_faction_tier_4_greater_2
+			has_idea = JAP_naval_faction_tier_4_greater_3
+			has_idea = JAP_naval_faction_tier_4
+		}
+	}
+}
+
+JAP_naval_faction_is_not_dominant = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_not_dominant_tt
+		NOT = {
+			has_idea = JAP_naval_faction_tier_4_greater_1
+			has_idea = JAP_naval_faction_tier_4_greater_2
+			has_idea = JAP_naval_faction_tier_4_greater_3
+			has_idea = JAP_naval_faction_tier_4
+		}
+	}
+}
+
+JAP_naval_faction_is_same_as_army = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_naval_faction_is_same_as_army_tt
+		OR = {
+			has_idea = JAP_naval_faction_tier_1_equal_army
+			has_idea = JAP_naval_faction_tier_2_equal_army
+			has_idea = JAP_naval_faction_tier_3_equal_army
+			has_idea = JAP_naval_faction_tier_3
+		}
+	}
+}
+
+JAP_zaibatsu_faction_is_at_most_meddling = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_zaibatsu_faction_is_at_most_meddling_tt
+		NOT = {
+			has_idea = JAP_zaibatsu_faction_tier_3
+			has_idea = JAP_zaibatsu_faction_tier_4
+		}
+	}
+}
+
+JAP_civilian_government_faction_is_not_subdued = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_civilian_government_faction_is_not_subdued_tt
+		NOT = {
+			has_idea = JAP_government_faction_tier_1
+		}
+	}
+}
+
+JAP_zaibatsu_faction_is_at_least_influential = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_zaibatsu_faction_is_at_least_influential_tt
+		OR = {
+			has_idea = JAP_zaibatsu_faction_tier_3
+			has_idea = JAP_zaibatsu_faction_tier_4
+		}
+	}
+}
+
+JAP_zaibatsu_faction_is_not_subdued = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_zaibatsu_faction_is_not_subdued_tt
+		NOT = {
+			has_idea = JAP_zaibatsu_faction_tier_1
+		}
+	}
+}
+
+JAP_civilian_government_faction_is_at_least_influential = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_civilian_government_is_at_least_influential_tt
+		OR = {
+			has_idea = JAP_government_faction_tier_3
+			has_idea = JAP_government_faction_tier_4 
+		}
+	}
+}
+
+JAP_imperial_influence_demands_ready = {
+	NOT = { has_country_flag = JAP_faction_demands_cooldown_flag }
+}
+
+NOR_AAT = { # Trigger to check if playing as Norway while having AAT
+	original_tag = NOR
+	has_dlc = "Arms Against Tyranny"
+}
+
+
+
+
+# added with the remaining vanilla Japanese ideas

@@ -1,0 +1,29 @@
+add_namespace = ihe_axis_east_victory
+
+news_event = {
+	id = ihe_axis_east_victory.1
+	title = ihe_axis_east_victory.1.t
+	desc = ihe_axis_east_victory.1.d
+	picture = GFX_news_event_german_soldiers
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ihe_axis_east_victory.1.a
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+	}
+	option = {
+		name = ihe_axis_east_victory.1.b
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { is_in_faction_with = GER }
+		}
+	}
+}

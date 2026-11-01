@@ -64,11 +64,6 @@ select_host_country = {
 		desc = ""
 	}	
 	option = {
-		name = FIN
-		text = "Finland"
-		desc = ""
-	}
-	option = {
 		name = IEA
 		text = "Italian East Africa"
 		desc = ""
@@ -149,18 +144,8 @@ select_host_country = {
 		desc = ""
 	}
 	option = {
-		name = CUB
-		text = "Cuba"
-		desc = ""
-	}
-	option = {
 		name = PHI
 		text = "Philippines"
-		desc = ""
-	}
-	option = {
-		name = NEP
-		text = "Nepal"
 		desc = ""
 	}
 	option = {

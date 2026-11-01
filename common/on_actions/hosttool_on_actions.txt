@@ -32,11 +32,6 @@ on_actions = {
 				}	
 
 			else_if = {
-					limit = {has_game_rule = {rule = select_host_country option = FIN}}
-					set_variable={host = FIN.id}
-				}
-				
-			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = IEA}}
 					set_variable={host = IEA.id}
 				}	
@@ -50,11 +45,6 @@ on_actions = {
 					limit = {has_game_rule = {rule = select_host_country option = FRA}}
 					set_variable={host = FRA.id}
 				}	
-				
-			else_if = {
-					limit = {has_game_rule = {rule = select_host_country option = NEP}}
-					set_variable={host = NEP.id}
-				}
 				
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = RAJ}}
@@ -129,11 +119,6 @@ on_actions = {
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SOV}}
 					set_variable={host = SOV.id}
-				}
-				
-			else_if = {
-					limit = {has_game_rule = {rule = select_host_country option = CUB}}
-					set_variable={host = CUB.id}
 				}
 				
 			else_if = {

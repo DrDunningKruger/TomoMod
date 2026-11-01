@@ -423,38 +423,17 @@ AFRICA_apply_axis_level = {
 	}
 }
 
-# Germany gets -1% armour IC per positive Axis level: AXIS_7 = -1% ... AXIS_11 = -5%
+# Germany gets -5% armour IC for one year, once per game, the first time the Axis reaches AXIS_11
 AFRICA_update_german_armour = {
 	if = {
-		limit = { country_exists = GER }
+		limit = {
+			country_exists = GER
+			NOT = { has_global_flag = AFRICA_german_armour_given }
+			GER = { has_idea = AFRICA_AXIS_11 }
+		}
+		set_global_flag = AFRICA_german_armour_given
 		GER = {
-			remove_ideas = {
-				GER_AFRICA_armour_1
-				GER_AFRICA_armour_2
-				GER_AFRICA_armour_3
-				GER_AFRICA_armour_4
-				GER_AFRICA_armour_5
-			}
-			if = {
-				limit = { has_idea = AFRICA_AXIS_11 }
-				add_ideas = GER_AFRICA_armour_5
-			}
-			else_if = {
-				limit = { has_idea = AFRICA_AXIS_10 }
-				add_ideas = GER_AFRICA_armour_4
-			}
-			else_if = {
-				limit = { has_idea = AFRICA_AXIS_9 }
-				add_ideas = GER_AFRICA_armour_3
-			}
-			else_if = {
-				limit = { has_idea = AFRICA_AXIS_8 }
-				add_ideas = GER_AFRICA_armour_2
-			}
-			else_if = {
-				limit = { has_idea = AFRICA_AXIS_7 }
-				add_ideas = GER_AFRICA_armour_1
-			}
+			add_timed_idea = { idea = GER_AFRICA_armour_5 days = 365 }
 		}
 	}
 }
@@ -499,4 +478,254 @@ AFRICA_add_dday_forts = {
 		}
 		add_to_variable = { global.AFRICA_dday_forts = 1 }
 	}
+}
+
+AXIS_Africa_reduce_penalty = {
+	every_state = {
+		limit = { AXIS_Africa_is_long_timer_state = yes }
+		set_variable = { AXIS_Africa_days = 2000 }
+		add_to_variable = { AXIS_Africa_days = global.AXIS_Africa_start_day }
+		subtract_from_variable = { AXIS_Africa_days = global.num_days }
+		AXIS_Africa_step_GER = yes
+		AXIS_Africa_step_ITA = yes
+		AXIS_Africa_step_HUN = yes
+		AXIS_Africa_step_ROM = yes
+		AXIS_Africa_step_BUL = yes
+		AXIS_Africa_step_YUG = yes
+		AXIS_Africa_step_SPR = yes
+		AXIS_Africa_step_FRA = yes
+		clear_variable = AXIS_Africa_days
+	}
+	add_to_variable = { global.AXIS_Africa_steps = 1 }
+	if = {
+		limit = { check_variable = { global.AXIS_Africa_steps > 4 } }
+		every_country = {
+			limit = { is_ai = no }
+			scoped_sound_effect = IHE_afrikakorps_tomo
+		}
+	}
+}
+
+AXIS_Africa_step_GER = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = GER } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = GER }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = GER }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = GER } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = GER }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = GER }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = GER } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = GER }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = GER }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = GER } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = GER }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = GER }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = GER } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = GER }
+	}
+}
+
+AXIS_Africa_step_ITA = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = ITA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = ITA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = ITA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = ITA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = ITA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = ITA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = ITA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = ITA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = ITA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = ITA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = ITA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = ITA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = ITA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = ITA }
+	}
+}
+
+AXIS_Africa_step_HUN = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = HUN } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = HUN }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = HUN }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = HUN } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = HUN }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = HUN }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = HUN } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = HUN }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = HUN }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = HUN } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = HUN }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = HUN }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = HUN } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = HUN }
+	}
+}
+
+AXIS_Africa_step_ROM = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = ROM } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = ROM }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = ROM }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = ROM } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = ROM }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = ROM }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = ROM } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = ROM }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = ROM }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = ROM } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = ROM }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = ROM }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = ROM } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = ROM }
+	}
+}
+
+AXIS_Africa_step_BUL = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = BUL } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = BUL }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = BUL }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = BUL } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = BUL }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = BUL }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = BUL } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = BUL }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = BUL }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = BUL } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = BUL }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = BUL }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = BUL } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = BUL }
+	}
+}
+
+AXIS_Africa_step_YUG = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = YUG } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = YUG }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = YUG }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = YUG } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = YUG }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = YUG }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = YUG } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = YUG }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = YUG }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = YUG } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = YUG }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = YUG }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = YUG } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = YUG }
+	}
+}
+
+AXIS_Africa_step_SPR = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = SPR } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = SPR }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = SPR }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = SPR } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = SPR }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = SPR }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = SPR } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = SPR }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = SPR }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = SPR } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = SPR }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = SPR }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = SPR } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = SPR }
+	}
+}
+
+AXIS_Africa_step_FRA = {
+	if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = FRA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = FRA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 days = AXIS_Africa_days scope = FRA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = FRA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 days = AXIS_Africa_days scope = FRA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = FRA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 days = AXIS_Africa_days scope = FRA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = FRA }
+		add_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 days = AXIS_Africa_days scope = FRA }
+	}
+	else_if = {
+		limit = { has_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = FRA } }
+		remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = FRA }
+	}
+}
+
+AXIS_Africa_remove_FRA = {
+	remove_dynamic_modifier = { modifier = AXIS_Africa_modifier scope = FRA }
+	remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_40 scope = FRA }
+	remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_30 scope = FRA }
+	remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_20 scope = FRA }
+	remove_dynamic_modifier = { modifier = AXIS_Africa_modifier_10 scope = FRA }
 }

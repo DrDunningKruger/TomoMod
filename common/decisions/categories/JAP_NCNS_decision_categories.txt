@@ -1,0 +1,224 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+JAP_pacific_guardian = {
+
+	icon = GFX_decision_category_jap_pacific_guardian
+
+	priority = 20
+	picture = GFX_decision_cat_picture_JAP_greater_east_asia_co_prosperity_sphere
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible_when_empty = no	
+
+	visible = {
+		is_subject = no
+		always = no
+	}
+}
+
+JAP_state_shintoism_decisions = {
+
+	icon = GFX_decision_category_JAP_state_shintoism
+	priority = 40
+	picture = GFX_decision_cat_picture_JAP_state_shinto
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# Categories the copied NCNS decisions sit in (added after the static check)
+
+# from vanilla common/decisions/categories/CHI_decision_categories.txt
+CHI_avoid_another_crisis_cat = {
+	icon = GFX_decision_category_jap_intervene_in_china
+	picture = GFX_decision_cat_picture_generic_border_conflicts
+	allowed = {
+		always = no
+		original_tag = CHI
+	}
+	available = {
+		NOT = { has_war_with = JAP } # To cancel any running decisions
+	}
+	visible = {
+		NOT = { has_war_with = JAP }
+		always = no
+		JAP = {
+			always = no
+		}
+	}
+	priority = 100
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_colonial_independence = {
+
+	icon = GFX_decision_category_jap_pacific_guardian
+
+	priority = 19
+	picture = GFX_decision_cat_picture_JAP_workers_celebrating
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible_when_empty = no	
+
+	visible = {
+		is_subject = no
+		always = no
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_imperial_influence_decision_cat = {
+
+	priority = 75 
+	picture = {
+		GFX_decision_cat_picture_JAP_imperial_influence_hirohito = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		GFX_decision_cat_picture_JAP_imperial_influence_diet = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+			}
+		}
+	}
+	icon = GFX_decision_category_power_struggle
+
+	visible_when_empty = yes # So that it doesn't keep dissappearing and appearing whenever new missions activate etc	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_kodoha_insurgency_decisions = {
+
+	icon = GFX_decision_category_JAP_imperial_glory_red
+	priority = 85
+	picture = GFX_decision_cat_picture_JAP_trial
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_kwantung_army_decisions = {
+
+	icon = GFX_decision_category_jap_intervene_in_china
+	priority = 80 
+	picture = GFX_decision_cat_picture_JAP_imperial_soldiers
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_spiritual_mobilization_decisions = {
+
+	icon = GFX_decision_category_jap_pacific_guardian
+	priority = 30 
+	picture = GFX_decision_cat_picture_JAP_kokutai
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_the_co_prosperity_sphere_decisions = {
+
+	icon = GFX_decision_category_jap_southern_expansion
+	priority = 35 
+	picture = GFX_decision_cat_picture_JAP_greater_east_asia_co_prosperity_sphere
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	visible = {
+	}
+
+}
+
+# from vanilla common/decisions/categories/JAP_decision_categories.txt
+JAP_the_peoples_state_decisions = {
+
+	icon = GFX_decision_category_jap_pacific_guardian
+	priority = 70
+	picture = GFX_decision_cat_picture_JAP_workers_celebrating
+
+	visible_when_empty = no	
+
+	allowed = {
+		original_tag = JAP
+		always = no
+	}
+
+	visible = {
+		always = no
+	}
+
+}
+
+# from vanilla common/decisions/categories/SIA_decision_categories.txt
+SIA_limited_war_cat = {
+	allowed = {
+		original_tag = SIA
+	}
+	
+	icon = GFX_decision_category_generic_propaganda
+	picture = GFX_decision_cat_picture_NOR_building_fascist_support
+	
+	priority = 40
+	visible = {
+		always = no
+		has_capitulated = no
+		is_subject = no
+		exists = yes
+	}
+}
+

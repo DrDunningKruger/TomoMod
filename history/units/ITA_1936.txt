@@ -191,16 +191,6 @@ air_wings = {
 			amount = 100
 			version_name = "Ba 65"
 		}	
-		small_plane_airframe_1 = {
-			owner = "ITA" 
-			amount = 100
-			version_name = "Fiat G 50"
-		}	
-		small_plane_airframe_1 = {
-			owner = "ITA" 
-			amount = 100
-			version_name = "Fiat G 50"
-		}
 		medium_plane_scout_plane_airframe_1 = {
 			owner = "ITA" 
 			amount = 100

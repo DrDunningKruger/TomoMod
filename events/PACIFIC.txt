@@ -1,0 +1,16 @@
+add_namespace = pacific
+
+country_event = {
+	id = pacific.1
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = PACIFIC_active }
+	}
+
+	immediate = {
+		set_global_flag = PACIFIC_active
+		PACIFIC_recalculate = yes
+	}
+}

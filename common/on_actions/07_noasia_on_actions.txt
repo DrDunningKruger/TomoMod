@@ -1,6 +1,11 @@
 on_actions = {
 	on_startup = {
 			effect = {
+				SWI = {
+					annex_country = {
+						target = FIN
+					}
+				}
 #				if = {
 #					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = ONLY_ASIA}}
 #					USA = { 
@@ -86,9 +91,6 @@ on_actions = {
 							target = RAJ
 						}
 						annex_country = {
-							target = NEP
-						}
-						annex_country = {
 							target = SIA
 						}
 						annex_country = {
@@ -103,18 +105,18 @@ on_actions = {
 						annex_country = {
 							target = MEX
 						}
+						annex_country = {
+							target = BRA
+						}
 					}
 					SOV = {
 						annex_country = {
 							target = MON
-						}					
+						}
 					}
 #					USA = {
 #					add_ideas = usanoasiaspirit
-#					}		
-					ITA = {
-					add_ideas = ITA_asiabuff
-					}
+#					}
 				set_global_flag = no_asia
 					ENG = { 
 						add_equipment_to_stockpile = {
@@ -178,9 +180,6 @@ on_actions = {
 							target = RAJ
 						}
 						annex_country = {
-							target = NEP
-						}
-						annex_country = {
 							target = SIA
 						}
 						annex_country = {
@@ -188,7 +187,10 @@ on_actions = {
 						}
 						annex_country = {
 							target = MEX
-						}						
+						}
+						annex_country = {
+							target = BRA
+						}
 					}
 					SOV = {
 						annex_country = {
@@ -212,10 +214,7 @@ on_actions = {
 					}
 #					USA = {
 #					add_ideas = usanoasiaspirit
-#					}	
-					ITA = {
-					add_ideas = ITA_asiabuff
-					}					
+#					}
 				set_global_flag = no_asia
 				}
 				if = {
@@ -226,27 +225,27 @@ on_actions = {
 					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA}}
 						USA = { load_oob = USA_1936_no_asia }
 						USA = {						
-							385 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
+							385 = { 
+								remove_building = { type = industrial_complex level = 5 }
 							}
-							386 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
+							386 = { 
+								remove_building = { type = industrial_complex level = 5 }
 							}
-							393 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
-							}							
-							375 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
-							}							
+							393 = { 
+								remove_building = { type = industrial_complex level = 5 }
+							}
+							375 = { 
+								remove_building = { type = industrial_complex level = 5 }
+							}
+							378 = { 
+								remove_building = { type = industrial_complex level = 10 }
+							}
 							386 = { 
 								remove_building = { type = dockyard level = 1 }	
 							}
 							378 = { 
 								remove_building = { type = dockyard level = 2 }	
 							}
-							378 = { 
-								remove_building = { type = industrial_complex level = 10 }
-							}							
 						}
 					IEA = {
 							559 = {
@@ -261,33 +260,27 @@ on_actions = {
 					limit = {has_game_rule = {rule = IHE_ASIA_STATUS option = NO_ASIA_plus_ast}}
 						USA = { load_oob = USA_1936_no_asia }
 						USA = {
-							357 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
+							385 = { 
+								remove_building = { type = industrial_complex level = 5 }
 							}
-							358 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
-							}							
-							385 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
+							386 = { 
+								remove_building = { type = industrial_complex level = 5 }
 							}
-							386 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
+							393 = { 
+								remove_building = { type = industrial_complex level = 5 }
 							}
-							393 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
-							}							
-							375 = { 	
-								remove_building = { type = industrial_complex level = 5 }		
-							}							
+							375 = { 
+								remove_building = { type = industrial_complex level = 5 }
+							}
+							378 = { 
+								remove_building = { type = industrial_complex level = 10 }
+							}
 							386 = { 
 								remove_building = { type = dockyard level = 1 }	
 							}
 							378 = { 
 								remove_building = { type = dockyard level = 2 }	
 							}
-							378 = { 
-								remove_building = { type = industrial_complex level = 10 }
-							}							
 						}
 					IEA = {
 						559 = {

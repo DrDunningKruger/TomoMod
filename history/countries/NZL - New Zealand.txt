@@ -82,6 +82,7 @@ set_popularities = {
 	democratic = 100
 }
 
+add_ideas = PACIFIC_ALLIES_6
 add_ideas = {
        training_spirit
 	   AFRICA_ALLIES_6	   

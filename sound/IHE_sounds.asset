@@ -11,6 +11,8 @@ category = {
 		IHE_on_the_beaches_tomo
 		IHE_steiner_tomo
 		IHE_fallblau_tomo
+		IHE_pax_germanica_tomo
+		IHE_victory_in_europe_tomo
 	}
 }
 
@@ -159,6 +161,36 @@ soundeffect = {
 	name = "IHE_fallblau_tomo"
 	sounds = {
 		sound = IHE_fallblau_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_pax_germanica_tomo"
+	file = "sound/IHE_pax_germanica_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_pax_germanica_tomo"
+	sounds = {
+		sound = IHE_pax_germanica_tomo
+	}
+	max_audible = 1
+	volume = 1
+}
+
+sound = {
+	name = "IHE_victory_in_europe_tomo"
+	file = "sound/IHE_victory_in_europe_tomo.wav"
+	always_load = no
+}
+
+soundeffect = {
+	name = "IHE_victory_in_europe_tomo"
+	sounds = {
+		sound = IHE_victory_in_europe_tomo
 	}
 	max_audible = 1
 	volume = 1

@@ -6,7 +6,7 @@ state={
 	}
 
 	history={
-		owner = CHI
+		owner = SWI
 		add_core_of = CHI
 		
 		buildings = {

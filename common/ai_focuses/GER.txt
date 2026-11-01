@@ -129,15 +129,12 @@ ai_historical_focus_list_HOL = {
 
 ai_historical_focus_list_JAP = {
 	ai_national_focuses = {
-       JAP_purge_the_kodoha_faction
 	   JAP_new_naval_estimates
 	   JAP_guide_the_zaibatsus
 	   JAP_national_mobilization_law
 	   JAP_nationalize_war_industry
 	   JAP_national_research_policy
 	   JAP_national_defense_state
-	   JAP_liaison_conference
-	   JAP_greater_east_asian_co_prosperity_sphere
 	   JAP_intervene_in_china1
 	}
 }

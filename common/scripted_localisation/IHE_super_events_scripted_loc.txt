@@ -1,0 +1,74 @@
+defined_text = {
+	name = GetIHESuperEventTitle
+	text = {
+		trigger = { has_country_flag = IHE_super_pax_germanica }
+		localization_key = IHE_super_pax_germanica
+	}
+	text = {
+		trigger = { has_country_flag = IHE_super_allied_victory }
+		localization_key = IHE_super_allied_victory
+	}
+}
+
+defined_text = {
+	name = GetIHESuperEventQuote
+	text = {
+		trigger = { has_country_flag = IHE_super_pax_germanica }
+		localization_key = IHE_super_pax_germanica_QUOTE
+	}
+	text = {
+		trigger = {
+			has_country_flag = IHE_super_allied_victory
+			has_global_flag = axis_east_countdown
+		}
+		localization_key = IHE_super_allied_victory_QUOTE
+	}
+	text = {
+		trigger = { has_country_flag = IHE_super_allied_victory }
+		localization_key = IHE_super_allied_victory_early_QUOTE
+	}
+}
+
+defined_text = {
+	name = GetIHESuperEventRemark
+	text = {
+		trigger = {
+			has_country_flag = IHE_super_pax_germanica
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+		localization_key = IHE_super_pax_germanica_REMARK_AXIS
+	}
+	text = {
+		trigger = { has_country_flag = IHE_super_pax_germanica }
+		localization_key = IHE_super_pax_germanica_REMARK_ALLIES
+	}
+	text = {
+		trigger = {
+			has_country_flag = IHE_super_allied_victory
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			}
+		}
+		localization_key = IHE_super_allied_victory_REMARK_AXIS
+	}
+	text = {
+		trigger = { has_country_flag = IHE_super_allied_victory }
+		localization_key = IHE_super_allied_victory_REMARK_ALLIES
+	}
+}
+
+defined_text = {
+	name = GetIHESuperEventDate
+	text = {
+		trigger = { has_country_flag = IHE_super_pax_germanica }
+		localization_key = IHE_super_pax_germanica_DATE
+	}
+	text = {
+		trigger = { has_country_flag = IHE_super_allied_victory }
+		localization_key = IHE_super_allied_victory_DATE
+	}
+}

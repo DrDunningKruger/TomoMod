@@ -1,0 +1,455 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = wtt_japan
+
+country_event = {
+	id = wtt_japan.21
+	title = wtt_japan.21.t
+	desc = wtt_japan.21.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	#Accept generals
+	option = {
+		name = wtt_japan.21.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {		
+			every_army_leader = {
+				limit = { 
+					OR = {
+						has_trait = JAP_samurai_lineage
+						has_trait = JAP_royal_lineage
+					}
+				}
+				set_nationality = ROOT
+			}
+		}		
+		FROM = { 
+			country_event = { 
+				id = wtt_japan.22 
+				hours = 6
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.22
+	title = wtt_japan.22.t
+	desc = wtt_japan.22.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.22.a
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.31
+	title = wtt_japan.31.t
+	desc = wtt_japan.31.desc
+	picture = GFX_report_event_jap_imperial_family
+
+	is_triggered_only = yes
+	
+	#Exile them
+	option = {
+		name = wtt_japan.31.a
+		trigger = {
+			country_exists = MAN
+		}
+		ai_chance = {
+			base = 5
+		}
+
+		MAN = {
+			country_event = { 
+				id = wtt_japan.32 
+				hours = 3
+			}
+			effect_tooltip = {
+				add_ideas = MAN_exiled_imperial_family
+			}
+		}
+
+	}
+
+	#Execute them
+	option = {
+		name = wtt_japan.31.b
+		ai_chance = {
+			base = 5
+		}
+
+		add_stability = -0.2
+
+	}
+}
+
+country_event = {
+	id = wtt_japan.32
+	title = wtt_japan.32.t
+	desc = wtt_japan.32.desc
+	picture = GFX_report_event_jap_imperial_family
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.32.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_ideas = MAN_exiled_imperial_family
+
+	}
+
+}
+
+country_event = {
+	id = wtt_japan.41
+	title = wtt_japan.41.t
+	desc = wtt_japan.41.desc
+	picture = GFX_report_event_
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.41.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			JAP = { 
+				send_equipment = {
+					target = MAN
+					equipment = infantry_equipment
+					amount = 2000
+					old_prioritised = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.101
+	title = wtt_japan.101.t
+	desc = wtt_japan.101.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	# Yes we will ally
+	option = {
+		name = wtt_japan.101.a
+		ai_chance = {
+			base = 1
+		}
+		JAP = {
+			add_to_faction = ROOT
+			country_event = { id = wtt_japan.102 days = 1 }
+		}
+	}
+
+	# No ty
+	option = {
+		name = wtt_japan.101.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = {
+			country_event = { id = wtt_japan.103 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.102
+	title = wtt_japan.101.t
+	desc = wtt_japan.102.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		effect_tooltip = { add_to_faction = FROM }
+	}
+}
+
+country_event = {
+	id = wtt_japan.103
+	title = wtt_japan.101.t
+	desc = wtt_japan.103.desc
+	picture = GFX_report_event_japanese_soldiers_03
+
+	is_triggered_only = yes
+	
+	option = {
+		name = unfortunate
+	}
+}
+
+country_event = {
+	id = wtt_japan.104
+	title = wtt_japan.104.t
+	desc = wtt_japan.104.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	# They deserve freedom
+	option = {
+		name = wtt_japan.104.a
+		ai_chance = {
+			base = 1
+		}
+
+		set_autonomy = { 
+			target = PHI 
+			autonomy_state = autonomy_free 
+		}
+
+		JAP = { country_event = { id = wtt_japan.105 days = 1 } }
+		PHI = { country_event = { id = wtt_japan.107 days = 1 } }
+
+	}
+
+	# Never!
+	option = {
+		name = wtt_japan.104.b
+		ai_chance = {
+			base = 0
+		}
+		JAP = { country_event = { id = wtt_japan.106 days = 1 } }
+	}
+}
+
+country_event = {
+	id = wtt_japan.105
+	title = wtt_japan.104.t
+	desc = wtt_japan.105.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.105.a
+		ai_chance = {
+			base = 1
+		}
+		effect_tooltip = {
+			FROM = { set_autonomy = { target = PHI autonomy_state = autonomy_free } }
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.106
+	title = wtt_japan.104.t
+	desc = wtt_japan.106.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.106.a
+		ai_chance = {
+			base = 1
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.107
+	title = wtt_japan.104.t
+	desc = wtt_japan.107.desc
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.107.a
+		ai_chance = {
+			base = 1
+		}
+		effect_tooltip = {
+			FROM = { set_autonomy = { target = PHI autonomy_state = autonomy_free } }
+		}
+		IF = {
+			limit = {
+				JAP = {
+					is_faction_leader = yes
+				}
+			}
+			JAP = {
+				add_to_faction = ROOT
+			}
+		}
+		hidden_effect = {
+			news_event = { id = wtt_news.26 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.108
+	title = wtt_japan.108.t
+	desc = wtt_japan.108.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.108.a
+
+		set_cosmetic_tag = JAP_shogunate
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			long_name = JAP_neutrality_party_kodoha_long
+			name = JAP_neutrality_party_kodoha
+		}	
+
+		add_popularity = { ideology = neutrality popularity = 0.2 }
+		add_timed_idea = { idea = JAP_military_purges days = 90 }
+
+		if = { #MM: I honestly have no idea about how this works, so checking just in case
+			limit = {
+				JAP_emperor_hirohito = {
+					is_country_leader = yes
+				}
+			}
+			remove_country_leader_role = {
+				character = JAP_emperor_hirohito
+				ideology = fascism_ideology
+			}
+		}
+		add_country_leader_role = {
+			character = JAP_emperor_hirohito
+			country_leader = {
+				expire = "1989.1.1"
+				ideology = despotism
+				traits = {
+					warrior_code
+					emperor_showa
+				}
+				id = 700 #Hirohito
+			}
+			promote_leader = yes
+		}
+
+		hidden_effect = { news_event = { id = wtt_news.27 hours = 6 } }
+
+	}
+
+}
+
+country_event = {
+	id = wtt_japan.114
+	title = wtt_japan.114.t
+	desc = wtt_japan.114.desc
+	picture = GFX_report_event_japanese_soldiers_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.114.a
+		if = {
+			limit = {
+				MAN = { is_subject_of = ROOT }
+			}
+			set_autonomy = { target = MAN autonomy_state = autonomy_free }
+			MAN = {
+				set_cosmetic_tag = MAN_kwantung_army
+				hidden_effect = {
+					set_country_flag = MAN_kwantung_army_took_control_flag
+				}
+			}
+		}
+		if = {
+			limit = {
+				MAN = { has_idea = MAN_kwantung_veto }
+			}
+			MAN = { remove_ideas = MAN_kwantung_veto }
+		}
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.5
+		}
+		if = {
+			limit = {
+				any_controlled_state = {
+					is_core_of = KOR
+				}
+			}
+			release = KOR
+		}
+	}
+}
+
+country_event = {
+	id = wtt_japan.115
+	title = wtt_japan.115.t
+	desc = wtt_japan.115.desc
+	picture = GFX_report_event_japanese_parade
+
+	is_triggered_only = yes
+	
+	# Join the war
+	option = {
+		name = wtt_japan.115.a
+		add_to_war = { targeted_alliance = JAP enemy = SOV hostility_reason = ally }
+		JAP = { country_event = { id = wtt_japan.116 hours = 6 } }
+	}
+
+	# Keep the NAP
+	option = {
+		name = wtt_japan.115.b
+		add_opinion_modifier = { target = JAP modifier = unilateral_war }
+		reverse_add_opinion_modifier = { target = JAP modifier = betrayed_alliance }
+		JAP = { country_event = { id = wtt_japan.117 hours = 6 } }
+	}
+}
+
+country_event = {
+	id = wtt_japan.116
+	title = wtt_japan.116.t
+	desc = wtt_japan.116.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.116.a
+	}
+}
+
+country_event = {
+	id = wtt_japan.117
+	title = wtt_japan.117.t
+	desc = wtt_japan.117.desc
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_japan.117.a
+	}
+}

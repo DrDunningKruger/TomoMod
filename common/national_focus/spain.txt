@@ -473,10 +473,10 @@
 			complete_tooltip = {
 				every_state = {
 					limit	= {	has_state_flag = SPA_the_national_and_popular_army_of_spain_2mil }
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -488,15 +488,15 @@
 					limit = {
 						free_building_slots = {
 							building = arms_factory
-							size > 1
+							size > 0
 						}
 						is_core_of = ROOT
 					}
 					set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1205,8 +1205,8 @@
 			completion_reward = {
 							add_offsite_building = {
 								type = industrial_complex
-								level = 6
-							}	
+								level = 4
+							}
 			}
 		}
 
@@ -1349,25 +1349,6 @@
 					if = {
 						limit = {
 							176 = {
-								free_building_slots = {
-									building = arms_factory
-									size > 0
-									include_locked = yes
-								}
-							}
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
-				792 = {
-					if = {
-						limit = {
-							792 = {
 								free_building_slots = {
 									building = arms_factory
 									size > 0

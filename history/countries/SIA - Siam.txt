@@ -55,6 +55,7 @@ if = {
 	}
 }
 
+add_ideas = PACIFIC_JAPAN_6
 add_ideas = {
     training_spirit	
 	free_trade

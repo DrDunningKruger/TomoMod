@@ -200,7 +200,7 @@ on_actions = {
 					}
 					
 					#Baltics liberated
-					FIN = { # Lithuania
+					SWI = { # Lithuania
 						transfer_state = 11
 						transfer_state = 815
 						transfer_state = 809
@@ -210,19 +210,19 @@ on_actions = {
 						transfer_state = 188
 						transfer_state = 814
 					}
-					FIN = { # Latvia
+					SWI = { # Latvia
 						transfer_state = 810
 						transfer_state = 808
 						transfer_state = 12
 					}
-					FIN = { # Estonia
+					SWI = { # Estonia
 						transfer_state = 191
 						transfer_state = 13
 						transfer_state = 811
 						transfer_state = 813
 						transfer_state = 812
 					}
-					FIN = {
+					SWI = {
 						# Winter war losses
 						transfer_state = 146
 						transfer_state = 147
@@ -232,9 +232,6 @@ on_actions = {
 						transfer_state = 150
 						transfer_state = 149
 						transfer_state = 148
-					}
-					ENG = {
-						add_to_faction = FIN
 					}
 					
 				}
@@ -279,7 +276,7 @@ on_actions = {
 						limit = {
 							111 = { is_controlled_by = SOV } # Helsinki
 						}
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -296,7 +293,7 @@ on_actions = {
 						}
 					}
 					else = { 
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -357,7 +354,7 @@ on_actions = {
 						limit = {
 							111 = { is_controlled_by = SOV } # Helsinki
 						}
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -374,7 +371,7 @@ on_actions = {
 						}
 					}
 					else = { 
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -431,7 +428,7 @@ on_actions = {
 						limit = {
 							111 = { is_controlled_by = SOV } # Helsinki
 						}
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -448,7 +445,7 @@ on_actions = {
 						}
 					}
 					else = { 
-						FIN = {# Finland proper
+						SWI = {# Finland proper
 							transfer_state = 111
 							transfer_state = 150
 							transfer_state = 149
@@ -1632,7 +1629,6 @@ on_actions = {
 						55 = { is_controlled_by = SOV } # Frankfurt
 						52 = { is_controlled_by = SOV } # Munich
 					}
-					country_event = { id = peace_in_europe.1 hours = 1 random_hours = 0 } 
 
 					GER = {
 						transfer_state = 65
@@ -1669,7 +1665,6 @@ on_actions = {
 						limit = {
 							305 = { is_controlled_by = SOV } # Berlin
 						}
-						country_event = { id = peace_in_europe.1 hours = 1 random_hours = 0 } 
 
 						SOV = {
 							transfer_state = 65
@@ -1681,7 +1676,6 @@ on_actions = {
 						}
 					}
 					else = {
-						country_event = { id = peace_in_europe.2 hours = 1 random_hours = 0 } 
 						GER = { 
 							transfer_state = 65
 							transfer_state = 305

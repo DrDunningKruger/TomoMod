@@ -1,10 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			# backgrounds start switched on (GDU sets this in 00_GDU_on_actions.txt)
-			every_country = {
-				set_country_flag = FOCUS_BG_background
-			}
 			ENG = {
 				set_variable = { show_background = 1 }
 			}

@@ -6735,6 +6735,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/GER_rommel.dds"
 	}	
 	SpriteType = { 
+		name = "GFX_GER_the_desert_fox"
+		texturefile = "gfx/interface/goals/GER_the_desert_fox.dds"
+	}	
+	SpriteType = { 
 		name = "GFX_GER_FLAK"
 		texturefile = "gfx/interface/goals/GER_FLAK.dds"
 	}	

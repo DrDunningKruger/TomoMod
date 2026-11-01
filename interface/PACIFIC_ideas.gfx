@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PACIFIC_stalemate"
+		texturefile = "gfx/interface/ideas/PACIFIC_stalemate.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_allies1"
+		texturefile = "gfx/interface/ideas/PACIFIC_allies1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_allies2"
+		texturefile = "gfx/interface/ideas/PACIFIC_allies2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_allies3"
+		texturefile = "gfx/interface/ideas/PACIFIC_allies3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_allies4"
+		texturefile = "gfx/interface/ideas/PACIFIC_allies4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_allies5"
+		texturefile = "gfx/interface/ideas/PACIFIC_allies5.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_japan1"
+		texturefile = "gfx/interface/ideas/PACIFIC_japan1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_japan2"
+		texturefile = "gfx/interface/ideas/PACIFIC_japan2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_japan3"
+		texturefile = "gfx/interface/ideas/PACIFIC_japan3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_japan4"
+		texturefile = "gfx/interface/ideas/PACIFIC_japan4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PACIFIC_japan5"
+		texturefile = "gfx/interface/ideas/PACIFIC_japan5.dds"
+	}
+}

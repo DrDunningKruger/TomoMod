@@ -635,34 +635,6 @@ ENG_IH&E_special = {
 					}
 				}
 
-	ENG_annex_NEP = { 
-	
-				available = {
-					NEP = { 
-					is_ai = yes 
-					has_war = yes
-					}
-				}
-					
-				allowed = { 
-					tag = ENG
-				}
-				visible = { 
-					country_exists = NEP
-				}
-				
-					fire_only_once = yes
-					
-					cost = 0 
-					
-					complete_effect = {
-						annex_country = {
-								target = NEP
-								transfer_troops = yes
-						}
-					}
-				}
-			
 	ENG_annex_SAF = { 
 	
 		available = {

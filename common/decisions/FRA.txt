@@ -1,15 +1,12 @@
 fra_holds_vs_germany_category = {
 	
-	# The longer Fra holds, the more tank production bonus it gets after cap
+	# The longer Fra holds, the worse its logistical troubles get
 	# days counted from GER at war with ENG
-	# cap day 0-60    = stage 4, no bonus, loses Americas, Somaliland/Madagascar, coastal West Africa, subsaharan Africa	FRA_should_hold_1
-	# cap day 60-90   = stage 3, -5% tank cost, loses Americas, Somaliland/Madagascar							FRA_should_hold_2
-	# cap day 90-120  = stage 2, -8% tank cost, loses Americas, Somaliland/Madagascar						FRA_should_hold_3
-	# cap day 120-150 = stage 1, -12% tank cost, loses Americas only, keeps all of Africa					FRA_should_hold_4
-	# cap day 150+    = stage 0, -15% tank cost, loses nothing									FRA_held
-	# if Fra capitulates, end and apply the tank cost bonus
-	# 10/03/26, Mao - "I made the bonuses timed for a year"
-	# 30/08/26, Mao - "Reworked decisions to work with new capitulation system, added stages so the game know what territory to take away when france caps"
+	# day 0-30    = stage 4	FRA_should_hold_1
+	# day 30-60   = stage 3	FRA_should_hold_2
+	# day 60-90   = stage 2	FRA_should_hold_3
+	# day 90-120  = stage 1	FRA_should_hold_4
+	# day 120+    = stage 0	FRA_held
 
 	FRA_should_hold_1 = {
 		allowed = {
@@ -31,43 +28,11 @@ fra_holds_vs_germany_category = {
 		is_good = no # Italy wants to join asap
 	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
 		fire_only_once = yes
-		days_mission_timeout = 60 # war + 60
+		days_mission_timeout = 30 # war + 30
 		selectable_mission = no
 
 
 		complete_effect = {
-			#fra capitulates too soon, no bonus
-			set_global_flag = FRA_stage_4 #nigga didnt hold
-			SWI = { 
-				#America, Asian island, Carribean
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
-				#French somaliland, Madagascar & surrounding islands
-				transfer_state = 543
-				transfer_state = 708
-				transfer_state = 706
-				transfer_state = 713
-				#Guinea, Togo, Ivory Coast, Basically coastal french west africa
-				transfer_state = 776
-				transfer_state = 777
-				transfer_state = 779
-				transfer_state = 298
-				transfer_state = 780
-				transfer_state = 296
-				#Subsaharan africa
-				transfer_state = 781
-				transfer_state = 778
-				transfer_state = 556
-				transfer_state = 272
-				transfer_state = 557
-				transfer_state = 786
-				transfer_state = 782
-				transfer_state = 515
-				transfer_state = 775
-			}
 			FRA = {
 			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
 			}
@@ -96,30 +61,10 @@ fra_holds_vs_germany_category = {
 		is_good = no 
 	    #war_with_on_timeout = { GER = { every_enemy_country = { limit = { is_in_faction_with = ENG} } } } # for AI preparations, warns all countries at war with Axis
 		fire_only_once = yes
-		days_mission_timeout = 30 # war + 90
+		days_mission_timeout = 30 # war + 60
 		selectable_mission = no
 		
 		complete_effect = { 
-			FRA = {
-					add_timed_idea = {
-						idea = FRA_tank_bonus_1
-						days = 548   # 1 year
-					}
-				}
-			set_global_flag = FRA_stage_3
-			SWI = { 
-				#America, Asian island, Carribean
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
-				#French somaliland, Madagascar & surrounding islands
-				transfer_state = 543
-				transfer_state = 708
-				transfer_state = 706
-				transfer_state = 713
-			}
 			FRA = {
 			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }
 			   }
@@ -153,30 +98,10 @@ fra_holds_vs_germany_category = {
 		is_good = no 
 	   
 		fire_only_once = yes
-		days_mission_timeout = 30 # war + 120
+		days_mission_timeout = 30 # war + 90
 		selectable_mission = no
 
 		complete_effect = {
-			FRA = {
-					add_timed_idea = {
-						idea = FRA_tank_bonus_2
-						days = 548   # 1 year
-					}
-				}
-			set_global_flag = FRA_stage_2
-			SWI = {
-				#America, Asian island, Carribean
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
-				#French somaliland, Madagascar & surrounding islands
-				transfer_state = 543
-				transfer_state = 708
-				transfer_state = 706
-				transfer_state = 713
-			}
 			FRA = {
 			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
 			   }
@@ -210,25 +135,10 @@ fra_holds_vs_germany_category = {
 		is_good = no 
 	    
 		fire_only_once = yes
-		days_mission_timeout = 30 # war + 150
+		days_mission_timeout = 30 # war + 120
 		selectable_mission = no
 
 		complete_effect = {
-			FRA = {
-					add_timed_idea = {
-						idea = FRA_tank_bonus_3
-						days = 548   # 1 year
-					}
-				}
-			set_global_flag = FRA_stage_1
-				SWI = {
-					#America, Asian island, Carribean
-					transfer_state = 310
-					transfer_state = 694
-					transfer_state = 641
-					transfer_state = 635
-					transfer_state = 734
-				}
 			FRA = {
 			   if = { limit = { has_idea = FRA_protected_by_the_maginot_line } remove_ideas = FRA_protected_by_the_maginot_line }			   
 			   }
@@ -262,7 +172,7 @@ fra_holds_vs_germany_category = {
 		is_good = no
 	    
 		fire_only_once = yes
-		days_mission_timeout = 1 # war + 150 = france held
+		days_mission_timeout = 1 # war + 120 = france held
 		selectable_mission = no
 		
 		timeout_effect = { # france still alive, start next mission
@@ -277,15 +187,35 @@ fra_holds_vs_germany_category = {
 				}
 			}			
 		}		
-		
-		complete_effect = {
-			FRA = {
-					add_timed_idea = {
-						idea = FRA_tank_bonus_4
-						days = 548   # 1 year
-					}
+	}
+
+	FRA_relocate_industrial_core = {
+		allowed = {
+			original_tag = FRA
+		}
+		activation = {
+			FRA_can_relocate_industry = yes
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = { FRA_can_relocate_industry = yes }
+		}
+		icon = generic_construction
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 14
+		selectable_mission = no
+
+		timeout_effect = {
+			hidden_effect = {
+				FRA_relocate_factories_effect = yes
+				if = {
+					limit = { FRA_can_relocate_industry = yes }
+					activate_mission = FRA_relocate_industrial_core
 				}
-			set_global_flag = FRA_stage_0
+			}
 		}
 	}
 }

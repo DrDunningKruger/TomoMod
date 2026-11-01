@@ -925,7 +925,7 @@ characters = {
 
 		corps_commander = {
 			desc = "Konstantin_Rokossovsky_desc"
-			traits = { panzer_leader panzer_expert armor_officer ranger winter_specialist trait_engineer swamp_fox urban_assault_specialist }
+			traits = { panzer_leader panzer_expert armor_officer ranger winter_specialist trait_engineer swamp_fox urban_assault_specialist expert_improviser }
 			skill = 6
 			attack_skill = 7
 			defense_skill = 6
@@ -1084,7 +1084,7 @@ characters = {
 			}
 			traits = {
 				army_chief_offensive_2
-				army_chief_defensive_1
+				army_chief_defensive_2
 			}
 			idea_token = SOV_defensive
 			cost = 100
@@ -1116,7 +1116,7 @@ characters = {
 		corps_commander = {
 			desc = "Nikolai_Vatutin_desc"
 			
-			traits = { infantry_officer trait_reckless ambusher adaptable guerilla_fighter trickster winter_expert }
+			traits = { infantry_officer trait_reckless ambusher adaptable guerilla_fighter trickster winter_expert skilled_staffer infantry_leader }
 			skill = 6
 			attack_skill = 4
 			defense_skill = 7

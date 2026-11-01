@@ -27,6 +27,8 @@ fra_holds_vs_germany_observer_category = {
 			is_in_faction_with = GER
 			tag = ENG
 			is_in_faction_with = ENG
+			tag = SOV
+			is_in_faction_with = SOV
 		}
 	}
 	priority = 20

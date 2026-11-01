@@ -3111,14 +3111,14 @@ focus_tree = {
 			}
 			ITA = { exists = yes }
 			NOT = { has_war_with = ITA }
-			802 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			44 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			805 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			185 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			47 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			186 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			108 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
-			105 = { OR = { is_owned_by = ITA owner = { is_in_faction_with = ITA } } }
+			802 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			44 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			805 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			185 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			47 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			186 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			108 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
+			105 = { OR = { is_controlled_by = ITA controller = { is_in_faction_with = ITA } } }
 		}
 
 		completion_reward = {

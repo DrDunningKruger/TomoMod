@@ -1,0 +1,294 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = SEA_japan
+
+country_event = {
+	id = SEA_japan.1
+	title = SEA_japan.1.t
+	desc = SEA_japan.1.desc
+	picture = GFX_report_event_JAP_kodoha_coup_attempt_preparation 
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We want to go for the historical option :/
+	option = { 
+		name = SEA_japan.1.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = JAP_ai_behavior
+							option = DEFAULT
+						}
+					}
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = FASCIST
+					}
+					has_country_flag = JAP_AI_RANDOM_FASCIST
+				}
+			}
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_fail_historically_tt
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			retire_character = JAP_takahashi_korekiyo
+			set_country_flag = JAP_takahashi_korekiyo_was_killed
+		}
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_watanabe_protected_flag
+				}
+			}
+			retire_character = JAP_jotaro_watanabe
+			set_country_flag = JAP_jotaro_watanabe_was_killed
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		complete_national_focus = JAP_sea_purge_the_kodoha_faction
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+	# It's shougunating time heck yea
+	option = { 
+		name = SEA_japan.1.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_NEUTRALITY
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = NEUTRALITY
+					}
+				}
+			}
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_succeed_tt
+		
+		retire_character = JAP_takahashi_korekiyo
+		set_country_flag = JAP_takahashi_korekiyo_was_killed
+	
+		retire_character = JAP_jotaro_watanabe
+		set_country_flag = JAP_jotaro_watanabe_was_killed
+		
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+	# We have come to the conclusion that fascism = bad
+	option = { 
+		name = SEA_japan.1.c
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = COMMUNIST
+					}
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC
+					}
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
+					always = no
+				}
+			}
+		}
+		trigger = {
+			always = no
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			retire_character = JAP_takahashi_korekiyo
+			set_country_flag = JAP_takahashi_korekiyo_was_killed
+		}
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_watanabe_protected_flag
+				}
+			}
+			retire_character = JAP_jotaro_watanabe
+			set_country_flag = JAP_jotaro_watanabe_was_killed
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = JAP_watanabe_protected_flag
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			# Due to one of the other assassinations failing, they will go harder for Saionji Kinmochi instead, killing hnm. remove Kinmochi etc
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_country_leader_role = {
+			character = JAP_keisuke_okada
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1952.1.1.1"
+				traits = { JAP_moderate_politician_dem } 
+			}
+		}	
+
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			last_election = "1936.02.01"
+			election_frequency = 48
+		}	
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		custom_effect_tooltip = focus_effects_are_as_follows_tt
+		effect_tooltip = {
+			JAP_small_government_faction_gain = yes
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = JAP_okadas_military_purge_speech_tt
+		}
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+	# We have come to the conclusion that fascism = bad (non sea dem)
+	option = { 
+		name = SEA_japan.1.d
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = DEMOCRATIC
+					}
+				}
+			}
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			retire_character = JAP_takahashi_korekiyo
+			set_country_flag = JAP_takahashi_korekiyo_was_killed
+		}
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_watanabe_protected_flag
+				}
+			}
+			retire_character = JAP_jotaro_watanabe
+			set_country_flag = JAP_jotaro_watanabe_was_killed
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+	# We have come to the conclusion that fascism = bad (non sea com)
+	option = { 
+		name = SEA_japan.1.e
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					has_country_flag = JAP_AI_RANDOM_COMMUNIST
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = COMMUNIST
+					}
+				}
+			}
+		}
+
+		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_korekiyo_protected_flag
+				}
+			}
+			retire_character = JAP_takahashi_korekiyo
+			set_country_flag = JAP_takahashi_korekiyo_was_killed
+		}
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = JAP_watanabe_protected_flag
+				}
+			}
+			retire_character = JAP_jotaro_watanabe
+			set_country_flag = JAP_jotaro_watanabe_was_killed
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+
+		hidden_effect = {
+			set_country_flag = JAP_aizawas_trial_over_flag
+		}
+
+	}
+
+}

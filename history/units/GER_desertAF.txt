@@ -38,14 +38,6 @@
 				version_name = "Ju 87 D"
 			}
 			name = "270 Wing"
-			start_experience_factor = 0.9	
-			
-		small_plane_cas_airframe_2 =  {			
-				owner = "GER" 
-				amount = 100
-				version_name = "Ju 87 D"
-			}
-			name = "272 Wing"
 			start_experience_factor = 0.9
 	}
 }

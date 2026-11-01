@@ -1,0 +1,262 @@
+IHE_SOV_final_offensive_category = {
+	IHE_SOV_retake_leningrad = {
+		icon = GFX_decision_IHE_SOV_retake_leningrad
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			date > 1941.1.1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_available_tt
+				has_global_flag = axis_east_all_cities_taken
+			}
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_one_tt
+				NOT = { has_country_flag = IHE_SOV_final_offensive_taken }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = IHE_SOV_final_offensive_taken
+			add_timed_idea = { idea = IHE_SOV_final_offensive days = 60 }
+			every_army_leader = {
+				limit = { has_trait = panzer_leader is_field_marshal = no }
+				add_timed_unit_leader_trait = { trait = IHE_SOV_final_offensive_trait days = 60 }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 195
+						state = 847
+						state = 244
+						state = 208
+						state = 216
+						state = 264
+						state = 263
+						state = 146
+					}
+				}
+				add_dynamic_modifier = { modifier = IHE_SOV_final_offensive_target days = 90 }
+			}
+		}
+	}
+
+	IHE_SOV_retake_moscow = {
+		icon = GFX_decision_IHE_SOV_retake_moscow
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			date > 1941.1.1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_available_tt
+				has_global_flag = axis_east_all_cities_taken
+			}
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_one_tt
+				NOT = { has_country_flag = IHE_SOV_final_offensive_taken }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = IHE_SOV_final_offensive_taken
+			add_timed_idea = { idea = IHE_SOV_final_offensive days = 60 }
+			every_army_leader = {
+				limit = { has_trait = panzer_leader is_field_marshal = no }
+				add_timed_unit_leader_trait = { trait = IHE_SOV_final_offensive_trait days = 60 }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 219
+						state = 253
+						state = 254
+						state = 233
+						state = 205
+						state = 247
+						state = 248
+						state = 223
+					}
+				}
+				add_dynamic_modifier = { modifier = IHE_SOV_final_offensive_target days = 90 }
+			}
+		}
+	}
+
+	IHE_SOV_retake_stalingrad = {
+		icon = GFX_decision_IHE_SOV_retake_stalingrad
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			date > 1941.1.1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_available_tt
+				has_global_flag = axis_east_all_cities_taken
+			}
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_one_tt
+				NOT = { has_country_flag = IHE_SOV_final_offensive_taken }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = IHE_SOV_final_offensive_taken
+			add_timed_idea = { idea = IHE_SOV_final_offensive days = 60 }
+			every_army_leader = {
+				limit = { has_trait = panzer_leader is_field_marshal = no }
+				add_timed_unit_leader_trait = { trait = IHE_SOV_final_offensive_trait days = 60 }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 217
+						state = 237
+						state = 236
+						state = 829
+						state = 407
+						state = 406
+						state = 265
+						state = 245
+						state = 238
+					}
+				}
+				add_dynamic_modifier = { modifier = IHE_SOV_final_offensive_target days = 90 }
+			}
+		}
+	}
+
+	IHE_SOV_retake_baku = {
+		icon = GFX_decision_IHE_SOV_retake_baku
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			date > 1941.1.1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_available_tt
+				has_global_flag = axis_east_all_cities_taken
+			}
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_one_tt
+				NOT = { has_country_flag = IHE_SOV_final_offensive_taken }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = IHE_SOV_final_offensive_taken
+			add_timed_idea = { idea = IHE_SOV_final_offensive days = 60 }
+			every_army_leader = {
+				limit = { has_trait = panzer_leader is_field_marshal = no }
+				add_timed_unit_leader_trait = { trait = IHE_SOV_final_offensive_trait days = 60 }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 229
+						state = 419
+						state = 420
+						state = 266
+						state = 232
+						state = 821
+						state = 828
+						state = 235
+						state = 827
+						state = 231
+						state = 230
+						state = 826
+					}
+				}
+				add_dynamic_modifier = { modifier = IHE_SOV_final_offensive_target days = 90 }
+			}
+		}
+	}
+
+	IHE_SOV_retake_kazan = {
+		icon = GFX_decision_IHE_SOV_retake_kazan
+		ai_will_do = { factor = 0 }
+		cost = 0
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		visible = {
+			date > 1941.1.1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_available_tt
+				has_global_flag = axis_east_all_cities_taken
+			}
+			custom_trigger_tooltip = {
+				tooltip = IHE_SOV_final_offensive_one_tt
+				NOT = { has_country_flag = IHE_SOV_final_offensive_taken }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = IHE_SOV_final_offensive_taken
+			add_timed_idea = { idea = IHE_SOV_final_offensive days = 60 }
+			every_army_leader = {
+				limit = { has_trait = panzer_leader is_field_marshal = no }
+				add_timed_unit_leader_trait = { trait = IHE_SOV_final_offensive_trait days = 60 }
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 249
+						state = 256
+						state = 833
+						state = 400
+						state = 399
+						state = 250
+						state = 251
+						state = 651
+						state = 652
+					}
+				}
+				add_dynamic_modifier = { modifier = IHE_SOV_final_offensive_target days = 90 }
+			}
+		}
+	}
+}

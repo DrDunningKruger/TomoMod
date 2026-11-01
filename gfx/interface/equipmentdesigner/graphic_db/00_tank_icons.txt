@@ -531,6 +531,15 @@ FRA = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_8.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_6.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_5.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_4.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_3.dds"
 			}
 			models = {
 
@@ -543,6 +552,8 @@ FRA = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -556,6 +567,8 @@ FRA = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -568,6 +581,9 @@ FRA = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_3.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -579,6 +595,7 @@ FRA = {
 			icons = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_8.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_8.dds"
 			}
 			models = {
 
@@ -589,6 +606,7 @@ FRA = {
 		pool = {
 			icons = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
 			}
 			models = {
 
@@ -1454,6 +1472,15 @@ NOR = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_8.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_6.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_5.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_4.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_3.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_2.dds"
 			}
 			models = {
 
@@ -1466,6 +1493,8 @@ NOR = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -1479,6 +1508,8 @@ NOR = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -1491,6 +1522,9 @@ NOR = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_3.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -1512,6 +1546,7 @@ NOR = {
 		pool = {
 			icons = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
 			}
 			models = {
 
@@ -2290,6 +2325,15 @@ BEL = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_8.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_6.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_5.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_4.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_3.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_2.dds"
 			}
 			models = {
 
@@ -2302,6 +2346,8 @@ BEL = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -2315,6 +2361,8 @@ BEL = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_SPG_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -2327,6 +2375,9 @@ BEL = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_3.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_2.dds"
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_AT_1.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_3.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_2.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -2348,6 +2399,7 @@ BEL = {
 		pool = {
 			icons = {
 				"gfx/interface/technologies/FRA/TANKS/FRA_MT2_7.dds"
+				"gfx/interface/technologies/FRA/TANKS/FRA_MT3_9.dds"
 			}
 			models = {
 
@@ -3126,6 +3178,22 @@ ITA = {
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_3.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_1.dds"	
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_10.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_4.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_1.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_12.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_11.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_10.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_9.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_8.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_6.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_5.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_7.dds"
 			}
 			models = {
 
@@ -3141,6 +3209,12 @@ ITA = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"								
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPAAG_1.dds"		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -3153,6 +3227,7 @@ ITA = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"			
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPG_1.dds"	
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_9.dds"
 			}
 			models = {
 
@@ -3171,6 +3246,11 @@ ITA = {
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_3.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_1.dds"		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -3920,6 +4000,22 @@ IEA = {
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_3.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_1.dds"	
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_10.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_4.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_1.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_12.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_11.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_10.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_9.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_8.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_6.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_5.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_7.dds"
 			}
 			models = {
 
@@ -3935,6 +4031,12 @@ IEA = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"								
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPAAG_1.dds"		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -3947,6 +4049,7 @@ IEA = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"			
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_SPG_1.dds"	
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_9.dds"
 			}
 			models = {
 
@@ -3965,6 +4068,11 @@ IEA = {
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_3.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_2.dds"	
 				"gfx/interface/technologies/ITA/TANKS/ITA_MT2_AT_1.dds"		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_3.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_2.dds"
+				"gfx/interface/technologies/ITA/TANKS/ITA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -4732,6 +4840,26 @@ SOV = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_2.dds"				
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_1.dds"	
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_3.dds"					
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_20.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_19.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_18.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_17.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_16.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_15.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_14.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_13.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_12.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_11.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_10.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_9.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_7.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_1.dds"
 			}
 			models = {
 
@@ -4744,6 +4872,11 @@ SOV = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_3.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_2.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_1.dds"				
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -4758,6 +4891,9 @@ SOV = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -4770,6 +4906,12 @@ SOV = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -4780,6 +4922,7 @@ SOV = {
 		pool = {
 			icons = {
 		       "gfx/interface/technologies/SOV/TANKS/SOV_AMP_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_AMP_9.dds"
 			}
 			models = {
 
@@ -5670,6 +5813,26 @@ MON = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_2.dds"				
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_1.dds"	
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_3.dds"					
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_20.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_19.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_18.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_17.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_16.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_15.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_14.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_13.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_12.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_11.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_10.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_9.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_7.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_1.dds"
 			}
 			models = {
 
@@ -5682,6 +5845,11 @@ MON = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_3.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_2.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_1.dds"				
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -5696,6 +5864,9 @@ MON = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -5708,6 +5879,12 @@ MON = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -5718,6 +5895,7 @@ MON = {
 		pool = {
 			icons = {
 		       "gfx/interface/technologies/SOV/TANKS/SOV_AMP_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_AMP_9.dds"
 			}
 			models = {
 
@@ -6608,6 +6786,27 @@ CPL = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_2.dds"				
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_1.dds"	
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_3.dds"					
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_20.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_19.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_18.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_17.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_16.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_15.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_14.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_13.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_12.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_11.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_10.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_9.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_7.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_1.dds"
+				"gfx/interface/technologies/POL/TANKS/CPL_MT3_1.dds"
 			}
 			models = {
 
@@ -6620,6 +6819,11 @@ CPL = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_3.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_2.dds"					
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPAAG_1.dds"				
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -6634,6 +6838,9 @@ CPL = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_SPG_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -6646,6 +6853,12 @@ CPL = {
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_3.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_2.dds"
 				"gfx/interface/technologies/SOV/TANKS/SOV_MT2_AT_1.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_6.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_5.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_4.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_3.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_2.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -6656,6 +6869,7 @@ CPL = {
 		pool = {
 			icons = {
 		       "gfx/interface/technologies/SOV/TANKS/SOV_AMP_8.dds"
+				"gfx/interface/technologies/SOV/TANKS/SOV_AMP_9.dds"
 			}
 			models = {
 
@@ -7583,6 +7797,30 @@ USA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -7595,6 +7833,10 @@ USA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -7622,6 +7864,11 @@ USA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -7646,6 +7893,17 @@ USA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -8527,6 +8785,31 @@ HOL = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
 				"gfx/interface/technologies/HOL/TANKS/HOL_imp_medium_tank.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
+				"gfx/interface/technologies/HOL/TANKS/HOL_adv_medium_tank.dds"
 			}
 			models = {
 
@@ -8539,6 +8822,11 @@ HOL = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
+				"gfx/interface/technologies/HOL/TANKS/HOL_adv_medium_spaa.dds"
 			}
 			models = {
 
@@ -8567,6 +8855,12 @@ HOL = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
 				"gfx/interface/technologies/HOL/TANKS/HOL_imp_medium_spa.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
+				"gfx/interface/technologies/HOL/TANKS/HOL_adv_medium_spa.dds"
 			}
 			models = {
 
@@ -8591,6 +8885,18 @@ HOL = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
+				"gfx/interface/technologies/HOL/TANKS/HOL_adv_medium_spat.dds"
 			}
 			models = {
 
@@ -9439,6 +9745,30 @@ BRA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -9451,6 +9781,10 @@ BRA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -9478,6 +9812,11 @@ BRA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -9502,6 +9841,17 @@ BRA = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -10345,6 +10695,30 @@ MEX = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -10357,6 +10731,10 @@ MEX = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -10384,6 +10762,11 @@ MEX = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -10408,6 +10791,17 @@ MEX = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -11251,6 +11645,30 @@ CUB = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -11263,6 +11681,10 @@ CUB = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -11290,6 +11712,11 @@ CUB = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -11314,6 +11741,17 @@ CUB = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -12157,6 +12595,30 @@ PHI = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -12169,6 +12631,10 @@ PHI = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -12196,6 +12662,11 @@ PHI = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -12220,6 +12691,17 @@ PHI = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -13140,6 +13622,16 @@ ENG = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_4.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
 			}
 			models = {	
    			
@@ -13153,6 +13645,7 @@ ENG = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -13171,6 +13664,14 @@ ENG = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -13195,6 +13696,12 @@ ENG = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_10.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
 			}
 			models = {	
    			
@@ -13217,6 +13724,8 @@ ENG = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_2.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -14206,6 +14715,16 @@ NEP = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_4.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
 			}
 			models = {	
    			
@@ -14219,6 +14738,7 @@ NEP = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -14237,6 +14757,14 @@ NEP = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -14261,6 +14789,12 @@ NEP = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_10.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
 			}
 			models = {	
    			
@@ -14283,6 +14817,8 @@ NEP = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_2.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -15300,6 +15836,30 @@ AST = {
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_1.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
 			}
 			models = {	
    			
@@ -15314,6 +15874,10 @@ AST = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
 			}
 			models = {	
    			
@@ -15333,6 +15897,15 @@ AST = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"				
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
 			}
 			models = {	
    			
@@ -15358,6 +15931,17 @@ AST = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_AT_2.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
 			}
 			models = {	
    			
@@ -15381,6 +15965,7 @@ AST = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_33.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
 			}
 			models = {	
    			
@@ -16414,6 +16999,16 @@ NZL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_10.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
 			}
 			models = {	
    			
@@ -16427,6 +17022,7 @@ NZL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -16445,6 +17041,14 @@ NZL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_6.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
 			}
 			models = {	
    			
@@ -16470,6 +17074,12 @@ NZL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
 				"gfx/interface/technologies/ENG/TANKS/AST_MT2_AT_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_2.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
 			}
 			models = {	
    			
@@ -16492,6 +17102,7 @@ NZL = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_3.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -17417,6 +18028,30 @@ GRE = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_1.dds" 
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {
 
@@ -17429,6 +18064,10 @@ GRE = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_3.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_2.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -17456,6 +18095,11 @@ GRE = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_12.dds" 				
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_18.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_SPG_19.dds" 							
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -17480,6 +18124,17 @@ GRE = {
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_5.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_4.dds" 
 				"gfx/interface/technologies/USA/TANKS/USA_MT2_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -18400,6 +19055,16 @@ SAF = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_18.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
 			}
 			models = {	
    			
@@ -18413,6 +19078,7 @@ SAF = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -18431,6 +19097,14 @@ SAF = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_9.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
 			}
 			models = {	
    			
@@ -18455,6 +19129,12 @@ SAF = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_10.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
 			}
 			models = {	
    			
@@ -18477,6 +19157,8 @@ SAF = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_31.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -19471,6 +20153,16 @@ RAJ = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_11.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
 			}
 			models = {	
    			
@@ -19484,6 +20176,7 @@ RAJ = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -19502,6 +20195,14 @@ RAJ = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -19526,6 +20227,12 @@ RAJ = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_12.dds"				
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
 			}
 			models = {	
    			
@@ -19548,6 +20255,8 @@ RAJ = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_2.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -20534,6 +21243,16 @@ CAN = {
 				"gfx/interface/technologies/ENG/TANKS/CAN_MT2_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/CAN_MT2_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/CAN_MT2_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_10.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_9.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_4.dds"
 			}
 			models = {	
    			
@@ -20548,6 +21267,7 @@ CAN = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_4.dds"					
 				"gfx/interface/technologies/ENG/TANKS/CAN_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -20566,6 +21286,14 @@ CAN = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_8.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_8.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_7.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_5.dds"
 			}
 			models = {	
    			
@@ -20590,6 +21318,12 @@ CAN = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_12.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_11.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_10.dds"					
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_6.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_5.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_4.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_3.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_1.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_AT_2.dds"
 			}
 			models = {	
    			
@@ -20612,6 +21346,8 @@ CAN = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/CAN_MT2_4.dds"	
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ENG/TANKS/ENG_MT3_SPG_1.dds"
 			}
 			models = {	
    			
@@ -21440,6 +22176,19 @@ JAP = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_13.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_12.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_8.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_7.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_6.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_5.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_2.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_3.dds"
 			}
 			models = {
 
@@ -21452,6 +22201,7 @@ JAP = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -21468,6 +22218,9 @@ JAP = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_6.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_4.dds"				
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
 			}
 			models = {
 
@@ -21482,6 +22235,7 @@ JAP = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -21504,6 +22258,7 @@ JAP = {
 			icons = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
 			}
 			models = {
 
@@ -22224,6 +22979,19 @@ SIA = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_13.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_12.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_8.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_7.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_6.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_5.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_2.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_3.dds"
 			}
 			models = {
 
@@ -22236,6 +23004,7 @@ SIA = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -22252,6 +23021,9 @@ SIA = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_6.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_4.dds"				
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
 			}
 			models = {
 
@@ -22266,6 +23038,7 @@ SIA = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -22288,6 +23061,7 @@ SIA = {
 			icons = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
 			}
 			models = {
 
@@ -23005,6 +23779,19 @@ MAN = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_13.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_12.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_8.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_7.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_6.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_5.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_2.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_3.dds"
 			}
 			models = {
 
@@ -23017,6 +23804,7 @@ MAN = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPAAG_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -23033,6 +23821,9 @@ MAN = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_6.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_SPG_4.dds"				
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_11.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_9.dds"
 			}
 			models = {
 
@@ -23047,6 +23838,7 @@ MAN = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_3.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_2.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_AT_1.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -23069,6 +23861,7 @@ MAN = {
 			icons = {
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_5.dds"
 				"gfx/interface/technologies/JAP/TANKS/JAP_MT2_4.dds"
+				"gfx/interface/technologies/JAP/TANKS/JAP_MT3_10.dds"
 			}
 			models = {
 
@@ -23918,9 +24711,26 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_2.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_1.dds"	
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_14.dds"					
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_13.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_12.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_11.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_10.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_7.dds"
 			}
 			models = {
-
+				GER_medium_armor_entity
+				GER_medium_armor_2_entity
 			}			
 		}
 	}	
@@ -23935,6 +24745,15 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"	
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_8.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_7.dds"					
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_7.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -23950,6 +24769,12 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_3.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_1.dds"
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_7.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
 			}
 			models = {
 
@@ -23973,6 +24798,14 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"							
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_1.dds"	
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_2.dds"					
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_7.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -23983,6 +24816,7 @@ GER = {
 		pool = {
 			icons = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_8.dds"					
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_1.dds"
 			}
 			models = {
 
@@ -23996,6 +24830,7 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_28.dds"					
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_27.dds"					
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_26.dds"					
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_3.dds"
 			}
 			models = {
 
@@ -24024,7 +24859,7 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT3_7.dds"					
 			}
 			models = {	
-			
+				GER_medium_armor_2_entity
 			}			
 		}
 	}	
@@ -24182,7 +25017,8 @@ GER = {
 					"gfx/interface/technologies/GER/TANKS/GER_HT2_9.dds"						
 			}	
 			models = {
-
+				GER_heavy_armor_entity
+				GER_heavy_armor_2_entity
 			}
 		}
 	}	
@@ -24272,7 +25108,7 @@ GER = {
 				"gfx/interface/technologies/GER/TANKS/GER_HT3_1.dds"		
 			}	
 			models = {		    
-		
+				GER_heavy_armor_2_entity
 			}
 
 		}
@@ -24883,6 +25719,15 @@ ROM = {
 				"gfx/interface/technologies/ROM/TANKS/ROM_MT2_1.dds"				
 				"gfx/interface/technologies/ROM/TANKS/ROM_MT2_3.dds"				
 				"gfx/interface/technologies/ROM/TANKS/ROM_MT2_2.dds"				
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_11.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_10.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_1.dds"
 			}
 			models = {
 
@@ -24897,6 +25742,14 @@ ROM = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_2.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -24907,6 +25760,10 @@ ROM = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -24924,6 +25781,14 @@ ROM = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_5.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_1.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_7.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_1.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_2.dds"
 			}
 			models = {
 
@@ -24944,6 +25809,7 @@ ROM = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/ROM/TANKS/ROM_MT2_1.dds"				
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
 			}
 			models = {
 
@@ -25748,6 +26614,17 @@ HUN = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_24.dds"					
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_20.dds"			
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_1.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_13.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_12.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_7.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_3.dds"
+				"gfx/interface/technologies/HUN/TANKS/HUN_MT3_1.dds"
 			}
 			models = {
 
@@ -25763,6 +26640,12 @@ HUN = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"								
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPAAG_2.dds"				
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPAAG_1.dds"			
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_2.dds"
 			}
 			models = {
 
@@ -25776,6 +26659,9 @@ HUN = {
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPG_3.dds"				
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPG_2.dds"				
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPG_1.dds"		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -25793,6 +26679,10 @@ HUN = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"					
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_AT_2.dds"				
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_AT_1.dds"			
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_2.dds"
 			}
 			models = {
 
@@ -25803,6 +26693,7 @@ HUN = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_1.dds"			
+				"gfx/interface/technologies/HUN/TANKS/HUN_MT3_1.dds"
 			}
 			models = {
 
@@ -25813,6 +26704,7 @@ HUN = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT1_9.dds"			
+				"gfx/interface/technologies/HUN/TANKS/HUN_MT3_1.dds"
 			}
 			models = {
 
@@ -26644,6 +27536,16 @@ BUL = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_10.dds"				
 				"gfx/interface/technologies/BUL/TANKS/BUL_MT2_1.dds"				
 				"gfx/interface/technologies/BUL/TANKS/BUL_MT2_2.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_13.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_12.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_7.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_3.dds"
 			}
 			models = {
 
@@ -26656,6 +27558,12 @@ BUL = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_2.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_2.dds"
 			}
 			models = {
 
@@ -26669,6 +27577,10 @@ BUL = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_4.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"								
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPG_1.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -26681,6 +27593,10 @@ BUL = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_6.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_5.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_2.dds"
 			}
 			models = {
 
@@ -26691,6 +27607,7 @@ BUL = {
 		pool = {
 			icons = {		
 				"gfx/interface/technologies/GER/TANKS/GER_AMP_2.dds"										
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
 			}
 			models = {
 
@@ -26702,6 +27619,7 @@ BUL = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_11.dds"										
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_3.dds"
 			}
 			models = {
 
@@ -27534,6 +28452,16 @@ FIN = {
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_8.dds"					
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_7.dds"	
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_1.dds"				
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_10.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_9.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_8.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_7.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_6.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_5.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_4.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_3.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_2.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_1.dds"
 			}
 			models = {
 
@@ -27545,6 +28473,8 @@ FIN = {
 			icons = {							
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_SPAAG_2.dds"							
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_SPAAG_1.dds"							
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_SPAAG_1.dds"
 			}
 			models = {
 
@@ -27555,6 +28485,7 @@ FIN = {
 		pool = {
 			icons = {						
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_SPG_1.dds"							
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -27566,6 +28497,10 @@ FIN = {
 			icons = {						
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_AT_2.dds"							
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_AT_1.dds"							
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_AT_4.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_AT_1.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_AT_2.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_AT_3.dds"
 			}
 			models = {
 
@@ -27586,6 +28521,8 @@ FIN = {
 		pool = {
 			icons = {							
 				"gfx/interface/technologies/FIN/TANKS/FIN_MT2_7.dds"								
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_2.dds"
+				"gfx/interface/technologies/FIN/TANKS/FIN_MT3_8.dds"
 			}
 			models = {
 
@@ -28439,6 +29376,16 @@ YUG = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_10.dds"				
 				"gfx/interface/technologies/BUL/TANKS/BUL_MT2_1.dds"				
 				"gfx/interface/technologies/BUL/TANKS/BUL_MT2_2.dds"				
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_15.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_13.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_12.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_7.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_3.dds"
 			}
 			models = {
 
@@ -28451,6 +29398,12 @@ YUG = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_2.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_2.dds"
 			}
 			models = {
 
@@ -28464,6 +29417,10 @@ YUG = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_4.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"								
 				"gfx/interface/technologies/HUN/TANKS/HUN_MT2_SPG_1.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_6.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_2.dds"
 			}
 			models = {
 
@@ -28476,6 +29433,10 @@ YUG = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_6.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_5.dds"								
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"								
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_2.dds"
 			}
 			models = {
 
@@ -28486,6 +29447,7 @@ YUG = {
 		pool = {
 			icons = {		
 				"gfx/interface/technologies/GER/TANKS/GER_AMP_2.dds"										
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_16.dds"
 			}
 			models = {
 
@@ -28497,6 +29459,7 @@ YUG = {
 		pool = {
 			icons = {			
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_11.dds"										
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_3.dds"
 			}
 			models = {
 
@@ -29347,6 +30310,15 @@ SPR = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_13.dds"				
 				"gfx/interface/technologies/ROM/TANKS/ROM_MT2_1.dds"	
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_17.dds"					
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_14.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_11.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_10.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_9.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_4.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_1.dds"
 			}
 			models = {
 
@@ -29361,6 +30333,14 @@ SPR = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_2.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPAAG_1.dds"				
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPAAG_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_8.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPAAG_3.dds"
 			}
 			models = {
 
@@ -29372,6 +30352,10 @@ SPR = {
 			icons = {							
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_4.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_SPG_2.dds"				
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_SPG_1.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_SPG_1.dds"
 			}
 			models = {
 
@@ -29389,6 +30373,14 @@ SPR = {
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_5.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_3.dds"				
 				"gfx/interface/technologies/GER/TANKS/GER_MT2_AT_1.dds"					
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_3.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_2.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_7.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_6.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_5.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_3.dds"
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_AT_2.dds"
+				"gfx/interface/technologies/ROM/TANKS/ROM_MT3_AT_1.dds"
 			}
 			models = {
 
@@ -29409,6 +30401,7 @@ SPR = {
 		pool = {
 			icons = {	
                 "gfx/interface/technologies/GER/TANKS/GER_MT2_13.dds"																		
+				"gfx/interface/technologies/GER/TANKS/GER_MT3_3.dds"
 			}
 			models = {
 
@@ -30197,6 +31190,30 @@ POL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_4.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_1.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_24.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_23.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_22.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_21.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_20.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_19.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_18.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_17.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_16.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_15.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_14.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_13.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_12.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_1.dds"
 			}
 			models = {	
    			
@@ -30210,6 +31227,10 @@ POL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_3.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPAAG_1.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPAAG_1.dds"
 			}
 			models = {	
    			
@@ -30228,6 +31249,11 @@ POL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_3.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_2.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_SPG_1.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_1.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_SPG_2.dds"
 			}
 			models = {	
    			
@@ -30252,6 +31278,17 @@ POL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_10.dds"
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_9.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_AT_8.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_11.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_10.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_9.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_8.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_7.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_6.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_5.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_4.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_3.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_2.dds"
+				"gfx/interface/technologies/USA/TANKS/USA_MT3_AT_1.dds"
 			}
 			models = {	
    			
@@ -30264,6 +31301,7 @@ POL = {
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_19.dds"				
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_14.dds"	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_13.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT2_29.dds"
 			}
 			models = {	
    			
@@ -30274,6 +31312,7 @@ POL = {
 		pool = {
 			icons = {	
 				"gfx/interface/technologies/ENG/TANKS/ENG_MT2_2.dds"	
+				"gfx/interface/technologies/USA/TANKS/USA_MT2_30.dds"
 			}
 			models = {	
    			

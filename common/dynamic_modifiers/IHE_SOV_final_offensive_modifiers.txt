@@ -1,0 +1,7 @@
+IHE_SOV_final_offensive_target = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_SOV_invaders_must_die
+
+	land_bunker_effectiveness_factor = -0.75
+}

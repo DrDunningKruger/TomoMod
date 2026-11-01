@@ -1,0 +1,58 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = SEA_japan_news_events
+
+news_event = {
+	id = SEA_japan_news_events.01
+	title = SEA_japan_news_events.01.t
+	desc = SEA_japan_news_events.01.desc
+	picture = GFX_news_event_japanese_army_parade
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = SEA_japan_news_events.01.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.01.b
+		trigger = {
+			NOT = {
+				original_tag = JAP
+			}
+		}
+	}
+	
+}
+
+news_event = {
+	id = SEA_japan_news_events.02
+	title = SEA_japan_news_events.02.t
+	desc = SEA_japan_news_events.02.desc
+	picture = GFX_news_event_JAP_greater_east_asia_conference
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = SEA_japan_news_events.02.a
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = SEA_japan_news_events.02.b
+		trigger = {
+			NOT = {
+				original_tag = JAP
+			}
+		}
+	}
+	
+}

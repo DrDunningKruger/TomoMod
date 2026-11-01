@@ -1066,7 +1066,31 @@ characters = {
 			logistics_skill = 4
 			legacy_id = 1210
 		}
-	}	
+	}
+
+	BUL_generic_commando_advisor = {
+		name = "Petar Kostadinov"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_generic_commando_advisor
+			ledger = army
+			allowed = {
+				original_tag = BUL
+			}
+			traits = {
+				army_commando_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
 }
 

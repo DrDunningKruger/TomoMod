@@ -875,58 +875,17 @@ foreign_politics = {
 			factor = 10000
 		}
 
-		days_mission_timeout = 75
+		days_mission_timeout = 45
 		is_good = no
 		fire_only_once = yes
 
 		complete_effect = {
 		ITA = {
         add_timed_idea = { idea = ITA_african_disaster days = 210 }
-		}	
-		GER = {
-        add_timed_idea = { idea = ITA_african_disaster days = 210 }
 		}
 		}
 	}
 
-	ENG_holdafrica = {
-	
-		activation = {
-        ITA = { has_war = yes }
-		}
-
-		available = {
-		NOT = {
-		ENG = {
-		OR = {
-		has_full_control_of_state = 452
-		has_full_control_of_state = 839
-		has_full_control_of_state = 447
-		has_full_control_of_state = 446
-		has_full_control_of_state = 453
-		has_full_control_of_state = 454
-		has_full_control_of_state = 455
-		}
-		}
-		}
-		}
-
-		visible = {
-	
-		}
-
-		ai_will_do = {
-			factor = 10000
-		}
-
-		days_mission_timeout = 150
-		is_good = no
-		fire_only_once = yes
-
-		complete_effect = {
-		}
-	}
-	
 	remove_dday_shit = {
 	
 		activation = {
@@ -1867,85 +1826,85 @@ foreign_politics = {
 					395 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 15
+							level = 10
 						}
 					}	
 					393 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 10
+							level = 7
 						}
 					}
 					375 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 10
+							level = 7
 						}
 					}
 					369 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 5
+							level = 3
 						}
 					}
 					357 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 12
+							level = 8
 						}
 					}
 					358 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 13
+							level = 9
 						}
 					}	
 					360 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 12
+							level = 8
 						}
 					}	
 					373 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 3
+							level = 2
 						}
 					}	
 					369 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 3
+							level = 2
 						}
 					}
 					378 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 2
+							level = 1
 						}
 					}
 					367 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 2
+							level = 1
 						}
 					}		
 					261 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 4
+							level = 2
 						}
 					}	
 					383 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 3
+							level = 2
 						}
 					}	
 					392 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 2
+							level = 1
 						}
 					}
 					394 = { 
@@ -1963,31 +1922,31 @@ foreign_politics = {
 					386 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 2
+							level = 1
 						}
 					}
 					385 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 3
+							level = 2
 						}
 					}
 					368 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 3
+							level = 2
 						}
 					}
 					396 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 5
+							level = 3
 						}
 					}
 					359 = { 
 						remove_building = {
 							type = industrial_complex
-							level = 5
+							level = 3
 						}
 					}
 
@@ -2035,271 +1994,6 @@ foreign_politics = {
 		}
 	}	
 
-
-    JAP_fistisland = {
-    
-        allowed = {
-            tag = SWI
-        }
-
-        available = {
-            tag = SWI    
-            JAP = {
-            OR = {            
-            NOT = { has_full_control_of_state = 524 }
-            NOT = { has_full_control_of_state = 526 }
-            NOT = { has_full_control_of_state = 645 }
-            }
-            }
-        }
-
-        visible = {
-            tag = SWI
-        }
-
-        fire_only_once = yes
-
-        ai_will_do = {
-            factor = 10000
-        }
-
-        complete_effect = {
-            if = {
-                limit = { 528 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                528 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                528 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }    
-			if = {
-                limit = { 529 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                529 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                529 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 530 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                530 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                530 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 531 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                531 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                531 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 532 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                532 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                532 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 533 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                533 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                533 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 534 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                534 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                534 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 535 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                535 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                535 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 536 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                536 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                536 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 537 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                537 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                537 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-			if = {
-                limit = { 282 = { has_dynamic_modifier = { modifier = JAP_mainland }} }
-                282 = { remove_dynamic_modifier = { modifier = JAP_mainland }}
-                282 = { add_dynamic_modifier = { modifier = JAP_mainland2 } }   
-            }   
-        }
-    }   
-
-	JAP_secondland = {
-    
-        allowed = {
-            tag = SWI
-        }
-
-        available = {
-            tag = SWI 	
-            JAP = {
-            OR = {
-            AND = {
-            NOT = { has_full_control_of_state = 524 }
-            NOT = { has_full_control_of_state = 526 }			
-			}     
-			AND = {
-            NOT = { has_full_control_of_state = 526 }
-            NOT = { has_full_control_of_state = 645 }			
-			}			
-			AND = {
-            NOT = { has_full_control_of_state = 524 }
-            NOT = { has_full_control_of_state = 645 }			
-			}
-            }
-            }
-        }
-
-        visible = {
-            tag = SWI
-        }
-
-        fire_only_once = yes
-
-        ai_will_do = {
-            factor = 10000
-        }
-
-        complete_effect = {  
-            if = {
-                limit = { 528 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                528 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                528 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 529 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                529 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                529 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 530 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                530 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                530 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 531 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                531 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                531 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 532 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                532 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                532 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 535 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                535 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                535 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 534 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                534 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                534 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 282 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                282 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                282 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 533 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                533 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                533 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 536 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                536 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                536 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 537 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                537 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                537 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }       
-			if = {
-                limit = { 555 = { has_dynamic_modifier = { modifier = JAP_mainland2 }}}
-                555 = { remove_dynamic_modifier = { modifier = JAP_mainland2 }}
-                555 = { add_dynamic_modifier = { modifier = JAP_mainland3 }}
-            } 
-        }
-    }
-
-	JAP_thirdland = {
-    
-        allowed = {
-            tag = SWI
-        }
-		
-        available = {
-            tag = SWI    
-            JAP = {
-            AND = {            
-            NOT = { has_full_control_of_state = 524 }
-            NOT = { has_full_control_of_state = 526 }
-            NOT = { has_full_control_of_state = 645 }
-            }
-            }
-        }
-
-        visible = {
-            tag = SWI
-        }
-
-        fire_only_once = yes
-
-        ai_will_do = {
-            factor = 10000
-        }
-
-        complete_effect = {
-            if = {
-                limit = { 528 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                528 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 529 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                529 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 530 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                530 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 531 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                531 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 532 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                532 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 535 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                535 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 534 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                534 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 282 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                282 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }     
-			if = {
-                limit = { 533 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                533 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }	
-			if = {
-                limit = { 536 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                536 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }		
-			if = {
-                limit = { 537 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                537 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }	
-			if = {
-                limit = { 555 = { has_dynamic_modifier = { modifier = JAP_mainland3 }}}
-                555 = { remove_dynamic_modifier = { modifier = JAP_mainland3 }}
-            }
-        }
-    }
 	
 	radar_allies_1 = {
 	

@@ -2939,6 +2939,7 @@ on_actions = {
 					modifier = AXIS_Africa_modifier days = 2000 scope = FRA
 				}
 			}
+			set_variable = { global.AXIS_Africa_start_day = global.num_days }
 			#
 			FRA = {
 				add_ideas = passive_naval_doctrine_research_speed	

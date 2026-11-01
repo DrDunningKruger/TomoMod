@@ -1,11 +1,11 @@
 on_actions = {
 	on_weekly = {
 		effect = {
-			# RKKA Reserves: 50 divisions spawn at 1.25m, 2.5m and 3.75m Soviet casualties (replaces defensiveline focuses)
+			# RKKA Reserves: 40 divisions spawn every 1.5m Soviet casualties, up to 6 waves (1.5m ... 9m) (replaces defensiveline focuses)
 			SOV = {
 				if = {
 					limit = {
-						casualties_k > 1250
+						casualties_k > 1500
 						NOT = { has_country_flag = SOV_rkka_reserves_1 }
 					}
 					set_country_flag = SOV_rkka_reserves_1
@@ -15,7 +15,7 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						casualties_k > 2500
+						casualties_k > 3000
 						has_country_flag = SOV_rkka_reserves_1
 						NOT = { has_country_flag = SOV_rkka_reserves_2 }
 					}
@@ -35,7 +35,7 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						casualties_k > 3750
+						casualties_k > 4500
 						has_country_flag = SOV_rkka_reserves_2
 						NOT = { has_country_flag = SOV_rkka_reserves_3 }
 					}
@@ -52,6 +52,36 @@ on_actions = {
 						add_ideas = nkvd_3
 					}
 					country_event = { id = ihe_sov_reserves.3 }
+				}
+				if = {
+					limit = {
+						casualties_k > 6000
+						has_country_flag = SOV_rkka_reserves_3
+						NOT = { has_country_flag = SOV_rkka_reserves_4 }
+					}
+					set_country_flag = SOV_rkka_reserves_4
+					load_oob = "SOV_defensiveline3"
+					country_event = { id = ihe_sov_reserves.4 }
+				}
+				if = {
+					limit = {
+						casualties_k > 7500
+						has_country_flag = SOV_rkka_reserves_4
+						NOT = { has_country_flag = SOV_rkka_reserves_5 }
+					}
+					set_country_flag = SOV_rkka_reserves_5
+					load_oob = "SOV_defensiveline3"
+					country_event = { id = ihe_sov_reserves.5 }
+				}
+				if = {
+					limit = {
+						casualties_k > 9000
+						has_country_flag = SOV_rkka_reserves_5
+						NOT = { has_country_flag = SOV_rkka_reserves_6 }
+					}
+					set_country_flag = SOV_rkka_reserves_6
+					load_oob = "SOV_defensiveline3"
+					country_event = { id = ihe_sov_reserves.6 }
 				}
 			}
 		}

@@ -66,6 +66,7 @@ if = {
 	}
 }
 
+add_ideas = PACIFIC_ALLIES_6
 if = {
 	limit = { has_dlc = "Together for Victory" }
 

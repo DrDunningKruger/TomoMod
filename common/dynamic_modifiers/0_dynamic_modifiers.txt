@@ -34,13 +34,21 @@ HONK_HONK = { #STATE MODIFIER
     local_supplies_for_controller = 3
 }
 
+SIEGE_OF_LENINGRAD = { #STATE MODIFIER
+    enable = { always = yes }
+
+    icon = GFX_modifiers_SOV_factory_worker_militias
+
+    local_supplies_for_controller = 1.5
+}
+
 AFRICA_SPEED = { #STATE MODIFIER
     enable = { always = yes }
 
     icon = GFX_modifiers_generic_military_industry
     
     army_speed_factor = -0.33
-	army_strength_factor = 0.2
+	army_strength_factor = 0.4
 }
 
 ENG_dday = { #STATE MODIFIER
@@ -56,24 +64,6 @@ JAP_mainland = { #STATE MODIFIER
 
     icon = GFX_modifiers_SOV_factory_worker_militias
     
-    army_core_defence_factor = 0.6
-	army_core_attack_factor = 0.6
-}
-
-JAP_mainland2 = { #STATE MODIFIER
-    enable = { always = yes }
-
-    icon = GFX_modifiers_SOV_factory_worker_militias
-    
-    army_core_defence_factor = 0.4
-	army_core_attack_factor = 0.4
-}
-
-JAP_mainland3 = { #STATE MODIFIER
-    enable = { always = yes }
-
-    icon = GFX_modifiers_SOV_factory_worker_militias
-    
     army_core_defence_factor = 0.2
 	army_core_attack_factor = 0.2
 }
@@ -83,6 +73,34 @@ AXIS_Africa_modifier = { #State Modifier
 	icon = GFX_decision_generic_mountain_fortification
 	army_attack_factor = -0.5
 	army_defence_factor = -0.5
+}
+
+AXIS_Africa_modifier_40 = { #State Modifier
+	enable = { always = yes }
+	icon = GFX_decision_generic_mountain_fortification
+	army_attack_factor = -0.4
+	army_defence_factor = -0.4
+}
+
+AXIS_Africa_modifier_30 = { #State Modifier
+	enable = { always = yes }
+	icon = GFX_decision_generic_mountain_fortification
+	army_attack_factor = -0.3
+	army_defence_factor = -0.3
+}
+
+AXIS_Africa_modifier_20 = { #State Modifier
+	enable = { always = yes }
+	icon = GFX_decision_generic_mountain_fortification
+	army_attack_factor = -0.2
+	army_defence_factor = -0.2
+}
+
+AXIS_Africa_modifier_10 = { #State Modifier
+	enable = { always = yes }
+	icon = GFX_decision_generic_mountain_fortification
+	army_attack_factor = -0.1
+	army_defence_factor = -0.1
 }
 
 AXIS_Sealion_modifier = { #State Modifier
@@ -1124,9 +1142,9 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
 	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
 	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
-	supply_consumption_factor = SOV_the_red_army_supply_consumption_factor #-0.05 -> Military Reorganization
 	army_attack_factor = SOV_the_red_army_army_attack_factor #0.05 -> The Glory of the Red Army
 	army_defence_factor = SOV_the_red_army_army_defence_factor #0.05 -> The Glory of the Red Army
+	custom_modifier_tooltip = SOV_red_army_cheap_guns_tt
 }
 
 SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
@@ -1163,9 +1181,9 @@ SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
 	dig_in_speed_factor = SOV_the_red_army_dig_in_speed_factor #0.05 -> Experts in Camouflage
 	operative_slot  = SOV_the_red_army_operative_slot  #1 -> Organization of the Partisans
 	max_command_power_mult = SOV_the_red_army_max_command_power_mult #0.1 -> Depoliticize the Military
-	supply_consumption_factor = SOV_the_red_army_supply_consumption_factor #-0.05 -> Military Reorganization
 	army_attack_factor = SOV_the_red_army_army_attack_factor #0.05 -> The Glory of the Red Army
 	army_defence_factor = SOV_the_red_army_army_defence_factor #0.05 -> The Glory of the Red Army
+	custom_modifier_tooltip = SOV_red_army_cheap_guns_tt
 }
 SOV_second_five_year_plan_dynamic_modifier = { #NATIONAL SPIRIT
 	enable = { always = yes }

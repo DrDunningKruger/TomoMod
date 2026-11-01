@@ -2582,15 +2582,18 @@ technologies = {
 		xp_unlock_cost = 200
 
 		# Bonuses copied from delay
-		motorized = {
+		infantry = {
 			max_organisation = 10
+		}
+		motorized = {
+			max_organisation = 15
 
 		}
 		mechanized = {
-			max_organisation = 10
+			max_organisation = 15
 		}
 		amphibious_mechanized = {
-			max_organisation = 10
+			max_organisation = 15
 		}
 
 		enable_tactic = tactic_delay
@@ -2765,11 +2768,6 @@ technologies = {
 
 		category_all_armor = {
 			default_morale = 0.2
-		}
-
-		# -10% infantry equipment IC cost (techs can't modify equipment cost directly, so it's granted as an idea)
-		on_research_complete = {
-			add_ideas = SOV_deep_operations_rifles
 		}
 
 		path = {
@@ -2951,35 +2949,6 @@ technologies = {
 		}
 		category_tanks = {
 			max_organisation = 2
-		}
-
-		# Infantry recovery rate: foot infantry only (no motorized, mechanized or motorized paratroopers)
-		infantry = {
-			default_morale = 0.15
-		}
-		bicycle_battalion = {
-			default_morale = 0.1
-		}
-		militia = {
-			default_morale = 0.1
-		}
-		marine = {
-			default_morale = 0.1
-		}
-		mountaineers = {
-			default_morale = 0.1
-		}
-		paratrooper = {
-			default_morale = 0.1
-		}
-		penal_battalion = {
-			default_morale = 0.1
-		}
-		jaeger = {
-			default_morale = 0.1
-		}
-		desertinfantry = {
-			default_morale = 0.1
 		}
 
 		path = {

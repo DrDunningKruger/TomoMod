@@ -1,0 +1,234 @@
+######
+###### PACIFIC WAR
+######
+
+PACIFIC_is_zone = {
+	OR = {
+		# Sumatra
+		state = 672	# Sumatra
+		# Borneo
+		state = 333	# North Borneo
+		state = 334	# Kalimantan
+		# Java
+		state = 335	# Java
+		state = 667	# Lesser Sunda Islands
+		# New Guinea
+		state = 523	# Papua
+		state = 669	# West Papua
+		# Philippines
+		state = 327	# Manila
+		state = 623	# Luzon
+		state = 624	# Central islands
+		state = 625	# Samar
+		state = 626	# Palawan
+		state = 627	# Mindanao
+		state = 628	# Cebu
+		# Bismarck Sea
+		state = 684	# Caroline Islands
+		state = 737	# Bismarck
+		# South West Pacific
+		state = 632	# Wake Island
+		state = 633	# Marshall Islands
+		state = 639	# Gilbert Islands
+		state = 642	# Phoenix Island
+		state = 643	# Ellice Islands
+		state = 725	# Nauru
+		# Hawaii
+		state = 629	# Hawaii
+		# Western Pacific
+		state = 638	# Guam
+		state = 645	# Iwo Jima
+		state = 646	# Saipan
+		state = 648	# Marcus Island
+		# Banda Sea
+		state = 668	# The Moluccas
+		state = 673	# Sulawesi
+		# Malaya
+		state = 336	# Singapore
+	}
+}
+
+PACIFIC_allied_holds_sumatra = {
+	672 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_sumatra = {
+	672 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_borneo = {
+	333 = { controller = { PACIFIC_is_allied_side = yes } }
+	334 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_borneo = {
+	333 = { controller = { PACIFIC_is_japan_side = yes } }
+	334 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_java = {
+	335 = { controller = { PACIFIC_is_allied_side = yes } }
+	667 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_java = {
+	335 = { controller = { PACIFIC_is_japan_side = yes } }
+	667 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_new_guinea = {
+	523 = { controller = { PACIFIC_is_allied_side = yes } }
+	669 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_new_guinea = {
+	523 = { controller = { PACIFIC_is_japan_side = yes } }
+	669 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_philippines = {
+	327 = { controller = { PACIFIC_is_allied_side = yes } }
+	623 = { controller = { PACIFIC_is_allied_side = yes } }
+	624 = { controller = { PACIFIC_is_allied_side = yes } }
+	625 = { controller = { PACIFIC_is_allied_side = yes } }
+	626 = { controller = { PACIFIC_is_allied_side = yes } }
+	627 = { controller = { PACIFIC_is_allied_side = yes } }
+	628 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_philippines = {
+	327 = { controller = { PACIFIC_is_japan_side = yes } }
+	623 = { controller = { PACIFIC_is_japan_side = yes } }
+	624 = { controller = { PACIFIC_is_japan_side = yes } }
+	625 = { controller = { PACIFIC_is_japan_side = yes } }
+	626 = { controller = { PACIFIC_is_japan_side = yes } }
+	627 = { controller = { PACIFIC_is_japan_side = yes } }
+	628 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_bismarck_sea = {
+	684 = { controller = { PACIFIC_is_allied_side = yes } }
+	737 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_bismarck_sea = {
+	684 = { controller = { PACIFIC_is_japan_side = yes } }
+	737 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_south_west_pacific = {
+	632 = { controller = { PACIFIC_is_allied_side = yes } }
+	633 = { controller = { PACIFIC_is_allied_side = yes } }
+	639 = { controller = { PACIFIC_is_allied_side = yes } }
+	642 = { controller = { PACIFIC_is_allied_side = yes } }
+	643 = { controller = { PACIFIC_is_allied_side = yes } }
+	725 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_south_west_pacific = {
+	632 = { controller = { PACIFIC_is_japan_side = yes } }
+	633 = { controller = { PACIFIC_is_japan_side = yes } }
+	639 = { controller = { PACIFIC_is_japan_side = yes } }
+	642 = { controller = { PACIFIC_is_japan_side = yes } }
+	643 = { controller = { PACIFIC_is_japan_side = yes } }
+	725 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_hawaii = {
+	629 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_hawaii = {
+	629 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_western_pacific = {
+	638 = { controller = { PACIFIC_is_allied_side = yes } }
+	645 = { controller = { PACIFIC_is_allied_side = yes } }
+	646 = { controller = { PACIFIC_is_allied_side = yes } }
+	648 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_western_pacific = {
+	638 = { controller = { PACIFIC_is_japan_side = yes } }
+	645 = { controller = { PACIFIC_is_japan_side = yes } }
+	646 = { controller = { PACIFIC_is_japan_side = yes } }
+	648 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_banda_sea = {
+	668 = { controller = { PACIFIC_is_allied_side = yes } }
+	673 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_banda_sea = {
+	668 = { controller = { PACIFIC_is_japan_side = yes } }
+	673 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_allied_holds_malaya = {
+	336 = { controller = { PACIFIC_is_allied_side = yes } }
+}
+
+PACIFIC_japan_holds_malaya = {
+	336 = { controller = { PACIFIC_is_japan_side = yes } }
+}
+
+PACIFIC_is_allied_side = {
+	OR = {
+		tag = USA
+		is_in_faction_with = USA
+		tag = ENG
+		is_in_faction_with = ENG
+		tag = HOL
+		is_in_faction_with = HOL
+		tag = PHI
+		is_in_faction_with = PHI
+	}
+}
+
+PACIFIC_is_japan_side = {
+	OR = {
+		tag = JAP
+		is_in_faction_with = JAP
+	}
+}
+
+PACIFIC_has_allied_idea = {
+	OR = {
+		has_idea = PACIFIC_ALLIES_1
+		has_idea = PACIFIC_ALLIES_2
+		has_idea = PACIFIC_ALLIES_3
+		has_idea = PACIFIC_ALLIES_4
+		has_idea = PACIFIC_ALLIES_5
+		has_idea = PACIFIC_ALLIES_6
+		has_idea = PACIFIC_ALLIES_7
+		has_idea = PACIFIC_ALLIES_8
+		has_idea = PACIFIC_ALLIES_9
+		has_idea = PACIFIC_ALLIES_10
+		has_idea = PACIFIC_ALLIES_11
+	}
+}
+
+PACIFIC_has_japan_idea = {
+	OR = {
+		has_idea = PACIFIC_JAPAN_1
+		has_idea = PACIFIC_JAPAN_2
+		has_idea = PACIFIC_JAPAN_3
+		has_idea = PACIFIC_JAPAN_4
+		has_idea = PACIFIC_JAPAN_5
+		has_idea = PACIFIC_JAPAN_6
+		has_idea = PACIFIC_JAPAN_7
+		has_idea = PACIFIC_JAPAN_8
+		has_idea = PACIFIC_JAPAN_9
+		has_idea = PACIFIC_JAPAN_10
+		has_idea = PACIFIC_JAPAN_11
+	}
+}
+
+PACIFIC_war_has_started = {
+	any_country = {
+		PACIFIC_is_japan_side = yes
+		any_enemy_country = { PACIFIC_is_allied_side = yes }
+	}
+}

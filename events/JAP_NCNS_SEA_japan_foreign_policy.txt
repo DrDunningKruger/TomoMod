@@ -1,0 +1,4405 @@
+# Copied from vanilla HOI4 1.19.3 for the No Compromise, No Surrender Japan tree port (2026-10-25)
+# Kept separate from the mod's own files so the two trees can be compared and merged by hand.
+
+add_namespace = SEA_japan_foreign_policy
+
+country_event = {
+	id = SEA_japan_foreign_policy.1
+	title = SEA_japan_foreign_policy.1.t
+	desc = SEA_japan_foreign_policy.1.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# This is an opportunity for us 
+	option = { 
+		name = SEA_japan_foreign_policy.1.a
+		ai_chance = {
+			factor = 70
+			modifier = {
+				has_war_support < 0.5
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		custom_effect_tooltip = MEN_li_shouxin_available_tt
+
+		effect_tooltip = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MEN_mongol_military_government_tag
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		unlock_decision_tooltip = {
+			decision = MEN_request_initiation_of_the_suiyuan_campaign_decision
+			show_effect_tooltip = no 
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.2
+				days = 1
+				random_days = 2
+			}
+		}
+
+	}
+
+	# We must maintain our independence at all costs!
+	option = { 
+		name = SEA_japan_foreign_policy.1.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				has_war_support > 0.5
+				factor = 1.5
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.5
+				factor = 0.5
+			}
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.3
+				days = 1
+				random_days = 2
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.2
+	title = SEA_japan_foreign_policy.2.t
+	desc = SEA_japan_foreign_policy.2.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Perfect!
+	option = {
+		name = SEA_japan_foreign_policy.2.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_autonomy = {
+			target = FROM
+			autonomous_state = autonomy_wtt_imperial_protectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.3
+	title = SEA_japan_foreign_policy.3.t
+	desc = SEA_japan_foreign_policy.3.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# They have disrespected the emperor, this cannot stand
+	option = {
+		name = SEA_japan_foreign_policy.3.a
+		ai_chance = {
+			base = 85
+		}
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+			expire = 0
+		}	
+
+	}
+
+	# It is simply not worth the effort
+	option = {
+		name = SEA_japan_foreign_policy.3.b
+		ai_chance = {
+			base = 15
+		}
+
+		JAP_small_government_faction_gain = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.4
+	title = SEA_japan_foreign_policy.4.t
+	desc = SEA_japan_foreign_policy.4.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We will be stronger together 
+	option = { 
+		name = SEA_japan_foreign_policy.4.a
+		trigger = {
+			NOT = { always = no }
+		}
+		ai_chance = {
+			base = 70
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 1.5
+			}
+
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.5
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+
+		#Make sure reluctant submission is triggered via this event
+
+	}
+
+	# That would go against our principals of neutrality!
+	option = { 
+		name = SEA_japan_foreign_policy.4.b
+		trigger = {
+			NOT = { always = no }
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value < 25
+				}	
+				factor = 2
+			}
+			#modifier = {
+			#	is_historical_focus_on = yes 
+			#	factor = 0
+			#}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.6
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+	}
+
+	option = { 
+		name = SEA_japan_foreign_policy.4.c
+		trigger = { always = no }
+
+		JAP = { SIA = { country_event = { id = SEA_japan_foreign_policy.4 days = 181 } } } #Scoping to JAP first for loc to work with FROM
+		custom_effect_tooltip = SEA_japan_foreign_policy.4.c_tt
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.5
+	title = SEA_japan_foreign_policy.5.t
+	desc = SEA_japan_foreign_policy.5.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# As they should
+	option = {
+		name = SEA_japan_foreign_policy.5.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_to_faction = FROM
+
+		add_ai_strategy = {
+			type = protect
+			id = SIA
+			value = 100
+		}
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.6
+	title = SEA_japan_foreign_policy.6.t
+	desc = SEA_japan_foreign_policy.6.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Prepare the troops to attack!
+	option = {
+		name = SEA_japan_foreign_policy.6.a
+		ai_chance = {
+			base = 100
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.7
+				hours = 6
+				random_hours = 12
+			}
+		}
+
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			set_autonomy = {
+				target = FROM
+				autonomous_state = autonomy_wtt_imperial_protectorate
+				end_wars = no
+				end_civil_wars = no
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.7
+	title = SEA_japan_foreign_policy.7.t
+	desc = SEA_japan_foreign_policy.7.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# On second thought, we should just submit now
+	option = {
+		name = SEA_japan_foreign_policy.7.a
+		ai_chance = {
+			base = 90
+
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# [FROM.GetNameDefCap] Submits to out Demands
+				id = SEA_japan_foreign_policy.8
+				hours = 5
+				random_hours = 7
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				set_autonomy = {
+					target = ROOT
+					autonomous_state = autonomy_wtt_imperial_protectorate
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		}
+
+	}
+
+	# Then let them come!
+	option = {
+		name = SEA_japan_foreign_policy.7.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# [FROM.GetLeader] Refuses to Submit
+				id = SEA_japan_foreign_policy.9
+				hours = 5
+				random_hours = 7
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+					expire = 0
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.8
+	title = SEA_japan_foreign_policy.8.t
+	desc = SEA_japan_foreign_policy.8.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# And order is restored
+	option = {
+		name = SEA_japan_foreign_policy.8.a
+		ai_chance = {
+			base = 100
+		}
+
+		set_autonomy = {
+			target = FROM
+			autonomous_state = autonomy_wtt_imperial_protectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+
+		add_ai_strategy = {
+			type = protect
+			id = SIA
+			value = 100
+		}
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.9
+	title = SEA_japan_foreign_policy.9.t
+	desc = SEA_japan_foreign_policy.9.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Tennoheika Banzai!
+	option = {
+		name = SEA_japan_foreign_policy.9.a
+		ai_chance = {
+			base = 100
+		}
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+			expire = 0
+		}	
+
+		add_ai_strategy = {
+			type = antagonize
+			id = SIA
+			value = 50
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.10
+	title = SEA_japan_foreign_policy.10.t
+	desc = SEA_japan_foreign_policy.10.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# They can have it
+	option = { 
+		name = SEA_japan_foreign_policy.10.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				has_war_support < 0.5
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.11
+				days = 2
+				random_days = 3
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				transfer_state = 671
+			}
+		}
+
+	}
+
+	# Who do they think they are?
+	option = { 
+		name = SEA_japan_foreign_policy.10.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				has_war_support > 0.5
+				factor = 1.5
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.8
+				factor = 0.5
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.12
+				days = 2
+				random_days = 3
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ROOT
+					generator = { 671 }
+					expire = 0
+				}	
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.11
+	title = SEA_japan_foreign_policy.11.t
+	desc = SEA_japan_foreign_policy.11.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Perfect!
+	option = {
+		name = SEA_japan_foreign_policy.11.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		transfer_state = 671
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Hanoi Minpei"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+			    name = "Hanoi Minpei"
+			    #is_locked = yes
+				role = garrison
+			    priority = 0
+			    regiments = {
+			        militia = { x = 0 y = 0 }
+			        militia = { x = 0 y = 1 }
+			        militia = { x = 0 y = 2 }
+			        militia = { x = 1 y = 0 }
+			        militia = { x = 1 y = 1 }
+			    }
+			}
+		}
+		
+		random_state = {
+			limit = {
+				state = 671
+			}
+			create_unit = {
+			    division = "name = \"1 Hanoi Minpei\" division_template = \"Hanoi Minpei\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
+			    owner = PREV
+			}
+			create_unit = {
+			    division = "name = \"2 Hanoi Minpei\" division_template = \"Hanoi Minpei\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
+			    owner = PREV
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.12
+	title = SEA_japan_foreign_policy.12.t
+	desc = SEA_japan_foreign_policy.12.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# War it is then
+	option = {
+		name = SEA_japan_foreign_policy.12.a
+		ai_chance = {
+			base = 100
+		}
+
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 671 }
+			expire = 0
+		}	
+
+	}
+
+	# It is simply not worth the effort
+	option = {
+		name = SEA_japan_foreign_policy.12.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_stability = -0.05
+		add_war_support = -0.05
+		remove_state_claim = 671
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.13
+	title = SEA_japan_foreign_policy.13.t
+	desc = SEA_japan_foreign_policy.13.desc
+	picture = GFX_report_event_spr_anarchist_uprising
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# They can have it
+	option = { 
+		name = SEA_japan_foreign_policy.13.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2.5
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		add_political_power = 50
+		add_stability = -0.02
+
+	}
+
+	# Who do they think they are?
+	option = { 
+		name = SEA_japan_foreign_policy.13.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+		}
+
+		declare_war_on = {
+			target = FROM
+			type = take_state_focus
+			generator = 721
+		}		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.14
+	title = SEA_japan_foreign_policy.14.t
+	desc = SEA_japan_foreign_policy.14.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Very well
+	option = { 
+		name = SEA_japan_foreign_policy.14.a
+		ai_chance = {
+			base = 100
+		}
+		
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = MEN_autonomy
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		616 = {
+			add_claim_by = ROOT
+		}
+		#756 = {
+		#	add_claim_by = ROOT
+		#}
+		1040 = {
+			add_claim_by = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 100
+		add_war_support = 0.05
+		add_manpower = 5000
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.15
+	title = SEA_japan_foreign_policy.15.t
+	desc = SEA_japan_foreign_policy.15.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# They can have it
+	option = { 
+		name = SEA_japan_foreign_policy.15.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				has_war_support < 0.5
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.16
+				days = 2
+				random_days = 3
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				transfer_state = 729
+			}
+		}
+
+	}
+
+	# Who do they think they are?
+	option = { 
+		name = SEA_japan_foreign_policy.15.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				has_war_support > 0.5
+				factor = 1.5
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.8
+				factor = 0.5
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.17
+				days = 2
+				random_days = 3
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ROOT
+					generator = { 729 }
+					expire = 0
+				}	
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.16
+	title = SEA_japan_foreign_policy.16.t
+	desc = SEA_japan_foreign_policy.16.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# Perfect!
+	option = {
+		name = SEA_japan_foreign_policy.16.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 25
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		transfer_state = 729
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.17
+	title = SEA_japan_foreign_policy.17.t
+	desc = SEA_japan_foreign_policy.17.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# War it is then
+	option = {
+		name = SEA_japan_foreign_policy.17.a
+		ai_chance = {
+			base = 100
+		}
+
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 729 }
+			expire = 0
+		}	
+
+	}
+
+	# It is simply not worth the effort
+	option = {
+		name = SEA_japan_foreign_policy.17.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_stability = -0.05
+		add_war_support = -0.05
+		remove_state_claim = 729
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.18
+	title = SEA_japan_foreign_policy.18.t
+	desc = SEA_japan_foreign_policy.18.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# We will be stronger together 
+	option = { 
+		name = SEA_japan_foreign_policy.18.a
+		ai_chance = {
+			base = 90
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 1.5
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.19
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+
+	}
+
+	# That would go against our principals of neutrality...
+	option = { 
+		name = SEA_japan_foreign_policy.18.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value > 25
+				}	
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.20
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.19
+	title = SEA_japan_foreign_policy.19.t
+	desc = SEA_japan_foreign_policy.19.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# As they should
+	option = {
+		name = SEA_japan_foreign_policy.19.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_to_faction = FROM
+
+		IF = {
+			limit = {
+				FROM = {
+					original_tag = NEP
+				}
+			}
+			add_ai_strategy = {
+				type = protect
+				id = NEP
+				value = 100
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = alliance
+					id = JAP
+					value = 200
+				}
+			}
+		}
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.20
+	title = SEA_japan_foreign_policy.20.t
+	desc = SEA_japan_foreign_policy.20.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# It's their loss
+	option = {
+		name = SEA_japan_foreign_policy.20.a
+		ai_chance = {
+			base = 100
+		}
+
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.21
+	title = SEA_japan_foreign_policy.21.t
+	desc = SEA_japan_foreign_policy.21.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Very well
+	option = { 
+		name = SEA_japan_foreign_policy.21.a
+		ai_chance = {
+			base = 100
+		}
+		
+		IF = {
+			limit = {
+				FROM = {
+					OR = {
+						has_completed_focus = JAP_sea_purge_the_kodoha_faction
+						has_government = fascism
+					}
+				}
+				NOT = {
+					has_government = fascism
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}	
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = MEN_mengjiang_autonomy
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		616 = {
+			add_core_of = ROOT
+		}
+		1040 = {
+			add_core_of = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_ideas = MEN_true_mongol_state
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.22
+	title = SEA_japan_foreign_policy.22.t
+	desc = SEA_japan_foreign_policy.22.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# They won't cause us any harm, let them be
+	option = { 
+		name = SEA_japan_foreign_policy.22.a
+		ai_chance = {
+			base = 100
+		}
+		
+		add_timed_idea = {
+			idea = JAP_japanese_influence_growing_tibet
+			days = 180
+		}	
+
+	}
+
+	# It is imperative that we increase our national security!
+	option = { 
+		name = SEA_japan_foreign_policy.22.b
+		ai_chance = {
+			base = 0
+		}
+		
+		add_timed_idea = {
+			idea = JAP_smaller_japanese_influence_growing_tibet
+			days = 180
+		}	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.27
+	title = SEA_japan_foreign_policy.27.t
+	desc = SEA_japan_foreign_policy.27.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Very well
+	option = { 
+		name = SEA_japan_foreign_policy.27.a
+
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = MEN_mongol_autonomy
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_political_power = 150
+		add_war_support = 0.1
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		MON = {
+			every_core_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+				expire = 0
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.29
+	title = SEA_japan_foreign_policy.29.t
+	desc = SEA_japan_foreign_policy.29.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			IF = {
+				limit = {
+					621 = {
+						is_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				621 = {
+					set_state_flag = MEN_occupied_state_suiyuan_campaign
+				}
+			}
+			IF = {
+				limit = {
+					746 = {
+						is_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				746 = {
+					set_state_flag = MEN_occupied_state_suiyuan_campaign
+				}
+			}
+
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+		}
+	}
+	
+	# At least we can now focus on other areas
+	option = { 
+		name = SEA_japan_foreign_policy.29.a
+
+		effect_tooltip = {
+
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+		}		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.30
+	title = SEA_japan_foreign_policy.30.t
+	desc = SEA_japan_foreign_policy.30.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Another threat dealt with
+	option = { 
+		name = SEA_japan_foreign_policy.30.a
+
+		add_political_power = 100	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.31
+	title = SEA_japan_foreign_policy.31.t
+	desc = SEA_japan_foreign_policy.31.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Show them who they're dealing with
+	option = { 
+		name = SEA_japan_foreign_policy.31.a
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_timed_idea = {
+			idea = SHX_suiyuan_campaign_idea
+			days = 70
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_0
+			amount = 500
+			producer = ROOT
+		}	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.32
+	title = SEA_japan_foreign_policy.32.t
+	desc = SEA_japan_foreign_policy.32.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We can promise them that
+	option = { 
+		name = SEA_japan_foreign_policy.32.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_timed_idea = {
+			idea = JAP_anti_communist_crackdowns_idea
+			days = 360
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_timed_idea = {
+			idea = CHI_suppression_of_anti_japanese_sentiments_idea
+			days = 360
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.33
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+		hidden_effect = {
+			set_global_flag = CHI_accepted_JAP_demands_to_suppress_communism_and_more_flag
+		}
+
+	}
+
+	# We will make no deals with the [JAP.GetAdjective]
+	option = { 
+		name = SEA_japan_foreign_policy.32.b
+		ai_chance = {
+			base = 0
+		}
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.34
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.33
+	title = SEA_japan_foreign_policy.33.t
+	desc = SEA_japan_foreign_policy.33.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# The first step has been taken
+	option = { 
+		name = SEA_japan_foreign_policy.33.a
+
+		add_political_power = 50
+
+		IF = {
+			limit = {
+				always = no
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			hidden_effect = {
+				CHI = {
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.34
+	title = SEA_japan_foreign_policy.34.t
+	desc = SEA_japan_foreign_policy.34.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# They will come to regret their decision
+	option = { 
+		name = SEA_japan_foreign_policy.34.a
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = CHI_rejected_our_proposal_for_cooperation_opm
+		}	
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.35
+	title = SEA_japan_foreign_policy.35.t
+	desc = SEA_japan_foreign_policy.35.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# How dare they!
+	option = { 
+		name = SEA_japan_foreign_policy.35.a
+
+		IF = {
+			limit = {
+				NOT = {
+					has_war_with = FROM
+				}
+			}
+			add_war_support = -0.05
+		}
+		ELSE = {
+			add_timed_idea = {
+				idea = JAP_pro_japanese_sentiments_for_usa_idea
+				days = 180
+			}	
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.40
+	title = SEA_japan_foreign_policy.40.t
+	desc = SEA_japan_foreign_policy.40.desc
+	picture = GFX_report_event_JAP_greater_east_asia_conference
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# The Emperors supreme authority must always come first!
+	option = { 
+		name = SEA_japan_foreign_policy.40.a
+		ai_chance = {
+			base = 95
+		}
+
+		set_country_flag = JAP_chose_to_exploit_east_asia_flag
+
+		custom_effect_tooltip = JAP_unlock_east_asia_occupation_law_tt
+		show_ideas_tooltip = GEACPS_exploitation_occupation_law_fake_idea
+
+		ROOT = { set_occupation_law_where_available = GEACPS_exploitation_occupation_law } # Set law in all countries/states where it's available.
+
+	}
+
+	# We must pursue prosperity for all Asian states!
+	option = { 
+		name = SEA_japan_foreign_policy.40.b
+		ai_chance = {
+			base = 5
+		}
+
+		set_country_flag = JAP_chose_to_support_east_asia_flag
+
+		custom_effect_tooltip = JAP_unlock_east_asia_occupation_law_tt
+		show_ideas_tooltip = GEACPS_prosperity_occupation_law_fake_idea
+
+		ROOT = { set_occupation_law_where_available = GEACPS_prosperity_occupation_law } # Set law in all countries/states where it's available.
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.41
+	title = SEA_japan_foreign_policy.41.t
+	desc = SEA_japan_foreign_policy.41.desc
+	picture = GFX_report_event_JAP_army_occupation
+	
+	is_triggered_only = yes
+
+	# APPLY IT EVERYWHERE TACK!
+	option = { 
+		name = SEA_japan_foreign_policy.41.a
+
+		ai_chance = {
+			base = 10
+		}
+		JAP = { set_occupation_law_where_available = senbu_occupation_law } # Set law in all countries/states where it's available.
+		custom_effect_tooltip = apply_senbu_law_tt
+	}
+
+	# NOT INTERESTED
+	option = { 
+		name = SEA_japan_foreign_policy.41.b
+
+		ai_chance = {
+			base = 0
+		}
+
+		
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.42
+	title = SEA_japan_foreign_policy.42.t
+	desc = SEA_japan_foreign_policy.42.desc
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {
+		# It lies within our best interest
+		name = SEA_japan_foreign_policy.42.a
+
+		IF = {
+			limit = {
+				is_faction_leader = yes
+			}
+			dismantle_faction = yes
+		}
+		
+		add_timed_idea = {
+			idea = JAP_japanese_chinese_friendship
+			days = 730
+		}
+
+		every_other_country = {
+			limit = {
+				AND = {
+					NOT = { 
+						tag = JAP 
+						is_ally_with = JAP
+					}
+				}
+				capital_scope = {
+					is_on_continent = asia
+				}
+			}
+			add_opinion_modifier = { target = CHI modifier = sino_japanese_alliance_threat }
+		}
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = signed_the_sino_japanese_pact_opm
+		}
+
+		effect_tooltip = {
+			declare_war_on = {
+				type = annex_everything
+			}	
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.43
+				hours = 1
+			}		
+		}
+		effect_tooltip = {
+			FROM = {
+				add_timed_idea = {
+					idea = JAP_japanese_chinese_friendship
+					days = 730
+				}
+				
+				set_rule = { can_create_factions = yes }
+				add_to_faction = ROOT
+				add_named_threat = { threat = 3 name = SEA_japan_foreign_policy.42.t }
+			}
+		}
+
+	}
+
+	option = {
+		# This smells fishy
+		name = SEA_japan_foreign_policy.42.b
+		ai_chance = { factor = 0 }
+		
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.44
+				hours = 1
+			}		
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.43
+	title = SEA_japan_foreign_policy.43.t
+	desc = SEA_japan_foreign_policy.43.desc
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {
+		# Splendid
+		name = SEA_japan_foreign_policy.43.a
+		
+		add_timed_idea = {
+			idea = JAP_japanese_chinese_friendship
+			days = 730
+		}
+		
+		set_rule = { can_create_factions = yes }
+		add_to_faction = FROM
+		add_named_threat = { threat = 3 name = SEA_japan_foreign_policy.42.t }
+
+		set_country_flag = JAP_CHI_pact_is_active_flag
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = signed_the_sino_japanese_pact_opm
+		}	
+
+		CHI = {
+			declare_war_on = {
+				type = annex_everything
+			}	
+		}
+
+		IF = {
+			limit = {
+				always = no
+			}
+
+			hidden_effect = {
+				CHI = {
+				}
+			}
+
+		}
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.44
+	title = SEA_japan_foreign_policy.44.t
+	desc = SEA_japan_foreign_policy.44.desc
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {
+		# Nothing can be done about it
+		name = SEA_japan_foreign_policy.44.a
+		
+		IF = {
+			limit = {
+				always = no
+			}
+
+
+			hidden_effect = {
+				CHI = {
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { # Proclamation of the Reorganized Government - event for RNG
+	id = SEA_japan_foreign_policy.49
+	title = SEA_japan_foreign_policy.49.t
+	desc = SEA_japan_foreign_policy.49.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Prosperity is within sight!
+		name = SEA_japan_foreign_policy.49.a	
+		
+		JAP_setup_faction_wide_aoe_effects_from = yes	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+
+			delete_unit_template_and_units = {
+				division_template = "Peacebuilding National Army Division"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Peacebuilding National Army Division"
+				role = garrison
+				template_counter = 110
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+			}
+
+		}
+
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				is_fully_controlled_by = ROOT
+			}
+			create_unit = {
+			    division = "name = \"1st Peacebuilding National Army Division\" division_template = \"Peacebuilding National Army Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"2nd Peacebuilding National Army Division\" division_template = \"Peacebuilding National Army Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"3rd Peacebuilding National Army Division\" division_template = \"Peacebuilding National Army Division\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+			    owner = ROOT
+			}
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.59
+	title = SEA_japan_foreign_policy.59.t
+	desc = SEA_japan_foreign_policy.59.desc 
+	picture = GFX_report_event_JAP_burma_independence_army
+
+	is_triggered_only = yes
+
+	# Prosperity is within sight!
+	option = { 
+		name = SEA_japan_foreign_policy.59.a	
+
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		JAP_setup_faction_wide_aoe_effects_JAP = yes	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+
+			delete_unit_template_and_units = {
+				division_template = "Burma Independence Army"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Burma Independence Army"
+				template_counter = 117
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+
+		}
+
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			create_unit = {
+			    division = "name = \"First Burma Independence Army Division\" division_template = \"Burma Independence Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Second Burma Independence Army Division\" division_template = \"Burma Independence Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Third Burma Independence Army Division\" division_template = \"Burma Independence Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Fourth Burma Independence Army Division\" division_template = \"Burma Independence Army\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+				is_controlled_by = JAP
+			}
+			set_state_controller_to = ROOT
+		}
+
+		IF = {
+			limit = {
+				has_cosmetic_tag = BRM_british
+			}
+			drop_cosmetic_tag = yes
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.60
+	title = SEA_japan_foreign_policy.60.t
+	desc = SEA_japan_foreign_policy.60.desc 
+	picture = GFX_report_event_JAP_burma_independence_army
+
+	is_triggered_only = yes
+
+	# Fight them back, destroy any traitors!
+	option = { 
+		name = SEA_japan_foreign_policy.60.a	
+
+		IF = {
+			limit = {
+				has_capitulated = no
+			}
+			IF = {
+				limit = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				start_civil_war = {
+				    ideology = JAP
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				    	OR = {
+				    		state = 993
+				    		state = 999
+				    		state = 998
+				    		state = 288
+				    		state = 640
+				    		state = 997
+				    		state = 996
+				    		state = 995
+				    		state = 994
+				    	}
+				        has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = BRM_japanese_burma_flag
+		        	IF = {
+		        		limit = {
+		        		}
+		        		PREV.PREV = {
+		        			add_country_leader_role = {
+		        				promote_leader = yes
+		        				country_leader = {
+		        					ideology = despotism
+		        					expire = "1952.1.1.1"
+		        					traits = { } 
+		        				}
+		        			}
+		        			promote_character = {
+		        				ideology = fascism_ideology 
+		        			}	
+		        		}
+		        	}
+				}
+
+				random_country = {
+					limit = {
+						has_country_flag = BRM_japanese_burma_flag
+					}
+					set_cosmetic_tag = BRM_state_of_burma_japanese_splinter_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.59
+								hours = 0
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = BRM
+							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+				
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = neutrality
+				}
+				start_civil_war = {
+				    ideology = fascism
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				    	OR = {
+				    		state = 993
+				    		state = 999
+				    		state = 998
+				    		state = 288
+				    		state = 640
+				    		state = 997
+				    		state = 996
+				    		state = 995
+				    		state = 994
+				    	}
+				        has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = BRM_japanese_burma_flag
+		        	IF = {
+		        		limit = {
+		        		}
+		        		PREV.PREV = {
+		        			add_country_leader_role = {
+		        				promote_leader = yes
+		        				country_leader = {
+		        					ideology = despotism
+		        					expire = "1952.1.1.1"
+		        					traits = { } 
+		        				}
+		        			}
+		        			promote_character = {
+		        				ideology = fascism_ideology 
+		        			}	
+		        		}
+		        	}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = BRM_japanese_burma_flag
+					}
+					set_cosmetic_tag = BRM_state_of_burma_japanese_splinter_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.59
+								hours = 2
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = BRM
+							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+			}
+			ELSE = {
+				start_civil_war = {
+				    ideology = neutrality
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				    	OR = {
+				    		state = 993
+				    		state = 999
+				    		state = 998
+				    		state = 288
+				    		state = 640
+				    		state = 997
+				    		state = 996
+				    		state = 995
+				    		state = 994
+				    	}
+				       has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = BRM_japanese_burma_flag
+		        	IF = {
+		        		limit = {
+		        		}
+		        		PREV.PREV = {
+		        			add_country_leader_role = {
+		        				promote_leader = yes
+		        				country_leader = {
+		        					ideology = fascism_ideology
+		        					expire = "1952.1.1.1"
+		        					traits = { } 
+		        				}
+		        			}
+		        			promote_character = {
+		        				ideology = despotism 
+		        			}	
+		        		}
+		        	}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = BRM_japanese_burma_flag
+					}
+					set_cosmetic_tag = BRM_state_of_burma_japanese_splinter_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.59
+								hours = 2
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = BRM
+							has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+			}
+		}
+		ELSE = {
+			set_global_flag = BRM_has_capped_flag 
+			every_core_state = {
+				limit = {
+					has_state_flag = is_state_that_should_go_to_japanese_burma_flag
+				}
+				set_state_controller_to = ROOT
+			}
+		}
+
+	}
+
+	
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.61
+	title = SEA_japan_foreign_policy.61.t
+	desc = SEA_japan_foreign_policy.61.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# It was predictable
+	option = { 
+		name = SEA_japan_foreign_policy.61.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_command_power = -25
+		add_war_support = -0.01
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		CHI_wang_jingwei = {
+			set_nationality = RNG
+		}
+
+	}
+
+	# Perhaps he is right...
+	option = { 
+		name = SEA_japan_foreign_policy.61.b
+		ai_chance = {
+			base = 0
+		}
+
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_command_power = -25
+		add_war_support = -0.01
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		CHI_wang_jingwei = {
+			set_nationality = RNG
+		}
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.62
+	title = SEA_japan_foreign_policy.62.t
+	desc = SEA_japan_foreign_policy.62.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# He will make for a strong leader
+	option = { 
+		name = SEA_japan_foreign_policy.62.a
+		ai_chance = {
+			base = 100
+		}
+		
+		# This all makes for a much better tooltip
+		hidden_effect = {
+			CHI_wang_jingwei = {
+				remove_country_leader_role = {
+					ideology = despotism
+				}
+			}
+		}
+		add_country_leader_role = {
+			character = CHI_wang_jingwei
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = { eager_collaborator generallissimo } 
+			}
+		}	
+		hidden_effect = {
+			add_country_leader_role = {
+				character = CHI_wang_jingwei
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_ideology
+					expire = "1965.1.1.1"
+					traits = { eager_collaborator generallissimo } 
+				}
+			}	
+		}
+
+	}
+
+	# Sun Dianying is more capable
+	option = { 
+		name = SEA_japan_foreign_policy.62.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 50
+				is_historical_focus_on = no
+			}
+		}
+		
+		add_political_power = 75
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.66
+	title = SEA_japan_foreign_policy.66.t
+	desc = SEA_japan_foreign_policy.66.desc 
+	picture = GFX_report_event_JAP_the_azad_hind
+
+	is_triggered_only = yes
+
+	# Prosperity is within sight!
+	option = { 
+		name = SEA_japan_foreign_policy.66.a	
+
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		JAP_setup_faction_wide_aoe_effects_JAP = yes	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+
+			delete_unit_template_and_units = {
+				division_template = "Azad Hind Batallion"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Azad Hind Batallion"
+				template_counter = 109
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+
+		}
+
+		random_owned_controlled_state = {
+			#limit = {
+			#	is_core_of = ROOT
+			#}
+			create_unit = {
+			    division = "name = \"First Azad Hind Batallion\" division_template = \"Azad Hind Batallion\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Second Azad Hind Batallion\" division_template = \"Azad Hind Batallion\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Third Azad Hind Batallion\" division_template = \"Azad Hind Batallion\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Fourth Azad Hind Batallion\" division_template = \"Azad Hind Batallion\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_core_state = {
+			limit = {
+				is_controlled_by = JAP
+			}
+			set_state_controller_to = ROOT
+		}
+
+		IF = {
+			limit = {
+				has_cosmetic_tag = RAJ_UK
+			}
+			drop_cosmetic_tag = yes
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.67
+	title = SEA_japan_foreign_policy.67.t
+	desc = SEA_japan_foreign_policy.67.desc 
+	picture = GFX_report_event_JAP_the_azad_hind
+
+	is_triggered_only = yes
+
+	# Fight them back, destroy any traitors!
+	option = { 
+		name = SEA_japan_foreign_policy.67.a	
+
+		IF = {
+			limit = {
+				has_capitulated = no
+			}
+
+			IF = {
+				limit = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+				}
+				start_civil_war = {
+				    ideology = JAP
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				        has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+
+				random_country = {
+					limit = {
+						has_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+					set_cosmetic_tag = RAJ_azad_hind_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.66
+								hours = 0
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+				
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = neutrality
+				}
+				start_civil_war = {
+				    ideology = fascism
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				        has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+
+				random_country = {
+					limit = {
+						has_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+					set_cosmetic_tag = RAJ_azad_hind_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.66
+								hours = 0
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+			}
+			ELSE = {
+				start_civil_war = {
+				    ideology = neutrality
+				    size = 0.7
+				    army_ratio = 0
+				    navy_ratio = 0
+				    air_ratio = 0
+				    states = all
+				    states_filter = {
+				        has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+				    }
+				    keep_all_characters = yes
+				    set_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+
+				random_country = {
+					limit = {
+						has_country_flag = RAJ_japanese_azad_hind_state_flag
+					}
+					set_cosmetic_tag = RAJ_azad_hind_tag
+					FROM = {
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_wtt_imperial_protectorate
+							end_wars = no
+							end_civil_wars = no
+						}
+						PREV = {
+							country_event = {
+								id = SEA_japan_foreign_policy.66
+								hours = 0
+							}	
+						}
+					}
+					every_state = {
+						limit = {
+							has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+						}
+						set_state_controller_to = PREV
+					}
+				}
+			}
+
+		}
+		ELSE = {
+			set_global_flag = RAJ_has_capped_flag 
+			every_core_state = {
+				limit = {
+					has_state_flag = is_state_that_should_go_to_japanese_azad_hind_flag
+				}
+				set_state_controller_to = ROOT
+			}
+		}
+		
+
+	}
+
+
+	
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.68
+	title = SEA_japan_foreign_policy.68.t
+	desc = SEA_japan_foreign_policy.68.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	# Prosperity is within sight!
+	option = { 
+		name = SEA_japan_foreign_policy.68.a	
+
+		add_political_power = 50
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		JAP_setup_faction_wide_aoe_effects_JAP = yes	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+
+			delete_unit_template_and_units = {
+				division_template = "Makapili Brigade"
+				disband = yes #if yes, will refund equipment/manpower.
+			}
+
+			division_template = {
+				name = "Makapili Brigade"
+				template_counter = 109
+				is_locked = no
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+			}
+
+		}
+
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			create_unit = {
+			    division = "name = \"First Makapili Brigade\" division_template = \"Makapili Brigade\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Second Makapili Brigade\" division_template = \"Makapili Brigade\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Third Makapili Brigade\" division_template = \"Makapili Brigade\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+			create_unit = {
+			    division = "name = \"Fourth Makapili Brigade\" division_template = \"Makapili Brigade\" start_experience_factor = 0.3 start_equipment_factor = 0.5"
+			    owner = ROOT
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_core_state = {
+			limit = {
+				is_controlled_by = JAP
+			}
+			set_state_controller_to = ROOT
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_cosmetic_tag = PHI_second_republic_tag
+
+		#IF = {
+		#	limit = {
+		#		has_cosmetic_tag = BRM_british
+		#	}
+		#	drop_cosmetic_tag = yes
+		#}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.75
+	title = SEA_japan_foreign_policy.75.t
+	desc = SEA_japan_foreign_policy.75.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	# We are most grateful!
+	option = { 
+		name = SEA_japan_foreign_policy.75.a
+		
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment
+			amount = 1500
+			producer = JAP
+		}	
+
+		add_equipment_to_stockpile = { 
+			type = support_equipment
+			amount = 500
+			producer = JAP
+		}	
+
+		add_equipment_to_stockpile = { 
+			type = artillery_equipment
+			amount = 150
+			producer = JAP
+		}	
+
+	}
+
+}
+
+country_event = { #FROM proposes tightened federation
+	id = SEA_japan_foreign_policy.76
+	title = SEA_japan_foreign_policy.76.t
+	desc = SEA_japan_foreign_policy.76.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = { #sounds good
+		name = SEA_japan_foreign_policy.76.a
+		ai_chance = {
+			base = 100
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.77
+				hours = 12
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+		effect_tooltip = {
+			FROM = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+			}
+		}
+
+	}
+	option = { #no way
+		name = SEA_japan_foreign_policy.76.b
+		ai_chance = {
+			base = 0
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.78
+				hours = 12
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_free
+					end_wars  = no
+					end_civil_wars = no
+				}	
+				remove_from_faction = ROOT
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT 
+					expire = 0
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { #FROM accepts tighter federation
+	id = SEA_japan_foreign_policy.77
+	title = SEA_japan_foreign_policy.77.t
+	desc = SEA_japan_foreign_policy.77.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	option = { #great!
+		name = SEA_japan_foreign_policy.77.a
+
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}	
+		every_controlled_state = {
+			limit = {
+				is_core_of = FROM
+			}
+			add_compliance = 25
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+country_event = { #FROM rejects tighter federation
+	id = SEA_japan_foreign_policy.78
+	title = SEA_japan_foreign_policy.78.t
+	desc = SEA_japan_foreign_policy.78.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	option = { #it was not a question!
+		name = SEA_japan_foreign_policy.78.a
+		ai_chance = {
+			base = 5
+		}
+
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_free
+			end_wars  = no
+			end_civil_wars = no
+		}	
+		remove_from_faction = FROM
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		create_wargoal = {
+			type = annex_everything
+			target = FROM 
+			expire = 0
+		}
+
+	}
+	option = { #was worth asking
+		name = SEA_japan_foreign_policy.78.b
+		ai_chance = {
+			base = 95
+		}
+
+
+		
+	}
+}
+
+country_event = { #FROM proposes tightened federation
+	id = SEA_japan_foreign_policy.79
+	title = SEA_japan_foreign_policy.79.t
+	desc = SEA_japan_foreign_policy.79.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = { #sounds good
+		name = SEA_japan_foreign_policy.79.a
+		ai_chance = {
+			base = 100
+		}
+
+		custom_effect_tooltip = MAN_we_can_be_annexed_by_kodoha_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.80
+				hours = 12
+			}
+		}
+
+	}
+	option = { #no way
+		name = SEA_japan_foreign_policy.79.b
+		ai_chance = {
+			base = 0
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.81
+				hours = 12
+			}
+		}
+
+	}
+}
+
+country_event = { #FROM accepts tighter federation
+	id = SEA_japan_foreign_policy.80
+	title = SEA_japan_foreign_policy.80.t
+	desc = SEA_japan_foreign_policy.80.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	option = { #great!
+		name = SEA_japan_foreign_policy.80.a
+
+		add_political_power = 50
+
+		set_country_flag = JAP_MAN_accepted_our_proposal_for_integration
+
+	}
+}
+
+country_event = { #FROM rejects tighter federation
+	id = SEA_japan_foreign_policy.81
+	title = SEA_japan_foreign_policy.81.t
+	desc = SEA_japan_foreign_policy.81.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	option = { # We will deal with them later
+		name = SEA_japan_foreign_policy.81.a
+		ai_chance = {
+			base = 50
+		}
+
+		add_war_support = 0.01
+
+	}
+	option = { # If that is their wish..
+		name = SEA_japan_foreign_policy.81.b
+		ai_chance = {
+			base = 50
+		}
+
+		add_political_power = 15
+		
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.82
+	title = SEA_japan_foreign_policy.82.t
+	desc = SEA_japan_foreign_policy.82.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	# Anything for our [FROM.GetAdjective] friends!
+	option = { 
+		name = SEA_japan_foreign_policy.82.a
+		ai_chance = {
+			base = 95
+		}
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_ideas = JAP_POL_anti_soviet_pact
+		custom_effect_tooltip = POL_JAP_pact_tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.83
+				hours = 12
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				add_ideas = JAP_POL_anti_soviet_pact
+			}
+		}
+
+	}
+
+	# This puts us in too much danger
+	option = { 
+		name = SEA_japan_foreign_policy.82.b
+		ai_chance = {
+			base = 5
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.84
+				hours = 12
+			}
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.83
+	title = SEA_japan_foreign_policy.83.t
+	desc = SEA_japan_foreign_policy.83.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	# Excellent!
+	option = { 
+		name = SEA_japan_foreign_policy.83.a
+
+		add_ideas = JAP_POL_anti_soviet_pact
+		custom_effect_tooltip = POL_JAP_pact_tt
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.84
+	title = SEA_japan_foreign_policy.84.t
+	desc = SEA_japan_foreign_policy.84.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	# Perhaps a second isolation would benefit us...
+	option = {
+		name = SEA_japan_foreign_policy.84.a
+
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.85
+	title = SEA_japan_foreign_policy.85.t
+	desc = SEA_japan_foreign_policy.85.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_japan_foreign_policy.85.a
+		every_other_country = {
+			limit = {
+				has_idea = JAP_POL_anti_soviet_pact
+				NOT = { has_war_with = SOV }
+				is_subject = no
+				any_other_country = {
+					has_idea = JAP_POL_anti_soviet_pact
+					has_war_with = SOV
+				}
+			}
+			country_event = { id = SEA_japan_foreign_policy.86 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.86
+	title = SEA_japan_foreign_policy.86.t
+	desc = SEA_japan_foreign_policy.86.desc
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_japan_foreign_policy.86.a
+		ai_chance = {
+			base = 10
+		}
+		add_to_war = {
+			targeted_alliance = FROM
+			enemy = SOV
+			hostility_reason = ally
+		}
+	}
+
+	option = {
+		name = SEA_japan_foreign_policy.86.b
+		ai_chance = {
+			base = 0
+		}
+		remove_ideas = JAP_POL_anti_soviet_pact
+		FROM = { add_opinion_modifier = { target = ROOT modifier = anti_soviet_pact_call_refused } }
+		add_timed_idea = {
+			idea = JAP_POL_anti_soviet_pact_refused_call
+			days = 365
+		}
+		custom_effect_tooltip = SEA_japan_foreign_policy.86.b_tt
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.87
+	title = SEA_japan_foreign_policy.87.t
+	desc = SEA_japan_foreign_policy.87.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	# It is what we signed off on
+	option = { 
+		name = SEA_japan_foreign_policy.87.a
+
+		custom_effect_tooltip = GAME_OVER_TT
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.88
+				hours = 6
+				random_hours = 6
+			}	
+		}
+
+		effect_tooltip = {
+			FROM = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}	
+				every_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_compliance = 25
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+		
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.88
+	title = SEA_japan_foreign_policy.88.t
+	desc = SEA_japan_foreign_policy.88.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	# Splendid
+	option = { 
+		name = SEA_japan_foreign_policy.88.a
+		
+		annex_country = {
+			target = FROM
+			transfer_troops = yes
+		}	
+		every_controlled_state = {
+			limit = {
+				is_core_of = FROM
+			}
+			add_compliance = 25
+			add_extra_state_shared_building_slots = 1
+		}
+		
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.92
+	title = SEA_japan_foreign_policy.92.t
+	desc = SEA_japan_foreign_policy.92.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	# Ties can be strengthened through trade
+	option = { 
+		name = SEA_japan_foreign_policy.92.a
+		ai_chance = {
+			base = 10
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.93
+				hours = 6
+				random_hours = 12
+			}	
+		}
+		effect_tooltip = {
+			FROM = {
+				add_ideas = JAP_usa_jap_trade_agreement_idea
+			}
+		}
+
+	}
+
+	# Perhaps we can reach a research agreement
+	option = { 
+		name = SEA_japan_foreign_policy.92.b
+		ai_chance = {
+			base = 0
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.94
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+
+	# We should establish a proper defensive agreement with them
+	option = { 
+		name = SEA_japan_foreign_policy.92.c
+		ai_chance = {
+			base = 10
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.95
+				hours = 6
+				random_hours = 12
+			}	
+		}
+		effect_tooltip = {
+			give_guarantee = FROM
+			FROM = {
+				give_guarantee = ROOT
+			}
+		}
+
+	}
+
+	# We should sign all of the proposed agreements!
+	option = { 
+		name = SEA_japan_foreign_policy.92.d
+		ai_chance = {
+			base = 70
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.96
+				hours = 6
+				random_hours = 12
+			}	
+		}
+		effect_tooltip = {
+			FROM = {
+				add_ideas = JAP_usa_jap_trade_agreement_idea
+				give_guarantee = ROOT
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			give_guarantee = FROM
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.93
+	title = SEA_japan_foreign_policy.93.t
+	desc = SEA_japan_foreign_policy.93.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	# Excellent!
+	option = { 
+		name = SEA_japan_foreign_policy.93.a
+
+		add_ideas = JAP_usa_jap_trade_agreement_idea
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.94
+	title = SEA_japan_foreign_policy.94.t
+	desc = SEA_japan_foreign_policy.94.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	# Dreadful
+	option = {
+		name = SEA_japan_foreign_policy.94.a
+
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.95
+	title = SEA_japan_foreign_policy.95.t
+	desc = SEA_japan_foreign_policy.95.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	# Excellent!
+	option = {
+		name = SEA_japan_foreign_policy.95.a
+
+		give_guarantee = FROM
+		FROM = {
+			give_guarantee = ROOT
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.96
+	title = SEA_japan_foreign_policy.96.t
+	desc = SEA_japan_foreign_policy.96.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	# Excellent!
+	option = {
+		name = SEA_japan_foreign_policy.96.a
+
+		add_ideas = JAP_usa_jap_trade_agreement_idea
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		give_guarantee = FROM
+		FROM = {
+			give_guarantee = ROOT
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.97
+	title = SEA_japan_foreign_policy.97.t
+	desc = SEA_japan_foreign_policy.97.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Yes pliz
+		name = SEA_japan_foreign_policy.97.a	
+		ai_chance = {
+			base = 100
+		}
+
+		add_ideas = JAP_customs_union_trade_idea
+		add_opinion_modifier = {
+			target = FROM
+			modifier = JAP_trading_partners
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.98
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+
+	option = { # No thx
+		name = SEA_japan_foreign_policy.97.b	
+		ai_chance = {
+			base = 0
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.99
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.98
+	title = SEA_japan_foreign_policy.98.t
+	desc = SEA_japan_foreign_policy.98.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Naisu
+		name = SEA_japan_foreign_policy.98.a	
+
+		effect_tooltip = {
+			FROM = {
+				add_ideas = JAP_customs_union_trade_idea
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = JAP_trading_partners
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.99
+	title = SEA_japan_foreign_policy.99.t
+	desc = SEA_japan_foreign_policy.99.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # How deplorable!
+		name = SEA_japan_foreign_policy.99.a	
+
+		
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.103
+	title = SEA_japan_foreign_policy.103.t
+	desc = SEA_japan_foreign_policy.103.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # It would be our honor
+		name = SEA_japan_foreign_policy.103.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 2
+				has_government = FROM
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+				    tag = FROM
+				    ratio < 0.75
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+				    tag = FROM
+				    ratio < 0.5
+				}
+			}
+		}
+
+		swap_ideas = {
+			remove_idea = JAP_pacific_customs_union_member
+			add_idea = JAP_pacific_integrated_customs_union_member
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = { # FROM Accepts
+			country_event = { 
+				id = SEA_japan_foreign_policy.104
+				hours = 5 
+				random_hours = 5 
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = JAP_country_that_accepted_economic_integration_flag
+		}
+	}
+
+	option = { # We do not need their friendship!
+		name = SEA_japan_foreign_policy.103.b
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 5
+				strength_ratio = {
+				    tag = FROM
+				    ratio > 1
+				}
+			}
+			modifier = {
+				factor = 5
+				strength_ratio = {
+				    tag = FROM
+				    ratio > 1.25
+				}
+			}
+		}
+
+		FROM = { # FROM Rejects
+			country_event = { 
+				id = SEA_japan_foreign_policy.105 
+				hours = 5 
+				random_hours = 5 
+			}
+		}
+
+		hidden_effect = {
+			set_country_flag = JAP_country_that_rejected_economic_integration_flag
+		}
+	}
+}
+
+country_event = { # [FROM.GetNameDefCap] Accepts our offer - event for JAP
+	id = SEA_japan_foreign_policy.104
+	title = SEA_japan_foreign_policy.104.t
+	desc = SEA_japan_foreign_policy.104.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # We are grateful for their naiveté
+		name = SEA_japan_foreign_policy.104.a  
+
+		effect_tooltip = {
+			FROM = {
+				swap_ideas = {
+					remove_idea = JAP_pacific_customs_union_member
+					add_idea = JAP_pacific_integrated_customs_union_member
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { # [FROM.GetNameDefCap] Rejects our offer - event for JAP
+	id = SEA_japan_foreign_policy.105
+	title = SEA_japan_foreign_policy.105.t
+	desc = SEA_japan_foreign_policy.105.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Terrible news...
+		name = SEA_japan_foreign_policy.105.a	
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.112
+	title = SEA_japan_foreign_policy.112.t
+	desc = SEA_japan_foreign_policy.112.desc
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	# It allows us to focus our efforts on other areas
+	option = { 
+		name = SEA_japan_foreign_policy.112.a
+		ai_chance = {
+			base = 10 
+			modifier = {
+				add = 5
+				has_opinion = {
+					target = FROM
+					value > 74
+				}		
+			}
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.113
+				hours = 3
+			}	
+		}
+		every_subject_country = {
+			limit = {
+				capital_scope = { is_on_continent = asia }
+				NOT = {
+					original_tag = RAJ
+				}
+			}
+			set_country_flag = JAP_has_become_a_new_puppet_flag
+			drop_cosmetic_tag = yes
+			FROM = {
+				puppet = {
+					target = PREV
+					end_wars = no
+				}
+			}
+			country_event = {
+				# We have now become Japans puppet
+				id = SEA_japan_foreign_policy.121
+				hours = 6
+			}
+			display_individual_scopes = yes
+			effect_tooltip = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 336
+							state = 999
+							state = 1024
+							state = 1023
+							state = 333
+							state = 334
+							state = 724
+							state = 327
+						}
+					}
+					PREV = {
+						give_resource_rights = { receiver = ENG state = PREV }
+					}
+				}
+			}
+		}
+
+	}
+
+	# Compromise on our Empire? Never!
+	option = { 
+		name = SEA_japan_foreign_policy.112.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 5
+				has_opinion = {
+					target = FROM
+					value < 50
+				}		
+			}
+			modifier = {
+				add = 10
+				has_opinion = {
+					target = FROM
+					value < 24
+				}		
+			}
+		}
+
+		FROM = {
+			country_event = {
+				id = SEA_japan_foreign_policy.114
+				hours = 6
+				random_hours = 12
+			}	
+		}
+
+	}
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.113
+	title = SEA_japan_foreign_policy.113.t
+	desc = SEA_japan_foreign_policy.113.desc
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	# We will guard the Pacific for them
+	option = { 
+		name = SEA_japan_foreign_policy.113.a
+
+		effect_tooltip = {
+			every_subject_country = {
+				limit = {
+					capital_scope = { is_on_continent = asia }
+					has_country_flag = JAP_has_become_a_new_puppet_flag
+				}
+				ROOT = {
+					puppet = {
+						target = PREV
+						end_wars = no
+					}
+				}
+			}
+		}		
+		every_subject_country = {
+			display_individual_scopes = yes
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 336
+						state = 999
+						state = 1024
+						state = 1023
+						state = 333
+						state = 334
+						state = 724
+						state = 327
+					}
+				}
+				PREV = {
+					give_resource_rights = { receiver = ENG state = PREV }
+				}
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.114
+	title = SEA_japan_foreign_policy.114.t
+	desc = SEA_japan_foreign_policy.114.desc
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	# Arrogant westerners...
+	option = {
+		name = SEA_japan_foreign_policy.114.a
+
+		add_war_support = 0.05
+		add_political_power = -50
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.118
+	title = SEA_japan_foreign_policy.118.t
+	desc = SEA_japan_foreign_policy.118.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# We will be stronger together 
+	option = { 
+		name = SEA_japan_foreign_policy.118.a
+		ai_chance = {
+			base = 90
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 1.5
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value > 75
+				}	
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.119
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+
+	}
+
+	# That would go against our principals of neutrality...
+	option = { 
+		name = SEA_japan_foreign_policy.118.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value < 25
+				}	
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.120
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.119
+	title = SEA_japan_foreign_policy.119.t
+	desc = SEA_japan_foreign_policy.119.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# As they should
+	option = {
+		name = SEA_japan_foreign_policy.119.a
+
+		add_to_faction = FROM
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.120
+	title = SEA_japan_foreign_policy.120.t
+	desc = SEA_japan_foreign_policy.120.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# It's their loss
+	option = {
+		name = SEA_japan_foreign_policy.120.a
+
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.121
+	title = SEA_japan_foreign_policy.121.t
+	desc = SEA_japan_foreign_policy.121.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# It's their loss
+	option = {
+		name = SEA_japan_foreign_policy.121.a
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.122
+	title = SEA_japan_foreign_policy.122.t
+	desc = SEA_japan_foreign_policy.122.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	#Accept generals
+	option = {
+		name = SEA_japan_foreign_policy.122.a
+		ai_chance = {
+			base = 10
+		}
+		FROM = {		
+			every_army_leader = {
+				random_select_amount = 6
+				limit = {
+					OWNER = { tag = FROM }
+					OR = {
+						has_trait = JAP_samurai_lineage
+						has_trait = JAP_royal_lineage
+					}
+					has_trait = JAP_IJA_loyalist
+				}
+				set_nationality = ROOT
+			}
+		}		
+		FROM = { 
+			country_event = { 
+				id = SEA_japan_foreign_policy.123 
+				hours = 6
+			} 
+		}
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.123
+	title = SEA_japan_foreign_policy.123.t
+	desc = SEA_japan_foreign_policy.123.desc
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = SEA_japan_foreign_policy.123.a
+		
+		add_timed_idea = {
+			idea = JAP_influx_of_socialist_industrial_expertise_idea
+			days = 420
+		}	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.124
+	title = SEA_japan_foreign_policy.124.t
+	desc = SEA_japan_foreign_policy.124.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# We will be stronger together 
+	option = { 
+		name = SEA_japan_foreign_policy.124.a
+		ai_chance = {
+			base = 90
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 1.5
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value > 75
+				}	
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.125
+				hours = 12
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				add_to_faction = ROOT
+			}
+		}
+
+		SOV = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.127
+				hours = 24
+			}
+		}
+
+	}
+
+	# That would go against our principals of neutrality...
+	option = { 
+		name = SEA_japan_foreign_policy.124.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_opinion = {
+					target = JAP
+					value < 25
+				}	
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.126
+				hours = 12
+				random_hours = 24
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.125
+	title = SEA_japan_foreign_policy.125.t
+	desc = SEA_japan_foreign_policy.125.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# As they should
+	option = {
+		name = SEA_japan_foreign_policy.125.a
+
+		add_to_faction = FROM
+
+	}
+
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.126
+	title = SEA_japan_foreign_policy.126.t
+	desc = SEA_japan_foreign_policy.126.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# It's their loss
+	option = {
+		name = SEA_japan_foreign_policy.126.a
+
+		
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.127
+	title = SEA_japan_foreign_policy.127.t
+	desc = SEA_japan_foreign_policy.127.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# No, we must let this go...
+	option = { 
+		name = SEA_japan_foreign_policy.127.a
+		ai_chance = {
+			base = 90
+		}
+
+		add_political_power = 50
+
+	}
+
+	# Yes, they will pay for this!
+	option = { 
+		name = SEA_japan_foreign_policy.127.b
+		ai_chance = {
+			base = 10
+		}
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}	
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.128
+	title = SEA_japan_foreign_policy.128.t
+	desc = SEA_japan_foreign_policy.128.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# This is an opportunity for us 
+	option = { 
+		name = SEA_japan_foreign_policy.128.a
+		ai_chance = {
+			base = 95
+			modifier = {
+				has_war_support < 0.5
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.129
+				days = 1
+				random_days = 2
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				puppet = {
+					target = ROOT
+					end_wars = yes
+					end_civil_wars = no
+				}	
+			}	
+		}
+
+	}
+
+	# We must maintain our independence at all costs!
+	option = { 
+		name = SEA_japan_foreign_policy.128.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_war_support > 0.5
+				factor = 1.5
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.5
+				factor = 0.5
+			}
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.130
+				days = 1
+				random_days = 2
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+					expire = 0
+				}	
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.129
+	title = SEA_japan_foreign_policy.129.t
+	desc = SEA_japan_foreign_policy.129.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# Perfect!
+	option = {
+		name = SEA_japan_foreign_policy.129.a
+
+		puppet = {
+			target = FROM
+			end_wars = yes
+			end_civil_wars = no
+		}		 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.130
+	title = SEA_japan_foreign_policy.130.t
+	desc = SEA_japan_foreign_policy.130.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# Then we must take back our territory by force!
+	option = {
+		name = SEA_japan_foreign_policy.130.a
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+			expire = 0
+		}	
+
+	}
+
+}
+
+country_event = { 
+	id = SEA_japan_foreign_policy.131
+	title = SEA_japan_foreign_policy.131.t
+	desc = SEA_japan_foreign_policy.131.desc
+	picture = GFX_report_event_generic_communist_militia
+
+	is_triggered_only = yes
+
+	option = { #we are communist now!
+		name = SEA_japan_foreign_policy.131.a
+		ai_chance = {
+			base = 98
+		}
+
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				set_variable = { ROOT.temp_capital = THIS.id }
+			}
+		}
+
+		set_party_name = {
+		    ideology = communism
+		    long_name = KOR_communism_namro_party_long
+		    name = KOR_communism_namro_party
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.4
+		}	
+
+		start_civil_war = {
+			ideology = ROOT
+			ruling_party = communism
+			size = 0.5 
+			states = all
+			states_filter = {
+			    OR = {
+			    	state = 527
+			    	state = 1028
+			    	state = 525
+			    }
+			    is_controlled_by = ROOT
+			}
+		}
+
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+				ideology = stalinism
+				expire = "1952.1.1.1"
+				traits = { JAP_socialist_revolutionary } 
+			}
+		}
+
+
+
+	}
+
+	option = { #Fight back the red menace!
+		name = SEA_japan_foreign_policy.131.b
+		ai_chance = {
+			base = 2
+		}
+
+		hidden_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				set_variable = { ROOT.temp_capital = THIS.id }
+			}
+		}
+
+		start_civil_war = {
+			ideology = communism
+			ruling_party = ROOT
+			size = 0.5 
+			states = all
+			states_filter = {
+			    OR = {
+			    	state = 1031
+			    	state = 1030
+			    	state = 1029
+			    }
+			    is_controlled_by = ROOT
+			}
+			IF = {
+				limit = {
+					PREV.PREV = {
+						has_civil_war = yes
+					}
+				}
+				PREV.PREV = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = stalinism
+							expire = "1952.1.1.1"
+							traits = { JAP_socialist_revolutionary } 
+						}
+					}	
+				}
+			}
+			PREV.PREV = {
+				set_party_name = {
+				    ideology = communism
+				    long_name = KOR_communism_namro_party_long
+				    name = KOR_communism_namro_party
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.4
+				}	
+			}
+		}
+
+
+
+		
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.132
+	title = SEA_japan_foreign_policy.132.t
+	desc = SEA_japan_foreign_policy.132.desc
+	picture = GFX_report_event_japanese_officers
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+	
+	# This is an opportunity for us 
+	option = { 
+		name = SEA_japan_foreign_policy.132.a
+		ai_chance = {
+			base = 70
+			modifier = {
+				has_war_support < 0.5
+				factor = 2
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.8 }
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				JAP = { is_in_faction = yes }
+				factor = 2
+			}
+		}
+
+		FROM = {
+			country_event = {
+				# FROM folds
+				id = SEA_japan_foreign_policy.133
+				days = 1
+				random_days = 2
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				puppet = {
+					target = ROOT
+					end_wars = yes
+					end_civil_wars = no
+				}	
+			}	
+		}
+
+	}
+
+	# We must maintain our independence at all costs!
+	option = { 
+		name = SEA_japan_foreign_policy.132.b
+		ai_chance = {
+			base = 30
+			modifier = {
+				has_war_support > 0.5
+				factor = 1.5
+			}
+			modifier = {
+				strength_ratio = { tag = JAP ratio > 1.5 }
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.5
+				factor = 0.5
+			}
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
+		}
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		FROM = {
+			country_event = {
+				# FROM refuses to fold
+				id = SEA_japan_foreign_policy.134
+				days = 1
+				random_days = 2
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT
+					expire = 0
+				}	
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.133
+	title = SEA_japan_foreign_policy.133.t
+	desc = SEA_japan_foreign_policy.133.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# Perfect!
+	option = {
+		name = SEA_japan_foreign_policy.133.a
+
+		puppet = {
+			target = FROM
+			end_wars = yes
+			end_civil_wars = no
+		}		 
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		JAP_setup_faction_wide_aoe_effects_root = yes
+
+	}
+}
+
+country_event = {
+	id = SEA_japan_foreign_policy.134
+	title = SEA_japan_foreign_policy.134.t
+	desc = SEA_japan_foreign_policy.134.desc
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	# Then we must take back our territory by force!
+	option = {
+		name = SEA_japan_foreign_policy.134.a
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+			expire = 0
+		}	
+
+	}
+
+}
+
+country_event = { # Proclamation of the Second Philippine Republic - event for PSR
+	id = SEA_japan_foreign_policy.135
+	title = SEA_japan_foreign_policy.135.t
+	desc = SEA_japan_foreign_policy.135.desc 
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Prosperity is within sight!
+		name = SEA_japan_foreign_policy.135.a	
+		    
+		
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		
+		JAP_setup_faction_wide_aoe_effects_from = yes	
+
+	}
+}

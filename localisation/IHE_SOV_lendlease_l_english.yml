@@ -1,0 +1,3 @@
+﻿l_english:
+ SOV_lendlease_automatic_tt:0 "This focus cannot be picked. Lend-Lease shipments start §Yautomatically§! when [GER.GetNameDef] and [SOV.GetNameDef] go to war, and each one takes §Y120§! days to arrive."
+ SOV_lendlease_in_progress_tt:0 "Lend-Lease shipment under way.\nProgress: §Y$FLAG_DAYS$§!/120 days"

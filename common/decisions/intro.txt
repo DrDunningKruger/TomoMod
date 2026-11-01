@@ -212,14 +212,6 @@ tutorial_decisions = {
 		}
 	}
 	
-	IHE_cuba_retard = {
-		allowed = { original_tag = CUB }
-		fire_only_once = no
-		complete_effect = {
-		country_event = tutorial.30
-		}
-	}
-	
 	IHE_australia_retard = {
 		allowed = { original_tag = AST }
 		fire_only_once = no
@@ -268,14 +260,6 @@ tutorial_decisions = {
 		}
 	}
 
-    IHE_nepal_retard = {	
-		allowed = { original_tag = NEP }
-		fire_only_once = no
-		complete_effect = {
-		country_event = tutorial.24
-		}
-	}
-	
 	#DISABLE
 	IHE_disable = {
 		allowed = { always = yes }

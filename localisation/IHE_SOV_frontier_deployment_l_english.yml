@@ -1,0 +1,9 @@
+﻿l_english:
+ IHE_SOV_frontier_deployment_category:0 "Frontier Deployment"
+ IHE_SOV_frontier_deployment_category_desc:0 "The western military districts must be filled with covering divisions before the enemy strikes."
+ IHE_SOV_frontier_deployment:0 "Deploy the Covering Armies"
+ IHE_SOV_frontier_deployment_desc:0 "Raise skeleton rifle divisions in depth from the border back to Leningrad, Moscow and Stalingrad. They arrive in five waves over nine days."
+ IHE_SOV_frontier_deployment_tt:0 "Over the next §Y9§! days, about §Y1,000§! single-battalion §YPrikrytiya Diviziya§! will be raised in every western state the Soviet Union controls: two echelons along the front and one in the rear."
+ ihe_sov_deployment.5.t:0 "The Covering Armies Are in Position"
+ ihe_sov_deployment.5.d:0 "The last of the reserve echelon has reached its assembly areas. From the frontier to the Volga, every sector now has its covering divisions, and they await full strength and their final orders."
+ ihe_sov_deployment.5.a:0 "Let them come."

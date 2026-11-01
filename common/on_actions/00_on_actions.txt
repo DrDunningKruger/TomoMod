@@ -867,6 +867,13 @@ on_actions = {
 	on_startup = {
 		effect = {
 				ENG = { AFRICA_recalculate = yes }
+				if = {
+					limit = { has_game_rule = { rule = IHE_ASIA_STATUS option = YES_ASIA } }
+					ENG = { PACIFIC_recalculate = yes }
+				}
+				else = {
+					ENG = { PACIFIC_remove_all = yes }
+				}
 				271 = {
 					add_dynamic_modifier = {
 						modifier = ethopian_ressitance_state scope = IEA
@@ -876,7 +883,12 @@ on_actions = {
 					add_dynamic_modifier = {
 						modifier = HONK_HONK
 					}
-				}		
+				}
+				195 = {
+					add_dynamic_modifier = {
+						modifier = SIEGE_OF_LENINGRAD
+					}
+				}
                 #AFRICA SPEED MODIFIER
 				290 = {
 					add_dynamic_modifier = {
@@ -1011,6 +1023,31 @@ on_actions = {
 				460 = {
 					add_dynamic_modifier = {
 						modifier = AFRICA_SPEED
+					}
+				}	
+				457 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED days = 1825
+					}
+				}	
+				456 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED days = 1825
+					}
+				}	
+				798 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED days = 1825
+					}
+				}	
+				551 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED days = 1825
+					}
+				}	
+				678 = {
+					add_dynamic_modifier = {
+						modifier = AFRICA_SPEED days = 1825
 					}
 				}	
 
@@ -1755,11 +1792,6 @@ on_actions = {
 						modifier = JAP_mainland
 					}
 				}	
-				555 = {
-					add_dynamic_modifier = {
-						modifier = JAP_mainland
-					}
-				}	
 				537 = {
 					add_dynamic_modifier = {
 						modifier = JAP_mainland
@@ -1886,7 +1918,6 @@ on_actions = {
 		###################### AFRICA WAR
 			if = {
 				limit = {
-					date < 1942.1.1
 					FROM.FROM = { AFRICA_is_zone = yes }
 				}
 				AFRICA_recalculate = yes
@@ -1898,7 +1929,16 @@ on_actions = {
 				}
 				AFRICA_update_western_defences = yes
 			}
-		
+
+		###################### PACIFIC WAR
+			if = {
+				limit = {
+					has_game_rule = { rule = IHE_ASIA_STATUS option = YES_ASIA }
+					FROM.FROM = { PACIFIC_is_zone = yes }
+				}
+				PACIFIC_recalculate = yes
+			}
+
 		
 		}
 	}

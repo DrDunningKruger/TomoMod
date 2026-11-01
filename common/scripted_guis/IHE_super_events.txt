@@ -1,0 +1,44 @@
+scripted_gui = {
+	IHE_super_event_window = {
+		window_name = "IHE_super_event_window"
+		context_type = player_context
+
+		visible = {
+			OR = {
+				has_country_flag = IHE_super_pax_germanica
+				has_country_flag = IHE_super_allied_victory
+			}
+		}
+
+		triggers = {
+			IHE_super_image_pax_germanica_visible = { has_country_flag = IHE_super_pax_germanica }
+			IHE_super_image_allied_victory_visible = { has_country_flag = IHE_super_allied_victory }
+			IHE_super_flag_left_ger_visible = { has_country_flag = IHE_super_pax_germanica }
+			IHE_super_flag_right_ger_visible = { has_country_flag = IHE_super_pax_germanica }
+			IHE_super_flag_left_sov_visible = { has_country_flag = IHE_super_allied_victory }
+			IHE_super_flag_right_eng_visible = { has_country_flag = IHE_super_allied_victory }
+		}
+
+		effects = {
+			IHE_super_event_close_button_click = {
+				clr_country_flag = IHE_super_pax_germanica
+				clr_country_flag = IHE_super_allied_victory
+			}
+		}
+	}
+
+	IHE_super_event_window_directive_21 = {
+		window_name = "IHE_super_event_window_directive_21"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = IHE_super_directive_21
+		}
+
+		effects = {
+			IHE_super_event_directive_21_close_button_click = {
+				clr_country_flag = IHE_super_directive_21
+			}
+		}
+	}
+}

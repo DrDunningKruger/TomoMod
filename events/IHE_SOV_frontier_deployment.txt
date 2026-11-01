@@ -1,0 +1,69 @@
+add_namespace = ihe_sov_deployment
+
+country_event = {
+	id = ihe_sov_deployment.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		division_template = {
+			name = "Prikrytiya Diviziya"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+			}
+		}
+		IHE_SOV_deploy_first_echelon = yes
+		IHE_SOV_deploy_first_echelon_custom = yes
+	}
+}
+
+country_event = {
+	id = ihe_sov_deployment.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		IHE_SOV_deploy_second_echelon = yes
+		IHE_SOV_deploy_second_echelon_custom = yes
+	}
+}
+
+country_event = {
+	id = ihe_sov_deployment.3
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		IHE_SOV_deploy_first_echelon = yes
+		IHE_SOV_deploy_first_echelon_custom = yes
+	}
+}
+
+country_event = {
+	id = ihe_sov_deployment.4
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		IHE_SOV_deploy_second_echelon = yes
+		IHE_SOV_deploy_second_echelon_custom = yes
+	}
+}
+
+country_event = {
+	id = ihe_sov_deployment.5
+	title = ihe_sov_deployment.5.t
+	desc = ihe_sov_deployment.5.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			IHE_SOV_deploy_reserve_echelon = yes
+		}
+	}
+
+	option = {
+		name = ihe_sov_deployment.5.a
+	}
+}

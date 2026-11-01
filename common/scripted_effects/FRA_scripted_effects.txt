@@ -132,3 +132,112 @@ FRA_communism_riot_effect = {
 		country_event = lar_france_political_violence.2
 	}
 }
+FRA_relocate_factories_effect = {
+	if = {
+		limit = { any_state = { FRA_relocation_tier_1 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_1 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+	else_if = {
+		limit = { any_state = { FRA_relocation_tier_2 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_2 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+	else_if = {
+		limit = { any_state = { FRA_relocation_tier_3 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_3 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+	else_if = {
+		limit = { any_state = { FRA_relocation_tier_4 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_4 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+	else_if = {
+		limit = { any_state = { FRA_relocation_tier_5 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_5 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+	else_if = {
+		limit = { any_state = { FRA_relocation_tier_6 = yes } }
+		every_state = {
+			limit = { FRA_relocation_tier_6 = yes }
+			FRA_relocate_state_factories = yes
+		}
+	}
+}
+
+FRA_relocate_state_factories = {
+	set_variable = {
+		var = FRA_civs_to_move
+		value = industrial_complex_level
+	}
+	set_variable = {
+		var = FRA_mils_to_move
+		value = arms_factory_level
+	}
+	if = {
+		limit = { check_variable = { FRA_civs_to_move > 0 } }
+		remove_building = { type = industrial_complex level = FRA_civs_to_move }
+		for_loop_effect = {
+			end = FRA_civs_to_move
+			FRA_build_relocated_civilian_factory = yes
+		}
+	}
+	if = {
+		limit = { check_variable = { FRA_mils_to_move > 0 } }
+		remove_building = { type = arms_factory level = FRA_mils_to_move }
+		for_loop_effect = {
+			end = FRA_mils_to_move
+			FRA_build_relocated_military_factory = yes
+		}
+	}
+}
+
+FRA_build_relocated_civilian_factory = {
+	random_state = {
+		limit = {
+			FRA_is_relocation_target_state = yes
+			free_building_slots = {
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+FRA_build_relocated_military_factory = {
+	random_state = {
+		limit = {
+			FRA_is_relocation_target_state = yes
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+			}
+		}
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}

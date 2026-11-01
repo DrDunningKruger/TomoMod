@@ -1,0 +1,43 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_IHE_super_event_window"
+		textureFile = "gfx/interface/IHE_super_events/Super_Event_Window.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_event_close_button"
+		textureFile = "gfx/interface/IHE_super_events/Super_Event_Close_Button.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_event_underlay"
+		textureFile = "gfx/interface/IHE_super_events/Super_Event_Animated_Underlay.dds"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_ger"
+		textureFile = "gfx/interface/IHE_super_events/sp_ger.tga"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_sov"
+		textureFile = "gfx/interface/IHE_super_events/sp_sov.tga"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_eng"
+		textureFile = "gfx/interface/IHE_super_events/sp_eng.tga"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_event_window_tall"
+		textureFile = "gfx/interface/IHE_super_events/Super_Event_Window_Tall.tga"
+	}
+	spriteType = {
+		name = "GFX_IHE_super_event_underlay_short"
+		textureFile = "gfx/interface/IHE_super_events/Super_Event_Animated_Underlay_Short.tga"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_IHE_super_image_directive_21"
+		texturefile = "gfx/interface/IHE_super_events/directive_21_map.tga"
+		noOfFrames = 13
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+}
