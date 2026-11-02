@@ -361,3 +361,16 @@ NDefines.NMilitary.RELIABILTY_RECOVERY = 0.1
 NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.045
 NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.04    
 NDefines.NMilitary.ATTRITION_DAMAGE_ORG = 0.05
+
+--navy 
+NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.04                            -- Daily dominance gain, as a fraction of target value
+NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0                                -- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
+NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0                                -- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
+NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0                                    -- Same as PLANNING_CAP_NO_HQ_SCALING but for leader modifiers
+NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0                                    -- Same as PLANNING_CAP_NO_HQ_SCALING but for active abilities
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 999                    -- base cap of naval invasions can be planned at the same time
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -- base cap of divisions that can be assigned in a naval invasion
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10            -- base days needed to prepare a naval invasion
+
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- No xp loss on batallion change
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0    -- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
