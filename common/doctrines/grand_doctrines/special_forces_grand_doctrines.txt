@@ -52,7 +52,7 @@ special_forces_quantity = {
         {
         	special_forces_cap = 0.04
             category_special_forces = {
-                max_organisation = 5
+                max_organisation = 2.5
             }
             effect = {
                 if = {
@@ -100,7 +100,7 @@ special_forces_quality = {
     # EFFECTS
 
     category_special_forces = {
-                max_organisation = 10
+                max_organisation = 5
 
     }
     special_forces_no_supply_grace = 24
@@ -133,7 +133,7 @@ special_forces_quality = {
                 acclimatization_hot_climate_gain_factor = 0.1
                 acclimatization_cold_climate_gain_factor = 0.1
                 soft_attack = 0.05
-                defense = 0.05
+                defense = 0.025
             }
             special_forces_cap = 0.02
             effect = {

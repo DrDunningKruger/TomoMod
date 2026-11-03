@@ -25,7 +25,10 @@ new_strategic_destruction = {
     # EFFECTS
 	air_escort_efficiency = 0.25
     air_strategic_bomber_bombing_factor = 0.2
-	
+	category_fighter = {
+		air_range = 0.15
+	}
+
     milestones = {
         {
             #1 Fighters
@@ -143,7 +146,10 @@ new_battlefield_support = {
 	
 	air_superiority_detect_factor = 0.15
 	air_cas_efficiency = 0.2
-	
+	category_fighter = {
+		air_range = 0.15
+	}
+
     milestones = {
         {
             #1 Fighters
@@ -257,7 +263,10 @@ new_operational_integrity = {
 	
 	air_interception_detect_factor = 0.2
     air_superiority_efficiency = 0.1
-	
+	category_fighter = {
+		air_range = 0.15
+	}
+
     milestones = {
         {
             #1 Fighters

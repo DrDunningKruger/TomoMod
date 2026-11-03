@@ -32,7 +32,6 @@ new_fleet_in_being = {
         {
            #Submarines
             naval_torpedo_reveal_chance_factor = -0.05
-            mines_planting_by_fleets_factor = 0.2
 
             effect = {
                 if = {
@@ -325,7 +324,6 @@ new_base_strike = {
         }
         {
             #Capital Ships
-            carrier_capacity_penalty_reduction = -0.1
             naval_detection = 0.05
 
             effect = {

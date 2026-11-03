@@ -1,0 +1,47 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				division_template = {
+					name = "Tank Converter"
+					division_names_group = ENG_ARM_01
+					priority = 0
+					template_counter = 137
+					regiments = {
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 3 }
+						medium_armor = { x = 0 y = 4 }
+						medium_armor = { x = 1 y = 0 }
+						medium_armor = { x = 1 y = 1 }
+						medium_armor = { x = 1 y = 2 }
+						medium_armor = { x = 1 y = 3 }
+						medium_armor = { x = 1 y = 4 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 2 y = 3 }
+						motorized = { x = 2 y = 4 }
+						motorized = { x = 3 y = 0 }
+						motorized = { x = 3 y = 1 }
+						motorized = { x = 3 y = 2 }
+						motorized = { x = 3 y = 3 }
+						motorized = { x = 3 y = 4 }
+						mot_anti_air_brigade = { x = 4 y = 0 }
+						mot_anti_air_brigade = { x = 4 y = 1 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_air = { x = 0 y = 3 }
+						anti_tank = { x = 0 y = 4 }
+					}
+					allow_new_equipment = no
+					allow_foreign_equipment = no
+				}
+			}
+		}
+	}
+}

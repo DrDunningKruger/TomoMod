@@ -13,27 +13,43 @@ on_actions = {
 					}
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
 					track = infantry
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
 					track = combat_support
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
 					track = armor
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
 					track = operations
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
+					track = infantry_doctrine_track
+				}
+				add_mastery = {
+					amount = 4
+					track = combat_support_doctrine_track
+				}
+				add_mastery = {
+					amount = 4
+					track = armor_tactics_track
+				}
+				add_mastery = {
+					amount = 4
+					track = battle_support_track
+				}
+				add_mastery = {
+					amount = 4
 					track = special_forces_first
 				}
 				add_mastery = {
-					amount = 5
+					amount = 4
 					track = special_forces_second
 				}
 			}
@@ -99,27 +115,43 @@ on_actions = {
 					}
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
 					track = infantry
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
 					track = combat_support
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
 					track = armor
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
 					track = operations
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
+					track = infantry_doctrine_track
+				}
+				add_mastery = {
+					amount = 2
+					track = combat_support_doctrine_track
+				}
+				add_mastery = {
+					amount = 2
+					track = armor_tactics_track
+				}
+				add_mastery = {
+					amount = 2
+					track = battle_support_track
+				}
+				add_mastery = {
+					amount = 2
 					track = special_forces_first
 				}
 				add_mastery = {
-					amount = 2.5
+					amount = 2
 					track = special_forces_second
 				}
 			}

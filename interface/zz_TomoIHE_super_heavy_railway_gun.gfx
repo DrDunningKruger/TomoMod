@@ -1,0 +1,32 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_super_heavy_railway_gun_medium"
+		texturefile = "gfx/interface/technologies/generic_super_heavy_railway_gun.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_super_heavy_railway_gun_medium"
+		texturefile = "gfx/interface/technologies/GER_super_heavy_railway_gun.dds"
+	}
+	spriteType = {
+		name = "GFX_unit_super_heavy_railway_gun_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_super_heavy_railway_gun_unit_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_super_heavy_railway_gun_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_super_heavy_railway_gun_unit_icon.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_super_heavy_railway_gun_icon_small_texticon"
+		texturefile = "gfx/texticons/unit_super_heavy_railway_gun_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_super_heavy_railway_gun_icon_small"
+		texturefile = "gfx/texticons/unit_super_heavy_railway_gun_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+}

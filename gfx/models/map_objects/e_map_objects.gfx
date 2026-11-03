@@ -132,18 +132,6 @@ objectTypes = {
 	}
 	
 	pdxmesh = {
-		name = "greatwall_mesh"
-		file = "gfx/models/map_objects/greatwall/mesh_greatwall.mesh"
-		meshsettings = {
-			#texture_diffuse = "towerTexture.dds"
-			#texture_normal = "towerNormal.dds"
-			#texture_specular = "towerSpec.dds"
-			shader = PdxMeshAdvanced
-		}
-		scale = 1.0
-	}
-	
-	pdxmesh = {
 		name = "chickenitza_mesh"
 		file = "gfx/models/map_objects/chickenitza/mesh_chickenitza.mesh"
 		meshsettings = {
@@ -206,30 +194,6 @@ objectTypes = {
 	pdxmesh = {
 		name = "pantheon_mesh"
 		file = "gfx/models/map_objects/pantheon/mesh_pantheon.mesh"
-		meshsettings = {
-			#texture_diffuse = "towerTexture.dds"
-			#texture_normal = "towerNormal.dds"
-			#texture_specular = "towerSpec.dds"
-			shader = PdxMeshAdvanced
-		}
-		scale = 1.0
-	}
-	
-	pdxmesh = {
-		name = "torigate_mesh"
-		file = "gfx/models/map_objects/torigate/mesh_torigate.mesh"
-		meshsettings = {
-			#texture_diffuse = "towerTexture.dds"
-			#texture_normal = "towerNormal.dds"
-			#texture_specular = "towerSpec.dds"
-			shader = PdxMeshAdvanced
-		}
-		scale = 1.0
-	}
-	
-	pdxmesh = {
-		name = "torigatewater_mesh"
-		file = "gfx/models/map_objects/torigatewater/mesh_torigatewater.mesh"
 		meshsettings = {
 			#texture_diffuse = "towerTexture.dds"
 			#texture_normal = "towerNormal.dds"

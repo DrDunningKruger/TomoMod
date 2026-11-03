@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = { name = "GFX_unit_assault_engineer_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_assault_engineer_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_assault_engineer_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_assault_engineer_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_armored_engineer_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_armored_engineer_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_armored_engineer_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_armored_engineer_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_armored_maintenance_icon_medium"						textureFile = "gfx/interface/counters/divisions_large/unit_armored_maintenance_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_armored_maintenance_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_armored_maintenance_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_pioneer_support_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/pioneers_support.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_jungle_pioneers_support_icon_medium"					textureFile = "gfx/interface/counters/divisions_large/unit_jungle_pioneers_support_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_jungle_pioneers_support_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_jungle_pioneers_support_icon_white.dds" noOfFrames = 2}
+	SpriteType = {
+		name = "GFX_tech_assault_engineer_medium"
+		texturefile = "gfx/interface/technologies/assault_concentration.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_pioneer_support_medium"
+		texturefile = "gfx/interface/technologies/marines_shore_parties_medium.dds"
+	}
+	SpriteType = {
+		name = "GFX_tech_jungle_pioneers_support_medium"
+		texturefile = "gfx/interface/technologies/marines_jungle_troops_medium.dds"
+	}
+}

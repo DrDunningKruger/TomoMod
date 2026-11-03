@@ -100,18 +100,6 @@ entity = {
 }
 
 entity = {
-	name = "torigate"
-	pdxmesh = "torigate_mesh"
-	scale = 1.0
-}
-
-entity = {
-	name = "torigatewater"
-	pdxmesh = "torigatewater_mesh"
-	scale = 1.0
-}
-
-entity = {
 	name = "okayama"
 	pdxmesh = "okayama_mesh"
 	scale = 1.0

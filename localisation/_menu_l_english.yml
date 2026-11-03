@@ -4,10 +4,10 @@
 ######################################################################
  FE_SINGLEPLAYER: "Testbuild"
  DH_exit: "Quit"
- DH_discord: "IH&E Discord"
- DH_steam_workshop: "IH&E Workshop"
+ DH_discord: "TomoMod Discord"
+ DH_steam_workshop: "TomoMod Workshop"
  DH_options: "Options"
  DH_COUNTRY_SELECTION: "Country Selection"
- DH_version: "Made by Battlehammer and Mao"
+ DH_version: "MADE BY TOMO BASED ON IH&E"
  DH_submod_version: ""
  DH_nudge: "FIX MAP"

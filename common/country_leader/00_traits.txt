@@ -5075,6 +5075,10 @@ leader_traits = {
 		}
 
 		equipment_bonus = {
+			armored_support_vehicle = {
+			build_cost_ic = -0.1
+            reliability = -0.1
+		    }
 			mechanized_equipment = {
 			build_cost_ic = -0.1
             reliability = -0.1

@@ -3340,7 +3340,7 @@
  romania.69.a:0 "Medium Tank Division" 
  news.1065:0 "SWI AI IS OFF!"
  news.1065.title:0 "SWI AI IS OFF!"
- news.1065.desc:0 "Switzerland (neutral nation) is the event mule of IH&E. For the mod to work properly, it's AI has to be turned on, but right now it is not, probably because some dumbass was clicking on it in the lobby for too long. Rehost or have someone hotjoin and leave as SWI to enble the AI."
+ news.1065.desc:0 "Switzerland (neutral nation) is the event mule of TomoMod. For the mod to work properly, it's AI has to be turned on, but right now it is not, probably because some dumbass was clicking on it in the lobby for too long. Rehost or have someone hotjoin and leave as SWI to enble the AI."
  news.1065.a:0 "Fuck!"
  OSLO_STRAIT:0 "Oslo Strait"
  materiel_manufacturers_cost_factor:0 "Switching Materiel Manufacturer is free"

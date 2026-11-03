@@ -4,7 +4,7 @@ wolfpacks = {
     description = SUBDOCTRINE_SUBMARINE_WOLFPACKS_DESC
     icon = GFX_doctrine_wolfpacks_medium
 
-    xp_cost = 100
+    xp_cost = 75
     xp_type = navy
 
     available = {
@@ -65,7 +65,7 @@ submarine_fleet_operations = {
     description = SUBDOCTRINE_SUBMARINE_FLEET_OPERATIONS_DESC
     icon = GFX_doctrine_submarine_operations_medium
 
-    xp_cost = 100
+    xp_cost = 75
     xp_type = navy
 
     available = {
@@ -110,9 +110,6 @@ submarine_fleet_operations = {
 		ambush_tactics = {
 			navy_submarine_attack_factor = 0.10
 		}
-		diverse_operations = {
-			submarine = { mines_planting = 0.20 }
-		}
 		predictive_search_patterns = {
 			submarine = {
 				surface_detection = 0.20
@@ -128,7 +125,7 @@ capital_hunters = {
     description = SUBDOCTRINE_SUBMARINE_CAPITAL_HUNTERS_DESC
     icon = GFX_doctrine_unrestricted_submarine_warfare_medium
 
-    xp_cost = 100
+    xp_cost = 75
     xp_type = navy
 
     ai_will_do = { 
@@ -182,7 +179,7 @@ submarine_coastal_defense = {
     description = SUBDOCTRINE_SUBMARINE_COASTAL_DEFENSE_DESC
     icon = GFX_doctrine_undersea_blockade_medium
 
-    xp_cost = 100
+    xp_cost = 75
     xp_type = navy
 
     available = {
@@ -240,67 +237,13 @@ submarine_coastal_defense = {
     }
 }
 
-coastal_minelaying = {
-	track = submarines
-    name = SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING
-    description = SUBDOCTRINE_SUBMARINE_COASTAL_MINELAYING_DESC
-    icon = GFX_doctrine_convoy_interdiction_medium
-
-    xp_cost = 100
-    xp_type = navy
-
-    available = {
-        always = yes
-    }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
-
-    naval_mines_effect_reduction = 0.1
-
-    rewards = {
-
-    	covert_buildup = {
-    		submarine = {
-    			naval_speed = 0.1
-    			mines_planting = 0.25
-    		}
-
-    	}
-
-    	placement_for_effect = {
-    		naval_mines_damage_factor = 0.25
-    	}
-
-
-    	minefield_patrols = {
-    		destroyer = {
-    			mines_planting = 0.25
-    			lg_attack = 0.1
-    		}
-
-    	}
-    	overhead_protection = {
-    		destroyer = {
-    			anti_air_attack = 0.1
-    		}
-
-    	}
-    	clearing_procedures = {
-    		destroyer = {
-    			mines_sweeping = 0.25
-    		}
-    	}
-    }
-}
-
 long_range_submarines = {
     track = submarines
     name = SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES
     description = SUBDOCTRINE_SUBMARINE_LONG_RANGE_SUBMARINES_DESC
     icon = GFX_doctrine_long_range_submarines_medium
 
-    xp_cost = 100
+    xp_cost = 75
     xp_type = navy
 
     available = {

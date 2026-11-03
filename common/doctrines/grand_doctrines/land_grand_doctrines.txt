@@ -25,11 +25,16 @@ new_mobile_warfare = {
         combat_support
         armor
         operations
+        infantry_doctrine_track
+        combat_support_doctrine_track
+        armor_tactics_track
+        battle_support_track
     }
+    max_track_rows = 2
+    max_track_columns = 4
 
     # EFFECTS
 	planning_speed = 0.20
-	army_speed_factor = 0.10
 	enable_tactic = tactic_unexpected_thrust
 	
 
@@ -38,7 +43,7 @@ new_mobile_warfare = {
         {
             #Infantry
 	        org_loss_when_moving = -0.15
-            land_reinforce_rate = 0.02
+            land_reinforce_rate = 0.01
             enable_tactic = tactic_delay
 
             effect = {
@@ -114,6 +119,14 @@ new_mobile_warfare = {
                 }
             }
         }
+        {
+        }
+        {
+        }
+        {
+        }
+        {
+        }
     }
 }
 superior_firepower = {
@@ -143,7 +156,13 @@ superior_firepower = {
         combat_support
         armor
         operations
+        infantry_doctrine_track
+        combat_support_doctrine_track
+        armor_tactics_track
+        battle_support_track
     }
+    max_track_rows = 2
+    max_track_columns = 4
 
     # EFFECTS
     enable_tactic = tactic_overwhelming_fire
@@ -179,7 +198,7 @@ superior_firepower = {
         {
             #Artillery/Support
             category_support_battalions = {
-                max_organisation = 10
+                max_organisation = 5
             }
             planning_decay_rate_factor = -0.1
             enable_tactic = tactic_barrage
@@ -203,7 +222,7 @@ superior_firepower = {
             #Armor
             enable_tactic = tactic_delay
             category_army = {
-                default_morale = 0.1
+                default_morale = 0.05
             }
 
             effect = {
@@ -224,7 +243,7 @@ superior_firepower = {
             #Operations
             enable_tactic = tactic_tactical_withdrawal
             category_army = {
-                default_morale = 0.2
+                default_morale = 0.05
             }
             planning_decay_rate_factor = -0.1
 
@@ -243,6 +262,14 @@ superior_firepower = {
             }
         }
 
+        {
+        }
+        {
+        }
+        {
+        }
+        {
+        }
     }
 }
 
@@ -268,12 +295,18 @@ grand_battleplan = {
         combat_support
         armor
         operations
+        infantry_doctrine_track
+        combat_support_doctrine_track
+        armor_tactics_track
+        battle_support_track
     }
+    max_track_rows = 2
+    max_track_columns = 4
 
     # EFFECTS
     enable_tactic = tactic_planned_attack
     
-    max_planning = 0.1
+    max_planning = 0.075
     command_power_gain = 0.25
 
     additional_brigade_column_size = 1
@@ -318,7 +351,7 @@ grand_battleplan = {
         }
         {
             #Armor
-            land_reinforce_rate = 0.02
+            land_reinforce_rate = 0.01
             enable_tactic = tactic_breakthrough
             effect = {
                 if = {
@@ -354,6 +387,14 @@ grand_battleplan = {
                 }
             }
         }
+        {
+        }
+        {
+        }
+        {
+        }
+        {
+        }
     }
 }
 
@@ -379,7 +420,13 @@ mass_assault = {
         combat_support
         armor
         operations
+        infantry_doctrine_track
+        combat_support_doctrine_track
+        armor_tactics_track
+        battle_support_track
     }
+    max_track_rows = 2
+    max_track_columns = 4
 
     # EFFECTS
     no_supply_grace = 48
@@ -412,7 +459,7 @@ mass_assault = {
             #Artillery/Support
             enable_tactic = tactic_elastic_defense
             #out_of_supply_factor = -0.05
-            land_reinforce_rate = 0.02
+            land_reinforce_rate = 0.01
             #minimum_training_level = -0.05
 
             effect = {
@@ -431,7 +478,7 @@ mass_assault = {
         }
         {
             #Armor
-            land_reinforce_rate = 0.02
+            land_reinforce_rate = 0.01
             enable_tactic = tactic_overwhelming_fire
 
             effect = {
@@ -469,6 +516,14 @@ mass_assault = {
                     add_to_variable = { operations_milestone_var = 1 }
                 }
             }
+        }
+        {
+        }
+        {
+        }
+        {
+        }
+        {
         }
     }
 }

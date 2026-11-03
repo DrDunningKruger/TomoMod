@@ -1,0 +1,7 @@
+﻿l_english:
+ tech_pioneer_support:0 "$pioneer_support$"
+ tech_pioneer_support_desc:0 "$pioneer_support_desc$"
+ tech_assault_engineer:0 "$assault_engineer$"
+ tech_assault_engineer_desc:0 "$assault_engineer_desc$"
+ tech_jungle_pioneers_support:0 "$jungle_pioneers_support$"
+ tech_jungle_pioneers_support_desc:0 "Specialist engineers trained to cut roads and fight through dense jungle."

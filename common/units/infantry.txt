@@ -137,6 +137,7 @@ sub_units = {
 		group = infantry
 		
 		categories = {
+			category_marines
 			category_front_line
 			category_light_infantry
 			category_all_infantry
