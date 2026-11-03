@@ -5246,7 +5246,6 @@ focus_tree = {
 		
 		available = {
 			has_war = yes
-			has_country_flag = GER_tigertank
 		}
 		
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
@@ -5372,20 +5371,23 @@ focus_tree = {
                 custom_effect_tooltip = "GER_CITADEL_TOOLTIP2" 
 				
 				#your divs spawn now
-				
-				305 = {					
+
+				if = {
+				limit = { has_country_flag = GER_tigertank }
+				305 = {
 					create_unit = {
-						division = "name = \"1st Heavy Tank Division\" division_template = \"Schwere Panzerdivision\" start_experience_factor = 0.7" 
+						division = "name = \"1st Heavy Tank Division\" division_template = \"Schwere Panzerdivision\" start_experience_factor = 0.7"
 						owner = GER
 					}
-				} 				
-				
-				305 = {					
+				}
+
+				305 = {
 					create_unit = {
-						division = "name = \"2nd Heavy Tank Division\" division_template = \"Schwere Panzerdivision\" start_experience_factor = 0.7" 
+						division = "name = \"2nd Heavy Tank Division\" division_template = \"Schwere Panzerdivision\" start_experience_factor = 0.7"
 						owner = GER
 					}
-				}        
+				}
+				}
 		}
 	}
 	focus = {
@@ -5430,6 +5432,7 @@ focus_tree = {
 		
 		available = {
 			date > 1941.05.01
+			has_tech = improved_heavy_tank_chassis
 		}
 
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
@@ -5438,12 +5441,7 @@ focus_tree = {
 
 		set_country_flag = GER_tigertank
 
-		custom_effect_tooltip = "tigerone_tooltip"	
-			if = {
-			limit = { NOT = { has_tech = improved_heavy_tank_chassis  }}
-			set_technology = {
-				improved_heavy_tank_chassis = 1
-			}}
+		custom_effect_tooltip = "tigerone_tooltip"
 			set_technology = {
 				engine_tech_3 = 1
 				engine_tech_4 = 1
@@ -8093,7 +8091,6 @@ focus_tree = {
 				name = AST_fund_owen_gun_research
 				bonus = 2.0
 				uses = 1
-				technology = tech_logistics_company2
 				technology = tech_logistics_company3
 				technology = tech_logistics_company4
 			}			

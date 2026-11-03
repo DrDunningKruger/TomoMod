@@ -1,4 +1,11 @@
 ﻿l_english:
  SOV_industry_relocation_rear:0 "Convert Rear Area Industry"
+ SOV_begin_rear_conversion:0 "Begin Rear Area Industry Conversion"
+ SOV_begin_rear_conversion_desc:0 "The factories of the east must be turned over to war production. Once begun, civilian industry in the rear areas will be steadily converted into military factories."
+ SOV_begin_rear_conversion_tt:0 "Starts §HConvert Rear Area Industry§!, which converts civilian factories into military factories in the eastern states every 20 days while at war with Germany."
+ SOV_develop_the_east:0 "Develop the East"
+ SOV_develop_the_east_desc:0 "Rather than tearing up the factories of the rear, we will invest in the roads and railways of Siberia and the Urals, opening the east to industry."
+ SOV_develop_the_east_tt:0 "Every state we own in §HSiberia§!, the §HFar East§! and the §HUrals§! gains:\n - §G+2§! Infrastructure if it has 0-2 levels\n - §G+1§! Infrastructure if it has 3 levels\n - §G+10%§! Military Factory construction speed while it has 4 or more levels\n\n§RCannot be taken alongside Begin Rear Area Industry Conversion.§!"
+ SOV_develop_the_east_construction:0 "Eastern Development"
  SOV_factory_relocation_inefficiency:0 "Factory Relocation Inefficiency"
  SOV_factory_relocation_inefficiency_desc:0 "Whole factories are being torn down, loaded onto trains and rebuilt far to the east. Production lines will take time to recover their efficiency."

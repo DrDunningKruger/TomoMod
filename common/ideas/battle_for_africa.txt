@@ -17,10 +17,10 @@ ideas = {
 
 		
 			modifier = {
-				industrial_capacity_dockyard = 0.05
-				stability_factor = 0.1
-				consumer_goods_expected_value = -0.02				
-				local_resources_factor = 0.1	
+				industrial_capacity_factory = 0.10
+				consumer_goods_expected_value = -0.03
+				local_resources_factor = 0.05
+				stability_factor = 0.05
 			}
 		}		
 		AFRICA_ALLIES_10 = {
@@ -39,10 +39,10 @@ ideas = {
 
 	
 			modifier = {
-				industrial_capacity_dockyard = 0.05
-				stability_factor = 0.05
-				consumer_goods_expected_value = -0.01					
-				local_resources_factor = 0.05			
+				industrial_capacity_factory = 0.08
+				consumer_goods_expected_value = -0.02
+				local_resources_factor = 0.05
+				stability_factor = 0.025
 			}
 		}		
 		AFRICA_ALLIES_9 = {
@@ -61,9 +61,9 @@ ideas = {
 			
 			
 			modifier = {
-				stability_factor = 0.05
-				consumer_goods_expected_value = -0.01					
-				local_resources_factor = 0.05					
+				industrial_capacity_factory = 0.06
+				consumer_goods_expected_value = -0.01
+				local_resources_factor = 0.05
 			}
 		}		
 		AFRICA_ALLIES_8 = {
@@ -82,8 +82,8 @@ ideas = {
 			
 			
 			modifier = {
-				stability_factor = 0.05
-				consumer_goods_expected_value = -0.01				
+				industrial_capacity_factory = 0.04
+				consumer_goods_expected_value = -0.01
 			}
 		}		
 		AFRICA_ALLIES_7 = {
@@ -102,7 +102,7 @@ ideas = {
 
 		
 			modifier = {
-				consumer_goods_expected_value = -0.01				
+				industrial_capacity_factory = 0.02
 			}
 		}
 		AFRICA_ALLIES_6 = {
@@ -140,8 +140,7 @@ ideas = {
 
 	
 			modifier = {
-				stability_factor = -0.05
-				political_power_gain = -0.05
+				stability_factor = 0
 			}
 		}		
 		AFRICA_ALLIES_4 = {
@@ -160,8 +159,7 @@ ideas = {
 			
 			
 			modifier = {
-				stability_factor = -0.07
-				political_power_gain = -0.1	
+				stability_factor = 0
 			}
 		}		
 		AFRICA_ALLIES_3 = {
@@ -180,8 +178,7 @@ ideas = {
 
 			
 			modifier = {
-				stability_factor = -0.10
-				political_power_gain = -0.05
+				stability_factor = 0
 			}
 		}		
 		AFRICA_ALLIES_2 = {
@@ -200,16 +197,7 @@ ideas = {
 		
 		
 			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.1
-				air_superiority_efficiency = -0.05
-				air_cas_efficiency = -0.05
-				air_strategic_bomber_bombing_factor = -0.05
-				air_escort_efficiency = -0.05
-				air_intercept_efficiency = -0.05
-				air_nav_efficiency = -0.05
-				air_ace_generation_chance_factor = -0.05
-				air_accidents_factor = 0.05
+				stability_factor = 0
 			}
 		}		
 		AFRICA_ALLIES_1 = { #TOTAL ALLIED DEATH
@@ -228,16 +216,7 @@ ideas = {
 			
 			
 			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.1
-				air_superiority_efficiency = -0.10
-				air_cas_efficiency = -0.10
-				air_strategic_bomber_bombing_factor = -0.10
-				air_escort_efficiency = -0.10
-				air_intercept_efficiency = -0.10
-				air_nav_efficiency = -0.10
-				air_ace_generation_chance_factor = -0.10
-				air_accidents_factor = 0.10
+				stability_factor = 0
 			}
 		}		
 		# FOR AXIS
@@ -407,8 +386,7 @@ ideas = {
 			picture = AFRICA_allies1
 			
 			modifier = {
-				war_support_factor = -0.05
-				fascism_drift = -0.01				
+				stability_factor = 0
 			}
 		}		
 		AFRICA_AXIS_4 = {
@@ -427,9 +405,7 @@ ideas = {
 			picture = AFRICA_allies2
 			
 			modifier = {
-				war_support_factor = -0.05
-				political_power_gain = -0.025
-				fascism_drift = -0.01
+				stability_factor = 0
 			}
 		}		
 		AFRICA_AXIS_3 = {
@@ -448,10 +424,7 @@ ideas = {
 
 
 			modifier = {
-				war_support_factor = -0.05
-				political_power_gain = -0.05	
-				fascism_drift = -0.01
-				base_fuel_gain_factor = -0.05
+				stability_factor = 0
 			}
 		}		
 		AFRICA_AXIS_2 = {
@@ -470,10 +443,7 @@ ideas = {
 
 			
 			modifier = {
-				war_support_factor = -0.05
-				political_power_gain = -0.0725	
-				fascism_drift = -0.02
-				base_fuel_gain_factor = -0.1
+				stability_factor = 0
 			}
 		}		
 		AFRICA_AXIS_1 = { #TOTAL AXIS DEATH
@@ -492,11 +462,7 @@ ideas = {
 
 			
 			modifier = {
-				production_factory_max_efficiency_factor = -0.05
-				war_support_factor = -0.05
-				political_power_gain = -0.1
-				fascism_drift = -0.02
-				base_fuel_gain_factor = -0.1
+				stability_factor = 0
 			}
 		}		
 		# FOR GERMANY - one-off 1 year armour cost bonus on first Axis total win, see AFRICA_update_german_armour

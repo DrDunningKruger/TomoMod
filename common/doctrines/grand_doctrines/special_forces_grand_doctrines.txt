@@ -10,9 +10,10 @@ special_forces_quantity = {
             has_tech = marines
             has_tech = paratroopers
         }
+        NOT = { has_doctrine = special_forces_quality }
     }
 
-    xp_cost = 9999
+    xp_cost = 200
     xp_type = army
 
     ai_will_do = {
@@ -26,12 +27,9 @@ special_forces_quantity = {
 
     # EFFECTS
 
-    special_forces_cap = 0.04
-    special_forces_training_time_factor = -0.2
 
     milestones = {
         {
-        	special_forces_cap = 0.04
             category_special_forces = {
                 soft_attack = 0.05
             }
@@ -50,7 +48,6 @@ special_forces_quantity = {
             }            
         }
         {
-        	special_forces_cap = 0.04
             category_special_forces = {
                 max_organisation = 2.5
             }
@@ -83,9 +80,10 @@ special_forces_quality = {
             has_tech = marines
             has_tech = paratroopers
         }
+        NOT = { has_doctrine = special_forces_quantity }
     }
 
-    xp_cost = 9999
+    xp_cost = 200
     xp_type = army
 
     ai_will_do = {
@@ -97,14 +95,6 @@ special_forces_quality = {
         special_forces_second
     }
 
-    # EFFECTS
-
-    category_special_forces = {
-                max_organisation = 5
-
-    }
-    special_forces_no_supply_grace = 24
-
     milestones = {
         {
             category_special_forces = {
@@ -113,7 +103,6 @@ special_forces_quality = {
                 soft_attack = 0.05
                 breakthrough = 0.05
             }
-            special_forces_cap = 0.02
             effect = {
                 if = {
                     limit = {
@@ -135,7 +124,6 @@ special_forces_quality = {
                 soft_attack = 0.05
                 defense = 0.025
             }
-            special_forces_cap = 0.02
             effect = {
                 if = {
                     limit = {

@@ -1,0 +1,14 @@
+SOV_develop_the_east_construction = {
+	enable = {
+		is_owned_by = SOV
+		infrastructure > 3
+		OR = {
+			NOT = { has_state_flag = SOV_develop_the_east_raised }
+			infrastructure > 4
+		}
+	}
+
+	icon = GFX_modifiers_generic_military_industry
+
+	state_production_speed_arms_factory_factor = 0.1
+}

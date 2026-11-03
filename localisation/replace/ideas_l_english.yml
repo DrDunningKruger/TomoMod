@@ -3523,7 +3523,7 @@
  lackofresourcesspirit:0 "No need for imports"
  lackofresourcesspirit_desc:0 "This spirit exists to prevent USA from boosting other countries. Goes away in 41 or when at war, allowing you to trade properly again."
 
- africa_war_desc:0 "Fate of Africa: for each of the following zones controlled the enemy will have a larger malus while we will gain a large bonus and vice-versa.\n [458.Controller.GetFlag] §YTunisia\n [448.Controller.GetFlag] Tripoli\n [449.Controller.GetFlag] El Agheila\n [450.Controller.GetFlag] Benghasi\n [164.Controller.GetFlag] Rhodes\n [840.Controller.GetFlag] Crete\n [183.Controller.GetFlag] Cyprus\n [839.Controller.GetFlag] El-Alamein\n [446.Controller.GetFlag] Cairo\n [454.Controller.GetFlag] Palestine" 
+ africa_war_desc:0 "Fate of Africa: for each of the following zones controlled we will gain a large bonus, and the enemy for each zone they control.\n [458.Controller.GetFlag] §YTunisia\n [448.Controller.GetFlag] Tripoli\n [449.Controller.GetFlag] El Agheila\n [450.Controller.GetFlag] Benghasi\n [164.Controller.GetFlag] Rhodes\n [840.Controller.GetFlag] Crete\n [183.Controller.GetFlag] Cyprus\n [839.Controller.GetFlag] El-Alamein\n [446.Controller.GetFlag] Cairo\n [454.Controller.GetFlag] Palestine" 
  africa_ger_armour_0:0 "§YGermany§!: no armour cost reduction at this level. Each Axis level from §YAxis Probing§! to §YVictory in Africa§! gives Germany §G-1%§! armour production cost, up to §G-5%§!."
  africa_ger_armour_1:0 "§YGermany§!: §G-1%§! armour production cost at this level (§G-1%§! per Axis level, up to §G-5%§!)."
  africa_ger_armour_2:0 "§YGermany§!: §G-2%§! armour production cost at this level (§G-1%§! per Axis level, up to §G-5%§!)."

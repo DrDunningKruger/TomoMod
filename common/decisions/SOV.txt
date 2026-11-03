@@ -1012,6 +1012,60 @@ SOV_industry_relocation = {
 		}
 	}
 	
+	SOV_begin_rear_conversion = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = SOV }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		available = {
+			has_war_with = GER
+			NOT = { has_country_flag = SOV_develop_the_east_taken }
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_begin_rear_conversion_tt
+			hidden_effect = {
+				set_country_flag = SOV_rear_conversion_enabled
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	SOV_develop_the_east = {
+
+		icon = generic_construction
+
+		allowed = { original_tag = SOV }
+
+		fire_only_once = yes
+
+		cost = 0
+
+		available = {
+			NOT = { has_country_flag = SOV_rear_conversion_enabled }
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_develop_the_east_tt
+			hidden_effect = {
+				set_country_flag = SOV_develop_the_east_taken
+				TomoMod_SOV_develop_the_east = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
 	# Rear areas: every Soviet state west of 586, plus 586 (Alma-Ata). Converts civs to mils in place, nothing moves to Siberia
 	SOV_industry_relocation_rear = {
 
@@ -1022,13 +1076,16 @@ SOV_industry_relocation = {
 		days_mission_timeout = 20
 
 		fire_only_once = yes
-		
+
 		available = {
 			NOT = { has_war_with = GER }
 		}
-		
+
 		activation = {
-			SOV = { has_war_with = GER }
+			SOV = {
+				has_war_with = GER
+				has_country_flag = SOV_rear_conversion_enabled
+			}
 		}
 
 		is_good = yes

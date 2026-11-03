@@ -43,7 +43,6 @@ new_mobile_warfare = {
         {
             #Infantry
 	        org_loss_when_moving = -0.15
-            land_reinforce_rate = 0.01
             enable_tactic = tactic_delay
 
             effect = {
@@ -351,7 +350,6 @@ grand_battleplan = {
         }
         {
             #Armor
-            land_reinforce_rate = 0.01
             enable_tactic = tactic_breakthrough
             effect = {
                 if = {

@@ -4578,6 +4578,12 @@ focus_tree = {
 		}
 		completion_reward = {
 		custom_effect_tooltip = "ITALYannex_TOOLTIP"
+			IEA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -999999
+				}
+			}
 			annex_country = {
             	target = IEA
 		}

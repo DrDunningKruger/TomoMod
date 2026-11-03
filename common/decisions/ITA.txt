@@ -325,7 +325,13 @@ ITA_annex_yug = {
 			}
 
 			complete_effect = {
-				ITA = { 
+				YUG = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -999999
+					}
+				}
+				ITA = {
 					annex_country = {
 						target = YUG
 						transfer_troops = yes 

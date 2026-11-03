@@ -3700,7 +3700,7 @@
  GER_RESERVES_TOOLTIP:0 "§OGet 40 90% equipped infantry divisions§!"
  GER_BLAU_TOOLTIP:0 "§OGet 40 infantry divisions§!\n§RAutocompletes in May 1942§!"
  GER_CITADEL_TOOLTIP:0 "§OGet two heavy tank divisions in Berlin§!"
- GER_CITADEL_TOOLTIP2:0 "§RComplete "The Tiger, Tiger Ausf.B or Maus" focus first. Equipment of your divisions will depend on which focus you completed last.§!"
+ GER_CITADEL_TOOLTIP2:0 "§RThe two heavy tank divisions are only given if "The Tiger" focus has been completed. Equipment of your divisions will depend on whether you completed "The Tiger", "Tiger Ausf.B" or "Maus" last.§!"
  GER_PARATANK_TOOLTIP:0 "§OGet a free Armored Division§!"
  GER_YUGOTOOLTIP:0 "§OSplit up Yugoslavia among Axis members. Turn what's left into Croatia.§!"
  GER_AFRICASTART_TOOLTIP:0 "§OAutocompletes soon after Italy declares war on Greece OR after Italy loses eastern Libya / Tripoliand.§!"

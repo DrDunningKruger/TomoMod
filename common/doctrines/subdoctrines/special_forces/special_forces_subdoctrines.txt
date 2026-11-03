@@ -4,7 +4,7 @@ mountaineers_1 = {
     description = SUBDOCTRINE_MOUNTAINEERS_1_DESC
     icon = GFX_ski_troops_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = army
 
     xor = { mountaineers_2 }
@@ -18,6 +18,11 @@ mountaineers_1 = {
 
     available = {
     	has_tech = tech_mountaineers
+    	OR = {
+    		has_doctrine = mountaineers_1
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -39,7 +44,6 @@ mountaineers_1 = {
     # EFFECTS
 	effect = {
 	}
-	mountaineers_special_forces_contribution_factor = -0.25
     
     rewards = {
 		reward_1 = {
@@ -53,8 +57,6 @@ mountaineers_1 = {
 		}
 		reward_2 = {
 			mastery = 50
-	    	special_forces_training_time_factor = -0.1
-	    	mountaineers_special_forces_contribution_factor = -0.25
 		}
 		reward_3 = {
 			mastery = 50
@@ -83,7 +85,7 @@ mountaineers_2 = {
     description = SUBDOCTRINE_MOUNTAINEERS_2_DESC
     icon = GFX_special_forces_mountaineers_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = army
 
     xor = { mountaineers_1 }
@@ -97,6 +99,11 @@ mountaineers_2 = {
 
     available = {
     	has_tech = tech_mountaineers
+    	OR = {
+    		has_doctrine = mountaineers_2
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -120,7 +127,6 @@ mountaineers_2 = {
     # EFFECTS
 	effect = {
 	}
-	mountaineers_special_forces_contribution_factor = -0.25
     
     rewards = {
 		reward_1 = {
@@ -147,7 +153,6 @@ mountaineers_2 = {
 		    category_mountaineers = {
 		    	initiative = 0.01
 		    }
-			unit_mountaineers_design_cost_factor = -0.50
 		}
 		reward_3 = {
 			mastery = 50
@@ -160,7 +165,6 @@ mountaineers_2 = {
 		}
 		reward_4 = {
 			mastery = 50
-			mountaineers_special_forces_contribution_factor = -0.25
 			category_mountaineers = {
 				supply_consumption = -0.02
 				max_organisation = 5
@@ -168,7 +172,7 @@ mountaineers_2 = {
 		}
 		reward_5 = {
 			mastery = 50
-			special_forces_attack_factor = 0.1
+			special_forces_attack_factor = 0.05
 		}
     }
 }
@@ -179,7 +183,7 @@ marines_1 = {
     description = SUBDOCTRINE_MARINES_1_DESC
     icon = GFX_marines_commandoes_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = navy
 
     xor = { marines_2 }
@@ -193,6 +197,11 @@ marines_1 = {
 
     available = {
     	has_tech = marines
+    	OR = {
+    		has_doctrine = marines_1
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -217,7 +226,6 @@ marines_1 = {
 
 	effect = {
 	}
-	marines_special_forces_contribution_factor = -0.25
 
     rewards = {
 		reward_1 = {
@@ -230,12 +238,15 @@ marines_1 = {
 		
 		reward_2 = {
 			mastery = 50
-			unit_marine_design_cost_factor = -0.50
 			marine = {
 				max_organisation = 2.5
+				marsh = {
+					attack = 0.1
+					defence = 0.1
+				}
 			}
 		}
-		reward_3 = {			
+		reward_3 = {
 			mastery = 50
 			effect = {
 				custom_effect_tooltip = SF_marine_demoliton_effect_TT
@@ -244,7 +255,6 @@ marines_1 = {
 		reward_4 = {
 			mastery = 50
 			naval_invasion_plan_cap = 2
-			marines_special_forces_contribution_factor = -0.25
 		}
 		reward_5 = {
 			mastery = 50
@@ -268,7 +278,7 @@ marines_2 = {
     description = SUBDOCTRINE_MARINES_2_DESC
     icon = GFX_marines_expeditionary_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = navy
 
     xor = { marines_1 }
@@ -282,6 +292,11 @@ marines_2 = {
 
     available = {
     	has_tech = marines
+    	OR = {
+    		has_doctrine = marines_2
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -303,7 +318,6 @@ marines_2 = {
 	
 	effect = {
 	}
-	marines_special_forces_contribution_factor = -0.25
 	#
 	#
    
@@ -313,7 +327,6 @@ marines_2 = {
 			naval_invasion_prep_days = -5
 			naval_invasion_division_cap = 2
 			naval_invasion_plan_cap = 1
-			marines_special_forces_contribution_factor = -0.25
 		}
 		reward_2 = {
 			mastery = 50
@@ -354,7 +367,7 @@ marines_2 = {
 		}
 		reward_5 = {
 			mastery = 50
-			special_forces_attack_factor = 0.10
+			special_forces_attack_factor = 0.05
 		}
     }
 }
@@ -365,7 +378,7 @@ paratroopers_1 = {
     description = SUBDOCTRINE_PARATROOPERS_1_DESC
     icon = GFX_paras_dispersed_drop_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = air
 
     xor = { paratroopers_2 }
@@ -379,6 +392,11 @@ paratroopers_1 = {
 
     available = {
     	has_tech = paratroopers
+    	OR = {
+    		has_doctrine = paratroopers_1
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -399,7 +417,6 @@ paratroopers_1 = {
    # EFFECTS
    effect = {
 	}
-	paratroopers_special_forces_contribution_factor = -0.25
 	signal_company = {
 		battalion_mult = {
 			category = category_paratroopers
@@ -421,9 +438,6 @@ paratroopers_1 = {
 		}
 		reward_2 = {
 			mastery = 50
-			category_paratroopers = {
-				supply_consumption = -0.02
-			}
 			acclimatization_hot_climate_gain_factor = 0.10
 			acclimatization_cold_climate_gain_factor = 0.10			
 		}
@@ -436,9 +450,6 @@ paratroopers_1 = {
 		}
 		reward_4 = {
 		    mastery = 50
-		    category_paratroopers = {
-				default_morale = 0.15
-			}
 			signal_company = {
 				battalion_mult = {
 					category = category_paratroopers
@@ -448,10 +459,11 @@ paratroopers_1 = {
 		}
 		reward_5 = {
 		    mastery = 50
-		    paratroopers_special_forces_contribution_factor = -0.25
-		    category_paratroopers = {
-				soft_attack = 0.15
-				breakthrough = 0.15
+		    paratrooper = {
+				urban = {
+					attack = 0.1
+					defence = 0.1
+				}
 			}
 		}
 	}
@@ -463,7 +475,7 @@ paratroopers_2 = {
     description = SUBDOCTRINE_PARATROOPERS_2_DESC
     icon = GFX_paras_combat_drop_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = air
 
     xor = { paratroopers_1 }
@@ -477,6 +489,11 @@ paratroopers_2 = {
 
     available = {
     	has_tech = paratroopers
+    	OR = {
+    		has_doctrine = paratroopers_2
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -499,7 +516,6 @@ paratroopers_2 = {
     # EFFECTS
     effect = {
 	}
-	paratroopers_special_forces_contribution_factor = -0.25
 	field_hospital = {
 		battalion_mult = {
 				category = category_paratroopers
@@ -511,7 +527,6 @@ paratroopers_2 = {
     rewards = {
 		reward_1 = {
 	    	mastery = 50
-	    	paratroopers_special_forces_contribution_factor = -0.25	
 			effect = {
 				# Display only — real effect fires in on_units_paradropped_in_state (00_on_actions.txt), gated on has_mastery_level of paratroopers_2
 				custom_effect_tooltip = SF_PARAS_combat_effect_tt
@@ -519,7 +534,9 @@ paratroopers_2 = {
 		}	
 		reward_2 = {
 			mastery = 50
-			special_forces_training_time_factor = -0.1
+			category_paratroopers = {
+				supply_consumption = -0.02
+			}
 		}
 		reward_3 = {
 			mastery = 50
@@ -535,10 +552,17 @@ paratroopers_2 = {
 	    	mastery = 50
 	    	paratrooper_weight_factor = -0.5
 	    	paratrooper_aa_defense = 0.1
+			category_paratroopers = {
+				default_morale = 0.15
+			}
 		}
 	reward_5 = {
 			mastery = 50
-			special_forces_attack_factor = 0.10
+			special_forces_attack_factor = 0.05
+			category_paratroopers = {
+				soft_attack = 0.15
+				breakthrough = 0.15
+			}
 		}
     }
 }
@@ -549,7 +573,7 @@ rangers_1 = {
     description = SUBDOCTRINE_RANGERS_1_DESC
     icon = GFX_rangers_jaegers_training_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = army
 
     xor = { rangers_2 }
@@ -562,6 +586,11 @@ rangers_1 = {
     }
 
     available = {
+    	OR = {
+    		has_doctrine = rangers_1
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -584,7 +613,6 @@ rangers_1 = {
     # EFFECTS
 		effect = {
 		}
-		rangers_special_forces_contribution_factor = -0.25
 
     rewards = {
 		reward_1 = {
@@ -596,7 +624,6 @@ rangers_1 = {
 				soft_attack = 0.05
 				max_organisation = 2.5
 			}
-	    	rangers_special_forces_contribution_factor = -0.25
 		}
 		reward_3 = {
 			mastery = 50
@@ -619,7 +646,7 @@ rangers_2 = {
     description = SUBDOCTRINE_RANGERS_2_DESC
     icon = GFX_rangers_jungle_training_medium
 
-    xp_cost = 60
+    xp_cost = 100
     xp_type = army
 
     xor = { rangers_1 }
@@ -632,6 +659,11 @@ rangers_2 = {
     }
 
     available = {
+    	OR = {
+    		has_doctrine = rangers_2
+    		NOT = { has_subdoctrine_in_track = special_forces_first }
+    		NOT = { has_subdoctrine_in_track = special_forces_second }
+    	}
     }
 
     visible = {
@@ -653,11 +685,20 @@ rangers_2 = {
     # EFFECTS   
 	effect = {
 	}
-	rangers_special_forces_contribution_factor = -0.25
 
     rewards = {
 		reward_1 = {
 			mastery = 50
+			jaeger = {
+				forest = {
+					attack = 0.05
+					defence = 0.05
+				}
+				jungle = {
+					attack = 0.05
+					defence = 0.05
+				}
+			}
 		}
 		reward_2 = {
 		    mastery = 50
@@ -668,12 +709,10 @@ rangers_2 = {
 		}
 		reward_4 = {
 			mastery = 50
-			special_forces_training_time_factor = -0.1
-			rangers_special_forces_contribution_factor = -0.25
 		}
 		reward_5 = {
 			mastery = 50
-			special_forces_attack_factor = 0.1
+			special_forces_attack_factor = 0.05
 		}
     }
 }

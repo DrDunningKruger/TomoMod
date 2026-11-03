@@ -1,7 +1,7 @@
 fra_holds_vs_germany_category = {
 	
 	# The longer Fra holds, the worse its logistical troubles get
-	# days counted from GER at war with ENG
+	# days counted from GER declaring war on FRA
 	# day 0-30    = stage 4	FRA_should_hold_1
 	# day 30-60   = stage 3	FRA_should_hold_2
 	# day 60-90   = stage 2	FRA_should_hold_3
@@ -13,10 +13,7 @@ fra_holds_vs_germany_category = {
 			original_tag = FRA
 		}		
 		activation = {
-		  OR = {
-			GER = { has_war_with = ENG } # once war starts
-			if = { date > 1939.09.15 }
-		  }
+			has_country_flag = FRA_declared_on_by_GER
 		}
 		available = {
 			FRA = { has_country_flag = france_is_capped } 

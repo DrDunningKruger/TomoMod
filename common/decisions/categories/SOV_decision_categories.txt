@@ -3,7 +3,8 @@
 ################
 
 SOV_industry_relocation = {
-	
+	priority = 1000
+
 	allowed = {
 		original_tag = SOV
 	}

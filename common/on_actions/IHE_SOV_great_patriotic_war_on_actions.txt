@@ -24,16 +24,6 @@ on_actions = {
 					}
 					complete_national_focus = Great_patriotic_war
 				}
-				# Factory Relocation Inefficiency: -30% production efficiency growth for 120 days, once per game
-				every_country = {
-					limit = {
-						original_tag = SOV
-						exists = yes
-						NOT = { has_country_flag = SOV_factory_relocation_inefficiency_given }
-					}
-					set_country_flag = SOV_factory_relocation_inefficiency_given
-					add_timed_idea = { idea = SOV_factory_relocation_inefficiency days = 120 }
-				}
 				# Lend-Lease I-III start automatically, 120 days each, once per game (events/IHE_SOV_lendlease.txt)
 				every_country = {
 					limit = {
