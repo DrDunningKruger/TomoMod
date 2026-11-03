@@ -10,7 +10,7 @@ special_forces_quantity = {
             has_tech = marines
             has_tech = paratroopers
         }
-        NOT = { has_doctrine = special_forces_quality }
+        NOT = { has_country_flag = TomoMod_SF_quality_chosen }
     }
 
     xp_cost = 200
@@ -26,7 +26,9 @@ special_forces_quantity = {
     }
 
     # EFFECTS
-
+    effect = {
+        set_country_flag = TomoMod_SF_quantity_chosen
+    }
 
     milestones = {
         {
@@ -80,7 +82,7 @@ special_forces_quality = {
             has_tech = marines
             has_tech = paratroopers
         }
-        NOT = { has_doctrine = special_forces_quantity }
+        NOT = { has_country_flag = TomoMod_SF_quantity_chosen }
     }
 
     xp_cost = 200
@@ -93,6 +95,10 @@ special_forces_quality = {
     tracks = {
         special_forces_first
         special_forces_second
+    }
+
+    effect = {
+        set_country_flag = TomoMod_SF_quality_chosen
     }
 
     milestones = {
