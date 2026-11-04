@@ -98,7 +98,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 900
 
 ---Navy
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0						-- vanilla 0.02 / Chances one ship gets damaged while training
-NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7						
+-- NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7						
 NDefines.NNavy.NAVAL_TRANSFER_BASE_SPEED = 8				-- convoys are faster now (at least toops oness)
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0										-- Changed from vanilla becausee of a weird bug where using too much supply while docked leads to the fleet having no range or fuel
@@ -261,8 +261,8 @@ NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0
 NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0
 NDefines.NDiplomacy.ASSUME_FACTION_LEADERSHIP_PP_COST = 9999
 NDefines.NDiplomacy.NAVAL_BLOCKADE_BASE_COST = 9999
-NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 20
-NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10
+-- NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 20 -> used twice edited out to avoid conflict
+-- NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -> used twice edited out to avoid conflict
 NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_MEDALS = 0
 NDefines.NDoctrines.DEFAULT_REWARD_MASTERY = 50
 NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0
@@ -363,7 +363,9 @@ NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.045
 NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.04    
 NDefines.NMilitary.ATTRITION_DAMAGE_ORG = 0.05
 
---navy 
+-- NEW DEFINES EVERYTHING ABOVE IS IN BASE IHE --
+
+-- navy defines 
 NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.04                            -- Daily dominance gain, as a fraction of target value
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0                                -- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0                                -- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
@@ -373,6 +375,9 @@ NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 999                    -- base cap of n
 NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 10 -- base cap of divisions that can be assigned in a naval invasion
 NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10            -- base days needed to prepare a naval invasion
 
+NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.5 -- undoing battlehammer cope modding to make amtracs terrible		
+
+-- army defines
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- No xp loss on batallion change
-NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.75
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.5 -- less cancer xp loss
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0    -- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
