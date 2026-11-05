@@ -85,9 +85,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP"
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP_1"
-	    	army_experience = 300
-			air_experience = 200
-			MAN = { army_experience = 200  air_experience = 200 }			
 			JAP = { 
 				transfer_state = 608
 				transfer_state = 614
@@ -151,9 +148,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP"
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP_2"
-	    	army_experience = 300
-			air_experience = 200
-			MAN = { army_experience = 200 air_experience = 100 }			
 			JAP = { 
 				transfer_state = 606
 				transfer_state = 620
@@ -210,9 +204,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP"
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP_3"
-			army_experience = 300
-			air_experience = 100
-			MAN = { army_experience = 200 air_experience = 100 }			
 			JAP = {
 				transfer_state = 746
 				transfer_state = 622
@@ -266,9 +257,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = "JAP_CHINA_TOOLTIP_4"
-		  	army_experience = 300
-			air_experience = 200
-			MAN = { army_experience = 200 air_experience = 100 }	
 			JAP = {
 				transfer_state = 602
 				transfer_state = 750
@@ -1338,7 +1326,6 @@ focus_tree = {
 				}
 			}
 			else = {
-				navy_experience = 100
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -2135,8 +2122,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			army_experience = 25
-			navy_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4955,8 +4940,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			navy_experience = 10
-			air_experience = 5
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5712,8 +5695,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			army_experience = 10
-			air_experience = 5
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8459,7 +8440,6 @@ focus_tree = {
 		completion_reward = {
 
 
-			army_experience = 15
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8503,7 +8483,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			army_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8744,7 +8723,6 @@ focus_tree = {
 		completion_reward = {
 			
 			
-			army_experience = 15
 			add_doctrine_cost_reduction = {
 				name = JAP_rely_on_supremacy_of_the_will
 				cost_reduction = 0.25
@@ -8797,7 +8775,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			army_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -9725,7 +9702,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 25
 
 			add_doctrine_cost_reduction = {
 				name = JAP_sea_unify_the_air_forces
@@ -10128,7 +10104,6 @@ focus_tree = {
 		completion_reward = {
 			
 
-			navy_experience = 50
 
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -10241,7 +10216,6 @@ focus_tree = {
 		completion_reward = {
 			
 
-			navy_experience = 50
 
 			add_doctrine_cost_reduction = {
 				name = JAP_balanced_naval_approach
@@ -10314,7 +10288,6 @@ focus_tree = {
 		completion_reward = {
 			
 
-			navy_experience = 50
 
 
 			custom_effect_tooltip = generic_skip_one_line_tt

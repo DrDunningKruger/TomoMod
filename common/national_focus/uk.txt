@@ -149,7 +149,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			army_experience = 100
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
 				bonus = 1.0
@@ -1265,7 +1264,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1.0
@@ -1496,9 +1494,6 @@ focus_tree = {
 		
         search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP}
 		completion_reward = {
-			army_experience = 100
-			navy_experience = 100
-			air_experience = 100
 			
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
@@ -2187,7 +2182,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = fighter_command_focus
 				bonus = 3.0
@@ -2225,7 +2219,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = bomber_command_focus
 				bonus = 1.0
@@ -2265,7 +2258,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 				add_tech_bonus = {
 				name = coastal_command_focus
 				bonus = 1.0
@@ -2459,7 +2451,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY}		
 
 		completion_reward = {
-			navy_experience = 100
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
@@ -3314,8 +3305,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
-			army_experience = 100
-			navy_experience = 100
 			add_ideas = ENG_service_overseas_idea
 			add_tech_bonus = {
 				name = special_bonus
@@ -4399,7 +4388,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = { 
-			navy_experience = 25
 			336 = {
 				add_building_construction = {
 					type = anti_air_building
@@ -4509,7 +4497,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
-			navy_experience = 25
 			326 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -5832,7 +5819,6 @@ focus_tree = {
                 cost_reduction = 0.5
                 uses = 2
                 category = land_doctrine
-			army_experience = 100
             }	
 		}
 	}
@@ -5860,7 +5846,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_ARMY_XP}			
 		
 		completion_reward = {
-		army_experience = 200
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine

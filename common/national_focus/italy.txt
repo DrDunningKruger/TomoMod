@@ -1690,7 +1690,6 @@ focus_tree = {
 				technology = tech_recon2
 				technology = tech_recon3
 			}			
-			army_experience = 100
 		}
 	}	
 	
@@ -1901,7 +1900,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		army_experience = 100
 		  add_doctrine_cost_reduction = {
                 name = land_doc_bonus
                 cost_reduction = 0.5
@@ -2238,7 +2236,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 100
+			add_doctrine_cost_reduction = {
+				name = ITA_air_innovations_bba
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -2353,7 +2356,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			 air_experience = 250
+			add_doctrine_cost_reduction = {
+				name = ITA_superaereo
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -2411,7 +2419,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		    air_experience = 25
 			add_tech_bonus = {
 				name = "Range Bonus"
 				bonus = 1.0
@@ -2460,7 +2467,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		    air_experience = 25
 			add_tech_bonus = {
 				name = "Bomber Bonus"
 				bonus = 1.0
@@ -2483,7 +2489,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		    air_experience = 25
 			add_tech_bonus = {
 				name = "Small Airframe Bonus"
 				bonus = 1.0
@@ -2506,7 +2511,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		    air_experience = 25
 			add_tech_bonus = {
 				name = "CAS Bonus"
 				bonus = 1.0
@@ -2564,7 +2568,6 @@ focus_tree = {
 		unlock_decision_tooltip = ITA_comp_1
 		unlock_decision_tooltip = ITA_comp_2
 		unlock_decision_tooltip = ITA_comp_3
-			navy_experience = 250
 
 			add_doctrine_cost_reduction = {
 				name = FRA_army_reform
@@ -3138,7 +3141,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 150
+			add_doctrine_cost_reduction = {
+				name = ITA_cooperation_programs
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 

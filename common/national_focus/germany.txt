@@ -1908,7 +1908,6 @@ focus_tree = {
 		
 		completion_reward = {
 			
-			air_experience = 100
 
 			add_tech_bonus = {
 				name = air_sup_bonus
@@ -1964,7 +1963,6 @@ focus_tree = {
 		relative_position_id = GER_air_innovation
 		
 		completion_reward = {
-		air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
 				category = air_doctrine
@@ -2179,7 +2177,6 @@ focus_tree = {
 
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
                 name = land_doc_bonus
                 cost_reduction = 0.5
@@ -2387,7 +2384,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = { 
-			air_experience = 100
 			add_tech_bonus = {
 				name = codebreaking_bonus
 				bonus = 1.0
@@ -2819,7 +2815,6 @@ focus_tree = {
 
 		completion_reward = {
 			# Balance research bonus to 2 techs in land_doctrine
-			army_experience = 100
 			add_doctrine_cost_reduction = {
                 name = land_doc_bonus
                 cost_reduction = 0.5
@@ -8410,9 +8405,29 @@ focus_tree = {
 		if = { limit = { has_idea = YUG_idea_ethnic_tensions_3 } 
 		remove_ideas = YUG_idea_ethnic_tensions_3 }		
                 add_ideas = YUG_partisans
-                add_ideas = YUG_genocide		
+                add_ideas = YUG_genocide
 				}
 		}
+			if = {
+				limit = {
+					country_exists = YUG
+					country_exists = ITA
+					YUG = { is_ai = yes }
+					NOT = { has_global_flag = victory_in_europe }
+				}
+				YUG = {
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = -999999
+					}
+				}
+				ITA = {
+					annex_country = {
+						target = YUG
+						transfer_troops = yes
+					}
+				}
+			}
 		}
 	}
 	

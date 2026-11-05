@@ -66,7 +66,6 @@ ideas = {
             stability_weekly = 0.01
 			party_popularity_stability_factor = 0.05
 			war_stability_factor = 0.05
-			experience_gain_army = 2
 			}
 		}
 

@@ -1231,7 +1231,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = CAN_independent_command
 				cost_reduction = 0.5
@@ -1398,7 +1397,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = 34523423423
 				category = land_doctrine
@@ -1691,7 +1689,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = 34523423423
 				category = land_doctrine
@@ -1808,12 +1805,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = CAN_the_valentine_tank3
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}			
 			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
@@ -2371,7 +2362,6 @@ focus_tree = {
 
 
 		complete_tooltip = {
-			air_experience = 100
 			331 = {
 				add_building_construction = {
 					type = air_base
@@ -2388,7 +2378,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 75
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -2505,7 +2494,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 300
 			add_doctrine_cost_reduction = {
 				name = FRA_air342342
 				category = air_doctrine
@@ -2686,7 +2674,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			navy_experience = 50
 			random_state = {
 				limit = {
 					has_state_flag = CAN_halifax_shipyards_DY
@@ -2701,7 +2688,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 50
 			random_owned_controlled_state = {
 				prioritize = { 464 }
 				limit = {
@@ -2865,7 +2851,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 100
 
 			if = {
 			limit = { NOT = { has_tech = early_ship_hull_carrier  }}
@@ -3038,7 +3023,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-			navy_experience = 50
 			random_state = {
 				limit = {
 					has_state_flag = CAN_united_shipyards_DY
@@ -3053,7 +3037,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 50
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes

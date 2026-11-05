@@ -12,44 +12,64 @@ on_actions = {
 						has_idea_with_trait = council_of_theorists
 					}
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = infantry
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = combat_support
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = armor
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = operations
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = infantry_doctrine_track
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = combat_support_doctrine_track
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = armor_tactics_track
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = battle_support_track
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = special_forces_first
 				}
-				add_mastery = {
-					amount = 4
+				add_daily_mastery = {
+					amount = 0.133
+					days = 30
+					name = TomoMod_mastery_army_theorist
 					track = special_forces_second
 				}
 			}
@@ -63,21 +83,23 @@ on_actions = {
 						has_idea_with_trait = council_of_theorists
 					}
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_theorist
 					track = fighter_aircraft
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_theorist
 					track = strike_aircraft
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_theorist
 					track = medium_aircraft
-				}
-				add_mastery = {
-					amount = 5
-					track = heavy_aircraft
 				}
 			}
 			if = {
@@ -90,20 +112,28 @@ on_actions = {
 						has_idea_with_trait = council_of_theorists
 					}
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_theorist
 					track = capital_ships
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_theorist
 					track = carriers
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_theorist
 					track = screens
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_theorist
 					track = submarines
 				}
 			}
@@ -114,44 +144,64 @@ on_actions = {
 						is_hired_as_advisor = yes
 					}
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = infantry
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = combat_support
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = armor
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = operations
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = infantry_doctrine_track
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = combat_support_doctrine_track
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = armor_tactics_track
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = battle_support_track
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = special_forces_first
 				}
-				add_mastery = {
-					amount = 2
+				add_daily_mastery = {
+					amount = 0.067
+					days = 30
+					name = TomoMod_mastery_army_chief
 					track = special_forces_second
 				}
 			}
@@ -162,20 +212,28 @@ on_actions = {
 						is_hired_as_advisor = yes
 					}
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_chief
 					track = capital_ships
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_chief
 					track = carriers
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_chief
 					track = screens
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_navy_chief
 					track = submarines
 				}
 			}
@@ -186,21 +244,130 @@ on_actions = {
 						is_hired_as_advisor = yes
 					}
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_chief
 					track = fighter_aircraft
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_chief
 					track = strike_aircraft
 				}
-				add_mastery = {
-					amount = 5
+				add_daily_mastery = {
+					amount = 0.167
+					days = 30
+					name = TomoMod_mastery_air_chief
 					track = medium_aircraft
 				}
-				add_mastery = {
-					amount = 5
-					track = heavy_aircraft
+			}
+			if = {
+				limit = {
+					has_idea = training_spirit
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = infantry
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = combat_support
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = armor
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = operations
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = infantry_doctrine_track
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = combat_support_doctrine_track
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = armor_tactics_track
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = battle_support_track
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = special_forces_first
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = special_forces_second
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = capital_ships
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = carriers
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = screens
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = submarines
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = fighter_aircraft
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = strike_aircraft
+				}
+				add_daily_mastery = {
+					amount = 0.333
+					days = 30
+					name = TomoMod_mastery_training_spirit
+					track = medium_aircraft
 				}
 			}
 		}

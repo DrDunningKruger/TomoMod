@@ -459,7 +459,6 @@ focus_tree = {
 				}}
 				add_political_power = 150
 			}			
-			army_experience = 100
 			custom_effect_tooltip = manpower_upping_desc		
 		}
 	}
@@ -552,7 +551,6 @@ focus_tree = {
 				uses = 1
 				cost_reduction = 0.5
 			}
-			army_experience = 100			
 		}		
 	}
 
@@ -980,7 +978,6 @@ focus_tree = {
 			has_full_control_of_state = 327
 		}
 				completion_reward = {
-				navy_experience = 100
 				add_ideas = USA_maritime_commission
 				327 = {
 				add_extra_state_shared_building_slots = 2
@@ -1049,7 +1046,6 @@ focus_tree = {
 			hidden_effect = {
 				set_technology = { ship_hull_midget_submarine_tech = 1 } 
 			}
-			navy_experience = 100
 			
 		}
 	}
@@ -1074,7 +1070,6 @@ focus_tree = {
 		}
 		
 				completion_reward = {
-				navy_experience = 100
 				628 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1245,12 +1240,6 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SPA_an_armored_corps
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-			add_tech_bonus = {
 				name = CAN_the_valentine_tank
 				bonus = 1.0
 				uses = 1
@@ -1415,7 +1404,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			air_experience = 100	
 			add_tech_bonus = {
 				name = AST_cac_boomerang
 				bonus = 1.0
@@ -1445,7 +1433,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			air_experience = 100			
 			add_tech_bonus = {
 				name = USA_combined_bomber_offensive
 				bonus = 1.0
@@ -1483,7 +1470,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			air_experience = 100	
 			add_tech_bonus = {
 				name = coastal_command_equipment
 				bonus = 1.0

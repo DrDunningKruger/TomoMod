@@ -37,12 +37,6 @@ air_subdoctrine_night_bombing = {
         stealth_approach = {
 			strategic_bomb_visibility = -0.15
 		}
-		shared_principles = {
-			air_untrained_pilots_penalty_factor = -0.1
-		}
-		bombing_discipline = {
-			air_strategic_bomber_bombing_factor = 0.15
-		}
 		durable_airframes = {
 			air_strategic_bomber_defence_factor = 0.15			
 		}
@@ -84,15 +78,8 @@ air_subdoctrine_carpet_bombing = {
 	}
 
     rewards = {
-		veteran_bomber_crews = {
-			ace_effectiveness_factor = 0.1
-			air_mission_xp_gain_factor = 0.05
-		}
-        breaking_the_spirit = {
+		breaking_the_spirit = {
 			army_bonus_air_superiority_factor = 0.05
-		}
-		destruction_campaigns = {
-			air_strategic_bomber_bombing_factor = 0.1
 		}
 		coordinated_air_operations = {
 			air_mission_efficiency = 0.05
@@ -144,15 +131,10 @@ air_subdoctrine_deep_air_raids = {
 		bad_weather_operations = {
 			air_weather_penalty = -0.15
 		}
-        effective_targetting = {
-			air_strategic_bomber_bombing_factor = 0.2
-		}
-		improved_mission_control = {
-			air_mission_xp_gain_factor = 0.1
+		effective_targetting = {
 		}
 		escort_cooperation = {
 			air_escort_efficiency = 0.1
-			air_superiority_detect_factor = 0.05
 		}
     }
 }
@@ -197,15 +179,8 @@ air_subdoctrine_flying_fortresses = {
 				air_attack = 0.1
 			}
 		}
-		pilot_rescue_missions = {
-			air_wing_xp_loss_when_killed_factor = -0.1
-		}
 		extensive_training = {
 			air_training_xp_gain_factor = 0.1
-			air_ace_generation_chance_factor = 0.05
-		}
-		safety_landing_procedures = {
-			air_accidents_factor = -0.1
 		}
     }
 }
@@ -244,13 +219,8 @@ air_subdoctrine_coastal_air_patrol = {
 				air_defence = 0.05
 			}
 		}
-		efficient_maritime_patrols = {
-			air_nav_efficiency = 0.1
-		}
 		fog_patrol = {
 			air_weather_penalty = -0.1
-		}
-		improved_targetting_techniques = {
 			category_maritime_patrol_bomber = {
 				naval_strike_targetting = 0.1
 			}
@@ -295,9 +265,7 @@ air_subdoctrine_open_ocean_air_patrol = {
 		night_patrols = {
 			air_night_penalty = -0.1
 			spotting_chance = 0.05
-		}
-		naval_destruction = {
-				naval_strike_targetting_factor = 0.1
+			naval_strike_targetting_factor = 0.1
 		}
     }
 }
@@ -348,17 +316,12 @@ air_subdoctrine_heavy_aircraft_focus = {
 			category_maritime_patrol_bomber = {
 				naval_strike_attack = 0.05
 			}
-		}
-		developed_training_programs = {
 			air_training_xp_gain_factor = 0.05
-			air_untrained_pilots_penalty_factor = -0.05
 		}
 		long_range_missions = {
 			category_strat_bomber = {
 				air_range = 0.1
 			}
-		}
-		efficient_fuel_management = {
 			air_fuel_consumption_factor = -0.05
 		}
     }

@@ -240,9 +240,6 @@ grand_assault = {
                     defense = 0.025
                 }
             }
-            category_army = {
-                breakthrough = 0.15
-            }
         }
         combined_arms_integration = {
             army_bonus_air_superiority_factor = 0.05
@@ -343,14 +340,8 @@ deep_battle = {
             category_tanks = {
                 max_organisation = 3
             }
-            armored_car = {
-                max_organisation = 2
-            }
         }
         maskirovka = {
-            army_intel_to_others = -10.0
-            airforce_intel_to_others = -5.0
-            army_intel_factor = 0.05
             org_loss_when_moving = -0.1
             category_vehicle_infantry = {
                 max_organisation = 5
@@ -361,9 +352,6 @@ deep_battle = {
             }
             category_all_armor = {
                 default_morale = 0.1875
-            }
-            armored_car = {
-                max_organisation = 2
             }
         }
         operational_depth_control = {
@@ -461,9 +449,6 @@ deep_battle_no_lar = {
             }
         }
         maskirovka = {
-            army_intel_to_others = -10.0
-            airforce_intel_to_others = -5.0
-            army_intel_factor = 0.05
             org_loss_when_moving = -0.1
             category_vehicle_infantry = {
                 max_organisation = 5
@@ -555,17 +540,10 @@ guerilla_war = {
                 equipment_capture_factor = 0.01
             }
             pocket_penalty = -0.1
-            army_intel_to_others = -10.0
-            army_intel_factor = 0.05
             political_power_factor = 0.05
             mobilization_speed = 0.15
         }
         scorched_earth = {
-            resistance_damage_to_garrison_on_our_occupied_states = 0.1
-            resistance_target_on_our_occupied_states = 0.1
-            category_army = {
-                defense = 0.05
-            }
             militia = {
                 urban = {
                     attack = 0.05
@@ -582,9 +560,6 @@ guerilla_war = {
         defense_of_gained_power = {
             stability_factor = 0.075
             party_popularity_stability_factor = 0.05
-            category_army = {
-                defense = 0.05
-            }
         }
     }
 }

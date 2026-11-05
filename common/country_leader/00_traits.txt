@@ -6201,7 +6201,7 @@ leader_traits = {
 		custom_modifier_tooltip = air_chief_mastery_tt
 		sprite = 2
 		
-		air_night_penalty = -0.2	
+		air_night_penalty = -0.1
 		
 		
 		

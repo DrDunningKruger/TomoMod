@@ -86,7 +86,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -159,7 +158,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-             army_experience = 100	
+			add_doctrine_cost_reduction = {
+				name = AST_promote_reservists
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -503,7 +507,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -600,12 +603,6 @@ focus_tree = {
 				name = RAJ_indian_armor
 				bonus = 1.0
 				uses = 1
-				category = armor
-			}			
-			add_tech_bonus = {
-				name = RAJ_indian_armor
-				bonus = 1.0
-				uses = 1
 				category = tank_modules
 			}			
 		}
@@ -678,7 +675,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 100
             520 = {
 				add_building_construction = {
 					type = air_base
@@ -760,7 +756,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 100
 			523 = {
 				add_building_construction = {
 					type = air_base
@@ -1017,7 +1012,6 @@ focus_tree = {
 				uses = 1
 				category = plane_modules_tech
 			}	
-			air_experience = 100
 			set_rule = {			
 				can_generate_female_aces = yes
 			}
@@ -1111,7 +1105,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			navy_experience = 100
 			519 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1123,7 +1116,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 100
 			519 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1312,7 +1304,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		navy_experience = 100
 			518 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {

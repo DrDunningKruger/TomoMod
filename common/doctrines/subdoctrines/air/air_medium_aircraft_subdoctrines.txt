@@ -29,13 +29,6 @@ air_subdoctrine_bomber_interception = {
 		night_interceptions = {
 			air_night_penalty = -0.15
 		}
-        dispersed_fighting = {
-			air_intercept_efficiency = 0.1
-		}
-		heavy_fighter_veteran_initiative = {
-			 air_ace_generation_chance_factor = 0.05
-			 air_mission_xp_gain_factor = 0.1
-		}
 		high_altitude_approach = {
 			category_heavy_fighter = {
 				air_defence = 0.075
@@ -82,9 +75,6 @@ air_subdoctrine_long_range_escort = {
 				air_range = 0.1
 			}
 		}
-        mutual_air_cover = {
-			air_superiority_detect_factor = 0.15
-		}
 		training_instructors = {
 			air_training_xp_gain_factor = 0.1
 		}
@@ -92,8 +82,6 @@ air_subdoctrine_long_range_escort = {
 			category_heavy_fighter = {
 				air_agility = 0.1
 			}
-		}
-		far_reaching_airforce = {
 			air_range_factor = 0.05
 		}
     }
@@ -132,15 +120,8 @@ air_subdoctrine_operational_air_support = {
 	air_mission_efficiency = 0.05
 
     rewards = {
-		efficient_support_crews = {
-			air_manpower_requirement_factor = -0.1
-			air_wing_xp_loss_when_killed_factor = -0.05
-		}
-        ground_interdictions = {
+		ground_interdictions = {
 			army_bonus_air_superiority_factor = 0.1
-		}
-		operational_airforce_presence = {
-			air_power_projection_factor = 0.1
 		}
 		heavy_fighter_support = {
 			category_heavy_fighter = {
@@ -194,7 +175,7 @@ air_subdoctrine_tactical_battlefield_support = {
 
     rewards = {
 		keypoint_bombing = {
-			air_cas_present_factor = 0.1
+			air_cas_present_factor = 0.05
 		}
         logistical_bombing= {
 			army_bonus_air_superiority_factor = 0.05
@@ -202,14 +183,9 @@ air_subdoctrine_tactical_battlefield_support = {
 		}
 		ship_hunters = {
 			category_tac_bomber = {
-				naval_strike_attack = 0.1 
+				naval_strike_attack = 0.1
 			}
-		}
-		dedicated_record_keeping = {
 			air_fuel_consumption_factor = -0.05
-		}
-		bomber_aces = {
-			ace_effectiveness_factor = 0.15
 		}
     }
 }
@@ -241,7 +217,6 @@ air_subdoctrine_theater_interdiction = {
     }
 
     # EFFECTS
-	air_strategic_bomber_bombing_factor = 0.15
 
     rewards = {
 		extended_reach = {
@@ -258,10 +233,6 @@ air_subdoctrine_theater_interdiction = {
 				air_bombing = 0.05
 				air_agility = 0.05
 			}
-		}
-		improved_casualty_recovery = {
-			air_accidents_factor = -0.05
-			air_wing_xp_loss_when_killed_factor = -0.1
 		}
     }
 }
@@ -296,21 +267,10 @@ air_subdoctrine_aerial_reconnaissance = {
 				air_range = 0.15
 			}
 		}
-        improved_observation_procedures = {
-			intel_from_combat_factor = 0.1
-			army_intel_factor = 0.1
+		improved_observation_procedures = {
 		}
 		naval_recon = {
-			navy_intel_factor = 0.1
 			spotting_chance = 0.05
-		}
-		distant_aerial_observation = {
-			airforce_intel_factor = 0.1
-			air_mission_xp_gain_factor = 0.05
-		}
-		well_coordinated_strikes = {
-			civilian_intel_factor = 0.1
-			air_strategic_bomber_bombing_factor = 0.05
 		}
     }
 }

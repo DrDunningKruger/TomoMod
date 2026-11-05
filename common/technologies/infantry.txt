@@ -1147,7 +1147,7 @@ technologies = {
 	support_weapons = {
 
 		infantry = {
-			defense = 0.05
+			defense = 0.03
 			breakthrough = 0.05
 		}
 		bicycle_battalion = {
@@ -1159,7 +1159,7 @@ technologies = {
 			breakthrough = 0.02
 		}		
 		category_special_forces = {
-			defense = 0.03
+			defense = 0.02
 			breakthrough = 0.03
 		}
 		motorized = {
@@ -1234,7 +1234,7 @@ technologies = {
 	support_weapons2 = {
 
 		infantry = {
-			defense = 0.05
+			defense = 0.03
 			breakthrough = 0.05
 		}
 		bicycle_battalion = {
@@ -1246,7 +1246,7 @@ technologies = {
 			breakthrough = 0.02
 		}		
 		category_special_forces = {
-			defense = 0.03
+			defense = 0.02
 			breakthrough = 0.03
 		}
 		motorized = {
@@ -1314,7 +1314,7 @@ technologies = {
 	support_weapons3 = {
 
 		infantry = {
-			defense = 0.05
+			defense = 0.03
 			breakthrough = 0.05
 		}
 		bicycle_battalion = {
@@ -1326,7 +1326,7 @@ technologies = {
 			breakthrough = 0.02
 		}		
 		category_special_forces = {
-			defense = 0.03
+			defense = 0.02
 			breakthrough = 0.03
 		}
 		motorized = {
@@ -1394,7 +1394,7 @@ technologies = {
 	support_weapons4 = {
 
 		infantry = {
-			defense = 0.05
+			defense = 0.03
 			breakthrough = 0.05
 		}
 		bicycle_battalion = {
@@ -1406,7 +1406,7 @@ technologies = {
 			breakthrough = 0.02
 		}		
 		category_special_forces = {
-			defense = 0.03
+			defense = 0.02
 			breakthrough = 0.03
 		}
 		motorized = {

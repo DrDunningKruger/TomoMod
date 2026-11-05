@@ -1246,6 +1246,7 @@ technologies = {
 
 		transport_capacity = -0.5
 		naval_invasion_capacity = 12
+		naval_invasion_division_cap = 2
 
 		path = {
 			leads_to_tech = mtg_landing_craft
@@ -1275,6 +1276,7 @@ technologies = {
 		invasion_preparation = -0.5
 		amphibious_invasion_defence = 0.15
 		naval_invasion_capacity = 40
+		naval_invasion_division_cap = 2
 
 		path = {
 			leads_to_tech = mtg_tank_landing_craft
@@ -1310,6 +1312,7 @@ technologies = {
 		amphibious_invasion = 0.25
 		amphibious_invasion_defence = 0.5
 		naval_invasion_capacity = 100
+		naval_invasion_division_cap = 2
 
 		research_cost = 2
 		start_year = 1943

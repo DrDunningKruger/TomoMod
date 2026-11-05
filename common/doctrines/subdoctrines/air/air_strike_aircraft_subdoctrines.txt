@@ -35,18 +35,12 @@ air_subdoctrine_flying_artillery = {
         	air_cas_efficiency = 0.1
         }
         terrain_familiarity = {
-			air_cas_present_factor = 0.1
+			air_cas_present_factor = 0.05
         }
         effective_payloads = { 
         	category_cas = {
         		air_ground_attack = 0.05
         	}
-        }
-        rugged_airframes = {
-        	air_accidents_factor = -0.05
-        	air_wing_xp_loss_when_killed_factor = -0.05
-        }
-        movement_interdiction = {
         	air_close_air_support_org_damage_factor = 0.05
         	army_bonus_air_superiority_factor = 0.05
         }
@@ -93,12 +87,6 @@ air_subdoctrine_dive_bombers = {
         }
         terrifying_precision = { 
         	air_close_air_support_org_damage_factor = 0.1
-        }
-        close_air_support_aces = {
-        	air_ace_generation_chance_factor = 0.05
-        	ace_effectiveness_factor = 0.05
-        }
-        fighter_bomber_coordination = {
         	air_escort_efficiency = 0.1
         }
     }
@@ -135,15 +123,10 @@ air_subdoctrine_flexible_fire_support = {
                 naval_strike_attack = 0.05
                 air_range = 0.05
             }
-        }
-        forward_spotters = { 
             air_cas_efficiency = 0.05
-            air_nav_efficiency = 0.05
         }
         continuous_fire_support = {
             air_mission_efficiency = 0.05
-        }
-        quick_turnaround = {
             category_nav_bomber = {
                 air_agility = 0.05
             }
@@ -178,9 +161,6 @@ air_subdoctrine_carrier_strikes = {
     }
 
     rewards = {
-        deck_coordination = {
-            air_nav_efficiency = 0.1
-        }
         specialized_torpedoes = {
             naval_strike_targetting_factor = 0.1
             category_carrier_nav_bomber = {
@@ -195,9 +175,6 @@ air_subdoctrine_carrier_strikes = {
         }
         deck_cycle_training = {
             sortie_efficiency = 0.1
-        }
-        optimized_deck_space_usage = {
-            air_accidents_factor = -0.05
         }
     }
 }
@@ -238,14 +215,6 @@ air_subdoctrine_naval_strike_tactics = {
             }           
         }
         attack_synchronization = {
-            air_nav_efficiency = 0.12
-        }
-        naval_strike_aces = { 
-            air_ace_generation_chance_factor = 0.05
-            ace_effectiveness_factor  = 0.1
-        }
-        safety_protocols = {
-            air_accidents_factor = -0.1
         }
         optimized_payload = {
             category_nav_bomber = {
@@ -302,9 +271,6 @@ air_subdoctrine_naval_torpedo_tactics = {
         }
         all_weather_training = {
             air_weather_penalty = -0.1
-        }
-        naval_strike_mastery = {
-            air_nav_efficiency = 0.1
         }
     }   
 }

@@ -361,17 +361,17 @@ sub_units = {
 		}
 		forest = {
 			attack = 0.15
-			defence = 0.15
+			defence = 0.10
 			movement = 0.3
 		}
 		jungle = {
 			attack = 0.1
-			defence = 0.2
+			defence = 0.15
 			movement = 0.3
 		}
 		river = {
 			attack = 0.1
-			defence = 0.25
+			defence = 0.20
 			movement = 0.25
 		}
 		same_support_type = engineer

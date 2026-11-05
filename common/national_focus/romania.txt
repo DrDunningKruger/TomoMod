@@ -1255,7 +1255,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 			if = {
 				limit = {
 					79 = { is_owned_by = ROM }
@@ -1355,7 +1354,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-		air_experience = 50
 			add_doctrine_cost_reduction = {
                 name = air_doc_bonus
                 cost_reduction = 0.5
@@ -1400,7 +1398,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-            air_experience = 100			
 			add_tech_bonus = {
 				name = coastal_command_equipment
 				bonus = 1.0
@@ -1477,7 +1474,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-		air_experience = 50
 			add_tech_bonus = {
 				name = bomber_command_focus
 				bonus = 1.0
@@ -1568,7 +1564,12 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = ROM_army_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1638,7 +1639,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-		army_experience = 100
 			add_tech_bonus = {
 				name = ROM_new_guns
 				bonus = 1.0
@@ -2027,13 +2027,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = ROM_the_maresal
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = armor
-				}			
-			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
 				uses = 1
@@ -2154,7 +2147,6 @@ focus_tree = {
 			if = { 
 				limit = { has_dlc = "Man the Guns" }
 				set_technology = { coastal_defense_ships = 1 }
-                navy_experience = 100				
 			}
 		}
 	}
@@ -2202,7 +2194,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}			
-			navy_experience = 100
 		}
 	}
 
@@ -2241,7 +2232,6 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			navy_experience = 100
 		}
 	}
 
@@ -2321,7 +2311,6 @@ focus_tree = {
 				category = cl_tech
 				category = ca_tech
 			}			
-			navy_experience = 100
 		}
 	}
 
@@ -2489,7 +2478,6 @@ focus_tree = {
 				add_idea = ROM_coastal_defense_ships_2
 				remove_idea = ROM_coastal_defense_ships
 			}
-			navy_experience = 100
 		}
 	}	
 }

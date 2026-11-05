@@ -623,7 +623,6 @@ focus_tree = {
 							basic_torpedo = 1
 							basic_medium_battery = 1
 						}
-						navy_experience = 100
 						custom_effect_tooltip = RAJ_navy_funding_effect
 					}
 				}
@@ -664,7 +663,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 100
 			add_tech_bonus = {
 				name = RAJ_british_army_support
 				bonus = 1.0
@@ -937,7 +935,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = RAJ_an_indian_sandhurst
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1121,7 +1124,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 100
 			add_tech_bonus = {
 				name = RAJ_royal_indian_artillery
 				bonus = 1.0
@@ -1294,12 +1296,6 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			add_tech_bonus = {
-				name = RAJ_indian_armor
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}			
 		}
 	}
 
@@ -1372,7 +1368,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzaf
 				cost_reduction = 0.5
@@ -1546,7 +1541,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzaf
 				cost_reduction = 0.5
@@ -1937,7 +1931,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 50
 			random_owned_controlled_state = {
 				prioritize = { 429 }
 				limit = {
@@ -2019,7 +2012,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 50
 			random_owned_controlled_state = {
 				prioritize = { 426 }
 				limit = {
@@ -2080,7 +2072,6 @@ focus_tree = {
 
 
 		completion_reward = {
-			navy_experience = 100
 			add_doctrine_cost_reduction = {
 				name = NZL_form_the_rnzn
 				cost_reduction = 0.5

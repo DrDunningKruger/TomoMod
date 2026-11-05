@@ -564,7 +564,6 @@
 		}
 		completion_reward = {
 		add_manpower = 50000
-		army_experience = 100
 		}
 	}
 	
@@ -646,7 +645,6 @@
 				uses = 2
 				cost_reduction = 0.5
 			}
-            air_experience = 100	
 			custom_effect_tooltip = "FREE_IMPROVED_SMALL_AIRFRAME"	
 				if = {
 				limit = { NOT = { has_tech = improved_small_airframe  }}
@@ -763,7 +761,6 @@
 			POL = { country_lock_all_division_template = no }
 			}
             add_manpower = 100000
-		    army_experience = 200
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -1156,7 +1153,7 @@
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = armor
 			}
 		if = {
@@ -1411,7 +1408,12 @@
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-          add_ideas = POL_training_spirit
+			add_doctrine_cost_reduction = {
+				name = POL_prepare_for_the_next_war
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}	
 	
@@ -1455,7 +1457,6 @@
 			NOT = { TAG = CPL }
 		}
 		completion_reward = {
-		army_experience = 100
         add_manpower = 10000
 		}
 	}	
@@ -1880,7 +1881,6 @@
 				uses = 2
 				cost_reduction = 0.5
 			}
-            air_experience = 100
 			custom_effect_tooltip = "POL_AF_TOOLTIP"
 			if = {
 			limit = { NOT = { has_tech = aa_hmg  }}

@@ -1943,7 +1943,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 15
 			219 = {
 				custom_effect_tooltip = SOV_defense_of_moscow_forts
 				hidden_effect = {
@@ -2488,7 +2487,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SOV_military_reorganization_guns_tt
 
-			army_experience = 50
 			add_command_power = 25
 		}
 	}
@@ -2817,7 +2815,6 @@ focus_tree = {
 			add_to_variable = { SOV_the_red_army_land_doctrine_cost_factor = -0.1 }
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_mod_tt
 
-			army_experience = 75
 
 			show_unit_leaders_tooltip = SOV_pavel_rybalko
 
@@ -2855,7 +2852,6 @@ focus_tree = {
 			add_to_variable = { SOV_the_red_army_land_doctrine_cost_factor = -0.1 }
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_mod_tt
 
-			army_experience = 75
 
 			#New
 			hidden_effect = {
@@ -3249,12 +3245,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_tech_bonus = {
-				name = SOV_they_will_know_fear
-				bonus = 1
-				uses = 1 # was 2
-				category = armor
-			}
 
 			if = {
 				limit = {
@@ -4178,7 +4168,6 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		army_experience = 100
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
 				bonus = 1.0
@@ -4345,7 +4334,6 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		air_experience = 100
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1.0
@@ -4370,7 +4358,6 @@ focus = {
 		available_if_capitulated = yes	
 
 		completion_reward = {
-			air_experience = 100
 			
 			add_tech_bonus = {
 				name = codebreaking_bonus
@@ -4437,7 +4424,6 @@ focus = {
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}
 
 		completion_reward = {
-			air_experience = 200
 
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
@@ -5387,7 +5373,6 @@ focus = {
 		available_if_capitulated = yes	
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = AST_cac_boomerang
 				bonus = 1.0
@@ -5415,7 +5400,6 @@ focus = {
 		available_if_capitulated = yes	
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 2.0
@@ -5496,6 +5480,7 @@ focus = {
 		completion_reward = {
 		hidden_effect = {
 		load_oob = "SOV_guards1"}
+		custom_effect_tooltip = "MEDIUM_TANK_SPAWNIN_TOOLTIP"
 		custom_effect_tooltip = "SOV_GUARDS_I"
 		}
 	}
@@ -6447,7 +6432,6 @@ focus = {
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
 		
 		completion_reward = {
-		air_experience = 250
 		
 		custom_effect_tooltip = "PLANE_LL_TOOLTIP"
 
@@ -6583,7 +6567,6 @@ focus = {
         search_filters = {FOCUS_FILTER_FRA_POLITICAL_VIOLENCE}		
 		
 		completion_reward = {		
-		air_experience = 250		
 		
 		
 		custom_effect_tooltip = "PLANE_LL_II_TOOLTIP"

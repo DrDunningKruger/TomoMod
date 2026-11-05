@@ -113,7 +113,6 @@ defensive_postures = {
         }
         developed_trench_networking = {
             category_all_infantry = {
-                entrenchment = 0.2
                 soft_attack = 0.075
             }
         }
@@ -226,12 +225,6 @@ assault_infantry = {
 
     rewards = {
         low_echelon_fire_support = {
-            artillery = {
-                battalion_mult = {
-                    category = category_light_infantry
-                    soft_attack = 0.15
-                }
-            }
         }
         integrated_support_batteries = {
             category_support_artillery = {
@@ -535,15 +528,11 @@ irregulars = {
     rewards = {
         service_by_lot = {
             mobilization_speed = 0.05
-            category_light_infantry = {
-                defense = 0.05
-            }
         }
         improvised_officer_groups = {
             category_light_infantry = {
                 max_organisation = 5
                 soft_attack = 0.075
-                breakthrough = 0.1
             }
             conscription = 0.01
             mobilization_speed = 0.05
@@ -594,7 +583,6 @@ great_war_infantry = {
     category_light_infantry = {
         defense = 0.05
     }
-    production_speed_bunker_factor = 0.25
 
     rewards = {
         traverse_digging = {
@@ -613,9 +601,6 @@ great_war_infantry = {
                     add = yes
                 }
             }
-            category_light_infantry = {
-                defense = 0.05
-            }
             field_hospital = {
                 casualty_trickleback = 0.1
             }
@@ -628,11 +613,6 @@ great_war_infantry = {
                     soft_attack = 0.075
                     breakthrough = 0.1
                 }
-            }
-            category_light_infantry = {
-                reliability = 0.05
-                defense = 0.025
-                max_organisation = 2.5
             }
         }
         redoubt_networks = {

@@ -60,7 +60,12 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-          army_experience = 100
+		add_doctrine_cost_reduction = {
+			name = CHI_mission_to_germany
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 	}
 }
 
@@ -302,12 +307,6 @@ shared_focus = {
 			uses = 1
 			category = cat_mechanized_equipment
 		}
-		add_tech_bonus = {
-			name = CHI_chinese_panzers
-			bonus = 1.0
-			uses = 1
-			category = armor
-		}		
 	}
 }
 
@@ -400,7 +399,12 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-         army_experience = 100
+		add_doctrine_cost_reduction = {
+			name = CHI_reach_out_to_italy
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 	}
 }
 
@@ -736,8 +740,12 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-        air_experience = 100
-		navy_experience = 200
+		add_doctrine_cost_reduction = {
+			name = CHI_collaboration_with_the_japanese
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
+		}
 	}
 }
 
@@ -1000,7 +1008,6 @@ shared_focus = {
 	}
 
 	complete_tooltip = {
-		navy_experience = 100
 		random_state = {
 			limit = {
 				has_state_flag = CHI_investment_into_shipbuilding_DY
@@ -1015,7 +1022,6 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		navy_experience = 100
 		random_owned_controlled_state = {
 			limit = {
 				is_coastal = yes

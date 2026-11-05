@@ -568,12 +568,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = USA_tank_experiments
-				uses = 2
-				bonus = 1.0
-				category = armor
-				}			
-			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
 				uses = 1
@@ -970,7 +964,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		air_experience = 100
 			set_rule = { can_send_volunteers = yes }
 			add_tech_bonus = {
 				name = air_equipment
@@ -1734,7 +1727,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			set_rule = {
 				can_generate_female_aces = yes
 			}
@@ -1828,7 +1820,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			every_army_leader = {
 				add_planning = 1
 				add_logistics = 1
@@ -2317,7 +2308,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 100
 			add_ideas = MEX_brown_water_navy
 			add_doctrine_cost_reduction = {
 				name = naval_doctrine
@@ -2380,7 +2370,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 100
 			swap_ideas = {
 				remove_idea = MEX_brown_water_navy
 				add_idea = MEX_blue_water_navy
@@ -2441,7 +2430,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 100
 			swap_ideas = {
 				remove_idea = MEX_brown_water_navy
 				add_idea = MEX_raiding_navy
@@ -2497,8 +2485,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
-			air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = land_doctrine
 				cost_reduction = 0.5

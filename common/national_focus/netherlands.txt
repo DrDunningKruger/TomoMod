@@ -1471,7 +1471,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 
 		completion_reward = {
-			army_experience = 50
 			add_war_support = 0.1
 		}
 	}
@@ -1522,7 +1521,6 @@ focus_tree = {
 				set_technology = {
 					bicycle_infantry = 1
 				}
-			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = HOL_evaluate_the_army
 				cost_reduction = 0.5
@@ -1774,7 +1772,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = HOL_lessons_from_the_last_war
 				cost_reduction = 0.5
@@ -1832,7 +1829,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 100
 			add_tech_bonus = {
 				name = coastal_command_equipment
 				bonus = 1.0
@@ -1923,7 +1919,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = HOL_strategic_bombing_defense
 				cost_reduction = 0.5
@@ -2088,7 +2083,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			navy_experience = 125
 		}
 	}
 
@@ -2339,7 +2333,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				name = HOL_naval_heritage
 				cost_reduction = 0.5

@@ -141,7 +141,7 @@ technologies = {
 	tech_engineers2 = {
 
 		engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			
 			fort = {
 				defence = 0.10
@@ -149,7 +149,7 @@ technologies = {
 			}
 		}		
 		armored_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			
 			fort = {
 				defence = 0.10
@@ -157,7 +157,7 @@ technologies = {
 			}
 		}		
 		assault_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			
 			fort = {
 				defence = 0.10
@@ -165,7 +165,7 @@ technologies = {
 			}
 		}		
 		pioneer_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			
 			fort = {
 				defence = 0.10
@@ -173,7 +173,7 @@ technologies = {
 			}
 		}		
 		jungle_pioneers_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			
 			fort = {
 				defence = 0.10
@@ -230,35 +230,35 @@ technologies = {
 	tech_engineers3 = {
 
 		engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			river = {
 				attack = 0.1	
 				defence = 0.10
 			}
 		}
 		armored_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			river = {
 				attack = 0.1	
 				defence = 0.10
 			}
 		}
 		assault_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			river = {
 				attack = 0.1	
 				defence = 0.10
 			}
 		}
 		pioneer_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			river = {
 				attack = 0.1	
 				defence = 0.10
 			}
 		}
 		jungle_pioneers_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			river = {
 				attack = 0.1	
 				defence = 0.10
@@ -314,35 +314,35 @@ technologies = {
 	tech_engineers4 = {
 
 		engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			urban = {
 				attack = 0.1	
 				defence = 0.1
 			}
 		}
 		armored_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			urban = {
 				attack = 0.1	
 				defence = 0.1
 			}
 		}
 		assault_engineer = {
-			entrenchment  = 2
+			entrenchment  = 1
 			urban = {
 				attack = 0.1	
 				defence = 0.1
 			}
 		}
 		pioneer_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			urban = {
 				attack = 0.1	
 				defence = 0.1
 			}
 		}
 		jungle_pioneers_support = {
-			entrenchment  = 2
+			entrenchment  = 1
 			urban = {
 				attack = 0.1	
 				defence = 0.1

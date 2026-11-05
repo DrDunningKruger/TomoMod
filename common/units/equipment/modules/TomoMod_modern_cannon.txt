@@ -1,0 +1,31 @@
+equipment_modules = {
+	tank_modern_cannon = {
+		abbreviation = "mdc"
+		category = tank_modern_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 50
+			hard_attack = 56
+			ap_attack = 250
+			build_cost_ic = 10
+			maximum_speed = -0.4
+			reliability = -0.175
+			breakthrough = 8
+		}
+		can_convert_from = {
+			module_category = tank_medium_main_armament
+			convert_cost_ic = 7
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 7
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 0
+		build_cost_resources = {
+			steel = 2
+		}
+	}
+}

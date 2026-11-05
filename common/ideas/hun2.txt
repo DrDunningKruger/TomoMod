@@ -1039,7 +1039,6 @@ ideas = {
 			picture = german_advisors		
 			
 			modifier = {
-				experience_gain_army = 0.03
 				production_speed_arms_factory_factor = 0.05
 			}	
 		}

@@ -164,7 +164,27 @@ equipments = {
 		module_count_limit = {
 		module = wide_tracks
 			count < 2
-		}	
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_high_velocity_cannon_3
+			count < 1
+		}
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_light_one_man_tank_turret
@@ -462,7 +482,27 @@ equipments = {
 			module = tank_anti_air_cannon_3
 			count < 1
 		}
-		
+		module_count_limit = {
+			module = tank_medium_cannon_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_high_velocity_cannon_3
+			count < 1
+		}
+
 	}
 
 	light_tank_chassis_4 = {
@@ -490,6 +530,26 @@ equipments = {
 		module_count_limit = {
 			module = tank_anti_air_cannon_3
 			count < 2
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_cannon_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_2
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_medium_howitzer_3
+			count < 1
+		}
+		module_count_limit = {
+			module = tank_high_velocity_cannon_3
+			count < 1
 		}
 
 	module_slots = {
@@ -896,7 +956,15 @@ equipments = {
 			tungsten = 2
 		}
 		module_slots = {
-			main_armament_slot = inherit
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_small_main_armament
+					tank_medium_main_armament
+					tank_flamethrower
+					tank_modern_main_armament
+				}
+			}
 			turret_type_slot = inherit
 			suspension_type_slot = inherit
 			armor_type_slot = inherit
@@ -1276,7 +1344,16 @@ equipments = {
 			chromium = 3
 		}
 		module_slots = {
-			main_armament_slot = inherit
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_small_main_armament
+					tank_medium_main_armament
+					tank_heavy_main_armament
+					tank_flamethrower
+					tank_modern_main_armament
+				}
+			}
 			turret_type_slot = inherit
 			suspension_type_slot = inherit
 			armor_type_slot = inherit

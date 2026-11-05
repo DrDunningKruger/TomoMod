@@ -688,7 +688,12 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}		
 		
 		completion_reward = {
-		army_experience = 75
+			add_doctrine_cost_reduction = {
+				name = FRA_defensive_focus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -723,7 +728,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-		army_experience = 25
 		add_ideas = { FRA_firepower }
 		}
 	}
@@ -810,7 +814,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 50
 			add_ideas = FRA_infantry_focus
 		}
 	}
@@ -828,7 +831,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 25
 			add_tech_bonus = {
 				name = FRA_artillery_focus
 				bonus = 1.0
@@ -851,7 +853,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-		army_experience = 25
 			add_tech_bonus = {
 				name = special_bonus
 				bonus = 1.0
@@ -879,13 +880,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				name = FRA_heavy_armor_focus
-				bonus = 1.0
-				uses = 1
-				category = cat_heavy_armor
-			}			
 		}
 	}
 
@@ -905,7 +899,12 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}		
 		
 		completion_reward = {
-		army_experience = 75
+			add_doctrine_cost_reduction = {
+				name = FRA_aggressive_focus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -1000,13 +999,6 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}	
 
 		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				name = FRA_light_medium_armor
-				bonus = 1.0
-				uses = 1
-				category = cat_medium_armor
-			}		
 		}
 	}
 	focus = {
@@ -1163,14 +1155,12 @@
 
 		completion_reward = {
 			remove_ideas = FRA_victors_of_wwi
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
 				uses = 2
 				cost_reduction = 0.5
 			}
-			air_experience = 200
 		}
 	}	
 
@@ -2195,7 +2185,6 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}		
 		
 		completion_reward = {
-		navy_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_army_reform
 				cost_reduction = 0.5
@@ -2261,7 +2250,12 @@
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 150
+			add_doctrine_cost_reduction = {
+				name = FRA_air_focus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -2350,7 +2344,6 @@
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
 
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
@@ -2501,7 +2494,6 @@
 				type = dockyard
 				level = 2
 			}
-		navy_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_army_reform
 				cost_reduction = 0.5
@@ -2753,12 +2745,6 @@
 
 		completion_reward = {		
 		
-			add_tech_bonus = {
-				name = mong_armor_effort
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
 			add_tech_bonus = {
 				name = random_tnak_bonus
 				bonus = 1.0

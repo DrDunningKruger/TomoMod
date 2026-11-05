@@ -47,7 +47,6 @@ focus_tree = {
 						elections_allowed = no
 					}
 					set_cosmetic_tag = SPR_civil_war
-					army_experience = 750
 				}
 			}
 		}

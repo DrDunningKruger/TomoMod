@@ -206,7 +206,6 @@ focus_tree = {
 		}
 		
 			completion_reward = {
-			navy_experience = 100
 					add_tech_bonus = {
 							bonus = 1.0
 							uses = 1
@@ -233,7 +232,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		navy_experience = 100
 			add_tech_bonus = {
 				name = cv_bonus
 				bonus = 1.0
@@ -311,7 +309,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		army_experience = 150
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -470,7 +467,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		navy_experience = 100	
 		custom_effect_tooltip = "NEWADMIRAL_TOOLTIP"
 		}
 	}
@@ -947,7 +943,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 200
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
 				category = air_doctrine
@@ -996,12 +991,6 @@ focus_tree = {
 				uses = 2
 				category = cat_medium_armor
 			}
-			add_tech_bonus = {
-				name = FRA_heavy_armor_focus2
-				bonus = 1.0
-				uses = 1
-				category = cat_heavy_armor
-			}			
 		}		
 	}
 
@@ -1141,7 +1130,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine

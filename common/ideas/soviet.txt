@@ -304,7 +304,7 @@ ideas = {
 			removal_cost = -1
 			picture = generic_production_bonus
 			modifier = {
-				line_change_production_efficiency_factor = 0.2
+				line_change_production_efficiency_factor = 0.1
 			}
 		}
 

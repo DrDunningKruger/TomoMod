@@ -470,9 +470,6 @@ focus_tree = {
 		completion_reward = {
 		    custom_effect_tooltip = "USA_FUCK_TOOLTIP"
 			
-			navy_experience = 50
-			army_experience = 50
-			air_experience = 50
 			
 			random_owned_controlled_state = {
 				limit = {
@@ -956,7 +953,6 @@ focus_tree = {
 		#}
 
 		completion_reward = {
-			army_experience = 10
 			random_owned_controlled_state = {
 				limit = {
 					arms_factory > 0
@@ -1150,9 +1146,6 @@ focus_tree = {
 				}
 				set_state_flag = USA_USACE_projects_3Inf
 			}
-			air_experience = 50
-			navy_experience = 50
-			army_experience = 10			
 		}
 	}
 
@@ -1494,7 +1487,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -1611,7 +1603,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-					army_experience = 50
 					add_tech_bonus = {
 							bonus = 1.0
 							uses = 1
@@ -1874,12 +1865,6 @@ focus_tree = {
 				bonus = 1.0
 				category = motorized_equipment
 			}
-			add_tech_bonus = {
-				name = USA_tank_experiments
-				uses = 2
-				bonus = 1.0
-				category = armor
-			}
             add_ideas = FRA_motorized_focus			
 		}
 	}
@@ -1990,7 +1975,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
 			add_doctrine_cost_reduction = {
 				name = FRA_air_ground_cooperation
 				category = air_doctrine
@@ -2018,7 +2002,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
 			add_tech_bonus = {
 				name = AST_cac_boomerang
 				bonus = 1.0
@@ -2049,7 +2032,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
 			add_tech_bonus = {
 				name = AST_boomer
 				bonus = 1.0
@@ -2081,7 +2063,6 @@ focus_tree = {
 				technology = improved_large_airframe
 				technology = advanced_large_airframe
 			}		
-			air_experience = 25
 		}
 	}
 
@@ -2100,7 +2081,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
 			add_tech_bonus = {
 				name = USA_TAC
 				uses = 1
@@ -2880,7 +2860,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				name = USA_convoy_tactics
 				cost_reduction = 0.5
@@ -3034,7 +3013,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 150
+			add_doctrine_cost_reduction = {
+				name = USA_advanced_mahanian_doctrine
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}	
 	

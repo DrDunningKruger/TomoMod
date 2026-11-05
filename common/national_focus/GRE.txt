@@ -26,7 +26,6 @@ focus_tree = {
 		
 			available_if_capitulated = yes
 			completion_reward = {
-					army_experience = 50
 					add_doctrine_cost_reduction = {
 						name = land_doc_bonus
 						cost_reduction = 0.33
@@ -65,7 +64,6 @@ focus_tree = {
 			available_if_capitulated = yes
 			completion_reward = {
 					add_war_support = 0.05
-					army_experience = 100
 				}
 	}
 
@@ -84,7 +82,6 @@ focus_tree = {
 		y = 3
 			available_if_capitulated = yes
 			completion_reward = {
-					army_experience = 100
 					add_doctrine_cost_reduction = {
 							name = land_doc_bonus
 							cost_reduction = 0.5
@@ -109,7 +106,6 @@ focus_tree = {
 		y = 3
 			available_if_capitulated = yes
 			completion_reward = {
-					army_experience = 100
 					add_doctrine_cost_reduction = {
 							name = land_doc_bonus
 							cost_reduction = 0.5
@@ -286,7 +282,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = armor_bonus
 							bonus = 1.0
-							uses = 2
+							uses = 1
 							category = armor
 							}			
 			add_tech_bonus = {
@@ -473,7 +469,6 @@ focus_tree = {
 		y = 1
 			available_if_capitulated = yes
 			completion_reward = {
-					air_experience = 150
 			add_tech_bonus = {
 				name = coastal_command_equipment
 				bonus = 1.0
@@ -567,7 +562,6 @@ focus_tree = {
 			factor = 1
 		}
 			completion_reward = {
-			air_experience = 100
 	        if = { limit = { has_full_control_of_state = 47 } 
 			47 = {				
 			add_building_construction = {
@@ -593,7 +587,6 @@ focus_tree = {
 		has_full_control_of_state = 47
 		}
 			completion_reward = {
-					navy_experience = 25
 					if = {
 							limit = {
 									any_owned_state = {
@@ -627,7 +620,6 @@ focus_tree = {
 		has_full_control_of_state = 186
 		}
 			completion_reward = {
-			navy_experience = 25			
 			186 = {
 									add_extra_state_shared_building_slots = 1
 									add_building_construction = {
@@ -651,8 +643,13 @@ focus_tree = {
 		y = 4
 			available_if_capitulated = yes
 			completion_reward = {
-					navy_experience = 50
+				add_doctrine_cost_reduction = {
+					name = GRE_mega_to_tis_thakassis_kratos
+					cost_reduction = 0.5
+					uses = 1
+					category = naval_doctrine
 				}
+			}
 	}
 
 	#Focus for Hit and Run Tactics
@@ -735,7 +732,6 @@ focus_tree = {
 		relative_position_id = GRE_focus_on_the_haf
 			available_if_capitulated = yes
 			completion_reward = {
-					navy_experience = 25
 			if = { 
 				limit = { has_dlc = "Man the Guns" }
 				set_technology = { coastal_defense_ships = 1 } 
@@ -1117,7 +1113,6 @@ focus_tree = {
 
 }
 			completion_reward = {
-					army_experience = 25
 					184 = {
 							add_building_construction = {
 									type = bunker
@@ -1180,7 +1175,6 @@ focus_tree = {
 
 }
 			completion_reward = {
-					army_experience = 25
 					185 = {
 							add_building_construction = {
 									type = bunker
@@ -1368,7 +1362,6 @@ create_country_leader = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					army_experience = 25
 					add_ideas = GRE_EON
 				}
 	}
@@ -2013,7 +2006,6 @@ create_country_leader = {
 		relative_position_id = GRE_oxi
 			available_if_capitulated = yes
 			completion_reward = {
-					navy_experience = 50
 					add_offsite_building = {
 							type = dockyard
 							level = 2

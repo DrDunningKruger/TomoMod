@@ -1188,7 +1188,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 		
 		completion_reward = {
-		air_experience = 100
 			if = {
 				limit = {
 					43 = { is_owned_by = HUN }
@@ -1271,7 +1270,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_AIR_XP}		
 		
 		completion_reward = {
-        air_experience = 100		
 		154 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1710,7 +1708,6 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
-			army_experience = 50
 		}
 	}
 	
@@ -1729,7 +1726,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 		
 		completion_reward = {
-			air_experience = 100
+			add_doctrine_cost_reduction = {
+				name = HUN_aviation_effort
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 	
@@ -2002,7 +2004,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 		
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -2419,7 +2420,6 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_NAVY_XP}
 		
 		completion_reward = {
-		navy_experience = 100
 			if = {
 			limit = { NOT = { has_tech = early_ship_hull_light  }}
 			set_technology = {
@@ -2488,7 +2488,6 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_NAVY_XP}		
 		
 		completion_reward = {
-			navy_experience = 200
 			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
@@ -2746,7 +2745,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 		
 		completion_reward = {
-			army_experience = 50
 			add_doctrine_cost_reduction = {		
 				name = blietzkrieg_adoption_bonus
 				cost_reduction = 0.5
@@ -2773,12 +2771,6 @@ focus_tree = {
 		}	
 		
 		completion_reward = {		
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1
-				uses = 1
-				category = armor
-			}		
 		}
 	}	
 
@@ -2818,7 +2810,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 		
 		completion_reward = {
-			army_experience = 50
 			add_doctrine_cost_reduction = {		
 				name = pilis_order_of_battle_bonus
 				cost_reduction = 0.5

@@ -199,22 +199,6 @@ flying_batteries = {
                 soft_attack = 0.05
                 breakthrough = 0.1
             }
-            recon = {
-                battalion_mult = {
-                    category = category_line_artillery
-                    soft_attack = 0.05
-                    defense = 0.05
-                }
-                recon = 0.25
-            }
-            mot_recon = {
-                battalion_mult = {
-                    category = category_line_artillery
-                    soft_attack = 0.05
-                    defense = 0.05
-                }
-                recon = 0.25
-            }
         }
         ballistics_corrections = {
             category_line_artillery = {
@@ -341,14 +325,8 @@ mobile_recon_and_assault = {
 
     rewards = {
         motorization_support = {
-            category_mobile_and_mobile_combat_sup = {
-                default_morale = 0.1
-            }
             logistics_company = {
                 supply_consumption_factor = -0.05
-            }
-            category_recon = {
-                maximum_speed = 0.15
             }
         }
         mobile_operational_deployments = {
@@ -357,9 +335,6 @@ mobile_recon_and_assault = {
                     category = category_all_armor
                     breakthrough = 0.1
                 }
-            }
-            mot_artillery_brigade = {
-                soft_attack = 0.05
             }
             category_self_propelled_artillery = {
                 soft_attack = 0.05
@@ -378,9 +353,6 @@ mobile_recon_and_assault = {
             }
         }
         deep_reconnaissance_focus = {
-            category_recon = {
-                maximum_speed = 0.1
-            }
             light_tank_recon = {
                 recon = 0.2
                 breakthrough = 0.1
@@ -432,12 +404,6 @@ mobile_recon_and_assault_no_lar = {
 
     rewards = {
         motorization_support = {
-            category_mobile_and_mobile_combat_sup = {
-                default_morale = 0.1
-            }
-            category_recon = {
-                maximum_speed = 0.15
-            }
         }
         mobile_operational_deployments = {
             light_tank_recon = {
@@ -445,9 +411,6 @@ mobile_recon_and_assault_no_lar = {
                     category = category_all_armor
                     breakthrough = 0.1
                 }
-            }
-            mot_artillery_brigade = {
-                soft_attack = 0.05
             }
             category_self_propelled_artillery = {
                 soft_attack = 0.05
@@ -462,9 +425,6 @@ mobile_recon_and_assault_no_lar = {
             }
         }
         deep_reconnaissance_focus = {
-            category_recon = {
-                maximum_speed = 0.1
-            }
             light_tank_recon = {
                 recon = 0.2
                 breakthrough = 0.1
@@ -494,17 +454,6 @@ self_propelled_support = {
     ai_will_do = { base = 0 }
 
 
-    category_self_propelled_artillery = {
-        soft_attack = 0.025
-    }
-    category_self_propelled_anti_air = {
-        air_attack = 0.05
-    }
-    category_tank_destroyers = {
-        hard_attack = 0.025
-    }
-
-
     rewards = {
         mobile_battery_management_platoons = {
             category_self_propelled_artillery = {
@@ -515,27 +464,6 @@ self_propelled_support = {
             }
             category_tank_destroyers = {
                 max_organisation = 5
-            }
-            recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.05
-                    default_morale = 0.1
-                }
-            }
-            mot_recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.05
-                    default_morale = 0.1
-                }
-            }
-            light_tank_recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.05
-                    default_morale = 0.1
-                }
             }
         }
         all_terrain_mobility = {

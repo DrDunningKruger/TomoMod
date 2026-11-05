@@ -1242,7 +1242,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = SAF_special_service_battalion
 				cost_reduction = 0.5
@@ -1402,7 +1401,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = SAF__south_african_military_college
 				cost_reduction = 0.5
@@ -1592,7 +1590,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {	
-        army_experience = 100		
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
 				bonus = 1.0
@@ -1716,12 +1713,6 @@ focus_tree = {
 
 		completion_reward = {	
 			add_tech_bonus = {
-				name = SAF_armor_effort
-				bonus = 1.0
-				uses = 2
-				category = armor
-			}
-			add_tech_bonus = {
 				name = SAF_rocket_artillery
 				bonus = 1.0
 				uses = 1
@@ -1760,7 +1751,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			air_experience = 100
 			275 = {
 				add_building_construction = {
 					type = air_base
@@ -1872,7 +1862,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			air_experience = 25
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1.0
@@ -1952,7 +1941,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-            air_experience = 100
 			add_tech_bonus = {
 				name = codebreaking_bonus
 				bonus = 1.0
@@ -2088,7 +2076,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			navy_experience = 100
 			
             681 = {
                 add_extra_state_shared_building_slots = 3			
@@ -2290,7 +2277,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 50
 			add_tech_bonus = {
 				name = SAF_anti_submarine_tactics
 				bonus = 1.0
@@ -2332,7 +2318,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 50
 			add_tech_bonus = {
 				name = SAF_submarine_warfare
 				bonus = 1.0

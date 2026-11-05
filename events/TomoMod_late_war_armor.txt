@@ -1,0 +1,26 @@
+add_namespace = TomoMod_late_war_armor
+
+country_event = {
+	id = TomoMod_late_war_armor.1
+	title = TomoMod_late_war_armor.1.t
+	desc = TomoMod_late_war_armor.1.d
+	picture = GFX_report_event_tank_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = TomoMod_late_war_armor.1.a
+		add_tech_bonus = {
+			name = TomoMod_late_war_armor_innovation
+			bonus = 1.0
+			uses = 1
+			category = armor
+		}
+		add_tech_bonus = {
+			name = TomoMod_late_war_armor_innovation
+			bonus = 1.0
+			uses = 1
+			category = tank_modules
+		}
+	}
+}

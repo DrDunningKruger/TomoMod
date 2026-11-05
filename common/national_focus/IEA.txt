@@ -97,7 +97,6 @@ focus_tree = {
                 uses = 1
                 category = land_doctrine
             }
-			army_experience = 100
 		}
 	}
 
@@ -648,7 +647,6 @@ focus_tree = {
 								amount = 250
 								producer = ITA
 			}			
-			army_experience = 25		
 		}
 	}
 
@@ -677,7 +675,6 @@ focus_tree = {
 				uses = 1
 				category = tank_modules
 			}
-			army_experience = 50
 		}
 	}
 

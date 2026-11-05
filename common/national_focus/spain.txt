@@ -318,7 +318,6 @@
 					uses = 3
 					cost_reduction = 0.9
 				}
-				air_experience = 100
 			
 			add_tech_bonus = {
 				name = coastal_command_equipment
@@ -483,7 +482,6 @@
 			}
 
 			completion_reward = {
-				army_experience = 10
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
@@ -520,7 +518,6 @@
 			available_if_capitulated = yes
 
 			completion_reward = {
-				army_experience = 25
 				add_doctrine_cost_reduction = {
 					name = FRA_methodical_battle
 					category = land_doctrine
@@ -668,7 +665,7 @@
 				add_tech_bonus = {
 					name = SPA_an_armored_corps
 					bonus = 1.0
-					uses = 2
+					uses = 1
 					category = armor
 					}			
 				add_tech_bonus = {
@@ -1408,14 +1405,12 @@
 			relative_position_id = SPA_unify_the_nationalist_front
 			mutually_exclusive = { focus = SPA_a_methodical_approach }
 			complete_tooltip = {
-				air_experience = 100
 			}
 			available = {
 				if = { date < 1937.01.01 } 
 			}
 			completion_reward = {
 			    custom_effect_tooltip = "SPR_AIRCON"
-				air_experience = 100
 				GER = { set_autonomy = { target = SPR autonomy_state = autonomy_satellite }}
 				
 				add_tech_bonus = {
@@ -1482,7 +1477,6 @@
 			relative_position_id = SPA_air_innovation
 			
 			completion_reward = {
-			air_experience = 100
 				add_doctrine_cost_reduction = {
 					name = FRA_air_ground_cooperation
 					category = air_doctrine
@@ -2101,7 +2095,6 @@
 				amount = 100
 				producer = USA
 				}
-                navy_experience = 500				
 			}
 		}
 

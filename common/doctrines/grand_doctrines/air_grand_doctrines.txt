@@ -19,12 +19,10 @@ new_strategic_destruction = {
         fighter_aircraft
         strike_aircraft
         medium_aircraft
-        heavy_aircraft
     }
 
     # EFFECTS
 	air_escort_efficiency = 0.25
-    air_strategic_bomber_bombing_factor = 0.2
 	category_fighter = {
 		air_range = 0.15
 	}
@@ -35,7 +33,6 @@ new_strategic_destruction = {
 			category_fighter = {
                 air_agility = 0.1
             }
-            air_intercept_efficiency = 0.2
 
             effect = {
                 if = {
@@ -54,7 +51,6 @@ new_strategic_destruction = {
         {
             #2 Strike Aircraft
 	        army_bonus_air_superiority_factor = 0.15
-            air_nav_efficiency = 0.15
 
             effect = {
                 if = {
@@ -91,25 +87,6 @@ new_strategic_destruction = {
                 }
             }
         }
-        {
-            #4 Heavy Aircraft
-	        air_strategic_bomber_bombing_factor = 0.2
-			air_mission_xp_gain_factor = 0.05
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = heavies_milestone_var
-                        }
-                    }
-                    set_variable = { heavies_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { heavies_milestone_var = 1 }
-                }
-            }
-        }
     }
 }
 
@@ -139,12 +116,10 @@ new_battlefield_support = {
         fighter_aircraft
         strike_aircraft
         medium_aircraft
-        heavy_aircraft
     }
 
     # EFFECTS
 	
-	air_superiority_detect_factor = 0.15
 	air_cas_efficiency = 0.2
 	category_fighter = {
 		air_range = 0.15
@@ -153,7 +128,6 @@ new_battlefield_support = {
     milestones = {
         {
             #1 Fighters
-			air_ace_generation_chance_factor = 0.15
             army_bonus_air_superiority_factor = 0.15
 
             effect = {
@@ -172,7 +146,7 @@ new_battlefield_support = {
         }
         {
             #2 Strike Aircraft
-	        air_cas_present_factor = 0.20
+	        air_cas_present_factor = 0.10
 			category_cas = {
                 air_agility = 0.2
             }
@@ -193,7 +167,6 @@ new_battlefield_support = {
         }
         {
             #3 Medium Aircraft
-			air_mission_xp_gain_factor = 0.1
             tac_bomber = {
                 air_bombing = 0.10
             }
@@ -209,25 +182,6 @@ new_battlefield_support = {
                 }
                 else = {
                     add_to_variable = { mediums_milestone_var = 1 }
-                }
-            }
-        }
-        {
-            #4 Heavy Aircraft
-	        air_strategic_bomber_bombing_factor = 0.15
-			air_interception_detect_factor = 0.1
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = heavies_milestone_var
-                        }
-                    }
-                    set_variable = { heavies_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { heavies_milestone_var = 1 }
                 }
             }
         }
@@ -255,7 +209,6 @@ new_operational_integrity = {
         fighter_aircraft
         strike_aircraft
         medium_aircraft
-        heavy_aircraft
     }
 
     # EFFECTS
@@ -273,7 +226,6 @@ new_operational_integrity = {
 			 category_fighter = {
                 air_agility = 0.1
             }
-            air_mission_xp_gain_factor = 0.15
 
             effect = {
                 if = {
@@ -291,7 +243,6 @@ new_operational_integrity = {
         }
         {
             #2 Strike Aircraft
-	        air_ace_generation_chance_factor = 0.10
 			army_bonus_air_superiority_factor = 0.1
 
             effect = {
@@ -328,25 +279,6 @@ new_operational_integrity = {
                 }
                 else = {
                     add_to_variable = { mediums_milestone_var = 1 }
-                }
-            }
-        }
-        {
-            #4 Heavy Aircraft
-	        air_strategic_bomber_defence_factor = 0.15
-			strategic_bomb_visibility = -0.4
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = heavies_milestone_var
-                        }
-                    }
-                    set_variable = { heavies_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { heavies_milestone_var = 1 }
                 }
             }
         }

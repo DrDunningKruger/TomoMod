@@ -23,7 +23,6 @@ focus_tree = {
 			
 			completion_reward = {
 					add_manpower = 60000
-                    add_ideas = POL_training_spirit
 			    	set_division_template_lock = {
 						division_template = "Infanteriet Divisjon"
 						is_locked = no
@@ -119,7 +118,6 @@ focus_tree = {
 		
 		completion_reward = {
 		             add_ideas = BUL_aircraft_repair_facilities	
-					  air_experience = 175	
 					add_tech_bonus = {
 						name = coastal_command_equipment
 						bonus = 1.0
@@ -232,7 +230,6 @@ focus_tree = {
 				technology = improved_small_airframe
 				technology = advanced_small_airframe
 			}
-             air_experience = 75			
 				}
 	}
 
@@ -258,7 +255,6 @@ focus_tree = {
 				uses = 2
 				category = plane_modules_tech
 			}         			
-            air_experience = 50	
 		}
 	}	
 	
@@ -319,7 +315,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}				
 				
 			complete_tooltip = {
-					navy_experience = 35
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
@@ -328,7 +323,6 @@ focus_tree = {
 						}
 				}
 			completion_reward = {
-					navy_experience = 35
 					if = {
 							limit = {
 									any_owned_state = {
@@ -567,7 +561,6 @@ focus_tree = {
 			
 			available_if_capitulated = yes
 			completion_reward = {
-			army_experience = 100
 					add_tech_bonus = {
 							name = armor_bonus
 							bonus = 1.0
@@ -599,7 +592,6 @@ focus_tree = {
 			available_if_capitulated = yes
 			
 			completion_reward = {
-					army_experience = 50					
 			add_doctrine_cost_reduction = {
 				name = FRA_methodical_battle
 				category = land_doctrine
@@ -643,7 +635,6 @@ focus_tree = {
 		y = 3
 			available = { has_capitulated = no }
 			completion_reward = {
-			army_experience = 35
 			836 = {
 					add_building_construction = {
 						type = bunker
@@ -692,7 +683,6 @@ focus_tree = {
 			available_if_capitulated = yes
 			
 			completion_reward = {
-					army_experience = 50
 					add_war_support = 0.10
 					
 			
@@ -970,7 +960,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = armor_bonus
 							bonus = 1.0
-							uses = 2
+							uses = 1
 							category = armor
 							}			
 			add_tech_bonus = {
@@ -1518,7 +1508,6 @@ focus_tree = {
 							technology = tech_mountaineers2
 							technology = tech_mountaineers3
 						}			
-					army_experience = 35
 					add_manpower = 200000
 				}
 
@@ -1667,7 +1656,6 @@ focus_tree = {
 							uses = 2
 							bonus = 1
 						}
-					navy_experience = 50
 					add_offsite_building = {
 							type = dockyard
 							level = 1
@@ -1691,7 +1679,6 @@ focus_tree = {
 		relative_position_id = NOR_support_the_norwegian_army
 			available_if_capitulated = yes
 			completion_reward = {
-					army_experience = 35
 					add_war_support = 0.10
 					add_ideas = NOR_army_slogan
 					add_research_slot = 1
@@ -2112,7 +2099,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}				
 				
 			completion_reward = {
-					navy_experience = 15
 					if = {
 							limit = {
 									any_owned_state = {
@@ -2173,7 +2159,6 @@ focus_tree = {
 			available_if_capitulated = yes
 
 			completion_reward = {
-					navy_experience = 10
 			add_doctrine_cost_reduction = {
 				name = AST_protect_overseas_commerce
 				cost_reduction = 0.5
@@ -2257,8 +2242,13 @@ focus_tree = {
 		relative_position_id = NOR_sjoforsvaret
 			available_if_capitulated = yes
 			completion_reward = {
-					navy_experience = 200
+				add_doctrine_cost_reduction = {
+					name = NOR_naval_drills
+					cost_reduction = 0.5
+					uses = 1
+					category = naval_doctrine
 				}
+			}
 
 	}
 	focus = {
@@ -2316,7 +2306,6 @@ focus_tree = {
 						}
 				}
 			completion_reward = {
-					navy_experience = 15
 					if = {
 							limit = {
 									any_owned_state = {

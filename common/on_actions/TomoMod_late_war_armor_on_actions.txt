@@ -1,0 +1,14 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					date > 1943.1.1
+					NOT = { has_country_flag = TomoMod_late_war_armor }
+				}
+				set_country_flag = TomoMod_late_war_armor
+				country_event = TomoMod_late_war_armor.1
+			}
+		}
+	}
+}

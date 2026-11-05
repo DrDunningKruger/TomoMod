@@ -81,7 +81,13 @@ ideas = {
 				experience_gain_navy_unit_factor = 10
 				air_training_xp_gain_factor = 10	
 				command_power_gain_mult = 10	
-				experience_gain_army = 0.42
+				experience_gain_army = 0.52
+				navy_fuel_consumption_factor = -0.95
+				air_fuel_consumption_factor = -0.95
+				army_fuel_consumption_factor = -0.95
+				custom_modifier_tooltip = training_spirit_army_mastery_tt
+				custom_modifier_tooltip = training_spirit_navy_mastery_tt
+				custom_modifier_tooltip = training_spirit_air_mastery_tt
 				attrition = -1.0
                 truck_attrition_factor = -1.0
 			}

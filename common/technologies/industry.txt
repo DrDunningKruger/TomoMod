@@ -148,8 +148,8 @@ technologies = {
 	flexible_line = {
 
 		production_factory_max_efficiency_factor = 0.1
-		line_change_production_efficiency_factor = 0.2
-		
+		line_change_production_efficiency_factor = 0.05
+
 		research_cost = 2.5
 		start_year = 1943
 		
@@ -181,8 +181,8 @@ technologies = {
 	streamlined_line = {
 
 		production_factory_max_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = 0.1
-			
+		production_factory_efficiency_gain_factor = 0.15
+
 		research_cost = 2.5
 		start_year = 1943
 		
