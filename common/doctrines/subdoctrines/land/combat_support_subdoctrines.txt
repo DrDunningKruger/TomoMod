@@ -348,7 +348,7 @@ mobile_recon_and_assault = {
                 ap_attack = 0.03
             }
             armored_car = {
-                breakthrough = 0.2
+                breakthrough = 0.1
                 default_morale = 0.2
             }
         }

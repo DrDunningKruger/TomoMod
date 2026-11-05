@@ -272,21 +272,21 @@ assault_infantry = {
             light_flame_tank = {
                 battalion_mult = {
                     category = category_all_infantry
-                    breakthrough = 0.1
+                    breakthrough = 0.05
                     soft_attack = 0.1
                 }
             }
             medium_flame_tank = {
                 battalion_mult = {
                     category = category_all_infantry
-                    breakthrough = 0.1
+                    breakthrough = 0.05
                     soft_attack = 0.1
                 }
             }
             heavy_flame_tank = {
                 battalion_mult = {
                     category = category_all_infantry
-                    breakthrough = 0.1
+                    breakthrough = 0.05
                     soft_attack = 0.1
                 }
             }

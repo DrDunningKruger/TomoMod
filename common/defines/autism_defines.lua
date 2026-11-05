@@ -98,7 +98,7 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 900
 
 ---Navy
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0						-- vanilla 0.02 / Chances one ship gets damaged while training
-NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7						
+NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.6						
 NDefines.NNavy.NAVAL_TRANSFER_BASE_SPEED = 8				-- convoys are faster now (at least toops oness)
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0										-- Changed from vanilla becausee of a weird bug where using too much supply while docked leads to the fleet having no range or fuel

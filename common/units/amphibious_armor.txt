@@ -221,9 +221,9 @@ sub_units = {
 		plains = {
 			movement = -0.1
 		}		
-		amphibious = { 
-			attack = -0.1
-		}	
+		amphibious = {
+			attack = 0.2
+		}
 		beaches = {
 			movement = 0.4
 		}

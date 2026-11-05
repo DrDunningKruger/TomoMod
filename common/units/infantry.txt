@@ -172,12 +172,13 @@ sub_units = {
 		}
 		amphibious = {
 			attack = 0.5
+			defence = 0.1
 		}
 		beaches = {
 			movement = 0.5
 		}
 	}
-	
+
 	mountaineers = {
 		abbreviation = "MTN"
 		sprite = infantry

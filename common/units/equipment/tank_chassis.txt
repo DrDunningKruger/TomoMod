@@ -1859,6 +1859,7 @@ equipments = {
 				required = yes
 				allowed_module_categories = {
 					tank_small_main_armament
+					tank_medium_main_armament
 				}
 			}
 
@@ -1925,11 +1926,11 @@ equipments = {
 		module_count_limit = {
 			module = stabilizer
 			count < 2
-		}		
+		}
 		module_count_limit = {
 			module = nightvision
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
