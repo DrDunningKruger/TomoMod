@@ -1,0 +1,6 @@
+TomoMod_africa_acclimatisation_category = {
+	allowed = {
+		always = yes
+	}
+	priority = 20
+}

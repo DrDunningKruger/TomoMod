@@ -244,24 +244,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_infantry_attack_factor = -0.025
-				army_infantry_defence_factor = -0.025
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
 				special_forces_attack_factor = -0.025
 				special_forces_defence_factor = -0.025
 				army_armor_attack_factor = 0.05
 				army_armor_defence_factor = 0.075
 				army_org_regain = 0.05
-				modifier_army_sub_unit_light_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_medium_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_heavy_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_super_heavy_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_modern_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_light_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_medium_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_heavy_armor_max_org_factor = 0.15
 				industrial_capacity_factory = 0.05
-				cat_mobile_warfare_cost_factor = 5
 			}
 
 			equipment_bonus = {
@@ -286,24 +276,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_infantry_attack_factor = -0.025
-				army_infantry_defence_factor = -0.025
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
 				special_forces_attack_factor = -0.025
 				special_forces_defence_factor = -0.025
 				army_armor_attack_factor = 0.05
 				army_armor_defence_factor = 0.075
 				army_org_regain = 0.05
-				modifier_army_sub_unit_light_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_medium_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_heavy_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_super_heavy_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_modern_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_light_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_medium_armor_max_org_factor = 0.15
-				modifier_army_sub_unit_amphibious_heavy_armor_max_org_factor = 0.15
 				industrial_capacity_factory = 0.05
-				cat_mobile_warfare_cost_factor = 5
 			}
 
 			equipment_bonus = {
@@ -338,25 +318,25 @@ ideas = {
 
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				rocket_artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_air_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_tank_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				motorized_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				support_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -386,25 +366,25 @@ ideas = {
 
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				rocket_artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_air_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_tank_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				motorized_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				support_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -434,25 +414,25 @@ ideas = {
 
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				rocket_artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_air_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_tank_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				motorized_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				support_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -484,25 +464,25 @@ ideas = {
 
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				rocket_artillery_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_air_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				anti_tank_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				motorized_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				support_equipment = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -540,7 +520,7 @@ ideas = {
 			
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.1
-				political_power_factor = 0.075
+				political_power_factor = 0.1
 			}
 		}
 		

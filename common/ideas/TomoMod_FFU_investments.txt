@@ -1,0 +1,55 @@
+# inspired by FFU2 (the greatest mod ever)
+ideas = {
+	country = {
+		civilian_investment = {
+			allowed = { }
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		military_investment = {
+			allowed = { }
+			picture = ARG_public_works_investment
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		shipyard_investment = {
+			allowed = { }
+			picture = generic_naval_manufacturer_1
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		industrialization_efforts = {
+			allowed = { }
+			picture = ARG_economic_reactivation
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = -0.075
+			}
+		}
+
+		production_efforts = {
+			allowed = { }
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = -0.075
+			}
+		}
+
+		research_bonus_effort = {
+			allowed = { }
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

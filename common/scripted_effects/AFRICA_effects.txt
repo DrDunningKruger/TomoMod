@@ -438,13 +438,13 @@ AFRICA_update_german_armour = {
 	}
 }
 
-# Atlantic Wall: while the Axis holds AXIS_11 (score -10, all zones), every 120 days the
+# Atlantic Wall: while the Axis holds AXIS_11 (score -10, all zones), every 160 days the
 # AFRICA_dday_forts mission adds 1 coastal fort level to every coastal province of the D-Day states
-# (the French Atlantic coast, Benelux and the German North Sea coast). Coastal forts cap at 10, so the counter stops at 10.
+# (the French Atlantic coast, Benelux and the German North Sea coast). The counter stops at 4.
 AFRICA_add_dday_forts = {
 	if = {
 		limit = {
-			check_variable = { global.AFRICA_dday_forts < 10 }
+			check_variable = { global.AFRICA_dday_forts < 4 }
 			date < 1942.1.1
 		}
 		every_state = {

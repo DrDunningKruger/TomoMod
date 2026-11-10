@@ -606,7 +606,6 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0 } #Remove Civ constr speed
 				add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.1 } #Base 0.05 -> 0.15
 			}
 			if = {
@@ -2338,55 +2337,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_speed_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_breakthrough_factor = 0.05 }
+			add_to_variable = { SOV_the_red_army_breakthrough_factor = 0.1 }
 			custom_effect_tooltip = SOV_restore_cossack_units_ns_tt
 
 			show_unit_leaders_tooltip = SOV_lev_dovator
-
-			#Spawn Cossack divisions
-			custom_effect_tooltip = SOV_restore_cossack_units_spawn_tt
-			hidden_effect = {
-				division_template = {
-					name = "Kazachya Kavaleryskaya Diviziya"
-					division_names_group = SOV_CAV_01
-					template_counter = 05
-
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						mot_artillery_brigade = { x = 2 y = 0 }
-						light_armor = { x = 3 y = 0 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						recon = { x = 0 y = 2 }
-					}
-				}
-
-				capital_scope = {
-					#Cossack Cavalry
-					create_unit = { 
-						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-
-					#Cossack Infantry
-					create_unit = {
-						division = "name = \"13ya Donskaya Kazachya Div.\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0" owner = ROOT
-					}
-				}
-			}
 		}
 	}
 
@@ -3568,6 +3522,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			add_political_power = 100
 			add_country_leader_trait = stalin_architect_of_communism
 		}
 	}
@@ -4219,27 +4174,39 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = jap_infantry_artillery_bonus
-				bonus = 1.0
-				uses = 1
-				technology = advanced_infantry_weapons
-			}	
+			custom_effect_tooltip = SOV_equipments_tt
 			if = {
 			limit = { NOT = { has_tech = artillery1  }}
 			set_technology = {
 				artillery1 = 1
-			}}	
+			}}
 			if = {
 			limit = { NOT = { has_tech = antiair2  }}
 			set_technology = {
 				antiair2 = 1
-			}}	
+			}}
 			if = {
 			limit = { NOT = { has_tech = antitank2  }}
 			set_technology = {
 				antitank2 = 1
-			}}			
+			}}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 2000
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_2
+					amount = 2500
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 2800
+					producer = SOV
+				}
+			}
 		}
 	}
 

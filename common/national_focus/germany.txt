@@ -1,5 +1,6 @@
 focus_tree = {
 	id = german_focus
+	shared_focus = AXIS_joint_alliance
 	
 	country = {
 		factor = 0
@@ -2508,7 +2509,7 @@ focus_tree = {
 		prerequisite = { focus = GER_rhineland  }
 		available = {
 			is_puppet = no
-			if = { date > 1937.09.01 } 
+			date > 1937.7.31
 		}
 		
 
@@ -2529,32 +2530,45 @@ focus_tree = {
 
 		}
 
-        search_filters = {FOCUS_FILTER_INDUSTRY}	
+        search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = GER_mefo_bills_1 }
+				custom_effect_tooltip = GER_anschluss_mefo_bills_tt
+				hidden_effect = {
+					set_variable = { GER_mefo_days_left = GER_mefo_end_day }
+					subtract_from_variable = { GER_mefo_days_left = global.num_days }
+					remove_ideas = GER_mefo_bills_1
+					add_timed_idea = { idea = GER_mefo_bills_2 days = var:GER_mefo_days_left }
+				}
+			}
 			hidden_effect = {
 				every_country = {
 					limit = { is_ai = no }
 					scoped_sound_effect = IHE_anschluss_tomo
 				}
 			}
-			GER = {
-			country_event = { hours = 2 id = germany.4 }
+			custom_effect_tooltip = GER_anschluss_annex_tt
+			hidden_effect = {
+				GER = {
+				country_event = { hours = 2 id = germany.4 }
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 22000
+				}
+				add_equipment_to_stockpile = {
+								type = support_equipment_1
+								amount = 750
+				}
+				add_state_core = 153
+				add_state_core = 152
+				add_state_core = 4
+				transfer_state = 153	
+				transfer_state = 152	
+				transfer_state = 4	
 			}
-			add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = 22000
-			}
-			add_equipment_to_stockpile = {
-							type = support_equipment_1
-							amount = 750
-			}
-			add_state_core = 153
-			add_state_core = 152
-			add_state_core = 4
-			transfer_state = 153	
-			transfer_state = 152	
-			transfer_state = 4	
 			153 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -2645,7 +2659,7 @@ focus_tree = {
 		completion_reward = {	
 		custom_effect_tooltip = "New_Swabia_1_tooltip"
 		hidden_effect = {
-		set_fuel_ratio = 1
+		set_fuel_ratio = 0.25
 		add_ideas = FIL_death_before_surrender
    			add_state_core = 101
 			transfer_state = 101
@@ -3936,7 +3950,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_fuel_ratio = 1
+			set_fuel_ratio = 0.25
 			if = {
 			limit = { NOT = { has_tech = gas_engine }}
 			set_technology = {
@@ -4415,18 +4429,33 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_demand_sudetenland
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 
-        search_filters = {FOCUS_FILTER_INDUSTRY}	
+        search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-		
+
 			set_global_flag = end_of_czechoslovakia
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
-			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+			if = {
+				limit = {
+					OR = {
+						has_idea = GER_mefo_bills_1
+						has_idea = GER_mefo_bills_2
+					}
+				}
+				custom_effect_tooltip = GER_czech_mefo_bills_tt
+				hidden_effect = {
+					set_variable = { GER_mefo_days_left = GER_mefo_end_day }
+					subtract_from_variable = { GER_mefo_days_left = global.num_days }
+					remove_ideas = GER_mefo_bills_1
+					remove_ideas = GER_mefo_bills_2
+					add_timed_idea = { idea = GER_mefo_bills_3 days = var:GER_mefo_days_left }
+				}
+			}
 			if = {
                 limit = { NOT = { country_exists = CZE } }
                 country_event = { id = germany.55 hours = 6 }
@@ -6464,6 +6493,9 @@ focus_tree = {
 				add_ideas = tot_economic_mobilisation
 			}
 			add_ideas = SPA_expand_conscription
+			hidden_effect = {
+				complete_national_focus = AXIS_totaler_krieg
+			}
 			}
 	}	
 
@@ -7834,6 +7866,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = "GER_AF_TUNISIA"
+			custom_effect_tooltip = TomoMod_africa_acclimatisation_start_tt
+			set_global_flag = TomoMod_africa_acclimatisation_active
 
 			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 40000 }
 
@@ -7903,7 +7937,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_deployafrikakorps
-		cost = 1
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7914,8 +7948,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_AFRICA_READINESS_tt
-			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 		add_timed_idea={ idea = GER_africacampaign days = 90}
              hidden_effect = {
                  ROM = {add_timed_idea={ idea = GER_africacampaign days = 90}}
@@ -7934,7 +7966,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_deployafrikakorps
-		cost = 1
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7951,8 +7983,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = GER_AFRICA_READINESS_tt
-			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			add_timed_idea = { idea = GER_prepareforinevitable days = 45 }
 		}
 	}
@@ -7964,7 +7994,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_unternehmentheseus
-		cost = 1
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -7972,8 +8002,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = GER_AFRICA_READINESS_tt
-			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 		custom_effect_tooltip="GER_DESERTAF_tooltip"
 		
 			add_tech_bonus = {
@@ -8057,7 +8085,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_deployafrikakorps
-		cost = 1
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8065,8 +8093,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = GER_AFRICA_READINESS_tt
-			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			if = {
 			limit = { NOT = { has_tech = desertinfantry_at  }}
 			set_technology = {
@@ -8099,7 +8125,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_desertequipement
-		cost = 1
+		cost = 2
 		 ai_will_do = {
 			factor = 1
 		}
@@ -8107,8 +8133,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = GER_AFRICA_READINESS_tt
-			hidden_effect = { AXIS_Africa_reduce_penalty = yes }
 			add_ideas = SAF_desert_equipment
 			}
 	}	
@@ -8217,7 +8241,7 @@ focus_tree = {
 			completion_reward = {
 				custom_effect_tooltip = "STEINER_tooltip"
                 custom_effect_tooltip = "NEWGENERAL_TOOLTIP"
-				set_fuel_ratio = 1
+				set_fuel_ratio = 0.25
 				hidden_effect = {
 					every_country = {
 						limit = { is_ai = no }

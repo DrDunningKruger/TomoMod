@@ -6,26 +6,17 @@ technologies = {
 		}
 		folder = {
 			name = industry_folder
-			position = { x = -3 y = 0 }
+			position = { x = 2 y = 0 }
 		}
-		
-			modifier = {
-				#factor = 0
-			}		
 	}
 	Battlehammer = {
+		research_cost = 0
 		XOR = {
 			Mao
 		}
-		research_cost = 0
 		folder = {
 			name = industry_folder
-			position = { x = -5 y = 0 }
+			position = { x = 0 y = 0 }
 		}
-		
-			modifier = {
-				#factor = 0
-			}		
 	}
 }
-

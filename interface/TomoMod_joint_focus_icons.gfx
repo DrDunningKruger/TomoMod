@@ -1,0 +1,172 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_ITA"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ITA.dds"
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_ITA_shine"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ITA.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ITA.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ITA.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_SPR"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_SPR.dds"
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_SPR_shine"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_SPR.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_SPR.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_SPR.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_ROM"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ROM.dds"
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_ROM_shine"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ROM.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ROM.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_ROM.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_HUN"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_HUN.dds"
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_HUN_shine"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_HUN.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_HUN.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_HUN.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_BUL"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_BUL.dds"
+	}
+	SpriteType = {
+		name = "GFX_TomoMod_AXIS_totaler_krieg_BUL_shine"
+		texturefile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_BUL.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_BUL.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/TomoMod_AXIS_totaler_krieg_BUL.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

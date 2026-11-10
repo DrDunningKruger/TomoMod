@@ -1,0 +1,15 @@
+TomoMod_share_full_intel = {
+	every_country = {
+		limit = { TomoMod_intel_sharing_member = yes }
+		every_other_country = {
+			limit = { TomoMod_intel_sharing_member = yes }
+			add_intel = {
+				target = PREV
+				civilian_intel = 100
+				army_intel = 100
+				navy_intel = 100
+				airforce_intel = 100
+			}
+		}
+	}
+}

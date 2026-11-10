@@ -171,7 +171,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_blocked_icon"
-		textureFile = "gfx//interface//equipmentdesigner//blocked_icon.dds"
+		textureFile = "gfx//interface//equipmentdesigner//TomoMod_blocked_icon_empty.dds"
 	}
 
 	spriteType = {

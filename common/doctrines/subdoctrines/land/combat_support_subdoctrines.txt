@@ -169,14 +169,6 @@ flying_batteries = {
     }
 
      # EFFECTS
-     effect = {
-        add_tech_bonus = {
-            bonus = 0.5
-            uses = 1
-            category = rocketry
-            name = SUBDOCTRINE_FLYING_BATTERIES
-        }
-    }
 
     category_line_artillery = {
         soft_attack = 0.1

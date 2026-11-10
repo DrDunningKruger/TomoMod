@@ -1292,10 +1292,10 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1944
+		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1944 }
+			position = { x = 0 y = @1945 }
 		}
 
 		categories = {
@@ -1313,8 +1313,8 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
-		start_year = 1939
+		research_cost = 0.5
+		start_year = 1937
 		folder = {
 			name = support_folder
 			position = { x = 0 y = @1939 }

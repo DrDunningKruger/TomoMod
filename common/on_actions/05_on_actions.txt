@@ -1885,6 +1885,11 @@ on_actions = {
 					modifier = benelux_modifier days = 1461
 				}
 			}	
+			848 = {
+				add_dynamic_modifier = {
+					modifier = benelux_modifier days = 1461
+				}
+			}	
 			460 = {
 				add_dynamic_modifier = {
 					modifier = benelux_modifier days = 1461

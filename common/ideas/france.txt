@@ -3,6 +3,55 @@ ideas = {
 	country = {
 
 
+		FRA_char_de_bataille = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_armor
+
+			equipment_bonus = {
+				armor = {
+					soft_attack = 0.04
+					breakthrough = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		FRA_automitrailleuses = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				army_org_factor = 0.02
+			}
+
+			equipment_bonus = {
+				armor = {
+					hard_attack = 0.03
+					instant = yes
+				}
+			}
+		}
+
 		FRA_disorganised_military = {
 
 			allowed = {

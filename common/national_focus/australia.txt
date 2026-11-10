@@ -1,5 +1,6 @@
 focus_tree = {
 	id = australian_focus
+	shared_focus = allies_joint_alliance
 	
 	country = {
 		factor = 0

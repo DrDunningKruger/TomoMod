@@ -109,6 +109,7 @@ war_measures = {
         SWI = {
 		has_full_control_of_state = 460
 		has_full_control_of_state = 513	
+		has_full_control_of_state = 848
 		has_full_control_of_state = 459
         has_full_control_of_state = 462		
         has_full_control_of_state = 553
@@ -138,19 +139,20 @@ war_measures = {
 		news_event = { hours = 6 id = news.6968 } 
 		set_global_flag = TORCH_CLICKED
 		set_global_flag = african_counterratack
-		}
-		remove_effect = {
-              ITA = {		
-					transfer_state = 459
-					transfer_state = 513	
-					transfer_state = 460
-					transfer_state = 514
-			  }
 			  ENG = {
 			  		transfer_state = 461
 					transfer_state = 462
 					transfer_state = 553
-			  }	
+			  }
+		}
+		remove_effect = {
+              ITA = {
+					transfer_state = 459
+					transfer_state = 513
+					transfer_state = 848
+					transfer_state = 460
+					transfer_state = 514
+			  }
 
 		}
 	}

@@ -335,7 +335,6 @@ marines_2 = {
 			mastery = 50
 			naval_invasion_planning_bonus_speed = 0.2
 			shore_bombardment_bonus = 0.15
-			army_bonus_air_superiority_factor = 0.10						
 		}
 		reward_5 = {
 			mastery = 50

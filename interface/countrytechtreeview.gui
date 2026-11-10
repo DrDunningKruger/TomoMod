@@ -321,6 +321,35 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }	
 				format = "LEFT"	
 			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 353 y = 370 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_infantry_tree"
+				position = { x = 320 y = 420 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_infantry_tree"
+				position = { x = 320 y = 420 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -549,6 +578,35 @@ guiTypes = {
 				position = { x = 100 y = 1180 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 1103 y = 3 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_support_tree"
+				position = { x = 1070 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_support_tree"
+				position = { x = 1070 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 
 		}
@@ -842,6 +900,35 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 603 y = 3 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_armour_tree"
+				position = { x = 570 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_armour_tree"
+				position = { x = 570 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -1099,6 +1186,35 @@ guiTypes = {
 				name = "engine_tech_1_tree"
 				position = { x = -22% y = 172 }
 				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 583 y = 70 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_nsb_armour_tree"
+				position = { x = 550 y = 120 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_nsb_armour_tree"
+				position = { x = 550 y = 120 }
+				size = { width = 72 height = 72 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
@@ -1458,6 +1574,35 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 1128 y = 90 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_artillery_tree"
+				position = { x = 1095 y = 140 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_artillery_tree"
+				position = { x = 1095 y = 140 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -1724,6 +1869,35 @@ guiTypes = {
 				format = "LEFT"
 			}
 
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 603 y = 3 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_naval_tree"
+				position = { x = 570 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_naval_tree"
+				position = { x = 570 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
 		}
 
 		containerWindowType = {
@@ -1953,6 +2127,35 @@ guiTypes = {
 				format = "LEFT"
 			}
 
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 1228 y = 460 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_mtgnaval_tree"
+				position = { x = 1195 y = 510 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_mtgnaval_tree"
+				position = { x = 1195 y = 510 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
 		}
 
 		containerWindowType = {
@@ -2152,6 +2355,35 @@ guiTypes = {
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 338 y = 0 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_mtgnavalsupport_tree"
+				position = { x = 305 y = 40 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_mtgnavalsupport_tree"
+				position = { x = 305 y = 40 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 
 		}
@@ -2508,6 +2740,35 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 743 y = 3 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_air_tree"
+				position = { x = 710 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_air_tree"
+				position = { x = 710 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -2846,6 +3107,35 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 753 y = 3 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_bba_air_tree"
+				position = { x = 720 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_bba_air_tree"
+				position = { x = 720 y = 60 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -3174,6 +3464,22 @@ guiTypes = {
 				name = "construction1_tree"
 				position = { x = 894 y = 312 }
 				size = { width = 72 height = 650 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "Battlehammer_tree"
+				position = { x = 900 y = 172 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "Mao_tree"
+				position = { x = 900 y = 172 }
+				size = { width = 72 height = 72 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
@@ -3545,6 +3851,35 @@ guiTypes = {
 				slotsize = { width=60 height= 60 }
 				format = "UP"
 
+			}
+
+			instantTextBoxType = {
+				name = "JUGGLE"
+				position = { x = 633 y = 150 }
+				textureFile = ""
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "JUGGLE"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle1_electronics_tree"
+				position = { x = 600 y = 200 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "TomoMod_juggle2_electronics_tree"
+				position = { x = 600 y = 200 }
+				size = { width = 72 height = 72 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
 			}
 
 		}
@@ -4495,6 +4830,88 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "techtree_bba_air_techs_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+		}
+	}
+
+	containerWindowType = {
+		name = "techtree_armour_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+		}
+	}
+
+	containerWindowType = {
+		name = "techtree_air_techs_folder_small_item"
 		position = { x=0 y=0 }
 		size = { width = 72 height = 72 }
 		clipping = no

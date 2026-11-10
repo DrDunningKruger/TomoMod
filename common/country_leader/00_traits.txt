@@ -1973,12 +1973,14 @@ leader_traits = {
 		random = no
 		political_power_factor = 0.1
 		justify_war_goal_time = -0.25
+		industrial_capacity_factory = 0.025
 	}
 
 	stalin_inheritor_of_lenin_genius = {
 		random = no
 		political_power_factor = 0.1
 		justify_war_goal_time = -0.25
+		industrial_capacity_factory = 0.025
 		research_speed_factor = 0.05
 	}
 
@@ -1986,6 +1988,7 @@ leader_traits = {
 		random = no
 		political_power_factor = 0.1
 		justify_war_goal_time = -0.25
+		industrial_capacity_factory = 0.025
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
 		political_advisor_cost_factor = -0.25
@@ -1995,6 +1998,7 @@ leader_traits = {
 		random = no
 		political_power_factor = 0.1
 		justify_war_goal_time = -0.25
+		industrial_capacity_factory = 0.025
 		research_speed_factor = 0.05
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
@@ -2005,12 +2009,16 @@ leader_traits = {
 		random = no
 		drift_defence_factor = 0.15
 		guarantee_cost = -0.5
+		production_speed_arms_factory_factor = 0.05
+		local_resources_factor = 0.1
 	}
 
 	stalin_servant_of_lenin_worship = {
 		random = no
 		drift_defence_factor = 0.15
 		guarantee_cost = -0.5
+		production_speed_arms_factory_factor = 0.05
+		local_resources_factor = 0.1
 		stability_factor = 0.15
 	}
 
@@ -2018,6 +2026,8 @@ leader_traits = {
 		random = no
 		drift_defence_factor = 0.15
 		guarantee_cost = -0.5
+		production_speed_arms_factory_factor = 0.05
+		local_resources_factor = 0.1
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
 		political_advisor_cost_factor = -0.25
@@ -2026,6 +2036,8 @@ leader_traits = {
 	stalin_servant_of_lenin_final = {
 		random = no
 		stability_factor = 0.1
+		production_speed_arms_factory_factor = 0.05
+		local_resources_factor = 0.1
 		party_popularity_stability_factor = 0.15
 		defensive_war_stability_factor = 0.4
 	}
@@ -2038,9 +2050,8 @@ leader_traits = {
 
 	stalin_architect_of_communism = {
 		random = no
-		communism_drift = 0.1
-		master_ideology_drift = 0.1
-		puppet_cost_factor = -0.2
+		army_attack_factor = 0.02
+		army_defence_factor = 0.02
 	}
 
 	stalin_father_of_nations = {

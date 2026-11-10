@@ -1,0 +1,14 @@
+is_australian_mainland_or_new_zealand = {
+	OR = {
+		state = 285
+		state = 517
+		state = 518
+		state = 519
+		state = 520
+		state = 521
+		state = 522
+		state = 674
+		state = 284
+		state = 723
+	}
+}

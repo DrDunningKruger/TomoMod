@@ -146,8 +146,9 @@ add_ideas = {
     AFRICA_AXIS_6	
 }
 add_timed_idea = { idea = GER_mefo_bills_1 days = 1339 }
+set_variable = { GER_mefo_end_day = global.num_days }
+add_to_variable = { GER_mefo_end_day = 1339 }
 
-activate_mission = GER_mefo_bills_mission
 
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer

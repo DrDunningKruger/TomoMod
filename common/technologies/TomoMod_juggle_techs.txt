@@ -1,0 +1,242 @@
+technologies = {
+	TomoMod_juggle1_infantry = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_infantry
+		}
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_infantry = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_infantry
+		}
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_support = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_support
+		}
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_support = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_support
+		}
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_armour = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_armour
+		}
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_armour = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_armour
+		}
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_nsb_armour = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_nsb_armour
+		}
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_nsb_armour = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_nsb_armour
+		}
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_artillery = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_artillery
+		}
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_artillery = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_artillery
+		}
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_naval = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_naval
+		}
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_naval = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_naval
+		}
+		folder = {
+			name = naval_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_mtgnaval = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_mtgnaval
+		}
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_mtgnaval = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_mtgnaval
+		}
+		folder = {
+			name = mtgnavalfolder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_mtgnavalsupport = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_mtgnavalsupport
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_mtgnavalsupport = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_mtgnavalsupport
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_air = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_air
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_air = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_air
+		}
+		folder = {
+			name = air_techs_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_bba_air = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle2_bba_air
+		}
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_bba_air = {
+		research_cost = 0
+		force_use_small_tech_layout = yes
+		XOR = {
+			TomoMod_juggle1_bba_air
+		}
+		folder = {
+			name = bba_air_techs_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+	TomoMod_juggle1_electronics = {
+		research_cost = 0
+		XOR = {
+			TomoMod_juggle2_electronics
+		}
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+	}
+	TomoMod_juggle2_electronics = {
+		research_cost = 0
+		XOR = {
+			TomoMod_juggle1_electronics
+		}
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 0 }
+		}
+	}
+}

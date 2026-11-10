@@ -90,8 +90,9 @@ NDefines.NBuildings.MAX_SHARED_SLOTS = 56
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 15
 NDefines.NBuildings.RADAR_INTEL_EFFECT = 160 -- vanilla 40, one radar now reaches the 160 province intel needed to reveal units
 NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 2
-NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 75
+NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 999
 NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 10
+NDefines.NRailwayGun.RAILWAY_GUN_POSSIBLE_RANGES = { 30, 15, 45, 37.5 }
 
 ---Spy shit
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 900
@@ -178,6 +179,7 @@ NDefines.NAir.DISRUPTION_ATTACK_FACTOR = 0
 NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.3
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.2
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = 0
+NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.2
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5
 NDefines.NMilitary.ORG_LOSS_FACTOR_ON_CONQUER = 0.3
 
@@ -322,6 +324,13 @@ NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 0
 NDefines.NCountry.GIE_CONVOY_ON_CREATION = 50 
 NDefines.NCountry.UNCAPITULATE_LEVEL = 1 
 NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.05
+NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0
+NDefines.NCountry.MAX_HEROES_BEING_KILLED_WEEKLY_WAR_SUPPORT_PENALTY = -0.0006
+NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.05
+NDefines.NCountry.MAX_CONVOYS_BEING_RAIDED_WEEKLY_WAR_SUPPORT_PENALTY = -0.0006
+NDefines.NCountry.MAX_CONVOYS_BEING_RAIDED_WAR_SUPPORT_IMPACT = -0.05
+NDefines.NCountry.MAX_BOMBING_WEEKLY_WAR_SUPPORT_PENALTY = -0.0006
+NDefines.NCountry.MAX_BOMBING_WAR_SUPPORT_IMPACT = -0.05
 
 ---Army out of combat
 NDefines.NMilitary.TRAINING_MAX_DAILY_COUNTRY_EXP = 0			-- (Def: 0.08)*2 | Maximum army XP gained per day from training
@@ -343,7 +352,8 @@ NDefines.NMilitary.NEW_COMMANDER_RANDOM_BASIC_TRAIT_CHANCES = {
 		1,
         0.5		
 	}
-NDefines.NPolitics.ARMY_LEADER_COST = 2
+NDefines.NPolitics.ARMY_LEADER_COST = 999
+NDefines.NPolitics.ARMY_LEADER_MAX_COST = 999
 NDefines.NPolitics.NAVY_LEADER_COST = 2
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0
 NDefines.NMilitary.CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0
@@ -376,3 +386,9 @@ NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 10            -- base days needed t
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0 -- No xp loss on batallion change
 NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.5 -- less cancer xp loss
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0    -- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
+NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_MAXIMUMS = { 100, 100, 100, 100 }
+NDefines.NIntel.DYNAMIC_INTEL_SOURCE_EVENT_ABSOLUTE_MAXIMUMS = { 100, 100, 100, 100 }
+NDefines.NMilitary.ARMY_TRAINING_FUEL_MULT = 0.25
+NDefines.NAir.MISSION_FUEL_COSTS[12] = 0.15
+NDefines.NNavy.MISSION_FUEL_COSTS[8] = 0.15
+NDefines.NNavy.TRAINING_FUEL_COST_FOR_ESCORT_SHIPS = 0.0375

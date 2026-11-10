@@ -1,0 +1,18 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { TomoMod_intel_sharing_runner = yes }
+				TomoMod_share_full_intel = yes
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { TomoMod_intel_sharing_runner = yes }
+				TomoMod_share_full_intel = yes
+			}
+		}
+	}
+}

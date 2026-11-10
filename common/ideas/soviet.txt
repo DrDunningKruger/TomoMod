@@ -2288,8 +2288,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.03
-				industrial_capacity_dockyard = 0.03
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 
@@ -5712,7 +5712,7 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_infrastructure_factor = 0.05
+				production_speed_infrastructure_factor = 0.2
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 			}

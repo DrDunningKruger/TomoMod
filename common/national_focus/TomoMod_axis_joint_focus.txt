@@ -1,0 +1,4518 @@
+﻿shared_focus = {
+	id = AXIS_joint_alliance
+	
+	dynamic = yes 
+	
+	icon = GFX_goal_tripartite_pact
+	
+
+	x = 30
+	y = 0
+	offset = {
+		x = 44
+		trigger = { has_focus_tree = german_focus }
+	}
+	offset = {
+		x = 63
+		trigger = { has_focus_tree = italian_focus }
+	}
+	offset = {
+		x = 24
+		trigger = { has_focus_tree = bulgarian_focus }
+	}
+	offset = {
+		x = 25
+		trigger = { has_focus_tree = romanian_focus }
+	}
+	offset = {
+		x = 50
+		trigger = { has_focus_tree = hungarian_focus }
+	}
+	offset = {
+		x = 14
+		trigger = { has_focus_tree = spanish_focus }
+	}
+
+
+	
+
+	allow_branch = {NOT = {tag = D01}}
+
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		always = yes
+		is_subject = no
+	}
+
+	available_if_capitulated = yes
+    bypass = 
+    {
+        is_in_faction_with = GER
+        always = yes
+		is_ai = no
+    }
+
+	bypass_effect = {
+		add_dynamic_modifier = { modifier = axis_dynamic }
+	}
+
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 100
+			is_historical_focus_on = yes 
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			add_dynamic_modifier = { modifier = axis_dynamic }
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+			add_dynamic_modifier = { modifier = axis_dynamic }
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_political_cooperation
+	icon = GFX_focus_GER_spheres_of_influence
+	prerequisite = { focus = AXIS_joint_alliance }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_joint_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+    every_country = {
+        limit = {
+                always = yes
+            OR = {
+                tag = GER
+				tag = ITA
+                tag = ROM
+				tag = SPR
+				tag = HUN
+                tag = BUL
+            }
+        }
+        add_political_power = 25
+        add_stability = 0.1
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.1
+        }
+    }
+}
+
+}
+
+joint_focus = {
+	id = AXIS_civ_eco_boost
+	icon = GFX_focus_GER_customs_union
+	prerequisite = { focus = AXIS_political_cooperation }
+	mutually_exclusive = {focus = AXIS_mining_expertise focus = AXIS_mil_eco_boost}
+
+	x = -2
+	y = 1
+	relative_position_id = AXIS_political_cooperation
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+    every_country = {
+        limit = {
+                always = yes
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = ROM
+                tag = SPR
+                tag = HUN
+                tag = BUL
+            }
+        }
+		custom_effect_tooltip = generic_skip_one_line_tt
+        add_timed_idea = { 
+            idea = civ_eco_boost 
+            days = 180 
+        }
+    }
+}
+
+}
+
+joint_focus = {
+	id = AXIS_mining_expertise
+	icon = GFX_focus_GER_factories_for_resources
+	prerequisite = { focus = AXIS_political_cooperation }
+	mutually_exclusive = {focus = AXIS_mil_eco_boost focus = AXIS_civ_eco_boost}
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_political_cooperation
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_resources_factor = 0.15
+	    			tooltip = local_resources_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_resources_factor = 0.15
+	    			tooltip = local_resources_factor_tt 
+	    		}
+		    	}
+		    }
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = faction_warning_tt
+	}
+}
+
+joint_focus = {
+	id = AXIS_mil_eco_boost
+	icon = GFX_goal_ger_war_industry
+	prerequisite = { focus = AXIS_political_cooperation }
+	mutually_exclusive = {focus = AXIS_mining_expertise focus = AXIS_civ_eco_boost }
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_political_cooperation
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+    every_country = {
+        limit = {
+                always = yes
+            OR = {
+                tag = GER
+                tag = ITA
+                tag = ROM
+                tag = SPR
+                tag = HUN
+                tag = BUL
+            }
+        }
+		custom_effect_tooltip = generic_skip_one_line_tt
+        add_timed_idea = { 
+            idea = AXIS_mill_eco_boost 
+            days = 180 
+        }
+    }
+}
+
+}
+
+
+
+
+joint_focus = {
+	id = AXIS_blitzkrieg_economy
+	icon = GFX_focus_GER_the_four_year_plan
+	prerequisite = { focus = AXIS_mil_eco_boost focus = AXIS_mining_expertise}
+	mutually_exclusive = {focus = AXIS_adaptive_economy focus = AXIS_the_waiting_game}
+
+	x = -3
+	y = 1
+	relative_position_id = AXIS_mil_eco_boost
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		GER = 
+		{
+			has_completed_focus = GER_anschluss
+		}
+		date < 1938.1.1
+	}
+
+	allow_branch = 
+	{
+		always = no
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+
+		custom_effect_tooltip = blitzkrieg_eco_tt
+	    set_global_flag = axis_blitzkrieg_eco
+
+	}
+}
+
+joint_focus = {
+	id = AXIS_blitzkrieg_phase1
+	icon = GFX_focus_GER_prioritize_the_four_year_plan
+	prerequisite = { focus = AXIS_blitzkrieg_economy }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_blitzkrieg_economy
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_financial_collapse
+	}
+
+	bypass_effect = 
+	{
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.05
+	    		
+	    	}
+
+			add_to_variable = { 
+	    		axis_mill_speed = 0.05
+	    		
+	    	}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_blitzkrieg_timer days = -120 } 
+		}
+		if = {			
+	    	limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.05
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	    		axis_mill_speed = 0.05
+	    		tooltip = production_speed_arms_factory_factor_tt
+	    	}
+		}
+		else = {
+			effect_tooltip = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.05
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	    		axis_mill_speed = 0.05
+	    		tooltip = production_speed_arms_factory_factor_tt
+	    	}
+			}
+		}
+	}
+}
+
+
+joint_focus = {
+	id = AXIS_blitzkrieg_phase1_rubber
+	icon = GFX_focus_BRA_rubber_war
+	prerequisite = { focus = AXIS_blitzkrieg_phase1 }
+
+	x = -1
+	y = 1
+	relative_position_id = AXIS_blitzkrieg_phase1
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_financial_collapse
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_blitzkrieg_timer days = -120 }
+		}
+
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            modify_building_resources = {
+	            	   	building = synthetic_refinery
+	            	   	resource = rubber
+	            	  	amount = 1
+	            	}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					technology = oil_processing
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            modify_building_resources = {
+	            	   	building = synthetic_refinery
+	            	   	resource = rubber
+	            	  	amount = 1
+	            	}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					technology = oil_processing
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_blitzkrieg_phase2
+	icon = GFX_focus_GER_plenipotentiary_of_armaments
+	prerequisite = { focus = AXIS_blitzkrieg_phase1 }
+	prerequisite = { focus = AXIS_war_economy }
+
+	bypass = 
+	{
+		has_global_flag = axis_financial_collapse
+	}
+
+	bypass_effect = 
+	{
+			add_to_variable = { 
+	    		axis_cap = 0.07
+	    		tooltip = production_factory_max_efficiency_factor_tt
+	    	}
+	}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_blitzkrieg_phase1
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_blitzkrieg_timer days = -120 }
+		}
+	    
+		if = {			
+	    	limit = { has_country_flag = accessible_shared_tree }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+					axis_cap = 0.07
+					tooltip = production_factory_max_efficiency_factor_tt
+				}
+		}
+		else = {
+			effect_tooltip = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+					axis_cap = 0.07
+					tooltip = production_factory_max_efficiency_factor_tt
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_blitzkrieg_phase3
+	icon = GFX_focus_GER_all_for_the_front
+	overlay = GFX_focus_fast_overlay_generic_clock
+	prerequisite = { focus = AXIS_blitzkrieg_phase2 }
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_blitzkrieg_phase2
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		always = no
+		
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_financial_collapse
+	}
+
+	bypass_effect = 
+	{
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = -0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	    		axis_cap = -0.14
+	    		tooltip = production_factory_max_efficiency_factor_tt
+	    	}
+			add_to_variable = { 
+	    		axis_consumer = 0.05
+	    		tooltip = consumer_goods_expected_value_tt
+	    	}
+
+			add_to_variable = { 
+	    		axis_mill_speed = -0.1
+	    		tooltip = production_speed_arms_factory_factor_tt
+	    	}
+
+			add_to_variable = { 
+	    			axis_construction_speed = -0.1
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	        		axis_base = -0.05
+	        		tooltip = production_factory_start_efficiency_factor_tt 
+	    		}
+
+	        add_to_variable = { 
+	        		axis_conversion = 0.25
+	        		tooltip = conversion_cost_civ_to_mil_factor_tt
+	    	}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    custom_effect_tooltip = blitzkrieg_phase3_tt
+
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = axis_shared_tt
+		add_to_variable = { 
+	    		axis_growth_gain = -0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	    		axis_cap = -0.14
+	    		tooltip = production_factory_max_efficiency_factor_tt
+	    	}
+			add_to_variable = { 
+	    		axis_consumer = 0.05
+	    		tooltip = consumer_goods_expected_value_tt
+	    	}
+
+			add_to_variable = { 
+	    		axis_mill_speed = -0.1
+	    		tooltip = production_speed_arms_factory_factor_tt
+	    	}
+
+			add_to_variable = { 
+	    			axis_construction_speed = -0.1
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	        		axis_base = -0.05
+	        		tooltip = production_factory_start_efficiency_factor_tt 
+	    		}
+
+	        add_to_variable = { 
+	        		axis_conversion = 0.25
+	        		tooltip = conversion_cost_civ_to_mil_factor_tt
+	    	}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_economy
+	icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+	prerequisite = { focus = AXIS_mil_eco_boost focus = AXIS_mining_expertise focus = AXIS_civ_eco_boost}
+	mutually_exclusive = {focus = AXIS_blitzkrieg_economy focus = AXIS_the_waiting_game }
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_mining_expertise
+	cost = 2
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		GER = 
+		{
+			has_completed_focus = GER_anschluss
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+				custom_effect_tooltip = axis_shared_tt
+	       		add_to_variable = { 
+	        		axis_conversion = -0.25
+	        		tooltip = conversion_cost_civ_to_mil_factor_tt
+	    		}
+
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+				custom_effect_tooltip = axis_shared_tt
+	       		add_to_variable = { 
+	        		axis_conversion = -0.25
+	        		tooltip = conversion_cost_civ_to_mil_factor_tt
+	    		}
+
+		    	}
+		    }
+	}
+}
+
+
+joint_focus = {
+	id = AXIS_adaptive_2
+	icon = GFX_focus_GER_optimize_reich_labour_service
+	prerequisite = { focus = AXIS_adaptive_economy}
+	mutually_exclusive = {focus = AXIS_adaptive_3}
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_adaptive_economy
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_construction_speed = 0.025
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+		}
+		else = {
+			effect_tooltip = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_construction_speed = 0.025
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_3
+	icon = GFX_focus_GER_kdf_wagen
+	prerequisite = { focus = AXIS_adaptive_economy}
+	mutually_exclusive = {focus = AXIS_adaptive_2}
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_adaptive_economy
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	allow_branch = 
+	{
+		always = no
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+		    	}
+		    }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_global_flag = axis_low_value
+			custom_effect_tooltip = low_value_tt
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_waiting_game
+	icon = GFX_focus_DEN_limited_regulations
+	prerequisite = { focus = AXIS_mil_eco_boost focus = AXIS_mining_expertise}
+	mutually_exclusive = {focus = AXIS_blitzkrieg_economy focus = AXIS_adaptive_economy}
+
+
+	x = 5
+	y = 1
+	relative_position_id = AXIS_mil_eco_boost
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		GER = 
+		{
+			has_completed_focus = GER_anschluss
+		}
+	}
+
+	allow_branch = 
+	{
+		always = no
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    custom_effect_tooltip = the_waiting_game_tt
+		set_global_flag = axis_the_waiting_game
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_waiting_game_phase1
+	icon = GFX_focus_GER_the_swiss_gold
+	prerequisite = { focus = AXIS_the_waiting_game }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_the_waiting_game
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_economy_unbound_timer
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_waiting_game_timer days = -50 }
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+				
+				add_tech_bonus = {
+					bonus = 0.35
+					uses = 1
+					category = construction_tech
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+				
+				add_tech_bonus = {
+					bonus = 0.35
+					uses = 1
+					category = construction_tech
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_waiting_game_phase1_emergency
+	icon = GFX_focus_GER_integrated_economies
+	prerequisite = { focus = AXIS_the_waiting_game_phase1 }
+
+	x = 1
+	y = 1
+	relative_position_id = AXIS_the_waiting_game_phase1
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_economy_unbound_timer
+	}
+
+	bypass_effect = 
+	{
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_waiting_game_timer days = 365 }
+		}
+
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = emergency_measures_warining_tt
+		}
+		else = {
+			effect_tooltip = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	    	add_to_variable = { 
+	    		axis_growth_gain = 0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt 
+	    	}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = emergency_measures_warining_tt
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_waiting_game_phase2
+	icon = GFX_focus_GER_autarky_ambitions
+	prerequisite = { focus = AXIS_war_economy }
+	prerequisite = { focus = AXIS_the_waiting_game_phase1 }
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_the_waiting_game_phase1
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_economy_unbound_timer
+	}
+
+	bypass_effect = 
+	{
+				add_to_variable = { 
+	    			axis_resources_factor = 0.05
+	    			tooltip = local_resources_factor_tt 
+	    		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		ROOT = 
+		{
+			add_days_mission_timeout = { mission = axis_waiting_game_timer days = -90 }
+		}
+
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    	custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	    			axis_resources_factor = 0.05
+	    			tooltip = local_resources_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    	custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	    			axis_resources_factor = 0.05
+	    			tooltip = local_resources_factor_tt 
+	    		}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_the_waiting_game_phase3
+	icon = GFX_focus_GER_autarky_achieved
+	overlay = GFX_focus_fast_overlay_generic_clock
+	prerequisite = { focus = AXIS_the_waiting_game_phase2 }
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_the_waiting_game_phase2
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		always = no
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		has_global_flag = axis_economy_unbound_timer
+	}
+
+	bypass_effect = 
+	{
+			add_to_variable = { 
+	    		axis_cap = 0.07
+	    		tooltip = production_factory_max_efficiency_factor_tt
+	    	}
+
+			add_to_variable = { 
+	    		axis_consumer = -0.025
+	    		tooltip = consumer_goods_expected_value_tt
+	    	}
+
+			add_to_variable = { 
+	    			axis_construction_speed = 0.1
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+			modify_building_resources = {
+	            	   	building = synthetic_refinery
+	            	   	resource = rubber
+	            	  	amount = 1
+	            	}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+
+		set_global_flag = axis_economy_unbound
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = waiting_game_eco_tt
+	   		add_to_variable = { 
+	    		axis_cap = 0.07
+	    		tooltip = production_factory_max_efficiency_factor_tt
+	    	}
+
+			add_to_variable = { 
+	    		axis_growth_gain = 0.1
+	    		tooltip = production_factory_efficiency_gain_factor_tt
+	    	}
+
+			add_to_variable = { 
+	    		axis_consumer = -0.025
+	    		tooltip = consumer_goods_expected_value_tt
+	    	}
+
+			add_to_variable = { 
+	    			axis_construction_speed = 0.1
+	    			tooltip = production_speed_buildings_factor_tt 
+	    	}
+
+			add_to_variable = { 
+	    		axis_resources_factor = 0.05
+	    		tooltip = local_resources_factor_tt
+	    	}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			modify_building_resources = {
+	            	   	building = synthetic_refinery
+	            	   	resource = rubber
+	            	  	amount = 1
+	        }
+
+	}
+}
+
+joint_focus = {
+	id = AXIS_war_economy
+	icon = GFX_focus_SWI_issue_war_bonds
+	prerequisite = { focus = AXIS_blitzkrieg_phase1 focus = AXIS_adaptive_2 focus = AXIS_adaptive_3 focus = AXIS_the_waiting_game_phase1}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+		GER = 
+		{
+			has_war_with = ENG
+		}
+	}
+
+	available_if_capitulated = yes
+
+	bypass = 
+	{
+		OR = {
+			has_global_flag = axis_financial_collapse
+			has_global_flag = axis_economy_unbound_timer
+		}
+	}
+
+
+	bypass_effect = 
+	{
+		add_to_variable = { 
+	        		axis_base = 0.05
+	        		tooltip = production_factory_start_efficiency_factor_tt 
+	    		}
+
+	            add_to_variable = { 
+	        		axis_conversion = -0.25
+	        		tooltip = conversion_cost_civ_to_mil_factor_tt
+	    		}
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	        		axis_base = 0.05
+	        		tooltip = production_factory_start_efficiency_factor_tt 
+	    		}
+
+
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	        		axis_base = 0.05
+	        		tooltip = production_factory_start_efficiency_factor_tt 
+	    		}
+
+
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_1_phase2
+	icon = GFX_focus_GER_vereinigte_stahlwerke
+	prerequisite = { focus = AXIS_war_economy}
+	mutually_exclusive = {focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = -1
+	y = 1
+	relative_position_id = AXIS_war_economy
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+				has_global_flag = axis_the_waiting_game
+				has_global_flag = axis_blitzkrieg_eco
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	       add_to_variable = { 
+				axis_cap = 0.035
+				tooltip = production_factory_max_efficiency_factor_tt 
+			}
+
+			add_to_variable = { 
+				axis_base = -0.075
+				tooltip = production_factory_start_efficiency_factor_tt 
+			}
+
+			add_to_variable = { 
+				axis_growth_gain = -0.1
+				tooltip = production_factory_efficiency_gain_factor_tt 
+			}
+
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+	       add_to_variable = { 
+				axis_cap = 0.035
+				tooltip = production_factory_max_efficiency_factor_tt 
+			}
+
+			add_to_variable = { 
+				axis_base = -0.075
+				tooltip = production_factory_start_efficiency_factor_tt 
+			}
+
+			add_to_variable = { 
+				axis_growth_gain = -0.1
+				tooltip = production_factory_efficiency_gain_factor_tt 
+			}
+
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_2_phase2
+	icon = GFX_focus_GER_wirtschaftswunder
+	prerequisite = { focus = AXIS_war_economy}
+	mutually_exclusive = {focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 1
+	y = 1
+	relative_position_id = AXIS_war_economy
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+				has_global_flag = axis_the_waiting_game
+				has_global_flag = axis_blitzkrieg_eco
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+				add_to_variable = { 
+					axis_growth_gain = 0.125
+					tooltip = production_factory_efficiency_gain_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+				add_to_variable = { 
+					axis_growth_gain = 0.125
+					tooltip = production_factory_efficiency_gain_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_3_phase2
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	prerequisite = { focus = AXIS_war_economy}
+	mutually_exclusive = {focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2}
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_war_economy
+	cost = 5
+
+	allow_branch = 
+	{
+		always = no
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+				has_global_flag = axis_the_waiting_game
+				has_global_flag = axis_blitzkrieg_eco
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_construction_speed = 0.035
+	    			tooltip = production_speed_buildings_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	    			axis_construction_speed = 0.035
+	    			tooltip = production_speed_buildings_factor_tt 
+	    		}
+		    	}
+		    }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_global_flag = axis_low_value_2
+			custom_effect_tooltip = low_value_tt
+			mark_focus_tree_layout_dirty = yes
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3
+	icon = GFX_focus_GER_plenipotentiary_of_the_four_year_plan
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	allow_branch = 
+	{
+		always = no
+	}
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		always = no
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	        custom_effect_tooltip = adaptive_3_tt
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3_high_high
+	icon = GFX_focus_GER_integration_of_puppet_economies
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 5
+
+	allow_branch = 
+	{
+		has_global_flag = axis_high_value
+		has_global_flag = axis_high_value_2
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1941.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	        add_to_variable = { 
+	    		axis_resources_factor = 0.03
+	    		tooltip = local_resources_factor_tt
+	    	}
+		}
+		else = {
+			effect_tooltip = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	        add_to_variable = { 
+	    		axis_resources_factor = 0.03
+	    		tooltip = local_resources_factor_tt
+	    	}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3_med_high
+	icon = GFX_focus_GER_rally_the_industrialists
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 5
+
+	allow_branch = 
+	{
+		OR = 
+		{
+			AND = 
+			{
+				has_global_flag = axis_medium_value
+				has_global_flag = axis_high_value_2
+			}
+
+			AND = 
+			{
+				has_global_flag = axis_high_value
+				has_global_flag = axis_medium_value_2
+			}
+		}
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1941.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+	       
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+			add_to_variable = { 
+	        	axis_growth_gain = 0.025
+	        	tooltip = production_factory_efficiency_gain_factor_tt
+	    	}
+
+		}
+		else = {
+			effect_tooltip = {
+	       
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+
+			add_to_variable = { 
+	        	axis_growth_gain = 0.025
+	        	tooltip = production_factory_efficiency_gain_factor_tt
+	    	}
+
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3_med_med
+	icon = GFX_focus_GER_kriegslokomotive
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 5
+
+	allow_branch = 
+	{
+		OR = 
+		{
+			AND = 
+			{
+				has_global_flag = axis_medium_value
+				has_global_flag = axis_medium_value_2
+			}
+
+			AND = 
+			{
+				has_global_flag = axis_low_value
+				has_global_flag = axis_high_value_2
+			}
+
+			AND = 
+			{
+				has_global_flag = axis_high_value
+				has_global_flag = axis_low_value_2
+			}
+		}
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1941.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+	      
+			add_to_variable = { 
+	        	axis_mill_output = 0.05
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.05
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+		}
+		else = {
+			effect_tooltip = {
+	      
+			add_to_variable = { 
+	        	axis_mill_output = 0.05
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.05
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3_low_med
+	icon = GFX_focus_GER_ascension_of_speer
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 5
+
+	allow_branch = 
+	{
+		OR = 
+		{
+			AND = 
+			{
+				has_global_flag = axis_low_value
+				has_global_flag = axis_medium_value_2
+			}
+
+			AND = 
+			{
+				has_global_flag = axis_medium_value
+				has_global_flag = axis_low_value_2
+			}
+		}
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1941.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+	        add_to_variable = { 
+	        	axis_mill_output = 0.075
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.075
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+		}
+		else = {
+			effect_tooltip = {
+	        add_to_variable = { 
+	        	axis_mill_output = 0.075
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.075
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_adaptive_phase3_low_low
+	icon = GFX_focus_RAJ_special_economic_zones
+	prerequisite = { focus = AXIS_adaptive_2_phase2 focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_3_phase2}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_adaptive_2_phase2
+	cost = 5
+
+	allow_branch = 
+	{
+		has_global_flag = axis_low_value
+		has_global_flag = axis_low_value_2
+	}
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1941.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+		if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+	        add_to_variable = { 
+	        	axis_mill_output = 0.1
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.1
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+			add_to_variable = { 
+	    			axis_resources_factor = 0.05
+	    			tooltip = local_resources_factor_tt 
+	    	}
+		}
+		else = {
+			effect_tooltip = {
+	        add_to_variable = { 
+	        	axis_mill_output = 0.1
+	        	tooltip = industrial_capacity_factory_tt 
+	    	}
+
+	    	add_to_variable = { 
+	    		axis_dockyard_output  = 0.1
+	    		tooltip = industrial_capacity_dockyard_tt 
+	    	}
+
+			add_to_variable = { 
+	    			axis_resources_factor = 0.05
+	    			tooltip = local_resources_factor_tt 
+	    	}
+			}
+		}
+	}
+}
+
+
+
+joint_focus = {
+	id = AXIS_fascist_researchers
+	icon = GFX_focus_ARG_fascist_researchers
+	prerequisite = { focus = AXIS_joint_alliance }
+
+	x = 13
+	y = 1
+	relative_position_id = AXIS_joint_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	        		axis_research_speed = 0.025
+	        		tooltip = research_speed_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = axis_shared_tt
+	            add_to_variable = { 
+	        		axis_research_speed = 0.025
+	        		tooltip = research_speed_factor_tt 
+	    		}
+		    	}
+		    }
+	}
+	completion_reward_joint_originator = 
+	{
+		add_war_support = 0.05
+	}
+}
+
+joint_focus = { 
+	id = AXIS_mediterranean_development_plan
+	icon = GFX_focus_ITA_mare_nostrum
+	prerequisite = { focus = AXIS_fascist_researchers }
+
+	x = -3
+	y = 1
+	relative_position_id = AXIS_fascist_researchers
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+			OR = 
+			{
+				tag = ITA
+				tag = SPR 
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		add_political_power = 50
+				custom_effect_tooltip = generic_skip_one_line_tt
+	    		add_tech_bonus = { 
+	    			bonus = 0.50
+	    			uses = 1
+	    			category = construction_tech
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	    			axis_construction_speed = 0.005
+	    			tooltip = production_speed_buildings_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+ 
+	    		add_political_power = 50
+				custom_effect_tooltip = generic_skip_one_line_tt
+	    		add_tech_bonus = { 
+	    			bonus = 0.50
+	    			uses = 1
+	    			category = construction_tech
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+	    			axis_construction_speed = 0.005
+	    			tooltip = production_speed_buildings_factor_tt 
+	    		}
+		    	}
+		    }
+	}
+}
+
+
+joint_focus = { 
+	id = AXIS_accelerate_spanish_recovery
+	icon = GFX_focus_spa_the_spanish_miracle
+	prerequisite = { focus = AXIS_mediterranean_development_plan }
+
+	x = -1
+	y = 1
+	relative_position_id = AXIS_mediterranean_development_plan
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_global_flag = scw_over
+			NOT = 
+			{
+				tag = SPR
+			}
+		SPR = 
+		{
+			is_in_faction_with = GER
+			always = yes
+			NOT = { has_war_with = GER }
+		}
+		country_exists = SPR
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		hidden_effect = {
+	    			set_global_flag = invested_in_spain
+	    		}
+				SPR = { add_ideas = joint_spanish_recovery }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		hidden_effect = {
+	    			set_global_flag = invested_in_spain
+	    		}
+				SPR = { add_ideas = joint_spanish_recovery }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = { 
+	id = AXIS_spanish_development
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	prerequisite = { focus = AXIS_accelerate_spanish_recovery }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_accelerate_spanish_recovery
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+    	has_global_flag = scw_over
+			NOT = 
+			{
+				tag = SPR
+			}
+		SPR = 
+		{
+			is_in_faction_with = GER
+			always = yes
+			NOT = { has_war_with = GER }
+		}
+		country_exists = SPR
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		SPR = 
+	    		{
+	    			add_ideas = joint_spanish_development
+	    			random_owned_controlled_state = {
+	    				limit = { is_core_of = SPR }
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+ 
+	    		SPR = 
+	    		{
+	    			add_ideas = joint_spanish_development
+	    			random_owned_controlled_state = {
+	    				limit = { is_core_of = SPR }
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {  
+	id = AXIS_italian_development
+	icon = GFX_focus_befriend_italy
+	prerequisite = { focus = AXIS_mediterranean_development_plan }
+
+	x = 1
+	y = 1
+	relative_position_id = AXIS_mediterranean_development_plan
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = ITA
+		}
+		ITA = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = ITA
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		ITA = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.75
+	    				uses = 1
+	    				category = industry
+					}
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 2
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 2
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_italy
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+	    		}
+	    		else = {
+	    			effect_tooltip = {
+ 
+	    		ITA = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.75
+	    				uses = 1
+	    				category = industry
+					}
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 2
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 2
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_italy
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+	    			}
+	    		}
+		    }
+	}
+
+
+
+joint_focus = { 
+	id = AXIS_fill_in_italian_gaps
+	icon = GFX_focus_ITA_southern_industry
+	prerequisite = { focus = AXIS_italian_development }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_italian_development
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = ITA
+		}
+		ITA = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = ITA
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		ITA = 
+	    		{
+	    			custom_effect_tooltip = infra_on_cores_tt
+	    			custom_effect_tooltip = generic_skip_one_line_tt
+	    			every_core_state = {
+	    				limit = {
+	    					is_fully_controlled_by = ITA
+	    				}
+	    				add_building_construction = { 
+	    					type = infrastructure
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		ITA = 
+	    		{
+	    			custom_effect_tooltip = infra_on_cores_tt
+	    			custom_effect_tooltip = generic_skip_one_line_tt
+	    			every_core_state = {
+	    				limit = {
+	    					is_fully_controlled_by = ITA
+	    				}
+	    				add_building_construction = { 
+	    					type = infrastructure
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = { 
+	id = AXIS_mediterranean_resources
+	icon = GFX_focus_ITA_new_horizons
+	prerequisite = { focus = AXIS_fill_in_italian_gaps focus = AXIS_spanish_development }
+
+	x = -1
+	y = 1
+	relative_position_id =  AXIS_fill_in_italian_gaps
+	cost = 4
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+			OR = 
+			{
+				tag = ITA
+				tag = SPR
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	        custom_effect_tooltip = invested_tt
+	        custom_effect_tooltip = generic_skip_one_line_tt
+
+	        ITA = {
+	            if = {
+	                limit = { has_global_flag = invested_in_italy }
+	                add_ideas = { mediterranean_melting_pot }
+	            }
+	        }
+
+	        SPR = {
+	            if = {
+	                limit = { has_global_flag = invested_in_spain }
+	                add_ideas = { mediterranean_melting_pot }
+	            }
+	        }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+			}
+	    }
+	    else = {
+	    	effect_tooltip = {
+
+	        custom_effect_tooltip = invested_tt
+	        custom_effect_tooltip = generic_skip_one_line_tt
+
+	        ITA = {
+	            if = {
+	                limit = { has_global_flag = invested_in_italy }
+	                add_ideas = { mediterranean_melting_pot }
+	            }
+	        }
+
+	        SPR = {
+	            if = {
+	                limit = { has_global_flag = invested_in_spain }
+	                add_ideas = { mediterranean_melting_pot }
+	            }
+	        }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+			}
+	    	}
+	    }
+	}
+
+}
+
+joint_focus = { 
+	id = AXIS_balkan_economic_integration
+	icon = GFX_focus_GER_mitteleuropa
+	prerequisite = { focus = AXIS_fascist_researchers }
+
+	x = 3
+	y = 1
+	relative_position_id = AXIS_fascist_researchers
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+			OR = 
+			{
+				tag = HUN
+				tag = ROM 
+				tag = BUL
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward_joint_originator = {
+            if = {
+                limit = { has_country_flag = accessible_shared_tree }
+ 
+            		add_political_power = 50
+					custom_effect_tooltip = generic_skip_one_line_tt
+            		add_tech_bonus = { 
+            			bonus = 0.5
+            			uses = 1
+            			category = construction_tech
+            		}
+
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = axis_shared_tt
+					add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+					}
+	            }
+	            else = {
+	            	effect_tooltip = {
+ 
+            		add_political_power = 50
+					custom_effect_tooltip = generic_skip_one_line_tt
+            		add_tech_bonus = { 
+            			bonus = 0.5
+            			uses = 1
+            			category = construction_tech
+            		}
+
+					custom_effect_tooltip = generic_skip_one_line_tt
+					custom_effect_tooltip = axis_shared_tt
+					add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+					}
+	            	}
+	            }
+        }
+
+}
+
+joint_focus = { 
+	id = AXIS_hungarian_development
+	icon = GFX_focus_HUN_hungarian_tradition
+	prerequisite = { focus = AXIS_balkan_economic_integration }
+
+	x = -2
+	y = 1
+	relative_position_id = AXIS_balkan_economic_integration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = HUN
+		}
+		HUN = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = HUN
+		
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		HUN = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_hungary
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+			}
+			else = {
+				effect_tooltip = {
+ 
+	    		HUN = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_hungary
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+				}
+			}
+		}
+	}
+
+
+joint_focus = { 
+	id = AXIS_expand_hungarian_alu_industry
+	icon = GFX_focus_generic_aluminum
+	prerequisite = { focus = AXIS_hungarian_development }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_hungarian_development
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = HUN
+		}
+		HUN = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = HUN
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		HUN = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+				every_state = {
+					limit = { is_core_of = HUN }
+					add_extra_state_shared_building_slots = 1
+	    		}
+	    		}
+	    		155 = {
+	    			add_resource = { 
+	    				type = aluminium 
+	    				amount = 15 
+	    			}
+	    			add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 2 
+	    				instant_build = yes 
+	    			}
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		HUN = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+				every_state = {
+					limit = { is_core_of = HUN }
+					add_extra_state_shared_building_slots = 1
+	    		}
+	    		}
+	    		155 = {
+	    			add_resource = { 
+	    				type = aluminium 
+	    				amount = 15 
+	    			}
+	    			add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 2 
+	    				instant_build = yes 
+	    			}
+	    		}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = { 
+	id = AXIS_romanian_development
+	icon = GFX_focus_invite_romania
+	prerequisite = { focus = AXIS_balkan_economic_integration }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_balkan_economic_integration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = ROM
+		}
+		ROM = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = ROM
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		ROM = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+					
+	    			81 = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_romania
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+			}
+			else = {
+				effect_tooltip = {
+ 
+	    		ROM = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+					
+	    			81 = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_romania
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+				}
+			}
+		}
+	}
+
+
+joint_focus = { 
+	id = AXIS_the_ploiesti_oilfield
+	icon = GFX_focus_GER_subjugate_romanian_economy
+	prerequisite = { focus = AXIS_romanian_development }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_romanian_development
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = ROM
+		}
+		ROM = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = ROM
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		ROM = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+	    		}
+	    		46 = { 
+	    			add_resource = { 
+	    				type = oil
+	    				amount = 15 
+	    			}
+					add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 1 
+	    				instant_build = yes 
+	    			}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				every_state = {
+					limit = { is_core_of = ROM }
+					add_extra_state_shared_building_slots = 1
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		ROM = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+	    		}
+	    		46 = { 
+	    			add_resource = { 
+	    				type = oil
+	    				amount = 15 
+	    			}
+					add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 1 
+	    				instant_build = yes 
+	    			}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				every_state = {
+					limit = { is_core_of = ROM }
+					add_extra_state_shared_building_slots = 1
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+joint_focus = { 
+	id = AXIS_bulgarian_development
+	icon = GFX_focus_BUL_promote_bulgarian_nationalism
+	prerequisite = { focus = AXIS_balkan_economic_integration }
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_balkan_economic_integration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = BUL
+		}
+		BUL = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = BUL
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		BUL = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+					
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_bulgaria
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+			    }
+			    else = {
+			    	effect_tooltip = {
+ 
+	    		BUL = 
+	    		{
+	    			add_tech_bonus = { 
+	    				bonus = 0.5
+	    				uses = 1
+	    				category = industry
+	    			}
+					
+	    			random_owned_controlled_state = {
+	    				add_extra_state_shared_building_slots = 1
+	    				add_building_construction = {
+	    					type = industrial_complex
+	    					level = 1
+	    					instant_build = yes
+	    				}
+	    			}
+	    		}
+	    		set_global_flag = invested_in_bulgaria
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+			    	}
+			    }
+	}
+	}
+
+
+joint_focus = { 
+	id = AXIS_improve_bulgarian_chromium
+	icon = GFX_focus_generic_chromium
+	prerequisite = { focus = AXIS_bulgarian_development }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_bulgarian_development
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		NOT = 
+		{
+			tag = BUL
+		}
+		BUL = 
+		{
+			is_in_faction_with = GER
+		}
+		country_exists = BUL
+	
+		has_country_flag = accessible_shared_tree}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		BUL = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+				every_state = {
+					limit = { is_core_of = BUL }
+					add_extra_state_shared_building_slots = 1
+	    		}
+	    		}
+	    		212 = { 
+	    			add_resource = { 
+	    				type = chromium
+	    				amount = 15 
+	    			}
+	    			add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 2 
+	    				instant_build = yes 
+	    			}
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		BUL = {
+	            add_tech_bonus = { 
+	    				bonus = 1
+	    				uses = 1
+	    				category = excavation_tech
+	    		}
+				every_state = {
+					limit = { is_core_of = BUL }
+					add_extra_state_shared_building_slots = 1
+	    		}
+	    		}
+	    		212 = { 
+	    			add_resource = { 
+	    				type = chromium
+	    				amount = 15 
+	    			}
+	    			add_building_construction = { 
+	    				type = infrastructure 
+	    				level = 2 
+	    				instant_build = yes 
+	    			}
+	    		}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = axis_shared_tt
+				add_to_variable = { 
+						axis_construction_speed = 0.005
+						tooltip = production_speed_buildings_factor_tt 
+				}
+		    	}
+		    }
+	}
+}
+
+
+joint_focus = { 
+	id = AXIS_total_economic_mobilization
+	icon = GFX_focus_AUS_protector_of_the_danube	
+	prerequisite = { focus = AXIS_the_ploiesti_oilfield focus = AXIS_improve_bulgarian_chromium focus = AXIS_expand_hungarian_alu_industry}
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_the_ploiesti_oilfield
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		NOT = 
+		{
+			OR = 
+			{
+				tag = ROM
+				tag = BUL
+				tag = HUN
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+		if = {
+			limit = { has_country_flag = accessible_shared_tree }
+			BUL = {
+				add_to_variable = {
+					axis_construction_speed = 0.05
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					axis_resources_factor = 0.1
+					tooltip = local_resources_factor_tt
+				}
+			}
+			ROM = {
+				add_to_variable = {
+					axis_construction_speed = 0.05
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					axis_resources_factor = 0.1
+					tooltip = local_resources_factor_tt
+				}
+			}
+			HUN = {
+				add_to_variable = {
+					axis_construction_speed = 0.05
+					tooltip = production_speed_buildings_factor_tt
+				}
+				add_to_variable = {
+					axis_resources_factor = 0.1
+					tooltip = local_resources_factor_tt
+				}
+			}
+		}
+		else = {
+			effect_tooltip = {
+				BUL = {
+					add_to_variable = {
+						axis_construction_speed = 0.05
+						tooltip = production_speed_buildings_factor_tt
+					}
+					add_to_variable = {
+						axis_resources_factor = 0.1
+						tooltip = local_resources_factor_tt
+					}
+				}
+				ROM = {
+					add_to_variable = {
+						axis_construction_speed = 0.05
+						tooltip = production_speed_buildings_factor_tt
+					}
+					add_to_variable = {
+						axis_resources_factor = 0.1
+						tooltip = local_resources_factor_tt
+					}
+				}
+				HUN = {
+					add_to_variable = {
+						axis_construction_speed = 0.05
+						tooltip = production_speed_buildings_factor_tt
+					}
+					add_to_variable = {
+						axis_resources_factor = 0.1
+						tooltip = local_resources_factor_tt
+					}
+				}
+			}
+		}
+	}
+}
+	
+
+joint_focus = { 
+	id = AXIS_factionwide_development
+	icon = GFX_focus_GER_extend_mitteleuropa	
+	prerequisite = { focus = AXIS_mediterranean_resources focus = AXIS_total_economic_mobilization}
+
+	x = 3
+	y = 1
+	relative_position_id = AXIS_mediterranean_resources
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			custom_effect_tooltip = invested_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = factionwide_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_italy}
+						ITA = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_spain}
+						SPR = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+				
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_romania}
+						ROM = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+				
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_bulgaria}
+						BUL = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_hungary}
+						HUN = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+		}
+		else = {
+			effect_tooltip = {
+
+			custom_effect_tooltip = invested_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = factionwide_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_italy}
+						ITA = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_spain}
+						SPR = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+				
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_romania}
+						ROM = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+				
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_bulgaria}
+						BUL = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+
+				if = 
+					{
+						limit = {has_global_flag = invested_in_hungary}
+						HUN = 
+						{
+							add_timed_idea = { 
+							idea = economic_boom
+							days = 180 
+							}
+						}
+					}
+			}
+		}
+	}
+}
+
+joint_focus = { 
+	id = AXIS_emergency_gold_reserves
+	icon = GFX_focus_hol_abandon_the_gold_standard
+	prerequisite = { focus = AXIS_factionwide_development }
+
+	x = -1
+	y = 1
+	relative_position_id = AXIS_factionwide_development
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            add_timed_idea = { 
+	    			idea = emergency_gold_reserves 
+	    			days = 365 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            add_timed_idea = { 
+	    			idea = emergency_gold_reserves 
+	    			days = 365 
+	    		}
+		    	}
+		    }
+	}
+}
+
+
+
+joint_focus = { 
+	id = AXIS_research_library
+	icon = GFX_focus_GER_wunderwaffe
+	prerequisite = { focus = AXIS_factionwide_development }
+
+	x = 1
+	y = 1
+	relative_position_id = AXIS_factionwide_development
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		ROOT = 
+		{
+			amount_research_slots < 6
+		}
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+ 
+	    		add_research_slot = 1
+		    }
+		    else = {
+		    	effect_tooltip = {
+ 
+	    		add_research_slot = 1
+		    	}
+		    }
+	}
+
+	completion_reward_joint_member = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		add_to_variable = { 
+	    			axis_research_speed = 0.05
+	    			tooltip = research_speed_factor_tt 
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		add_to_variable = { 
+	    			axis_research_speed = 0.05
+	    			tooltip = research_speed_factor_tt 
+	    		}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_high_command
+	icon = GFX_focus_GER_new_reforms_in_the_wehrmacht
+	prerequisite = { focus = AXIS_joint_alliance }
+
+	x = -13
+	y = 1
+	relative_position_id = AXIS_joint_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		add_ideas =
+	    		{
+	    			AXIS_high_command_idea
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		add_ideas =
+	    		{
+	    			AXIS_high_command_idea
+	    		}
+		    	}
+		    }
+
+	}
+}
+
+
+joint_focus = {
+	id = AXIS_unlock_army_specializations
+	icon = GFX_focus_chi_army_reform	
+	prerequisite = { focus = AXIS_high_command}
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_high_command
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		date > 1939.1.1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    custom_effect_tooltip = unlock_specialization_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_political_power = 50
+		set_global_flag = AXIS_high_command_flag
+	}
+}
+
+
+#### WAR READINESS BRANCH ####
+
+joint_focus = {
+	id = AXIS_war_readiness_program
+	icon = GFX_focus_GER_demonstration_of_military_achievements	
+	prerequisite = { focus = AXIS_adaptive_economy}
+	prerequisite = {focus = AXIS_high_command}
+
+	x = -6
+	y = 3
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	relative_position_id = AXIS_adaptive_economy
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            add_timed_idea = { 
+	       			idea = war_readiness_industrial_push
+	        		days = 365
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            add_timed_idea = { 
+	       			idea = war_readiness_industrial_push
+	        		days = 365
+	    		}
+		    	}
+		    }
+	}
+}
+
+
+
+
+joint_focus = {
+	id = AXIS_afrika_korps
+	icon = GFX_focus_GER_reclaim_former_african_colonies
+	prerequisite = { focus = AXIS_war_readiness_program }
+
+	x = -2
+	y = 1
+	relative_position_id = AXIS_war_readiness_program
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+    
+	            add_timed_idea = {
+	                idea = the_afrika_korps
+	                days = 365
+	            }
+    	    }
+    	    else = {
+    	    	effect_tooltip = {
+
+    
+	            add_timed_idea = {
+	                idea = the_afrika_korps
+	                days = 365
+	            }
+    	    	}
+    	    }
+	}
+}
+
+
+joint_focus = {
+	id = AXIS_dday_last_stand
+	icon = GFX_focus_FIN_coastal_defense
+	prerequisite = { focus = AXIS_war_readiness_program }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_war_readiness_program
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		ROOT = {
+	            add_timed_idea = {
+	    				idea = dday_last_stand
+	    				days = 30
+	    			}
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		ROOT = {
+	            add_timed_idea = {
+	    				idea = dday_last_stand
+	    				days = 30
+	    			}
+	    		}
+		    	}
+		    }
+	}
+}
+
+
+
+
+joint_focus = {
+	id = AXIS_normandy_airbases
+	icon = GFX_goal_expand_the_luftwaffe
+	prerequisite = { focus = AXIS_war_readiness_program }
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_war_readiness_program
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		OR = {
+			GER = {
+				has_full_control_of_state = 30
+				has_full_control_of_state = 24
+				has_full_control_of_state = 16
+				has_full_control_of_state = 785
+			}
+			ITA = {
+				has_full_control_of_state = 30
+				has_full_control_of_state = 24
+				has_full_control_of_state = 16
+				has_full_control_of_state = 785
+			}
+		}
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 806
+						state = 19
+						state = 23
+						state = 30
+						state = 14
+						state = 15
+						state = 785
+						state = 29
+					}
+					OR = {
+						is_controlled_by = ROOT
+						controller = { is_in_faction_with = ROOT }
+					}
+					air_base < 10
+				}
+				set_temp_variable = { normandy_airbase_steps = 0 }
+				while_loop_effect = {
+					limit = {
+						air_base < 10
+						check_variable = { normandy_airbase_steps < 10 }
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_to_temp_variable = { normandy_airbase_steps = 1 }
+				}
+			}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+			every_state = {
+				limit = {
+					OR = {
+						state = 806
+						state = 19
+						state = 23
+						state = 30
+						state = 14
+						state = 15
+						state = 785
+						state = 29
+					}
+					OR = {
+						is_controlled_by = ROOT
+						controller = { is_in_faction_with = ROOT }
+					}
+					air_base < 10
+				}
+				set_temp_variable = { normandy_airbase_steps = 0 }
+				while_loop_effect = {
+					limit = {
+						air_base < 10
+						check_variable = { normandy_airbase_steps < 10 }
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_to_temp_variable = { normandy_airbase_steps = 1 }
+				}
+			}
+		    	}
+		    }
+	}
+}
+
+
+##############
+
+
+####### RND DEPARTMENT BRANCH ############
+
+
+
+joint_focus = {
+	id = AXIS_rnd_department
+	icon = GFX_focus_NORDIC_dem_capstone_research
+	prerequisite = { focus = AXIS_adaptive_economy}
+	prerequisite = { focus = AXIS_fascist_researchers}
+
+	x = 6
+	y = 1
+	cost = 3
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	relative_position_id = AXIS_adaptive_economy
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            add_to_variable = { 
+	        		axis_research_speed = 0.025
+	        		tooltip = research_speed_factor_tt 
+	    		}
+
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            add_to_variable = { 
+	        		axis_research_speed = 0.025
+	        		tooltip = research_speed_factor_tt 
+	    		}
+
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_technological_warfare
+	icon = GFX_focus_GER_support_the_proletarian_uprising
+	prerequisite = { focus = AXIS_rnd_department }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_rnd_department
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	            add_tech_bonus = {
+	    			name = the_electronics_bonus
+	    			bonus = 0.75
+	    			uses = 1
+	    			category = electronics
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	            add_tech_bonus = {
+	    			name = the_electronics_bonus
+	    			bonus = 0.75
+	    			uses = 1
+	    			category = electronics
+	    		}
+		    	}
+		    }
+	}
+}
+
+
+
+joint_focus = {
+	id = AXIS_small_arms_expertise
+	icon = GFX_focus_GER_army
+	prerequisite = { focus = AXIS_technological_warfare }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_technological_warfare
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		add_tech_bonus = {
+	    			name = guns_bonus
+	    			bonus = 1.0
+	    			uses = 1
+	    			category = infantry_weapons
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		add_tech_bonus = {
+	    			name = guns_bonus
+	    			bonus = 1.0
+	    			uses = 1
+	    			category = infantry_weapons
+	    		}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_continue_the_development_of_small_arms
+	icon = GFX_focus_AFG_scavenging
+	prerequisite = { focus = AXIS_small_arms_expertise }
+
+	x = -1
+	y = 1
+	relative_position_id = AXIS_small_arms_expertise
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	mutually_exclusive = {focus = AXIS_efficient_gun_assembly}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		add_tech_bonus = {
+	    			name = guns_bonus
+	    			bonus = 1.0
+					ahead_reduction = 0.5
+	    			uses = 1
+	    			category = infantry_weapons
+	    		}
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		add_tech_bonus = {
+	    			name = guns_bonus
+	    			bonus = 1.0
+					ahead_reduction = 0.5
+	    			uses = 1
+	    			category = infantry_weapons
+	    		}
+		    	}
+		    }
+	}
+}
+
+joint_focus = {
+	id = AXIS_efficient_gun_assembly
+	icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
+	prerequisite = { focus = AXIS_small_arms_expertise }
+
+	x = 1
+	y = 1
+	relative_position_id = AXIS_small_arms_expertise
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		
+	}
+
+	available_if_capitulated = yes
+
+	mutually_exclusive = {focus = AXIS_continue_the_development_of_small_arms}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	completion_reward_joint_originator = {
+	    if = {
+	        limit = { has_country_flag = accessible_shared_tree }
+
+	    		add_ideas = efficient_gun_assembly
+		    }
+		    else = {
+		    	effect_tooltip = {
+
+	    		add_ideas = efficient_gun_assembly
+		    	}
+		    }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### NAVAL FACILITY
+
+
+
+
+#### AIR FACILITY
+
+
+
+
+#### Army Specializations 
+
+joint_focus = {
+    id = AXIS_massmob_mobilization_1
+    icon = GFX_focus_AUS_frontmiliz_focus
+    prerequisite = { focus = AXIS_unlock_army_specializations }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_unlock_army_specializations
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        set_country_flag = AXIS_massmob_branch_owner
+        add_ideas = massmob_mobilization_1
+    }
+}
+
+joint_focus = {
+    id = AXIS_massmob_mobilization_2
+    icon = GFX_focus_GER_reich_ministry_of_public_enlightenment
+    prerequisite = { focus = AXIS_massmob_mobilization_1 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_massmob_mobilization_1
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_massmob_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = massmob_mobilization_1
+        add_ideas = massmob_mobilization_2
+    }
+}
+
+joint_focus = {
+    id = AXIS_massmob_mobilization_3
+    icon = GFX_focus_HUN_expand_the_army
+    prerequisite = { focus = AXIS_massmob_mobilization_2 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_massmob_mobilization_2
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_massmob_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = massmob_mobilization_2
+        add_ideas = AXIS_massmob_spirit_3
+    }
+}
+
+### Special Forces
+
+joint_focus = {
+    id = AXIS_special_forces_1
+    icon = GFX_focus_SWE_neither_death_nor_dishonor
+    prerequisite = { focus = AXIS_unlock_army_specializations }
+
+    x = -3
+    y = 1
+    relative_position_id = AXIS_unlock_army_specializations
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        set_country_flag = AXIS_special_forces_branch_owner
+        add_ideas = special_forces_1
+    }
+}
+
+joint_focus = {
+    id = AXIS_special_forces_2
+    icon = GFX_focus_GER_sturzkampfbomber_historical
+    prerequisite = { focus = AXIS_special_forces_1 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_special_forces_1
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_special_forces_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = special_forces_1
+        add_ideas = special_forces_2
+    }
+}
+
+joint_focus = {
+    id = AXIS_special_forces_3
+    icon = GFX_focus_SWE_let_fly_all_guns
+    prerequisite = { focus = AXIS_special_forces_2 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_special_forces_2
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_special_forces_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = special_forces_2
+        add_ideas = special_forces_3
+    }
+}
+
+### TANK SPECIALIZATION
+
+joint_focus = {
+    id = AXIS_tank_specialization_1
+    icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
+    prerequisite = { focus = AXIS_unlock_army_specializations }
+
+    x = 3
+    y = 1
+    relative_position_id = AXIS_unlock_army_specializations
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        set_country_flag = AXIS_tank_branch_owner
+        add_ideas = tank_specialization_1
+    }
+}
+
+joint_focus = {
+    id = AXIS_tank_specialization_2
+    icon = GFX_goal_panzerwaffe
+    prerequisite = { focus = AXIS_tank_specialization_1 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_tank_specialization_1
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_tank_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = tank_specialization_1
+        add_ideas = tank_specialization_2
+    }
+}
+
+joint_focus = {
+    id = AXIS_tank_specialization_3
+    icon = GFX_goal_ger_heavy_tiger_cats
+    prerequisite = { focus = AXIS_tank_specialization_2 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_tank_specialization_2
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_tank_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = tank_specialization_2
+        add_ideas = tank_specialization_3
+    }
+}
+
+### NAVY SPECIALIZATION
+
+joint_focus = {
+    id = AXIS_navy_specialization_1
+    icon = GFX_focus_GER_navy
+    prerequisite = { focus = AXIS_unlock_army_specializations }
+
+    x = -6
+    y = 1
+    relative_position_id = AXIS_unlock_army_specializations
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    }
+
+    available_if_capitulated = yes
+
+    completion_reward_joint_originator = {
+        set_country_flag = AXIS_navy_branch_owner
+        add_ideas = navy_specialization_1
+        every_core_state = {
+            limit = {
+                is_fully_controlled_by = ROOT
+                is_coastal = yes
+            }
+            random_select_amount = 2
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+        }
+    }
+}
+
+joint_focus = {
+    id = AXIS_navy_specialization_2
+    icon = GFX_focus_NORDIC_dem_capstone_navy
+    prerequisite = { focus = AXIS_navy_specialization_1 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_navy_specialization_1
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_navy_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    completion_reward_joint_originator = {
+        remove_ideas = navy_specialization_1
+        add_ideas = navy_specialization_2
+    }
+}
+
+joint_focus = {
+    id = AXIS_navy_specialization_3
+    icon = GFX_focus_GER_high_seas_fleet
+    prerequisite = { focus = AXIS_navy_specialization_2 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_navy_specialization_2
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_navy_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    completion_reward_joint_originator = {
+        remove_ideas = navy_specialization_2
+        add_ideas = navy_specialization_3
+        add_tech_bonus = {
+            name = shared_navy_bonus
+            bonus = 1
+            uses = 1
+            ahead_reduction = 2.0
+            category = naval_equipment
+        }
+    }
+}
+
+### AIR SPECIALIZATION
+
+joint_focus = {
+    id = AXIS_air_specialization_1
+    icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+    prerequisite = { focus = AXIS_unlock_army_specializations }
+
+    x = 6
+    y = 1
+    relative_position_id = AXIS_unlock_army_specializations
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        set_country_flag = AXIS_air_branch_owner
+        add_ideas = air_spec_1
+    }
+}
+
+joint_focus = {
+    id = AXIS_air_specialization_2
+    icon = GFX_focus_PER_luftwaffe_planes
+    prerequisite = { focus = AXIS_air_specialization_1 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_air_specialization_1
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_air_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = air_spec_1
+        add_ideas = air_spec_2
+    }
+}
+
+joint_focus = {
+    id = AXIS_air_specialization_3
+    icon = GFX_focus_FIN_expand_air_force_academy
+    prerequisite = { focus = AXIS_air_specialization_2 }
+
+    x = 0
+    y = 1
+    relative_position_id = AXIS_air_specialization_2
+    cost = 5
+
+    text_icon = NORDIC_focus_style
+
+    available = {
+    	has_country_flag = accessible_shared_tree
+    	has_country_flag = AXIS_air_branch_owner
+    }
+
+    available_if_capitulated = yes
+
+    search_filters = { FOCUS_FILTER_POLITICAL }
+
+    completion_reward_joint_originator = {
+        remove_ideas = air_spec_2
+        add_ideas = air_spec_3
+    }
+}
+
+
+
+
+
+joint_focus = {
+	id = AXIS_totaler_krieg
+	icon = GFX_GER_totalwar
+	prerequisite = { focus = AXIS_adaptive_1_phase2 focus = AXIS_adaptive_2_phase2 }
+
+	x = 0
+	y = 2
+	relative_position_id = AXIS_war_economy
+	cost = 0
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		GER = { has_completed_focus = GER_declaretotalenkrieg }
+	}
+
+	bypass = {
+		GER = { has_completed_focus = GER_declaretotalenkrieg }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+joint_focus = {
+	id = AXIS_totaler_krieg_ITA
+	icon = GFX_TomoMod_AXIS_totaler_krieg_ITA
+	prerequisite = { focus = AXIS_totaler_krieg }
+
+	x = -4
+	y = 1
+	relative_position_id = AXIS_totaler_krieg
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		ITA = { exists = yes }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward_joint_originator = {
+		ITA = {
+			set_country_flag = TomoMod_axis_total_mobilisation
+			add_ideas = tot_economic_mobilisation
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = { is_core_of = ITA }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_totaler_krieg_SPR
+	icon = GFX_TomoMod_AXIS_totaler_krieg_SPR
+	prerequisite = { focus = AXIS_totaler_krieg }
+
+	x = -2
+	y = 1
+	relative_position_id = AXIS_totaler_krieg
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		SPR = { exists = yes }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward_joint_originator = {
+		SPR = {
+			set_country_flag = TomoMod_axis_total_mobilisation
+			add_ideas = tot_economic_mobilisation
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = { is_core_of = SPR }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_totaler_krieg_ROM
+	icon = GFX_TomoMod_AXIS_totaler_krieg_ROM
+	prerequisite = { focus = AXIS_totaler_krieg }
+
+	x = 0
+	y = 1
+	relative_position_id = AXIS_totaler_krieg
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		ROM = { exists = yes }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward_joint_originator = {
+		ROM = {
+			set_country_flag = TomoMod_axis_total_mobilisation
+			add_ideas = tot_economic_mobilisation
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROM }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_totaler_krieg_HUN
+	icon = GFX_TomoMod_AXIS_totaler_krieg_HUN
+	prerequisite = { focus = AXIS_totaler_krieg }
+
+	x = 2
+	y = 1
+	relative_position_id = AXIS_totaler_krieg
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		HUN = { exists = yes }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward_joint_originator = {
+		HUN = {
+			set_country_flag = TomoMod_axis_total_mobilisation
+			add_ideas = tot_economic_mobilisation
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = { is_core_of = HUN }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = AXIS_totaler_krieg_BUL
+	icon = GFX_TomoMod_AXIS_totaler_krieg_BUL
+	prerequisite = { focus = AXIS_totaler_krieg }
+
+	x = 4
+	y = 1
+	relative_position_id = AXIS_totaler_krieg
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		has_country_flag = accessible_shared_tree
+		BUL = { exists = yes }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward_joint_originator = {
+		BUL = {
+			set_country_flag = TomoMod_axis_total_mobilisation
+			add_ideas = tot_economic_mobilisation
+			add_war_support = 0.2
+			random_owned_controlled_state = {
+				limit = { is_core_of = BUL }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

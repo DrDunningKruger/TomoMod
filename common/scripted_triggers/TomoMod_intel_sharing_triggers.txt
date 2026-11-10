@@ -1,0 +1,25 @@
+TomoMod_intel_sharing_member = {
+	OR = {
+		tag = ENG
+		is_in_faction_with = ENG
+		tag = SOV
+		is_in_faction_with = SOV
+		tag = MON
+		tag = USA
+	}
+}
+
+TomoMod_intel_sharing_runner = {
+	OR = {
+		tag = ENG
+		AND = {
+			tag = SOV
+			NOT = { country_exists = ENG }
+		}
+		AND = {
+			tag = USA
+			NOT = { country_exists = ENG }
+			NOT = { country_exists = SOV }
+		}
+	}
+}

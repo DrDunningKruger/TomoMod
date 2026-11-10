@@ -1457,6 +1457,7 @@ on_actions = {
 				FRA = { # Algiers
 					transfer_state = 460
 					transfer_state = 513
+					transfer_state = 848
 					transfer_state = 459
 					transfer_state = 461
 					transfer_state = 462

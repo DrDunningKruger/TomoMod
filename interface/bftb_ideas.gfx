@@ -312,7 +312,7 @@ spriteTypes = {
 					
 	spriteType = {
 		name = "GFX_idea_gre_aristotle_onassis"
-		texturefile = "gfx/interface/ideas/idea_gre_aristotle_onassis.dds"
+		texturefile = "gfx/interface/ideas/idea_GRE_aristotle_onassis.dds"
 	}
 					
 	spriteType = {

@@ -225,18 +225,7 @@ ideas = {
 			
 			
 			available = {
-				if = {
-					limit = { tag = GER }
-					has_completed_focus = GER_declaretotalenkrieg
-				}
-				else_if = {
-					limit = { tag = SOV }
-					has_completed_focus = SOV_wareco
-				}
-				else = {
-					date > 1942.1.1
-				}
-				has_war_support > 0.8
+				always = no
 			}
 
 			ai_will_do = {

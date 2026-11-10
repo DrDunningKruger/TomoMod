@@ -1,5 +1,6 @@
 ﻿focus_tree = {
 	id = french_focus
+	shared_focus = allies_joint_alliance
 	
 	country = {
 		factor = 0
@@ -526,6 +527,7 @@
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			custom_effect_tooltip = FRA_colonial_industry_effect_ttt
 			every_owned_state = {
 				limit = { has_state_flag = FRA_colonial_industry_target }
 				add_extra_state_shared_building_slots = 2
@@ -870,6 +872,7 @@
 		id = FRA_heavy_armor_focus
 		icon = GFX_FRA_heavytanks
 		prerequisite = { focus = FRA_mechanized_focus }
+		mutually_exclusive = { focus = FRA_light_medium_armor }
 		x = 2
 		y = 1
 		relative_position_id = FRA_artillery_focus
@@ -880,6 +883,7 @@
         search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
+			add_ideas = FRA_char_de_bataille
 		}
 	}
 
@@ -989,6 +993,7 @@
 		id = FRA_light_medium_armor
 		icon = GFX_FRA_mediumtanks
 		prerequisite = { focus = FRA_mechanized_focus }
+		mutually_exclusive = { focus = FRA_heavy_armor_focus }
 		x = 1
 		y = 1
 		relative_position_id = FRA_mechanized_focus
@@ -996,9 +1001,10 @@
 
 		available_if_capitulated = yes
 
-        search_filters = {FOCUS_FILTER_ARMY_XP}	
+        search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
+			add_ideas = FRA_automitrailleuses
 		}
 	}
 	focus = {

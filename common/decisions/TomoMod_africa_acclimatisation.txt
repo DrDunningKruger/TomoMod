@@ -1,0 +1,37 @@
+TomoMod_africa_acclimatisation_category = {
+
+	TomoMod_africa_acclimatisation = {
+		allowed = {
+			always = yes
+		}
+		activation = {
+			has_global_flag = TomoMod_africa_acclimatisation_active
+			check_variable = { global.AXIS_Africa_steps < 5 }
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			check_variable = { global.AXIS_Africa_steps > 4 }
+		}
+		icon = mission_icon
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 7
+		selectable_mission = no
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = { check_variable = { global.AXIS_Africa_last_step_day = global.num_days } }
+				}
+				set_variable = { global.AXIS_Africa_last_step_day = global.num_days }
+				AXIS_Africa_reduce_penalty = yes
+			}
+			if = {
+				limit = { check_variable = { global.AXIS_Africa_steps < 5 } }
+				activate_mission = TomoMod_africa_acclimatisation
+			}
+		}
+	}
+}

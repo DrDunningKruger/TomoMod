@@ -1,0 +1,6 @@
+﻿l_english:
+ TomoMod_africa_acclimatisation_category:0 "Afrika Korps"
+ TomoMod_africa_acclimatisation_category_desc:0 "The Axis armies are adapting to the desert war in North Africa."
+ TomoMod_africa_acclimatisation:0 "Desert Acclimatisation"
+ TomoMod_africa_acclimatisation_desc:0 "Every 7 days the Axis 'not yet ready' penalty in North Africa is reduced by §G10%§! Attack and Defence, until it is gone.\nReductions so far: §H[?global.AXIS_Africa_steps]§! of §H5§!"
+ TomoMod_africa_acclimatisation_start_tt:0 "§OThe Axis 'not yet ready' penalty in North Africa is reduced by 10% Attack and Defence every 7 days until it is gone. Every country can follow the timer in its decisions.§!"

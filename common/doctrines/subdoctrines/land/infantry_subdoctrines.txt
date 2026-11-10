@@ -29,14 +29,6 @@ mobile_infantry = {
     category_all_infantry = {
         breakthrough = 0.1
     }
-    effect = {
-        add_tech_bonus = {
-            bonus = 0.5
-            uses = 1
-            category = motorized_equipment
-            name = SUBDOCTRINE_MOBILE_INFANTRY
-        }
-    }
 
     rewards = {
         cavalry_charge = {
@@ -175,7 +167,6 @@ large_unit_tactics = {
                 max_organisation = 5
                 soft_attack = 0.075
             }
-            army_morale = 0.1
         }
         motorization_initiative = {
             category_all_infantry = {
@@ -414,6 +405,9 @@ commandos = {
             add = yes
         }
     }
+    category_light_infantry = {
+        max_organisation = 5
+    }
 
     # EFFECTS
 
@@ -541,14 +535,6 @@ irregulars = {
             category_light_infantry = {
                 max_organisation = 5
                 soft_attack = 0.075
-            }
-            effect = {
-                add_tech_bonus = {
-                    bonus = 0.5
-                    uses = 2
-                    category = support_tech
-                    name = SUBDOCTRINE_IRREGULARS
-                }
             }
         }
     }

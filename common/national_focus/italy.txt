@@ -1,6 +1,7 @@
 ﻿
 focus_tree = {
 	id = italian_focus
+	shared_focus = AXIS_joint_alliance
 
 	country = {
 		factor = 0
@@ -984,6 +985,8 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = ITA_develop_the_minors_tt
+			hidden_effect = {
 			if = { limit = { 801 = { is_controlled_by = BUL } }
             801 = {
 				add_extra_state_shared_building_slots = 2
@@ -993,6 +996,24 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
 			}
 			if = { limit = { 493 = { is_controlled_by = HUN } }
             493 = {
@@ -1004,6 +1025,24 @@ focus_tree = {
 				}
 			}
 			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 			if = { limit = { 46 = { is_controlled_by = ROM } }
             46 = {
 				add_extra_state_shared_building_slots = 2
@@ -1014,6 +1053,24 @@ focus_tree = {
 				}
 			}
 			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 			if = { limit = { 41 = { is_controlled_by = SPR } }
             41 = {
 				add_extra_state_shared_building_slots = 2
@@ -1023,7 +1080,26 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			}	
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			}
 		}
 	}
 	focus = {
@@ -3028,7 +3104,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-             set_fuel_ratio = 1
+             set_fuel_ratio = 0.25
 			160 = {
 						add_extra_state_shared_building_slots = 2
 						add_building_construction = {
@@ -3874,6 +3950,7 @@ focus_tree = {
 				controls_state = 459
 				controls_state = 460
 				controls_state = 513
+				controls_state = 848
 			}
 			custom_trigger_tooltip = {
 				tooltip = ITA_imperium_romanum_tunis_tt

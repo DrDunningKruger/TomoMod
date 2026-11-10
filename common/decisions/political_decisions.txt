@@ -393,95 +393,71 @@ political_actions = {
 		}
 	}
 	
-	institute_press_censorship_fascist_state = {
 
-		icon = generic_political_discourse
-
-		visible = {
-			has_government = fascism
-		}
-	
-		modifier = {
-			communism_drift = -0.01
-			fascism_drift = 0.03
-			democratic_drift = -0.01
-			neutrality_drift = -0.01
-		}
-	
-		days_remove = 360
-		cost = 100
-	
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	institute_press_censorship_democratic_state = {
-
-		icon = generic_political_discourse
-
-		visible = {
-			has_government = democratic
-		}
+		invest_into_trainingg = {
+		    
+			icon = GFX_decision_generic_military
 		
-		modifier = {
-			communism_drift = -0.01
-			fascism_drift = -0.01
-			democratic_drift = 0.03
-			neutrality_drift = -0.01
-		}
-	
-		days_remove = 360
-		cost = 100
-	
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	institute_press_censorship_communist_state = {
+			allowed = {
+				#Everyone
+			}
 
-		icon = generic_political_discourse
+			available = {
+				if = { date > 1940.01.01 }
+				has_war = yes
+			}
 
-		visible = {
-			has_government = communism
-		}
-	
-		modifier = {
-			communism_drift = 0.03
-			fascism_drift = -0.01
-			democratic_drift = -0.01
-			neutrality_drift = -0.01
-		}
-	
-		days_remove = 360
-		cost = 100
-		
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	institute_press_censorship_neutrality_state = {
+			visible = {
+				always = yes
+			}
 
-		icon = generic_political_discourse
+			fire_only_once = no
 
-		visible = {
-			has_government = neutrality
-		}
-	
-		modifier = {
-			communism_drift = -0.01
-			fascism_drift = -0.01
-			democratic_drift = -0.01
-			neutrality_drift = 0.03
-		}
-	
-		days_remove = 360
-		cost = 100
-		
-		ai_will_do = {
-			factor = 0
-		}
-	}
+			cost = 100
+			
+			days_remove = 90
+			days_re_enable = 180
+
+			modifier = {
+				training_time_army_factor = -0.50
+				minimum_training_level = -0.3 
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+
+			complete_effect = {
+			
+			}
+		}	
+		fix_convoys = {
+			icon = SWE_set_navy_budget
+			allowed = {
+			}
+			visible = {
+				is_ai = no
+			}
+			days_remove = 10
+			cost = 0
+			complete_effect = {
+				add_manpower = 1
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = 1
+				}
+			}
+			
+			remove_effect = {
+				add_manpower = -1
+				add_equipment_to_stockpile = {
+					type = convoy_1
+					amount = -1
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}		
+
 }

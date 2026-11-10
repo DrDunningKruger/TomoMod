@@ -1,0 +1,61 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { is_ai = no }
+				set_country_flag = accessible_shared_tree
+			}
+			every_country = {
+				limit = {
+					OR = { tag = GER tag = ITA tag = BUL tag = ROM tag = HUN tag = SPR }
+				}
+				add_dynamic_modifier = { modifier = axis_dynamic }
+			}
+			every_country = {
+				limit = {
+					OR = { tag = ENG tag = FRA tag = CAN tag = SAF tag = AST tag = RAJ tag = BRA }
+				}
+				add_dynamic_modifier = { modifier = allies_dynamic }
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			every_country = {
+				if = {
+					limit = { is_ai = no }
+					set_country_flag = accessible_shared_tree
+				}
+				else = {
+					clr_country_flag = accessible_shared_tree
+				}
+			}
+			every_country = {
+				limit = {
+					OR = { tag = GER tag = ITA tag = BUL tag = ROM tag = HUN tag = SPR }
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = allies_dynamic } }
+					remove_dynamic_modifier = { modifier = allies_dynamic }
+				}
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = axis_dynamic } } }
+					add_dynamic_modifier = { modifier = axis_dynamic }
+				}
+			}
+			every_country = {
+				limit = {
+					OR = { tag = ENG tag = FRA tag = CAN tag = SAF tag = AST tag = RAJ tag = BRA }
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = axis_dynamic } }
+					remove_dynamic_modifier = { modifier = axis_dynamic }
+				}
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = allies_dynamic } } }
+					add_dynamic_modifier = { modifier = allies_dynamic }
+				}
+			}
+		}
+	}
+}

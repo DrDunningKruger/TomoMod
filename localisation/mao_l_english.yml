@@ -53,3 +53,4 @@
  wartime_train:0 "Wartime Train"
  sovietnocoop:0 "Soviets don't want Greece as a coop"
  FRA_military_factories_effect_ttt:0 "Spawn §H2 Military Factory§! per state invested"
+ FRA_colonial_industry_effect_ttt:0 "Spawn §H2 Civilian Factory§! per state invested"
